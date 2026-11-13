@@ -10,11 +10,9 @@ import {
   Shield, 
   Star,
   ChevronRight,
-  HelpCircle,
-  Truck,
-  ShieldCheck,
-  FileText,
-  Lock
+  Flame,
+  Zap,
+  Sparkles
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import logoImg from '../assets/logo.png';
@@ -186,8 +184,20 @@ function CrtTvSvg() {
   );
 }
 
+// Announcements list for the running marquee
+const ANNOUNCEMENTS = [
+  "⚡ ¡Compramos tus consolas y videojuegos usados en todo México con cotización garantizada en MXN!",
+  "🎮 Nintendo, PlayStation, Xbox, Sega, Atari y sistemas retro al mejor valor del mercado",
+  "🚚 Envíos asegurados y guías de paquetería prepagada (Estafeta y DHL) con recolección directa",
+  "💰 Depósito y transferencia electrónica a tu cuenta bancaria el mismo día de la inspección",
+  "📺 Compramos televisores de tubo CRT para retrogaming (Sony Trinitron, PVM y monitores de tubo)",
+  "🛡️ Valuación técnica transparente, sin regateos ni comisiones ocultas",
+  "✨ ¿Tienes ediciones especiales o de colección? ¡Escríbenos y recibe ofertas preferentes!",
+  "📱 Atención personalizada y asesoría directa vía WhatsApp: 55 1234 5678"
+];
+
 // ========================================================
-// Main Navbar Component
+// Main Navbar Component with Running Marquee & Themed Sub-Menu
 // ========================================================
 export default function Navbar({ currentView, setView, onSelectBrand, onSelectCategory }) {
   const { itemCount, openCart } = useCart();
@@ -231,22 +241,62 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
 
   return (
     <header ref={navRef} className="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-neutral-900 text-white transition-all shadow-2xl">
+      
+      {/* ======================================================== */}
+      {/* 1. RUNNING MARQUEE ANNOUNCEMENT BAR (AT THE VERY TOP)   */}
+      {/* ======================================================== */}
+      <div className="w-full bg-[#070709] border-b border-[#F5A623]/25 py-2 px-3 sm:px-4 overflow-hidden relative select-none z-50 flex items-center shadow-inner">
+        {/* Live Indicator Badge */}
+        <div className="flex items-center gap-2 pr-3 sm:pr-4 shrink-0 z-20 bg-[#070709] border-r border-[#F5A623]/30">
+          <span className="flex h-2 w-2 relative">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F5A623] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F5A623]"></span>
+          </span>
+          <span className="text-[10px] font-black uppercase tracking-wider text-[#F5A623] font-display whitespace-nowrap">
+            AVISOS EN VIVO
+          </span>
+        </div>
+
+        {/* Marquee Smooth Continuous Scroller (Paused on Hover) */}
+        <div className="overflow-hidden w-full relative">
+          <div className="animate-marquee flex items-center gap-8 whitespace-nowrap text-xs text-neutral-300 font-medium cursor-default">
+            {/* Set 1 */}
+            {ANNOUNCEMENTS.map((text, idx) => (
+              <div key={`msg-1-${idx}`} className="flex items-center gap-3">
+                <span className="text-neutral-200">{text}</span>
+                <span className="text-[#F5A623] font-bold">★</span>
+              </div>
+            ))}
+            {/* Set 2 (Seamless loop duplicate) */}
+            {ANNOUNCEMENTS.map((text, idx) => (
+              <div key={`msg-2-${idx}`} className="flex items-center gap-3">
+                <span className="text-neutral-200">{text}</span>
+                <span className="text-[#F5A623] font-bold">★</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ======================================================== */}
+      {/* 2. MAIN NAVBAR BAR                                      */}
+      {/* ======================================================== */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* 1. Left Logo (Lion Games and TVs / RetroCompra) */}
+          {/* Left Logo (Lion Games and TVs / RetroCompra) */}
           <div 
             onClick={() => { setView('home'); setCatDropdownOpen(false); }} 
             className="flex items-center cursor-pointer select-none group py-1 shrink-0"
           >
             <img 
               src={logoImg} 
-              alt="Lion Games & TVs" 
+              alt="RetroCompra" 
               className="h-12 sm:h-14 md:h-16 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_2px_12px_rgba(245,166,35,0.2)]" 
             />
           </div>
 
-          {/* 2. Center Navigation Links (Matching Screenshot Layout) */}
+          {/* Center Navigation Links (Matching Screenshot Layout) */}
           <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
             
             {/* Inicio (Golden Pill with Home Icon) */}
@@ -317,7 +367,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
 
           </nav>
 
-          {/* 3. Right Icons & Admin Button (Matching Screenshot Layout) */}
+          {/* Right Icons & Admin Button (Matching Screenshot Layout) */}
           <div className="flex items-center gap-2 sm:gap-3">
             
             {/* 1. Shopping Cart Icon with Red Counter Badge */}
@@ -375,30 +425,35 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
         </div>
 
         {/* ======================================================== */}
-        {/* 4. MEGA MENU FLOATING DROPDOWN PANEL (PIXEL-PERFECT) */}
+        {/* 3. CATEGORY SUB-MENU (THEMED, CLEANED & NO BOTTOM BAR)   */}
         {/* ======================================================== */}
         {catDropdownOpen && (
-          <div className="fixed left-1/2 -translate-x-1/2 top-20 w-[96vw] max-w-6xl z-50 animate-mega-menu pt-3">
-            <div className="bg-[#0B0C10]/98 backdrop-blur-2xl rounded-[2.5rem] border-2 border-[#F5A623] p-6 sm:p-8 glow-mega-box shadow-[0_0_60px_rgba(245,166,35,0.35),0_25px_60px_rgba(0,0,0,0.95)] space-y-6">
+          <div className="fixed left-1/2 -translate-x-1/2 top-28 sm:top-28 w-[96vw] max-w-6xl z-50 animate-mega-menu pt-2">
+            <div className="bg-[#090A0E]/98 backdrop-blur-2xl rounded-[2.5rem] border-2 border-[#F5A623] p-6 sm:p-8 glow-mega-box shadow-[0_0_55px_rgba(245,166,35,0.32),0_25px_60px_rgba(0,0,0,0.95)] space-y-6">
               
-              {/* Top Header inside Mega Menu */}
-              <div className="flex items-center justify-between pb-3 border-b border-neutral-800/80">
+              {/* Top Header inside Sub-Menu matching Theme Color */}
+              <div className="flex items-center justify-between pb-4 border-b border-neutral-800/80">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#F5A623] to-[#B87406] flex items-center justify-center text-black font-black shadow-md shadow-[#F5A623]/25">
+                  <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#F5A623] via-[#E59819] to-[#B87406] flex items-center justify-center text-black font-black shadow-lg shadow-[#F5A623]/25">
                     🎮
                   </div>
                   <div className="w-0.5 h-6 bg-[#F5A623] mx-1 rounded-full" />
-                  <h2 className="text-lg sm:text-2xl font-black text-white font-display tracking-wide">
-                    Explora por Categoría
-                  </h2>
+                  <div>
+                    <h2 className="text-xl sm:text-2xl font-black text-white font-display tracking-tight">
+                      Explora por Categoría
+                    </h2>
+                    <p className="text-[11px] text-[#F5A623] font-semibold">
+                      59+ Sistemas de Videojuegos y TVs CRT Cotizados en Tiempo Real (MXN)
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => handleCategoryClick('consoles')}
-                    className="px-4 py-2 rounded-full border border-[#F5A623]/80 bg-[#F5A623]/10 hover:bg-[#F5A623]/20 text-[#F5A623] text-xs font-extrabold flex items-center gap-1.5 transition-all shadow-sm hover:scale-105"
+                    className="px-4 py-2 rounded-full border border-[#F5A623] bg-[#F5A623]/10 hover:bg-[#F5A623] text-[#F5A623] hover:text-black text-xs font-black flex items-center gap-1.5 transition-all duration-200 shadow-sm hover:scale-105"
                   >
-                    <Star className="w-3.5 h-3.5 fill-[#F5A623] text-[#F5A623]" />
+                    <Star className="w-3.5 h-3.5 fill-current" />
                     <span>Todas las Categorías →</span>
                   </button>
 
@@ -411,228 +466,177 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
                 </div>
               </div>
 
-              {/* 8 Category Cards (4 columns x 2 rows) */}
+              {/* 8 Themed Category Cards (Grid: 4 cols x 2 rows) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 
                 {/* 1. Nintendo */}
                 <div
                   onClick={() => handleBrandClick('Nintendo')}
-                  className="bg-[#12141D] hover:bg-[#1A1D2A] border border-neutral-800 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,166,35,0.2)]"
+                  className="bg-gradient-to-b from-[#14151D] to-[#0D0E14] hover:from-[#1D1B14] hover:to-[#14120B] border border-neutral-800/90 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(245,166,35,0.25)]"
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/90 group-hover:border-[#F5A623]/50 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
                       <NesControllerSvg />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display">
+                      <h3 className="font-black text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display tracking-tight">
                         Nintendo
                       </h3>
-                      <p className="text-[11px] text-neutral-400 mt-0.5 line-clamp-1">
+                      <p className="text-[11px] text-neutral-400 group-hover:text-amber-200/90 mt-0.5 line-clamp-1 transition-colors font-medium">
                         NES, SNES, N64 y más
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1 transition-transform shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1.5 transition-transform shrink-0" />
                 </div>
 
                 {/* 2. PlayStation */}
                 <div
                   onClick={() => handleBrandClick('PlayStation')}
-                  className="bg-[#12141D] hover:bg-[#1A1D2A] border border-neutral-800 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,166,35,0.2)]"
+                  className="bg-gradient-to-b from-[#14151D] to-[#0D0E14] hover:from-[#1D1B14] hover:to-[#14120B] border border-neutral-800/90 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(245,166,35,0.25)]"
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/90 group-hover:border-[#F5A623]/50 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
                       <PlaystationSvg />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display">
+                      <h3 className="font-black text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display tracking-tight">
                         PlayStation
                       </h3>
-                      <p className="text-[11px] text-neutral-400 mt-0.5 line-clamp-1">
+                      <p className="text-[11px] text-neutral-400 group-hover:text-amber-200/90 mt-0.5 line-clamp-1 transition-colors font-medium">
                         PS1, PS2, PS3, PS4, PS5
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1 transition-transform shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1.5 transition-transform shrink-0" />
                 </div>
 
                 {/* 3. Xbox */}
                 <div
                   onClick={() => handleBrandClick('Xbox')}
-                  className="bg-[#12141D] hover:bg-[#1A1D2A] border border-neutral-800 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,166,35,0.2)]"
+                  className="bg-gradient-to-b from-[#14151D] to-[#0D0E14] hover:from-[#1D1B14] hover:to-[#14120B] border border-neutral-800/90 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(245,166,35,0.25)]"
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/90 group-hover:border-[#F5A623]/50 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
                       <XboxSvg />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display">
+                      <h3 className="font-black text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display tracking-tight">
                         Xbox
                       </h3>
-                      <p className="text-[11px] text-neutral-400 mt-0.5 line-clamp-1">
+                      <p className="text-[11px] text-neutral-400 group-hover:text-amber-200/90 mt-0.5 line-clamp-1 transition-colors font-medium">
                         Xbox Clásico, 360, One y más
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1 transition-transform shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1.5 transition-transform shrink-0" />
                 </div>
 
                 {/* 4. Sega y Retro */}
                 <div
                   onClick={() => handleBrandClick('Sega')}
-                  className="bg-[#12141D] hover:bg-[#1A1D2A] border border-neutral-800 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,166,35,0.2)]"
+                  className="bg-gradient-to-b from-[#14151D] to-[#0D0E14] hover:from-[#1D1B14] hover:to-[#14120B] border border-neutral-800/90 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(245,166,35,0.25)]"
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/90 group-hover:border-[#F5A623]/50 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
                       <SegaSvg />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display">
+                      <h3 className="font-black text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display tracking-tight">
                         Sega y Retro
                       </h3>
-                      <p className="text-[11px] text-neutral-400 mt-0.5 line-clamp-1">
+                      <p className="text-[11px] text-neutral-400 group-hover:text-amber-200/90 mt-0.5 line-clamp-1 transition-colors font-medium">
                         Genesis, Dreamcast y más
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1 transition-transform shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1.5 transition-transform shrink-0" />
                 </div>
 
                 {/* 5. Atari y Sistemas Clásicos */}
                 <div
                   onClick={() => handleBrandClick('Atari')}
-                  className="bg-[#12141D] hover:bg-[#1A1D2A] border border-neutral-800 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,166,35,0.2)]"
+                  className="bg-gradient-to-b from-[#14151D] to-[#0D0E14] hover:from-[#1D1B14] hover:to-[#14120B] border border-neutral-800/90 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(245,166,35,0.25)]"
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/90 group-hover:border-[#F5A623]/50 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
                       <AtariSvg />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display">
+                      <h3 className="font-black text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display tracking-tight">
                         Atari y Sistemas Clásicos
                       </h3>
-                      <p className="text-[11px] text-neutral-400 mt-0.5 line-clamp-1">
+                      <p className="text-[11px] text-neutral-400 group-hover:text-amber-200/90 mt-0.5 line-clamp-1 transition-colors font-medium">
                         2600, 5200, 7800 y más
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1 transition-transform shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1.5 transition-transform shrink-0" />
                 </div>
 
                 {/* 6. Videojuegos */}
                 <div
                   onClick={() => handleCategoryClick('video_games')}
-                  className="bg-[#12141D] hover:bg-[#1A1D2A] border border-neutral-800 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,166,35,0.2)]"
+                  className="bg-gradient-to-b from-[#14151D] to-[#0D0E14] hover:from-[#1D1B14] hover:to-[#14120B] border border-neutral-800/90 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(245,166,35,0.25)]"
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/90 group-hover:border-[#F5A623]/50 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
                       <VideoGamesSvg />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display">
+                      <h3 className="font-black text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display tracking-tight">
                         Videojuegos
                       </h3>
-                      <p className="text-[11px] text-neutral-400 mt-0.5 line-clamp-1">
+                      <p className="text-[11px] text-neutral-400 group-hover:text-amber-200/90 mt-0.5 line-clamp-1 transition-colors font-medium">
                         Juegos para todas las consolas
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1 transition-transform shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1.5 transition-transform shrink-0" />
                 </div>
 
                 {/* 7. Accesorios */}
                 <div
                   onClick={() => handleCategoryClick('accessories')}
-                  className="bg-[#12141D] hover:bg-[#1A1D2A] border border-neutral-800 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,166,35,0.2)]"
+                  className="bg-gradient-to-b from-[#14151D] to-[#0D0E14] hover:from-[#1D1B14] hover:to-[#14120B] border border-neutral-800/90 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(245,166,35,0.25)]"
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/90 group-hover:border-[#F5A623]/50 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
                       <AccessoriesSvg />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display">
+                      <h3 className="font-black text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display tracking-tight">
                         Accesorios
                       </h3>
-                      <p className="text-[11px] text-neutral-400 mt-0.5 line-clamp-1">
+                      <p className="text-[11px] text-neutral-400 group-hover:text-amber-200/90 mt-0.5 line-clamp-1 transition-colors font-medium">
                         Controles, cables y más
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1 transition-transform shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1.5 transition-transform shrink-0" />
                 </div>
 
                 {/* 8. Televisiones CRT */}
                 <div
                   onClick={() => handleCategoryClick('retro_tvs')}
-                  className="bg-[#12141D] hover:bg-[#1A1D2A] border border-neutral-800 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(245,166,35,0.2)]"
+                  className="bg-gradient-to-b from-[#14151D] to-[#0D0E14] hover:from-[#1D1B14] hover:to-[#14120B] border border-neutral-800/90 hover:border-[#F5A623] rounded-3xl p-4 sm:p-5 flex items-center justify-between cursor-pointer transition-all duration-300 group hover:scale-[1.02] hover:shadow-[0_0_24px_rgba(245,166,35,0.25)]"
                 >
                   <div className="flex items-center gap-3.5">
-                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/80 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-16 h-16 rounded-2xl bg-neutral-900/90 border border-neutral-800/90 group-hover:border-[#F5A623]/50 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
                       <CrtTvSvg />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display">
+                      <h3 className="font-black text-sm sm:text-base text-white group-hover:text-[#F5A623] transition-colors font-display tracking-tight">
                         Televisiones CRT
                       </h3>
-                      <p className="text-[11px] text-neutral-400 mt-0.5 line-clamp-1">
+                      <p className="text-[11px] text-neutral-400 group-hover:text-amber-200/90 mt-0.5 line-clamp-1 transition-colors font-medium">
                         Trinitron, WEGA y más
                       </p>
                     </div>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1 transition-transform shrink-0" />
+                  <ChevronRight className="w-5 h-5 text-[#F5A623] group-hover:translate-x-1.5 transition-transform shrink-0" />
                 </div>
 
-              </div>
-
-              {/* Bottom Nav Bar inside Mega Menu (Divided by subtle vertical lines) */}
-              <div className="border border-neutral-800 bg-[#07080B]/95 rounded-2xl py-3 px-5 sm:px-8 flex flex-wrap items-center justify-between gap-3 text-xs font-semibold text-neutral-300">
-                <button 
-                  onClick={() => { setView('faq'); setCatDropdownOpen(false); }}
-                  className="hover:text-[#F5A623] flex items-center gap-1.5 transition-colors"
-                >
-                  <HelpCircle className="w-3.5 h-3.5 text-[#F5A623]" />
-                  <span>FAQs</span>
-                </button>
-
-                <div className="hidden sm:block text-neutral-700">|</div>
-
-                <button 
-                  onClick={() => { setView('shipping-policy'); setCatDropdownOpen(false); }}
-                  className="hover:text-[#F5A623] flex items-center gap-1.5 transition-colors"
-                >
-                  <Truck className="w-3.5 h-3.5 text-[#F5A623]" />
-                  <span>Envíos</span>
-                </button>
-
-                <div className="hidden sm:block text-neutral-700">|</div>
-
-                <button 
-                  onClick={() => { setView('shipping-policy'); setCatDropdownOpen(false); }}
-                  className="hover:text-[#F5A623] flex items-center gap-1.5 transition-colors"
-                >
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#F5A623]" />
-                  <span>Inspección y Devoluciones</span>
-                </button>
-
-                <div className="hidden sm:block text-neutral-700">|</div>
-
-                <button 
-                  onClick={() => { setView('terms'); setCatDropdownOpen(false); }}
-                  className="hover:text-[#F5A623] flex items-center gap-1.5 transition-colors"
-                >
-                  <FileText className="w-3.5 h-3.5 text-[#F5A623]" />
-                  <span>Términos y Condiciones</span>
-                </button>
-
-                <div className="hidden sm:block text-neutral-700">|</div>
-
-                <button 
-                  onClick={() => { setView('privacy'); setCatDropdownOpen(false); }}
-                  className="hover:text-[#F5A623] flex items-center gap-1.5 transition-colors"
-                >
-                  <Lock className="w-3.5 h-3.5 text-[#F5A623]" />
-                  <span>Política de Privacidad</span>
-                </button>
               </div>
 
             </div>

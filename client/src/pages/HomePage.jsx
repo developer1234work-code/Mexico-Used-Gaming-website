@@ -104,7 +104,7 @@ export default function HomePage({ setView, onSelectCategory }) {
       {/* ======================================================== */}
       {/* 1. HERO SECTION (100% Spanish, Pure Black, Hero Background) */}
       {/* ======================================================== */}
-      <section className="relative overflow-hidden bg-black text-white min-h-[580px] lg:min-h-[620px] flex items-center">
+      <section className="relative overflow-hidden bg-black text-white min-h-[580px] lg:min-h-[670px] flex items-center">
 
         {/* Background Image Layer from Asset */}
         <div
