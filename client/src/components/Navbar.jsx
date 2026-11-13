@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { 
+import {
   Home,
-  ChevronDown, 
-  Menu, 
-  X, 
-  ShoppingBag, 
-  Gift, 
-  User, 
-  Shield, 
+  ChevronDown,
+  Menu,
+  X,
+  ShoppingBag,
+  Gift,
+  Shield,
   Star,
   ChevronRight
 } from 'lucide-react';
@@ -125,10 +124,10 @@ function AtariSvg() {
   );
 }
 
-// 6. Videojuegos (Retro Golden Cartridges)
+// 6. Videojuegos (Retro Golden Cartridges - Decreased Size)
 function VideoGamesSvg() {
   return (
-    <svg viewBox="0 0 140 85" className="w-26 h-13 sm:w-30 sm:h-15 object-contain drop-shadow-md">
+    <svg viewBox="0 0 140 85" className="w-18 h-9 sm:w-20 sm:h-10 object-contain drop-shadow-md">
       {/* Gold Back Cartridge */}
       <rect x="22" y="12" width="50" height="60" rx="4" fill="#D4AF37" stroke="#A6831A" strokeWidth="1.5" />
       <rect x="28" y="20" width="38" height="34" rx="2" fill="#E2E8F0" />
@@ -149,10 +148,10 @@ function VideoGamesSvg() {
   );
 }
 
-// 7. Accesorios (Dual Retro Controllers)
+// 7. Accesorios (Dual Retro Controllers - Decreased Size)
 function AccessoriesSvg() {
   return (
-    <svg viewBox="0 0 140 85" className="w-26 h-13 sm:w-30 sm:h-15 object-contain drop-shadow-md">
+    <svg viewBox="0 0 140 85" className="w-18 h-9 sm:w-20 sm:h-10 object-contain drop-shadow-md">
       {/* Left Purple N64 Controller */}
       <path d="M 14 36 C 14 26, 62 26, 62 36 L 62 44 L 54 74 L 46 50 L 38 74 L 30 50 L 22 74 Z" fill="#7C3AED" stroke="#5B21B6" strokeWidth="1.5" />
       <circle cx="38" cy="35" r="5.5" fill="#E4E4E7" stroke="#71717A" strokeWidth="0.8" />
@@ -318,7 +317,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
 
   return (
     <header ref={navRef} className="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-neutral-900 text-white transition-all shadow-2xl">
-      
+
       {/* ======================================================== */}
       {/* 1. RUNNING MARQUEE ANNOUNCEMENT BAR (AT THE VERY TOP)   */}
       {/* ======================================================== */}
@@ -360,84 +359,78 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
       {/* ======================================================== */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          
+
           {/* Left Logo (Lion Games and TVs / RetroCompra) */}
-          <div 
-            onClick={() => { setView('home'); setCatDropdownOpen(false); }} 
+          <div
+            onClick={() => { setView('home'); setCatDropdownOpen(false); }}
             className="flex items-center cursor-pointer select-none group py-1 shrink-0"
           >
-            <img 
-              src={logoImg} 
-              alt="RetroCompra" 
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_2px_12px_rgba(245,166,35,0.2)]" 
+            <img
+              src={logoImg}
+              alt="RetroCompra"
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_2px_12px_rgba(245,166,35,0.2)]"
             />
           </div>
 
           {/* Center Navigation Links (Matching Screenshot Layout) */}
           <nav className="hidden lg:flex items-center gap-3 xl:gap-5">
-            
+
             {/* Inicio (Golden Pill with Home Icon) */}
             <button
               onClick={() => { setView('home'); setCatDropdownOpen(false); }}
-              className={`px-4 py-2 rounded-full font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-all duration-200 ${
-                isHomeActive 
-                  ? 'border border-[#F5A623] bg-neutral-900/90 text-white shadow-[0_0_15px_rgba(245,166,35,0.3)] scale-[1.02]' 
+              className={`px-4 py-2 rounded-full font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-all duration-200 ${isHomeActive
+                  ? 'border border-[#F5A623] bg-neutral-900/90 text-white shadow-[0_0_15px_rgba(245,166,35,0.3)] scale-[1.02]'
                   : 'text-neutral-300 hover:text-white hover:bg-neutral-900/60'
-              }`}
+                }`}
             >
               <Home className="w-4 h-4 text-[#F5A623]" />
               <span>Inicio</span>
             </button>
 
             {/* Categorías (Golden Active Pill Button with Chevron) */}
-            <button 
+            <button
               onClick={() => setCatDropdownOpen(!catDropdownOpen)}
-              className={`px-4 py-2 rounded-full font-extrabold text-xs sm:text-sm flex items-center gap-1.5 transition-all duration-200 ${
-                catDropdownOpen
+              className={`px-4 py-2 rounded-full font-extrabold text-xs sm:text-sm flex items-center gap-1.5 transition-all duration-200 ${catDropdownOpen
                   ? 'border-2 border-[#F5A623] bg-neutral-900 text-[#F5A623] shadow-[0_0_22px_rgba(245,166,35,0.45)] scale-[1.02]'
                   : 'border border-[#F5A623]/80 bg-neutral-900/80 text-neutral-200 hover:text-[#F5A623] hover:border-[#F5A623] shadow-[0_0_10px_rgba(245,166,35,0.2)]'
-              }`}
+                }`}
             >
               <span>Categorías</span>
               <ChevronDown className={`w-4 h-4 text-[#F5A623] transition-transform duration-300 ${catDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {/* Cómo Funciona */}
-            <button 
-              onClick={() => { setView('how-it-works'); setCatDropdownOpen(false); }} 
-              className={`px-3 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${
-                currentView === 'how-it-works' ? 'text-[#F5A623]' : 'text-neutral-300 hover:text-white'
-              }`}
+            <button
+              onClick={() => { setView('how-it-works'); setCatDropdownOpen(false); }}
+              className={`px-3 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${currentView === 'how-it-works' ? 'text-[#F5A623]' : 'text-neutral-300 hover:text-white'
+                }`}
             >
               Cómo Funciona
             </button>
 
             {/* Ediciones Especiales */}
-            <button 
-              onClick={() => { setView('special-editions'); setCatDropdownOpen(false); }} 
-              className={`px-3 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${
-                currentView === 'special-editions' ? 'text-[#F5A623]' : 'text-neutral-300 hover:text-[#F5A623]'
-              }`}
+            <button
+              onClick={() => { setView('special-editions'); setCatDropdownOpen(false); }}
+              className={`px-3 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${currentView === 'special-editions' ? 'text-[#F5A623]' : 'text-neutral-300 hover:text-[#F5A623]'
+                }`}
             >
               Ediciones Especiales
             </button>
 
-            {/* Nosotros */}
-            <button 
-              onClick={() => { setView('about'); setCatDropdownOpen(false); }} 
-              className={`px-3 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${
-                currentView === 'about' ? 'text-[#F5A623]' : 'text-neutral-300 hover:text-white'
-              }`}
+            {/* Sobre Nosotros */}
+            <button
+              onClick={() => { setView('about'); setCatDropdownOpen(false); }}
+              className={`px-3 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${currentView === 'about' ? 'text-[#F5A623]' : 'text-neutral-300 hover:text-white'
+                }`}
             >
-              Nosotros
+              Sobre Nosotros
             </button>
 
             {/* Contáctanos */}
-            <button 
-              onClick={() => { setView('contact'); setCatDropdownOpen(false); }} 
-              className={`px-3 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${
-                currentView === 'contact' ? 'text-[#F5A623]' : 'text-neutral-300 hover:text-white'
-              }`}
+            <button
+              onClick={() => { setView('contact'); setCatDropdownOpen(false); }}
+              className={`px-3 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${currentView === 'contact' ? 'text-[#F5A623]' : 'text-neutral-300 hover:text-white'
+                }`}
             >
               Contáctanos
             </button>
@@ -446,7 +439,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
 
           {/* Right Icons & Admin Button (Matching Screenshot Layout) */}
           <div className="flex items-center gap-2 sm:gap-3">
-            
+
             {/* 1. Shopping Cart Icon with Red Counter Badge */}
             <button
               onClick={openCart}
@@ -470,17 +463,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
               <Gift className="w-4 h-4 text-[#F5A623]" />
             </button>
 
-            {/* 3. User Profile Icon */}
-            <button
-              onClick={() => { setView('admin'); setCatDropdownOpen(false); }}
-              className="w-10 h-10 rounded-full border border-[#F5A623]/80 bg-neutral-900/90 hover:bg-neutral-800 hover:border-[#F5A623] transition-all flex items-center justify-center text-[#F5A623] shadow-[0_0_12px_rgba(245,166,35,0.25)] hover:scale-110 active:scale-95 group"
-              title="Mi Cuenta"
-              aria-label="Mi Cuenta"
-            >
-              <User className="w-4 h-4 text-[#F5A623]" />
-            </button>
-
-            {/* 4. Admin Button (Filled Golden Capsule) */}
+            {/* 3. Admin Button (Filled Golden Capsule) */}
             <button
               onClick={() => { setView('admin'); setCatDropdownOpen(false); }}
               className="btn-shimmer px-4 py-2 rounded-full bg-gradient-to-r from-[#F5A623] via-[#E59819] to-[#D48806] text-black font-extrabold text-xs sm:text-sm flex items-center gap-1.5 shadow-[0_0_20px_rgba(245,166,35,0.4)] hover:brightness-110 hover:scale-105 active:scale-95 transition-all"
@@ -506,19 +489,19 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
         {/* ======================================================== */}
         {catDropdownOpen && (
           <div className="fixed left-1/2 -translate-x-1/2 top-28 w-[95vw] max-w-6xl z-50 animate-mega-menu pt-1">
-            <div 
+            <div
               style={{
                 background: 'radial-gradient(ellipse at 25% 10%, rgba(245, 166, 35, 0.12) 0%, transparent 50%), #0C0D10'
               }}
               className="backdrop-blur-2xl rounded-3xl sm:rounded-[2rem] border border-[#F5A623]/70 p-4 sm:p-5 shadow-[0_0_50px_rgba(245,166,35,0.28),0_25px_60px_rgba(0,0,0,0.95)] space-y-3"
             >
-              
+
               {/* Header inside Sub-Menu (Compact) */}
               <div className="flex items-center justify-between pb-2.5 border-b border-neutral-800/80">
                 <div className="flex items-center gap-2.5">
                   {/* Yellow Gamepad Icon matching reference image */}
                   <svg viewBox="0 0 24 24" className="w-6 h-6 fill-[#F5A623] text-[#F5A623] drop-shadow-[0_2px_8px_rgba(245,166,35,0.5)]">
-                    <path d="M7 6h10a6 6 0 0 1 6 6v3a4 4 0 0 1-6.9 2.6L13.7 15H10.3l-2.4 2.6A4 4 0 0 1 1 15v-3a6 6 0 0 1 6-6zm-1 5v2h2v-2H6zm2 2v2H6v-2h2zm-2 0H4v-2h2v2zm2-2V9H6v2h2zm9-1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm2 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                    <path d="M7 6h10a6 6 0 0 1 6 6v3a4 4 0 0 1-6.9 2.6L13.7 15H10.3l-2.4 2.6A4 4 0 0 1 1 15v-3a6 6 0 0 1 6-6zm-1 5v2h2v-2H6zm2 2v2H6v-2h2zm-2 0H4v-2h2v2zm2-2V9H6v2h2zm9-1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm2 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" />
                   </svg>
                   <div className="w-0.5 h-5 bg-[#F5A623] mx-0.5 rounded-full" />
                   <h2 className="text-base sm:text-lg font-black text-white font-display tracking-tight">
@@ -582,15 +565,15 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-neutral-900 space-y-2 animate-fade-in text-sm font-semibold">
-            <div 
+            <div
               onClick={() => { setView('home'); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer flex items-center gap-2"
             >
               <Home className="w-4 h-4 text-[#F5A623]" />
               <span>Inicio</span>
             </div>
-            
-            <div 
+
+            <div
               onClick={() => { setCatDropdownOpen(!catDropdownOpen); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-[#F5A623] font-bold hover:bg-neutral-900 cursor-pointer flex items-center justify-between"
             >
@@ -598,28 +581,28 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
               <ChevronDown className="w-4 h-4 text-[#F5A623]" />
             </div>
 
-            <div 
+            <div
               onClick={() => { setView('consoles'); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer"
             >
               Vende tus Consolas (59+ Sistemas)
             </div>
 
-            <div 
+            <div
               onClick={() => { handleCategoryClick('video_games'); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer"
             >
               Videojuegos
             </div>
 
-            <div 
+            <div
               onClick={() => { handleCategoryClick('retro_tvs'); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer"
             >
               Televisiones CRT
             </div>
 
-            <div 
+            <div
               onClick={() => { setView('special-editions'); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-[#F5A623] hover:bg-neutral-900 cursor-pointer flex items-center gap-2"
             >
@@ -627,28 +610,28 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
               <span>Ediciones Especiales</span>
             </div>
 
-            <div 
+            <div
               onClick={() => { setView('how-it-works'); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer"
             >
               Cómo Funciona
             </div>
 
-            <div 
+            <div
               onClick={() => { setView('about'); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer"
             >
-              Nosotros
+              Sobre Nosotros
             </div>
 
-            <div 
+            <div
               onClick={() => { setView('contact'); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer"
             >
               Contáctanos
             </div>
 
-            <div 
+            <div
               onClick={() => { setView('admin'); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-black font-bold bg-[#F5A623] rounded-2xl flex items-center justify-center gap-2 text-xs shadow-md"
             >
