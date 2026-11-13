@@ -125,18 +125,18 @@ export default function CataloguePage({ initialCategory = 'all', onOpenCustomQuo
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] py-12">
+    <div className="min-h-screen bg-[#FAF9F6] py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Title */}
-        <div className="mb-10 text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
+        <div className="mb-12 text-center max-w-2xl mx-auto space-y-2">
+          <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#E59819] block">
             — CATÁLOGO DE COMPRA MÉXICO —
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight font-display">
             Valúa tus Consolas, Juegos y TVs CRT
           </h1>
-          <p className="text-sm text-slate-600">
+          <p className="text-xs sm:text-sm text-neutral-500">
             Busca tu modelo, ajusta su estado y obtén una cotización inmediata garantizada en MXN.
           </p>
         </div>

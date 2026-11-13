@@ -29,20 +29,20 @@ export default function SellingCartDrawer({ onProceedToSubmit, onAddMore }) {
         <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col">
           
           {/* Header */}
-          <div className="px-6 py-5 bg-[#0B0F19] text-white flex items-center justify-between border-b border-slate-800">
+          <div className="px-6 py-5 bg-black text-white flex items-center justify-between border-b border-neutral-900">
             <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-black">
+              <div className="w-8 h-8 rounded-xl bg-[#F5A623]/20 text-[#F5A623] flex items-center justify-center font-black">
                 {itemCount}
               </div>
               <div>
-                <h3 className="font-bold text-base leading-tight">Tu Carrito de Venta</h3>
-                <p className="text-xs text-slate-400">Precios estimados en Pesos Mexicanos (MXN)</p>
+                <h3 className="font-bold text-base leading-tight font-display">Tu Carrito de Venta</h3>
+                <p className="text-[11px] text-neutral-400">Precios estimados en Pesos Mexicanos (MXN)</p>
               </div>
             </div>
 
             <button 
               onClick={closeCart}
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-xl text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -181,7 +181,7 @@ export default function SellingCartDrawer({ onProceedToSubmit, onAddMore }) {
                     closeCart();
                     onProceedToSubmit();
                   }}
-                  className="w-full py-3.5 px-4 rounded-xl font-bold text-slate-950 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 shadow-lg shadow-amber-500/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.01]"
+                  className="btn-shimmer w-full py-3.5 px-4 rounded-xl font-bold text-xs tracking-wide text-black bg-gradient-to-r from-[#F5A623] via-[#E59819] to-[#D48806] hover:brightness-105 shadow-lg shadow-[#F5A623]/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.01]"
                 >
                   <span>Continuar a Solicitud de Venta</span>
                   <ArrowRight className="w-4 h-4" />
@@ -192,7 +192,7 @@ export default function SellingCartDrawer({ onProceedToSubmit, onAddMore }) {
                     closeCart();
                     onAddMore();
                   }}
-                  className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 transition-colors"
+                  className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs text-neutral-700 bg-white border border-neutral-300 hover:bg-neutral-100 transition-colors"
                 >
                   + Agregar más consolas o juegos a la venta
                 </button>
