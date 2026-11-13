@@ -3,517 +3,3085 @@
     {
       "id": "usr-admin-1",
       "name": "Carlos Mendoza (Owner/Admin)",
-      "email": "admin@liongamestv.mx",
-      "passwordHash": "$2a$10$OMUvaN3De5BNdLSx2VnvFezyCSV6A1uEbkG2pUfqXb84ULBD4vuoK",
+      "email": "admin@retrocompra.com",
+      "passwordHash": "$2a$10$R1PtMGd.iyvytOmIAcaT/udJ8qfBAjmgD2gnHdU3AEaO5mtDrNlee",
       "role": "admin",
       "department": "Management",
-      "createdAt": "2026-11-13T16:09:54.647Z"
+      "createdAt": "2026-11-13T18:04:49.492Z"
     },
     {
       "id": "usr-purchasing-1",
       "name": "Sofia Reyes (Purchasing Lead)",
-      "email": "purchasing@liongamestv.mx",
-      "passwordHash": "$2a$10$Ua7Jq6UwFX.yMebVUUiYJu5w7LkyEDpzvNXcVBKtKVlIjhAQIuAvy",
+      "email": "purchasing@retrocompra.com",
+      "passwordHash": "$2a$10$uPwzVL1t8VQXJiKebacm7uAyN2um/DiE.Ghgtqaawp7CbcHXnzeYK",
       "role": "purchasing",
       "department": "Purchasing & Valuations",
-      "createdAt": "2026-11-13T16:09:54.712Z"
+      "createdAt": "2026-11-13T18:04:49.640Z"
     },
     {
       "id": "usr-inspection-1",
       "name": "Mateo Hernandez (Hardware QA & Receiving)",
-      "email": "inspection@liongamestv.mx",
-      "passwordHash": "$2a$10$ViCX1ahwXPWZxX7CqY31O.mM1lOZxUJOS1i4HIqxOFq5qIP0eeo.6",
+      "email": "inspection@retrocompra.com",
+      "passwordHash": "$2a$10$AwPIe.WJ.FD3LOMii8tetePGKwvM.NxuojidSbgSVL3Ku89vd9.N6",
       "role": "inspection",
       "department": "Receiving & Inspection",
-      "createdAt": "2026-11-13T16:09:54.776Z"
+      "createdAt": "2026-11-13T18:04:49.758Z"
     },
     {
       "id": "usr-support-1",
       "name": "Valeria Cruz (Customer Service)",
-      "email": "support@liongamestv.mx",
-      "passwordHash": "$2a$10$4v5MEZY.I4VSOLCQHC7hVuIfnryqjQr4k2rL/hsw0.4us4eL2e/sy",
+      "email": "support@retrocompra.com",
+      "passwordHash": "$2a$10$7DfXAKxaH67R0d4.1qMBEO6z1MqiJQR5pBJZ77Cz4MO.3VyzidjK6",
       "role": "customer_service",
       "department": "Customer Support",
-      "createdAt": "2026-11-13T16:09:54.839Z"
+      "createdAt": "2026-11-13T18:04:49.864Z"
     }
   ],
   "products": [
     {
-      "id": "prod-ps5-disc",
-      "sku": "CON-SONY-PS5-DISC",
+      "id": "nes-original",
+      "sku": "CON-NINT-NES-ORIGIN",
       "category": "consoles",
-      "categoryName": "Gaming Consoles",
-      "brand": "Sony",
-      "name": "PlayStation 5 (Standard Disc Edition)",
-      "model": "CFI-1215A / 825GB",
-      "platform": "PS5",
-      "baseBuyPrice": 6500,
-      "description": "Consola Sony PlayStation 5 con lector de discos Ultra HD Blu-ray, almacenamiento de 825GB SSD.",
-      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.7,
-        "damaged": 0.4,
-        "untested": 0.2
-      },
-      "accessoryAdjustments": {
-        "extraController": 550,
-        "originalBox": 300,
-        "missingPowerCable": -150,
-        "missingHdmi": -80,
-        "missingController": -600
-      }
-    },
-    {
-      "id": "prod-ps5-digital",
-      "sku": "CON-SONY-PS5-DIG",
-      "category": "consoles",
-      "categoryName": "Gaming Consoles",
-      "brand": "Sony",
-      "name": "PlayStation 5 Digital Edition",
-      "model": "CFI-1215B / 825GB",
-      "platform": "PS5",
-      "baseBuyPrice": 5500,
-      "description": "Consola PlayStation 5 edición 100% digital sin lector óptico.",
-      "imageUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.7,
-        "damaged": 0.4,
-        "untested": 0.2
-      },
-      "accessoryAdjustments": {
-        "extraController": 550,
-        "originalBox": 300,
-        "missingPowerCable": -150,
-        "missingHdmi": -80,
-        "missingController": -600
-      }
-    },
-    {
-      "id": "prod-xbox-series-x",
-      "sku": "CON-MS-XSX-1TB",
-      "category": "consoles",
-      "categoryName": "Gaming Consoles",
-      "brand": "Microsoft",
-      "name": "Xbox Series X 1TB",
-      "model": "Model 1882 / 1TB SSD",
-      "platform": "Xbox Series",
-      "baseBuyPrice": 6200,
-      "description": "Consola Xbox Series X de Microsoft con lector 4K Blu-ray y 1TB SSD interno.",
-      "imageUrl": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.7,
-        "damaged": 0.4,
-        "untested": 0.2
-      },
-      "accessoryAdjustments": {
-        "extraController": 500,
-        "originalBox": 250,
-        "missingPowerCable": -120,
-        "missingHdmi": -80,
-        "missingController": -550
-      }
-    },
-    {
-      "id": "prod-xbox-series-s",
-      "sku": "CON-MS-XSS-512",
-      "category": "consoles",
-      "categoryName": "Gaming Consoles",
-      "brand": "Microsoft",
-      "name": "Xbox Series S 512GB Blanco",
-      "model": "Model 1883 / 512GB SSD",
-      "platform": "Xbox Series",
-      "baseBuyPrice": 3400,
-      "description": "Consola Xbox Series S compacta para gaming digital hasta 1440p a 120 FPS.",
-      "imageUrl": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.7,
-        "damaged": 0.4,
-        "untested": 0.2
-      },
-      "accessoryAdjustments": {
-        "extraController": 500,
-        "originalBox": 200,
-        "missingPowerCable": -120,
-        "missingHdmi": -80,
-        "missingController": -500
-      }
-    },
-    {
-      "id": "prod-switch-oled",
-      "sku": "CON-NINT-SW-OLED",
-      "category": "consoles",
-      "categoryName": "Gaming Consoles",
+      "categoryName": "Consolas",
       "brand": "Nintendo",
-      "name": "Nintendo Switch Modelo OLED 64GB",
-      "model": "HEG-001 White / Neon",
-      "platform": "Nintendo Switch",
-      "baseBuyPrice": 4200,
-      "description": "Nintendo Switch con pantalla OLED de 7 pulgadas y soporte ancho ajustable.",
-      "imageUrl": "https://images.unsplash.com/photo-1578303512597-8be9f1505e60?auto=format&fit=crop&w=800&q=80",
+      "name": "Nintendo Entertainment System (NES)",
+      "model": "NES-001 (Front Loader)",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1200,
+      "description": "La legendaria consola de 8 bits de Nintendo que revolucionó los videojuegos caseros en 1985.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
       "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
       "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.7,
-        "damaged": 0.4,
-        "untested": 0.2
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
       },
-      "accessoryAdjustments": {
-        "extraJoyCons": 450,
-        "originalBox": 250,
-        "missingDock": -450,
-        "missingCharger": -200,
-        "missingJoyCons": -650
-      }
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 450,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "zapper_gun": 200
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Front Loader Original",
+          "priceDiff": 0
+        },
+        {
+          "id": "toploader",
+          "name": "NES-101 Top Loader (Rara)",
+          "priceDiff": 800
+        }
+      ]
     },
     {
-      "id": "prod-ps4-pro",
-      "sku": "CON-SONY-PS4-PRO",
+      "id": "snes-original",
+      "sku": "CON-NINT-SNES-ORIGI",
       "category": "consoles",
-      "categoryName": "Gaming Consoles",
-      "brand": "Sony",
-      "name": "PlayStation 4 Pro 1TB",
-      "model": "CUH-7215B / 1TB",
-      "platform": "PS4",
-      "baseBuyPrice": 3200,
-      "description": "Consola PS4 Pro con soporte para resolución 4K dinámica y HDR.",
-      "imageUrl": "https://images.unsplash.com/photo-1486401899868-0e435ed85128?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.7,
-        "damaged": 0.35,
-        "untested": 0.2
-      },
-      "accessoryAdjustments": {
-        "extraController": 350,
-        "originalBox": 200,
-        "missingPowerCable": -100,
-        "missingHdmi": -80,
-        "missingController": -400
-      }
-    },
-    {
-      "id": "prod-n64-console",
-      "sku": "CON-RET-N64-BLK",
-      "category": "consoles",
-      "categoryName": "Gaming Consoles",
+      "categoryName": "Consolas",
       "brand": "Nintendo",
-      "name": "Nintendo 64 Charcoal Black",
-      "model": "NUS-001 (NTSC-U)",
-      "platform": "Retro Consoles",
+      "name": "Super Nintendo (SNES)",
+      "model": "SNS-001 / 16-Bit",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1400,
+      "description": "Consola Super Nintendo de 16 bits original.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 180,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 500,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "super_scope": 350
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "SNES Original SNS-001",
+          "priceDiff": 0
+        },
+        {
+          "id": "jr",
+          "name": "SNES Jr. SNS-101 (Rediseño)",
+          "priceDiff": 400
+        }
+      ]
+    },
+    {
+      "id": "n64-original",
+      "sku": "CON-NINT-N64-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64",
+      "model": "NUS-001 (Charcoal Black)",
+      "platform": "Nintendo",
+      "baseBuyPrice": 900,
+      "description": "Consola clásica N64 de 64 bits con joystick analógico.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 200,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "expansion_pak": 300,
+        "rumble_pak": 120
+      },
+      "editions": [
+        {
+          "id": "charcoal",
+          "name": "Charcoal Black Estándar",
+          "priceDiff": 0
+        },
+        {
+          "id": "funtastic_jungle",
+          "name": "Funtastic Jungle Green",
+          "priceDiff": 500
+        },
+        {
+          "id": "funtastic_ice",
+          "name": "Funtastic Ice Blue",
+          "priceDiff": 500
+        },
+        {
+          "id": "funtastic_fire",
+          "name": "Funtastic Fire Orange",
+          "priceDiff": 600
+        },
+        {
+          "id": "funtastic_grape",
+          "name": "Funtastic Grape Purple",
+          "priceDiff": 600
+        },
+        {
+          "id": "funtastic_smoke",
+          "name": "Funtastic Smoke Grey",
+          "priceDiff": 700
+        },
+        {
+          "id": "funtastic_watermelon",
+          "name": "Funtastic Watermelon Red",
+          "priceDiff": 800
+        },
+        {
+          "id": "pikachu",
+          "name": "Pikachu Edition (Azul/Amarillo)",
+          "priceDiff": 1400
+        },
+        {
+          "id": "gold",
+          "name": "Gold Edition",
+          "priceDiff": 900
+        }
+      ]
+    },
+    {
+      "id": "gamecube-original",
+      "sku": "CON-NINT-GAMECUBE-O",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo GameCube",
+      "model": "DOL-001 / DOL-101",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1300,
+      "description": "Cubo compacto de Nintendo con formato miniDVD.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 250,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 120,
+        "original_box": 400,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "game_boy_player": 650
+      },
+      "editions": [
+        {
+          "id": "indigo",
+          "name": "Indigo Morado Original",
+          "priceDiff": 0
+        },
+        {
+          "id": "jet_black",
+          "name": "Jet Black Negro",
+          "priceDiff": 0
+        },
+        {
+          "id": "platinum",
+          "name": "Platinum Plateado",
+          "priceDiff": 150
+        },
+        {
+          "id": "orange_spice",
+          "name": "Spice Orange (Import)",
+          "priceDiff": 600
+        }
+      ]
+    },
+    {
+      "id": "nintendo-wii",
+      "sku": "CON-NINT-NINTENDO-W",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo Wii",
+      "model": "RVL-001 (Retrocompatible GC)",
+      "platform": "Nintendo",
+      "baseBuyPrice": 850,
+      "description": "Consola revolucionaria con controles por movimiento Wii Remote y barra de sensores.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 200,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "nunchuk": 80,
+        "balance_board": 250
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nintendo-wii-u",
+      "sku": "CON-NINT-NINTENDO-W",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo Wii U",
+      "model": "WUP-010 Deluxe 32GB",
+      "platform": "Nintendo",
       "baseBuyPrice": 1800,
-      "description": "Consola retro clásica Nintendo 64 original para entusiastas.",
-      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+      "description": "Consola con GamePad táctil integrado de 6.2 pulgadas y soporte HD.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
       "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
       "conditionMultipliers": {
-        "like_new": 1.2,
-        "good": 1,
-        "fair": 0.75,
-        "damaged": 0.4,
-        "untested": 0.25
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
       },
-      "accessoryAdjustments": {
-        "expansionPak": 600,
-        "extraController": 350,
-        "originalBox": 800,
-        "missingPowerSupply": -250,
-        "missingAvCable": -100
-      }
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 350,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "original_gamepad": 600,
+        "pro_controller": 250
+      },
+      "editions": [
+        {
+          "id": "deluxe_32",
+          "name": "Deluxe Black 32GB",
+          "priceDiff": 0
+        },
+        {
+          "id": "zelda_windwaker",
+          "name": "Zelda Wind Waker HD Edition",
+          "priceDiff": 700
+        }
+      ]
+    },
+    {
+      "id": "nintendo-switch-v2",
+      "sku": "CON-NINT-NINTENDO-S",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo Switch",
+      "model": "HAC-001(-01) Batería Mejorada",
+      "platform": "Nintendo",
+      "baseBuyPrice": 2800,
+      "description": "Consola híbrida portátil y de sobremesa con dock y Joy-Cons desmontables.",
+      "imageUrl": "https://images.unsplash.com/photo-1578303512597-8be9f1505e60?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 450,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "pro_controller": 400,
+        "case": 100
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nintendo-switch-lite",
+      "sku": "CON-NINT-NINTENDO-S",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo Switch Lite",
+      "model": "HDH-001 100% Portátil",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1900,
+      "description": "Versión compacta y ligera optimizada exclusivamente para el juego portátil.",
+      "imageUrl": "https://images.unsplash.com/photo-1578303512597-8be9f1505e60?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 200,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "charger": 150
+      },
+      "editions": [
+        {
+          "id": "standard_color",
+          "name": "Colores Estándar (Turquesa/Gris/Amarillo/Coral/Azul)",
+          "priceDiff": 0
+        },
+        {
+          "id": "zacian_zamazenta",
+          "name": "Edición Pokémon Zacian & Zamazenta",
+          "priceDiff": 350
+        },
+        {
+          "id": "dialga_palkia",
+          "name": "Edición Pokémon Dialga & Palkia",
+          "priceDiff": 350
+        },
+        {
+          "id": "hyrule",
+          "name": "Edición Dorada Hyrule Edition",
+          "priceDiff": 500
+        }
+      ]
+    },
+    {
+      "id": "nintendo-switch-oled",
+      "sku": "CON-NINT-NINTENDO-S",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo Switch OLED",
+      "model": "HEG-001 Pantalla OLED 7\"",
+      "platform": "Nintendo",
+      "baseBuyPrice": 4200,
+      "description": "Pantalla OLED vibrante de 7 pulgadas con soporte ancho ajustable y puerto LAN.",
+      "imageUrl": "https://images.unsplash.com/photo-1578303512597-8be9f1505e60?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 500,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "pro_controller": 450
+      },
+      "editions": [
+        {
+          "id": "white",
+          "name": "Blanco Estándar",
+          "priceDiff": 0
+        },
+        {
+          "id": "neon",
+          "name": "Neón Azul/Rojo",
+          "priceDiff": 0
+        },
+        {
+          "id": "zelda_totk",
+          "name": "Edición Zelda Tears of the Kingdom",
+          "priceDiff": 650
+        },
+        {
+          "id": "pokemon_sv",
+          "name": "Edición Pokémon Scarlet & Violet",
+          "priceDiff": 600
+        },
+        {
+          "id": "mario_red",
+          "name": "Edición Mario Red",
+          "priceDiff": 400
+        },
+        {
+          "id": "splatoon_3",
+          "name": "Edición Splatoon 3",
+          "priceDiff": 550
+        }
+      ]
+    },
+    {
+      "id": "nintendo-switch-2",
+      "sku": "CON-NINT-NINTENDO-S",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo Switch 2",
+      "model": "Next-Generation Console",
+      "platform": "Nintendo",
+      "baseBuyPrice": 5500,
+      "description": "La próxima generación de consola Nintendo. Valuación prioritaria garantizada en RetroCompra.",
+      "imageUrl": "https://images.unsplash.com/photo-1578303512597-8be9f1505e60?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 600,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 400,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "gameboy-original",
+      "sku": "CON-NINT-GAMEBOY-OR",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Original Game Boy",
+      "model": "DMG-01 (Gris Clásico)",
+      "platform": "Nintendo",
+      "baseBuyPrice": 950,
+      "description": "El Game Boy clásico de 1989 diseñado por Gunpei Yokoi. Tubo de pantalla monocromática.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 600,
+        "original_manuals": 200,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "link_cable": 100
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "gameboy-pocket",
+      "sku": "CON-NINT-GAMEBOY-PO",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy Pocket",
+      "model": "MGB-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 850,
+      "description": "Versión delgada y compacta con pantalla LCD en blanco y negro real (True B&W).",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 450,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "gameboy-color",
+      "sku": "CON-NINT-GAMEBOY-CO",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy Color",
+      "model": "CGB-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1100,
+      "description": "Consola portátil con pantalla a color de 56 colores simultáneos.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 500,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Colores Estándar (Atomic Purple, Teal, Berry)",
+          "priceDiff": 0
+        },
+        {
+          "id": "pokemon_yellow",
+          "name": "Edición Pokémon Yellow Pikachu/Togepi",
+          "priceDiff": 750
+        }
+      ]
+    },
+    {
+      "id": "gameboy-advance",
+      "sku": "CON-NINT-GAMEBOY-AD",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy Advance",
+      "model": "AGB-001 (Horizontal)",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1000,
+      "description": "Portátil de 32 bits ergonómica horizontal.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 450,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "worm_light": 80
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "gameboy-advance-sp",
+      "sku": "CON-NINT-GAMEBOY-AD",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy Advance SP",
+      "model": "AGS-001 / AGS-101",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1300,
+      "description": "Diseño plegable clamshell con batería recargable y pantalla iluminada.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 450,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "original_charger": 120
+      },
+      "editions": [
+        {
+          "id": "ags_001",
+          "name": "Frontlight Modelo AGS-001",
+          "priceDiff": 0
+        },
+        {
+          "id": "ags_101",
+          "name": "Brighter Backlit Modelo AGS-101 (Muy Cotizado)",
+          "priceDiff": 900
+        },
+        {
+          "id": "nes_edition",
+          "name": "Classic NES Edition",
+          "priceDiff": 600
+        }
+      ]
+    },
+    {
+      "id": "nintendo-ds-original",
+      "sku": "CON-NINT-NINTENDO-D",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo DS",
+      "model": "NTR-001 (\"Phat\")",
+      "platform": "Nintendo",
+      "baseBuyPrice": 650,
+      "description": "Doble pantalla con pantalla táctil inferior y ranura para cartuchos de GBA.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 200,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "original_stylus": 50,
+        "original_charger": 100
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nintendo-ds-lite",
+      "sku": "CON-NINT-NINTENDO-D",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo DS Lite",
+      "model": "USG-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 750,
+      "description": "Rediseño estilizado con pantallas más brillantes de 4 niveles y batería prolongada.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "original_charger": 100,
+        "original_stylus": 50
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nintendo-dsi",
+      "sku": "CON-NINT-NINTENDO-D",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo DSi",
+      "model": "TWL-001 / DSi XL",
+      "platform": "Nintendo",
+      "baseBuyPrice": 850,
+      "description": "Cámaras duales integradas y lector de tarjetas SD.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "original_charger": 100
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nintendo-2ds",
+      "sku": "CON-NINT-NINTENDO-2",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 2DS",
+      "model": "FTR-001 (Formato Cuña)",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1100,
+      "description": "Diseño robusto no plegable compatible con todos los juegos de 3DS en 2D.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "original_charger": 100
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nintendo-3ds",
+      "sku": "CON-NINT-NINTENDO-3",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 3DS",
+      "model": "CTR-001 / 3DS XL",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1600,
+      "description": "Efecto 3D estereoscópico sin necesidad de gafas y giroscopio integrado.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "original_charger": 100,
+        "charging_cradle": 80
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "new-nintendo-3ds",
+      "sku": "CON-NINT-NEW-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "New Nintendo 3DS",
+      "model": "KTR-001 / New 3DS XL",
+      "platform": "Nintendo",
+      "baseBuyPrice": 2400,
+      "description": "Procesador mejorado, C-Stick adicional, 3D súper estable y compatibilidad NFC Amiibo.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 400,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "original_charger": 100
+      },
+      "editions": [
+        {
+          "id": "standard_xl",
+          "name": "New 3DS XL Estándar",
+          "priceDiff": 0
+        },
+        {
+          "id": "zelda_majoras",
+          "name": "Edición Zelda Majora's Mask Gold",
+          "priceDiff": 1200
+        },
+        {
+          "id": "pokemon_sol_luna",
+          "name": "Edición Pokémon Sol y Luna",
+          "priceDiff": 700
+        },
+        {
+          "id": "super_famicom",
+          "name": "Super Famicom Edition",
+          "priceDiff": 1400
+        },
+        {
+          "id": "pikachu_yellow",
+          "name": "Pikachu Yellow Edition",
+          "priceDiff": 1100
+        }
+      ]
+    },
+    {
+      "id": "ps1-original",
+      "sku": "CON-PLAY-PS1-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 1",
+      "model": "SCPH-1001 / 5501 (Gris Clásico)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 900,
+      "description": "La primera consola de sobremesa de Sony que redefinió los videojuegos en 3D en 1994.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 120,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 80,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps1-slim",
+      "sku": "CON-PLAY-PS1-SLIM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 1 Slim",
+      "model": "PSone (SCPH-101)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 950,
+      "description": "Versión compacta y estilizada de PS1.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 120,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "lcd_screen_attachment": 700
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps2-original",
+      "sku": "CON-PLAY-PS2-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 2 Original",
+      "model": "SCPH-30000 / 50000 (Fat)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 1100,
+      "description": "La consola más vendida de la historia con reproductor de DVD y bahía para disco duro.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 350,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "network_adapter": 200
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps2-slim",
+      "sku": "CON-PLAY-PS2-SLIM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 2 Slim",
+      "model": "SCPH-70000 / 90000",
+      "platform": "PlayStation",
+      "baseBuyPrice": 1200,
+      "description": "Diseño ultradelgado de PS2 con puerto Ethernet integrado.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps3-original",
+      "sku": "CON-PLAY-PS3-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 3",
+      "model": "CECHA01 / CECHE01 (Fat Retrocompatible)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 1800,
+      "description": "Consola PS3 con lector Blu-ray y retrocompatibilidad con PS2 (4 puertos USB).",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 200,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 350,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "retrocompatible_ps2",
+          "name": "Fat con 4 USB (Retrocompatible PS2 Hardware)",
+          "priceDiff": 1000
+        },
+        {
+          "id": "fat_standard",
+          "name": "Fat Estándar 2 USB (40GB/80GB)",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps3-slim",
+      "sku": "CON-PLAY-PS3-SLIM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 3 Slim",
+      "model": "CECH-2000 / 2500 / 3000",
+      "platform": "PlayStation",
+      "baseBuyPrice": 1400,
+      "description": "Modelo Slim de PS3 eficiente y silencioso.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 200,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps3-super-slim",
+      "sku": "CON-PLAY-PS3-SUPER-",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 3 Super Slim",
+      "model": "CECH-4000 (Tapa Deslizable)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 1300,
+      "description": "Último rediseño de PS3 ultraligero con tapa superior deslizante.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 200,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps4-original",
+      "sku": "CON-PLAY-PS4-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 4",
+      "model": "CUH-1000 / 1100 / 1200 (Fat)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 2200,
+      "description": "Consola PS4 Fat de 500GB con arquitectura x86.",
+      "imageUrl": "https://images.unsplash.com/photo-1486401899868-0e435ed85128?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 350,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 200,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps4-slim",
+      "sku": "CON-PLAY-PS4-SLIM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 4 Slim",
+      "model": "CUH-2000 / 2200 (500GB/1TB)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 2600,
+      "description": "Consola PS4 delgada de menor consumo energético y HDR.",
+      "imageUrl": "https://images.unsplash.com/photo-1486401899868-0e435ed85128?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 350,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 200,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps4-pro",
+      "sku": "CON-PLAY-PS4-PRO",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 4 Pro",
+      "model": "CUH-7000 / 7200 4K 1TB",
+      "platform": "PlayStation",
+      "baseBuyPrice": 3300,
+      "description": "Consola con doble potencia gráfica para juegos en resolución 4K y modo rendimiento.",
+      "imageUrl": "https://images.unsplash.com/photo-1486401899868-0e435ed85128?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 350,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps5-original",
+      "sku": "CON-PLAY-PS5-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 5",
+      "model": "CFI-1000 / 1100 / 1200 (Standard Con Lector)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 6500,
+      "description": "Consola PlayStation 5 con lector de discos Blu-ray Ultra HD y SSD ultrarrápido.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 600,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "charging_station": 250
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps5-digital",
+      "sku": "CON-PLAY-PS5-DIGITA",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 5 Digital",
+      "model": "CFI-1000B / 1100B / 1200B Digital",
+      "platform": "PlayStation",
+      "baseBuyPrice": 5600,
+      "description": "Consola PS5 edición digital sin unidad de disco óptico.",
+      "imageUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 600,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps5-slim",
+      "sku": "CON-PLAY-PS5-SLIM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 5 Slim",
+      "model": "CFI-2000 (Chasis Reducido 1TB)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 6800,
+      "description": "Nuevo modelo estilizado con 1TB de almacenamiento interno.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 600,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps5-pro",
+      "sku": "CON-PLAY-PS5-PRO",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation 5 Pro",
+      "model": "CFI-7000 2TB High-End",
+      "platform": "PlayStation",
+      "baseBuyPrice": 11000,
+      "description": "La consola más potente de Sony con PSSR AI Upscaling y trazado de rayos avanzado.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 700,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 500,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "disc_drive_attachment": 900
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "psp-original",
+      "sku": "CON-PLAY-PSP-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation Portable (PSP)",
+      "model": "PSP 1000 / 2000 / 3000 / Go",
+      "platform": "PlayStation",
+      "baseBuyPrice": 950,
+      "description": "La primera consola portátil de Sony con discos ópticos UMD y pantalla panorámica 16:9.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 300,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "memory_stick": 100,
+        "original_charger": 100
+      },
+      "editions": [
+        {
+          "id": "psp_1000_3000",
+          "name": "PSP Modelo Estándar (1000/2000/3000)",
+          "priceDiff": 0
+        },
+        {
+          "id": "psp_go",
+          "name": "PSP Go (Deslizable)",
+          "priceDiff": 400
+        },
+        {
+          "id": "god_of_war",
+          "name": "God of War Red Edition",
+          "priceDiff": 500
+        }
+      ]
+    },
+    {
+      "id": "ps-vita",
+      "sku": "CON-PLAY-PS-VITA",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation Vita",
+      "model": "PCH-1000 (OLED) / PCH-2000 (Slim)",
+      "platform": "PlayStation",
+      "baseBuyPrice": 1600,
+      "description": "Portátil de alta gama con pantalla táctil OLED de 5 pulgadas y touchpad trasero.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 400,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "vita_memory_card_16gb": 250,
+        "vita_memory_card_32gb": 450,
+        "original_charger": 120
+      },
+      "editions": [
+        {
+          "id": "oled_1000",
+          "name": "Modelo OLED Original PCH-1000",
+          "priceDiff": 150
+        },
+        {
+          "id": "slim_2000",
+          "name": "Modelo Slim PCH-2000",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-original",
+      "sku": "CON-XBOX-XBOX-ORIGI",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Original Xbox",
+      "model": "Xbox Clásica (2001)",
+      "platform": "Xbox",
+      "baseBuyPrice": 1100,
+      "description": "La primera incursión de Microsoft con disco duro integrado y puerto Ethernet de serie.",
+      "imageUrl": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 400,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "duke_controller": 200,
+        "controller_s": 150
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-360-original",
+      "sku": "CON-XBOX-XBOX-360-O",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Xbox 360",
+      "model": "Xbox 360 Fat (Pro / Elite / Arcade)",
+      "platform": "Xbox",
+      "baseBuyPrice": 950,
+      "description": "Segunda generación de Xbox con resolución en alta definición y Xbox Live.",
+      "imageUrl": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "hard_drive_hdd": 150
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-360-slim",
+      "sku": "CON-XBOX-XBOX-360-S",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Xbox 360 Slim",
+      "model": "Model 1439 (Sleek Black)",
+      "platform": "Xbox",
+      "baseBuyPrice": 1250,
+      "description": "Diseño silencioso con Wi-Fi integrado y protección térmica avanzada.",
+      "imageUrl": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 180,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "kinect_sensor": 120
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-360-e",
+      "sku": "CON-XBOX-XBOX-360-E",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Xbox 360 E",
+      "model": "Model 1538 (Estilo Xbox One)",
+      "platform": "Xbox",
+      "baseBuyPrice": 1350,
+      "description": "El último rediseño de Xbox 360 ultra-compacto inspirado en Xbox One.",
+      "imageUrl": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 180,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-one-original",
+      "sku": "CON-XBOX-XBOX-ONE-O",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Xbox One",
+      "model": "Model 1540 (Fat 500GB/1TB)",
+      "platform": "Xbox",
+      "baseBuyPrice": 1700,
+      "description": "Consola con lector Blu-ray y capacidades multimedia HDMI Pass-Through.",
+      "imageUrl": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 300,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 200,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-one-s",
+      "sku": "CON-XBOX-XBOX-ONE-S",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Xbox One S",
+      "model": "Model 1681 (4K Ultra HD Blu-ray)",
+      "platform": "Xbox",
+      "baseBuyPrice": 2200,
+      "description": "Consola blanca compacta 40% más pequeña con fuente de alimentación interna y HDR.",
+      "imageUrl": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 350,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 200,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-one-x",
+      "sku": "CON-XBOX-XBOX-ONE-X",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Xbox One X",
+      "model": "Model 1787 (4K Nativo 6 Teraflops)",
+      "platform": "Xbox",
+      "baseBuyPrice": 2900,
+      "description": "La consola de generación anterior más potente, con juegos en 4K nativo.",
+      "imageUrl": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 400,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-series-s",
+      "sku": "CON-XBOX-XBOX-SERIE",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Xbox Series S",
+      "model": "Model 1883 512GB / 1TB",
+      "platform": "Xbox",
+      "baseBuyPrice": 3400,
+      "description": "Nueva generación en formato digital compacto hasta 120 FPS y arquitectura Xbox Velocity.",
+      "imageUrl": "https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 500,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 250,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-series-x",
+      "sku": "CON-XBOX-XBOX-SERIE",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Xbox Series X",
+      "model": "Model 1882 1TB 4K Gaming",
+      "platform": "Xbox",
+      "baseBuyPrice": 6200,
+      "description": "La cúspide de Microsoft con 12 Teraflops de potencia, lector de discos y 1TB SSD.",
+      "imageUrl": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 550,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 350,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-master-system",
+      "sku": "CON-SEGA-SEGA-MASTE",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Sega Master System",
+      "model": "Master System I / II",
+      "platform": "Sega",
+      "baseBuyPrice": 1500,
+      "description": "Consola retro de 8 bits de Sega con ranura de cartuchos y tarjetas Sega Card.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 200,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 600,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "light_phaser": 300
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-genesis",
+      "sku": "CON-SEGA-SEGA-GENES",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Sega Genesis",
+      "model": "Genesis Model 1 / Model 2 / Model 3",
+      "platform": "Sega",
+      "baseBuyPrice": 1200,
+      "description": "Consola de 16 bits de Sega con el procesador Motorola 68000 y sonido estéreo.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 450,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "extra_controller_6button": 150
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-cd",
+      "sku": "CON-SEGA-SEGA-CD",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Sega CD",
+      "model": "Sega CD Model 1 (Tray) / Model 2",
+      "platform": "Sega",
+      "baseBuyPrice": 2200,
+      "description": "Expansión de CD-ROM para Genesis con audio con calidad de CD y video full-motion.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 250,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 800,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-32x",
+      "sku": "CON-SEGA-SEGA-32X",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Sega 32X",
+      "model": "Super 32X (MK-84000)",
+      "platform": "Sega",
+      "baseBuyPrice": 1800,
+      "description": "Periférico en forma de hongo con dos procesadores Hitachi SH-2 de 32 bits.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 700,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "patch_cable": 200
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-saturn",
+      "sku": "CON-SEGA-SEGA-SATUR",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Sega Saturn",
+      "model": "MK-80000 (Model 1 / 2)",
+      "platform": "Sega",
+      "baseBuyPrice": 2400,
+      "description": "Potente consola 2D y 3D con procesadores duales SH-2 y lector CD-ROM.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 250,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 750,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "backup_memory_cartridge": 300
+      },
+      "editions": [
+        {
+          "id": "standard_black",
+          "name": "Negro Estándar Americano",
+          "priceDiff": 0
+        },
+        {
+          "id": "white_japanese",
+          "name": "Blanco Japonés Shiro",
+          "priceDiff": 500
+        }
+      ]
+    },
+    {
+      "id": "sega-dreamcast",
+      "sku": "CON-SEGA-SEGA-DREAM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Sega Dreamcast",
+      "model": "HKT-3020 (GD-ROM)",
+      "platform": "Sega",
+      "baseBuyPrice": 1900,
+      "description": "La pionera consola con módem para juego en línea de fábrica y memoria VMU con pantalla.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 200,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 600,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "vmu_memory_screen": 200,
+        "vga_box": 350
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-game-gear",
+      "sku": "CON-SEGA-SEGA-GAME-",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Sega Game Gear",
+      "model": "MK-2110 (Pantalla a Color Iluminada)",
+      "platform": "Sega",
+      "baseBuyPrice": 1200,
+      "description": "Portátil de 8 bits a color con pantalla retroiluminada de Sega.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 600,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "tv_tuner": 300,
+        "car_adapter": 100
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "atari-2600",
+      "sku": "CON-ATAR-ATARI-2600",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Atari",
+      "name": "Atari 2600",
+      "model": "VCS (Woodgrain 4/6 Switches o Black Vader)",
+      "platform": "Atari",
+      "baseBuyPrice": 1100,
+      "description": "El clásico atemporal de 1977 con acabado frontal de madera o modelo Vader.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 500,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "joystick_controller": 150,
+        "paddle_controllers": 200
+      },
+      "editions": [
+        {
+          "id": "heavy_sixer",
+          "name": "Heavy Sixer 1977 (Sunnyvale)",
+          "priceDiff": 900
+        },
+        {
+          "id": "four_switch",
+          "name": "4-Switch Woodgrain",
+          "priceDiff": 0
+        },
+        {
+          "id": "vader",
+          "name": "All-Black Vader",
+          "priceDiff": 100
+        }
+      ]
+    },
+    {
+      "id": "atari-7800",
+      "sku": "CON-ATAR-ATARI-7800",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Atari",
+      "name": "Atari 7800 ProSystem",
+      "model": "Retrocompatible con Atari 2600",
+      "platform": "Atari",
+      "baseBuyPrice": 1600,
+      "description": "Consola avanzada retrocompatible de fábrica con toda la biblioteca de Atari 2600.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 600,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "proline_controller": 200
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "atari-lynx",
+      "sku": "CON-ATAR-ATARI-LYNX",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Atari",
+      "name": "Atari Lynx",
+      "model": "Lynx I / Lynx II",
+      "platform": "Atari",
+      "baseBuyPrice": 1900,
+      "description": "La primera consola portátil del mundo con pantalla LCD a color y aceleración 3D por hardware.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 700,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "carrying_case": 200
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "neo-geo-aes",
+      "sku": "CON-VINT-NEO-GEO-AE",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Vintage",
+      "name": "Neo Geo AES",
+      "model": "Advanced Entertainment System",
+      "platform": "Vintage",
+      "baseBuyPrice": 9500,
+      "description": "La \"Rolls-Royce\" de las consolas de videojuegos. Hardware idéntico a las máquinas arcade MVS.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 2500,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "arcade_stick": 1200
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "3do-interactive",
+      "sku": "CON-VINT-3DO-INTERA",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Vintage",
+      "name": "3DO Interactive Multiplayer",
+      "model": "Panasonic FZ-1 / FZ-10",
+      "platform": "Vintage",
+      "baseBuyPrice": 2800,
+      "description": "Consola pionera de 32 bits de Panasonic y The 3DO Company.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 800,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "controller": 300
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "turbografx-16",
+      "sku": "CON-VINT-TURBOGRAFX",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Vintage",
+      "name": "TurboGrafx-16 / PC Engine",
+      "model": "NEC TurboGrafx-16 (HuCard)",
+      "platform": "Vintage",
+      "baseBuyPrice": 3200,
+      "description": "Elegante y codiciada consola con juegos en formato de tarjeta ultrafina HuCard.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "baseIncludes": [
+        "original_controller",
+        "power_supply",
+        "av_cable"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "original_power_supply": 120,
+        "av_cable": 80,
+        "hdmi_adapter": 150,
+        "memory_card": 100,
+        "original_box": 1000,
+        "original_manuals": 100,
+        "missing_controller": -150,
+        "missing_power_supply": -120,
+        "missing_av_cable": -60,
+        "turbopad": 350,
+        "turbo_booster": 500
+      },
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión Estándar / Color Original",
+          "priceDiff": 0
+        }
+      ]
     },
     {
       "id": "prod-game-zelda-totk",
       "sku": "GAM-NSW-ZELDA-TOTK",
       "category": "video_games",
-      "categoryName": "Video Games",
+      "categoryName": "Videojuegos",
       "brand": "Nintendo",
       "name": "The Legend of Zelda: Tears of the Kingdom",
       "model": "Nintendo Switch Cartridge",
       "platform": "Nintendo Switch",
       "baseBuyPrice": 750,
       "description": "Aventura épica en las tierras y los cielos de Hyrule.",
-      "imageUrl": "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80",
       "active": true,
       "conditionMultipliers": {
-        "sealed": 1.3,
-        "cib": 1,
-        "box_game": 0.9,
-        "game_only": 0.75,
-        "scratched": 0.5
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
       },
-      "accessoryAdjustments": {
-        "hasManual": 50,
-        "hasCase": 100
+      "accessoryPricing": {
+        "original_box": 100,
+        "original_manuals": 50
       }
     },
     {
-      "id": "prod-game-spiderman-2",
-      "sku": "GAM-PS5-SM2",
+      "id": "prod-game-pokemon-hgss",
+      "sku": "GAM-NDS-POKEMON-HG",
       "category": "video_games",
-      "categoryName": "Video Games",
-      "brand": "Sony Interactive",
-      "name": "Marvel's Spider-Man 2",
-      "model": "PS5 Blu-ray Disc",
-      "platform": "PS5",
-      "baseBuyPrice": 700,
-      "description": "Juega como Peter Parker y Miles Morales contra Venom.",
-      "imageUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "sealed": 1.25,
-        "cib": 1,
-        "box_game": 0.9,
-        "game_only": 0.7,
-        "scratched": 0.45
-      },
-      "accessoryAdjustments": {
-        "hasCase": 100
-      }
-    },
-    {
-      "id": "prod-game-smash-ultimate",
-      "sku": "GAM-NSW-SSBU",
-      "category": "video_games",
-      "categoryName": "Video Games",
+      "categoryName": "Videojuegos",
       "brand": "Nintendo",
-      "name": "Super Smash Bros. Ultimate",
-      "model": "Nintendo Switch Cartridge",
-      "platform": "Nintendo Switch",
-      "baseBuyPrice": 650,
-      "description": "El mayor crossover de lucha en Nintendo Switch.",
-      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+      "name": "Pokémon HeartGold / SoulSilver (CIB con Pokewalker)",
+      "model": "Nintendo DS",
+      "platform": "Nintendo DS",
+      "baseBuyPrice": 2200,
+      "imageUrl": "https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=600&q=80",
+      "description": "Una de las joyas más codiciadas de Pokémon en Nintendo DS.",
       "active": true,
       "conditionMultipliers": {
-        "sealed": 1.25,
-        "cib": 1,
-        "box_game": 0.9,
-        "game_only": 0.7,
-        "scratched": 0.4
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
       },
-      "accessoryAdjustments": {
-        "hasCase": 100
+      "accessoryPricing": {
+        "pokewalker": 600,
+        "big_outer_box": 500
       }
     },
     {
-      "id": "prod-game-gow-ragnarok",
-      "sku": "GAM-PS5-GOWR",
+      "id": "prod-game-silent-hill-2",
+      "sku": "GAM-PS2-SH2",
       "category": "video_games",
-      "categoryName": "Video Games",
-      "brand": "Sony Interactive",
-      "name": "God of War Ragnarök",
-      "model": "PS5 Blu-ray Disc",
-      "platform": "PS5",
-      "baseBuyPrice": 650,
-      "description": "Viaje nórdico épico con Kratos y Atreus.",
-      "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "sealed": 1.25,
-        "cib": 1,
-        "box_game": 0.9,
-        "game_only": 0.7,
-        "scratched": 0.45
-      },
-      "accessoryAdjustments": {
-        "hasCase": 100
-      }
-    },
-    {
-      "id": "prod-game-silent-hill-2-ps2",
-      "sku": "GAM-RET-SH2-PS2",
-      "category": "video_games",
-      "categoryName": "Video Games",
+      "categoryName": "Videojuegos",
       "brand": "Konami",
       "name": "Silent Hill 2 (Black Label)",
-      "model": "PlayStation 2 DVD-ROM",
-      "platform": "PS2 Retro",
-      "baseBuyPrice": 1600,
-      "description": "Obra maestra del survival horror retro. Muy cotizada por coleccionistas.",
-      "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+      "model": "PlayStation 2 DVD",
+      "platform": "PlayStation 2",
+      "baseBuyPrice": 1700,
+      "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+      "description": "Clásico del survival horror psicológico de Team Silent.",
       "active": true,
       "conditionMultipliers": {
-        "sealed": 2.2,
-        "cib": 1,
-        "box_game": 0.8,
-        "game_only": 0.55,
-        "scratched": 0.35
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
       },
-      "accessoryAdjustments": {
-        "hasManual": 250,
-        "hasCase": 200
-      }
-    },
-    {
-      "id": "prod-acc-dualsense",
-      "sku": "ACC-SONY-DS-WHT",
-      "category": "accessories",
-      "categoryName": "Controllers & Accessories",
-      "brand": "Sony",
-      "name": "Control Inalámbrico DualSense Blanco (PS5)",
-      "model": "CFI-ZCT1W",
-      "platform": "PS5",
-      "baseBuyPrice": 600,
-      "description": "Control oficial con respuesta háptica y gatillos adaptativos.",
-      "imageUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.65,
-        "damaged": 0.3,
-        "untested": 0.15
-      },
-      "accessoryAdjustments": {
-        "originalBox": 100,
-        "usbCable": 50
-      }
-    },
-    {
-      "id": "prod-acc-xbox-controller",
-      "sku": "ACC-MS-XBCON-BLK",
-      "category": "accessories",
-      "categoryName": "Controllers & Accessories",
-      "brand": "Microsoft",
-      "name": "Control Inalámbrico Xbox Robot White / Carbon Black",
-      "model": "Model 1914",
-      "platform": "Xbox Series / One",
-      "baseBuyPrice": 550,
-      "description": "Control oficial para Xbox Series X|S, Xbox One y PC Bluetooth.",
-      "imageUrl": "https://images.unsplash.com/photo-1526509867162-5b0c0d1b4b33?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.65,
-        "damaged": 0.3,
-        "untested": 0.15
-      },
-      "accessoryAdjustments": {
-        "originalBox": 80
-      }
-    },
-    {
-      "id": "prod-acc-switch-pro",
-      "sku": "ACC-NINT-SWPRO",
-      "category": "accessories",
-      "categoryName": "Controllers & Accessories",
-      "brand": "Nintendo",
-      "name": "Nintendo Switch Pro Controller",
-      "model": "HAC-013",
-      "platform": "Nintendo Switch",
-      "baseBuyPrice": 600,
-      "description": "Control tradicional ergonómico de alta precisión con vibración HD.",
-      "imageUrl": "https://images.unsplash.com/photo-1578303512597-8be9f1505e60?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "conditionMultipliers": {
-        "like_new": 1,
-        "good": 0.85,
-        "fair": 0.65,
-        "damaged": 0.3,
-        "untested": 0.15
-      },
-      "accessoryAdjustments": {
-        "originalBox": 90,
-        "chargingCable": 40
+      "accessoryPricing": {
+        "original_box": 250,
+        "original_manuals": 200
       }
     },
     {
       "id": "prod-tv-sony-trinitron-27",
       "sku": "CRT-SONY-KV27FV310",
       "category": "retro_tvs",
-      "categoryName": "Retro CRT TVs",
+      "categoryName": "TVs CRT",
       "brand": "Sony Trinitron",
       "name": "Sony Trinitron WEGA 27\" Flat CRT (KV-27FV310)",
-      "model": "KV-27FV310 / NTSC",
+      "model": "KV-27FV310 / NTSC Componentes",
       "platform": "Retro Display",
       "baseBuyPrice": 3500,
-      "description": "El \"Santo Grial\" de los televisores CRT de consumo para retrogaming en México. Equipado con circuito de alto voltaje separado y entrada por componentes.",
-      "imageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80",
+      "description": "El \"Santo Grial\" de los televisores CRT para retrogaming en México. Tubo plano FD Trinitron con subwoofer integrado.",
+      "imageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=600&q=80",
       "active": true,
       "isCRT": true,
       "dimensions": "76 x 58 x 52 cm",
       "weightKg": 46,
       "conditionMultipliers": {
-        "like_new": 1.25,
-        "good": 1,
-        "fair": 0.75,
-        "damaged": 0.3,
-        "untested": 0.2
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.3,
+        "for_parts_only": 0.15
       },
-      "accessoryAdjustments": {
-        "originalRemote": 350,
-        "componentInputVerified": 400,
-        "screenBurnFree": 300,
-        "scratchedGlass": -500
-      }
-    },
-    {
-      "id": "prod-tv-jvc-dseries",
-      "sku": "CRT-JVC-AV27D302",
-      "category": "retro_tvs",
-      "categoryName": "Retro CRT TVs",
-      "brand": "JVC",
-      "name": "JVC D-Series 27\" Curved CRT Television",
-      "model": "AV-27D302",
-      "platform": "Retro Display",
-      "baseBuyPrice": 2200,
-      "description": "Aclamado tubo curvo con excelentes líneas de escaneo (scanlines) y entradas de video por componentes YPbPr.",
-      "imageUrl": "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=800&q=80",
-      "active": true,
-      "isCRT": true,
-      "dimensions": "72 x 56 x 49 cm",
-      "weightKg": 38,
-      "conditionMultipliers": {
-        "like_new": 1.2,
-        "good": 1,
-        "fair": 0.7,
-        "damaged": 0.3,
-        "untested": 0.2
-      },
-      "accessoryAdjustments": {
-        "originalRemote": 250,
-        "screenBurnFree": 250
+      "accessoryPricing": {
+        "original_remote": 350,
+        "stand_furniture": 500,
+        "component_cable_test": 200
       }
     },
     {
       "id": "prod-tv-sony-pvm-14",
       "sku": "CRT-SONY-PVM14M4U",
       "category": "retro_tvs",
-      "categoryName": "Retro CRT TVs",
+      "categoryName": "TVs CRT",
       "brand": "Sony PVM",
-      "name": "Sony Trinitron PVM-14M4U 14\" RGB Broadcast Monitor (800 TVL)",
-      "model": "PVM-14M4U High Resolution HR Trinitron",
-      "platform": "Broadcast CRT",
-      "baseBuyPrice": 7500,
-      "description": "Monitor profesional de transmisión con entradas BNC RGB / Component y 800 líneas de resolución horizontal.",
-      "imageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80",
+      "name": "Sony PVM-14M4U 14\" RGB Broadcast Monitor (800 TVL)",
+      "model": "PVM-14M4U High Resolution RGB",
+      "platform": "Broadcast Monitor",
+      "baseBuyPrice": 7800,
+      "imageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=600&q=80",
       "active": true,
       "isCRT": true,
       "dimensions": "39 x 34 x 42 cm",
       "weightKg": 18,
       "conditionMultipliers": {
-        "like_new": 1.3,
-        "good": 1,
-        "fair": 0.75,
-        "damaged": 0.35,
-        "untested": 0.2
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
       },
-      "accessoryAdjustments": {
-        "bncTerminators": 200,
-        "screenBurnFree": 600
+      "accessoryPricing": {
+        "bnc_terminators": 250,
+        "rgb_scart_cable": 400
+      }
+    },
+    {
+      "id": "prod-tv-jvc-dseries",
+      "sku": "CRT-JVC-AV27D302",
+      "category": "retro_tvs",
+      "categoryName": "TVs CRT",
+      "brand": "JVC",
+      "name": "JVC D-Series 27\" Curved CRT Television",
+      "model": "AV-27D302 Component Video",
+      "platform": "Retro Display",
+      "baseBuyPrice": 2400,
+      "imageUrl": "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=600&q=80",
+      "active": true,
+      "isCRT": true,
+      "dimensions": "72 x 56 x 49 cm",
+      "weightKg": 38,
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.3,
+        "for_parts_only": 0.15
+      },
+      "accessoryPricing": {
+        "original_remote": 250
       }
     }
   ],
@@ -526,280 +3094,65 @@
         "phone": "+52 55 1234 5678",
         "whatsapp": "+52 55 1234 5678",
         "city": "Ciudad de México",
-        "state": "CDMX",
+        "state": "Ciudad de México (CDMX)",
         "postalCode": "03100",
         "shippingOrigin": "Benito Juárez, CDMX"
       },
       "items": [
         {
           "itemId": "item-1",
-          "productId": "prod-ps5-disc",
-          "productName": "PlayStation 5 (Standard Disc Edition)",
+          "productId": "n64-original",
+          "productName": "Nintendo 64",
+          "edition": "Funtastic Jungle Green",
           "category": "consoles",
-          "condition": "good",
-          "conditionLabel": "Buen Estado (Uso normal)",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente",
           "accessories": {
-            "extraController": true,
-            "originalBox": true,
-            "missingPowerCable": false,
-            "missingHdmi": false,
-            "missingController": false
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
           },
-          "calculatedEstimate": 6375,
-          "customerNotes": "La consola funciona al 100%, incluye caja original y un control negro adicional."
+          "calculatedEstimate": 1950,
+          "customerNotes": "N64 Jungle Green con expansion pak instalado y control extra."
         }
       ],
-      "totalEstimatedAmount": 6375,
+      "totalEstimatedAmount": 1950,
       "currency": "MXN",
       "status": "SUBMITTED",
       "statusLabel": "En Revisión Preliminar",
-      "customerNotes": "Disponible para envío de lunes a viernes.",
+      "customerNotes": "Disponible para entrega o recolección.",
       "photos": [
         {
-          "url": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80",
-          "label": "Consola y caja frontal"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80",
-          "label": "Etiqueta serial CFI-1215A"
+          "url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "label": "Consola y accesorios"
         }
       ],
       "termsAccepted": true,
-      "termsAcceptedAt": "2026-11-12T16:09:54.839Z",
+      "termsAcceptedAt": "2026-11-12T18:04:49.865Z",
       "termsVersion": "1.1-MEX-2026",
       "preliminaryOffer": {
-        "amount": 6375,
+        "amount": 1950,
         "preparedBy": "Sofia Reyes",
         "sentAt": null
       },
       "shippingApproval": {
-        "approved": false,
-        "approvedBy": null,
-        "approvedAt": null,
-        "carrier": null,
-        "trackingNumber": null,
-        "instructions": null
+        "approved": false
       },
       "inspection": null,
       "revisedOffer": null,
-      "createdAt": "2026-11-12T16:09:54.839Z",
-      "updatedAt": "2026-11-12T16:09:54.839Z",
+      "createdAt": "2026-11-12T18:04:49.866Z",
+      "updatedAt": "2026-11-12T18:04:49.866Z",
       "statusHistory": [
         {
           "status": "SUBMITTED",
           "changedBy": "Cliente (Roberto Garcia)",
-          "timestamp": "2026-11-12T16:09:54.839Z",
-          "notes": "Solicitud enviada a través del portal de venta."
+          "timestamp": "2026-11-12T18:04:49.866Z",
+          "notes": "Solicitud creada con cotización de Nintendo 64 Jungle Green."
         }
       ]
     },
     {
-      "id": "REQ-2026-8802",
-      "customer": {
-        "fullName": "Alejandra Morales V.",
-        "email": "alejandra.morales@example.com",
-        "phone": "+52 33 9876 5432",
-        "whatsapp": "+52 33 9876 5432",
-        "city": "Guadalajara",
-        "state": "Jalisco",
-        "postalCode": "44100",
-        "shippingOrigin": "Centro, Guadalajara, JAL"
-      },
-      "items": [
-        {
-          "itemId": "item-2",
-          "productId": "prod-switch-oled",
-          "productName": "Nintendo Switch Modelo OLED 64GB",
-          "category": "consoles",
-          "condition": "like_new",
-          "conditionLabel": "Como Nuevo (Sin marcas)",
-          "accessories": {
-            "extraJoyCons": false,
-            "originalBox": true,
-            "missingDock": false,
-            "missingCharger": false,
-            "missingJoyCons": false
-          },
-          "calculatedEstimate": 4450,
-          "customerNotes": "Prácticamente sin uso, con mica de cristal templado instalada."
-        }
-      ],
-      "totalEstimatedAmount": 4450,
-      "currency": "MXN",
-      "status": "SHIPPING_APPROVED",
-      "statusLabel": "Envío Aprobado (Guía Emitida)",
-      "customerNotes": "Tengo empaque protector listo.",
-      "photos": [
-        {
-          "url": "https://images.unsplash.com/photo-1578303512597-8be9f1505e60?auto=format&fit=crop&w=600&q=80",
-          "label": "Switch OLED con caja y dock"
-        }
-      ],
-      "termsAccepted": true,
-      "termsAcceptedAt": "2026-11-11T16:09:54.839Z",
-      "termsVersion": "1.1-MEX-2026",
-      "preliminaryOffer": {
-        "amount": 4450,
-        "preparedBy": "Sofia Reyes",
-        "sentAt": "2026-11-12T00:09:54.839Z",
-        "acceptedByCustomer": true,
-        "acceptedAt": "2026-11-12T04:09:54.839Z"
-      },
-      "shippingApproval": {
-        "approved": true,
-        "approvedBy": "Carlos Mendoza",
-        "approvedAt": "2026-11-12T10:09:54.840Z",
-        "carrier": "Estafeta México",
-        "trackingNumber": "EST-MX-9823419082",
-        "labelReference": "LION-LBL-2026-0882",
-        "instructions": "Empacar con al menos 3 capas de plástico de burbujas en caja rígida. Llevar a cualquier sucursal Estafeta autorizada."
-      },
-      "inspection": null,
-      "revisedOffer": null,
-      "createdAt": "2026-11-11T16:09:54.840Z",
-      "updatedAt": "2026-11-12T10:09:54.840Z",
-      "statusHistory": [
-        {
-          "status": "SUBMITTED",
-          "changedBy": "Cliente (Alejandra Morales)",
-          "timestamp": "2026-11-11T16:09:54.840Z",
-          "notes": "Solicitud creada con estimado preliminar $4,450 MXN"
-        },
-        {
-          "status": "PRELIMINARY_OFFER_SENT",
-          "changedBy": "Sofia Reyes (Purchasing)",
-          "timestamp": "2026-11-12T00:09:54.840Z",
-          "notes": "Oferta preliminar autorizada y enviada por correo."
-        },
-        {
-          "status": "OFFER_ACCEPTED",
-          "changedBy": "Cliente (Alejandra Morales)",
-          "timestamp": "2026-11-12T04:09:54.840Z",
-          "notes": "Cliente aceptó la oferta preliminar."
-        },
-        {
-          "status": "SHIPPING_APPROVED",
-          "changedBy": "Carlos Mendoza (Admin)",
-          "timestamp": "2026-11-12T10:09:54.840Z",
-          "notes": "Envío aprobado explícitamente. Guía Estafeta EST-MX-9823419082 generada."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2026-8803",
-      "customer": {
-        "fullName": "Eduardo Jimenez Rios",
-        "email": "eduardo.j@example.com",
-        "phone": "+52 81 2345 6789",
-        "whatsapp": "+52 81 2345 6789",
-        "city": "Monterrey",
-        "state": "Nuevo León",
-        "postalCode": "64000",
-        "shippingOrigin": "San Pedro Garza García, NL"
-      },
-      "items": [
-        {
-          "itemId": "item-3",
-          "productId": "prod-tv-sony-trinitron-27",
-          "productName": "Sony Trinitron WEGA 27\" Flat CRT (KV-27FV310)",
-          "category": "retro_tvs",
-          "condition": "good",
-          "conditionLabel": "Buen Estado Funcional",
-          "accessories": {
-            "originalRemote": false,
-            "componentInputVerified": true,
-            "screenBurnFree": true,
-            "scratchedGlass": false
-          },
-          "calculatedEstimate": 3900,
-          "customerNotes": "TV CRT muy pesado. Se entrega con cable de alimentación original."
-        }
-      ],
-      "totalEstimatedAmount": 3900,
-      "currency": "MXN",
-      "status": "REVISED_OFFER_SENT",
-      "statusLabel": "Oferta Revisada Pendiente de Decisión",
-      "customerNotes": "Verificar por favor con mucho cuidado.",
-      "photos": [
-        {
-          "url": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=600&q=80",
-          "label": "Tubo frontal encendido"
-        }
-      ],
-      "termsAccepted": true,
-      "termsAcceptedAt": "2026-11-09T16:09:54.840Z",
-      "termsVersion": "1.1-MEX-2026",
-      "preliminaryOffer": {
-        "amount": 3900,
-        "preparedBy": "Sofia Reyes",
-        "sentAt": "2026-11-10T08:09:54.840Z",
-        "acceptedByCustomer": true,
-        "acceptedAt": "2026-11-10T13:09:54.840Z"
-      },
-      "shippingApproval": {
-        "approved": true,
-        "approvedBy": "Carlos Mendoza",
-        "approvedAt": "2026-11-10T18:09:54.840Z",
-        "carrier": "Castores Transporte Especializado (Tarima)",
-        "trackingNumber": "CAST-PAL-441092",
-        "labelReference": "LION-CRT-SPEC-091",
-        "instructions": "Recolección en domicilio de planta baja con flejado en tarima de madera y esquineros."
-      },
-      "inspection": {
-        "inspectedBy": "Mateo Hernandez",
-        "inspectedAt": "2026-11-13T04:09:54.840Z",
-        "serialVerified": "KV-27FV310-901428",
-        "functionalityStatus": "fully_functional",
-        "physicalCondition": "fair",
-        "discrepancies": "Se detectó rasguño visible en la carcasa superior y pequeña descalibración de geometría en la esquina superior izquierda.",
-        "missingAccessories": [
-          "Control Remoto Original Ausente",
-          "Falta tapa posterior de conexiones frontales"
-        ],
-        "inspectionEvidenceUrls": [
-          "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=600&q=80"
-        ]
-      },
-      "revisedOffer": {
-        "originalAmount": 3900,
-        "revisedAmount": 3200,
-        "reason": "Ajuste de $700 MXN por detalle cosmético en carcasa plástica y falta del control remoto RM-Y181 original que requiere reemplazo.",
-        "issuedBy": "Sofia Reyes",
-        "issuedAt": "2026-11-13T06:09:54.840Z",
-        "customerDecision": null,
-        "customerDecisionAt": null
-      },
-      "createdAt": "2026-11-09T16:09:54.840Z",
-      "updatedAt": "2026-11-13T06:09:54.840Z",
-      "statusHistory": [
-        {
-          "status": "SUBMITTED",
-          "changedBy": "Cliente (Eduardo Jimenez)",
-          "timestamp": "2026-11-09T16:09:54.840Z",
-          "notes": "Solicitud creada para CRT de 27 pulgadas."
-        },
-        {
-          "status": "SHIPPING_APPROVED",
-          "changedBy": "Carlos Mendoza",
-          "timestamp": "2026-11-10T18:09:54.840Z",
-          "notes": "Aprobación especial de logística pesada (Castores)."
-        },
-        {
-          "status": "RECEIVED",
-          "changedBy": "Mateo Hernandez",
-          "timestamp": "2026-11-12T20:09:54.840Z",
-          "notes": "Recepción física en bodega central Azcapotzalco CDMX."
-        },
-        {
-          "status": "REVISED_OFFER_SENT",
-          "changedBy": "Mateo Hernandez & Sofia Reyes",
-          "timestamp": "2026-11-13T06:09:54.840Z",
-          "notes": "Inspección completada: Oferta revisada a $3,200 MXN emitida por detalles cosméticos."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2026-9048",
+      "id": "REQ-2026-7025",
       "customer": {
         "fullName": "Juan Pablo Montoya",
         "email": "juan.pablo@test.mx",
@@ -813,53 +3166,87 @@
       },
       "items": [
         {
-          "itemId": "item-1794586812380-1",
-          "productId": "prod-ps5-disc",
-          "sku": "CON-SONY-PS5-DISC",
-          "productName": "PlayStation 5 (Standard Disc Edition)",
+          "itemId": "item-1794595951379-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
           "category": "consoles",
-          "categoryName": "Gaming Consoles",
-          "platform": "PS5",
-          "brand": "Sony",
-          "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=800&q=80",
-          "condition": "good",
-          "conditionLabel": "Buen Estado (Uso normal)",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
           "accessories": {
-            "extraController": true
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
           },
-          "calculatedEstimate": 6075,
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
           "calculationBreakdown": {
-            "basePrice": 6500,
-            "conditionMultiplier": 0.85,
-            "accessoriesAdjustmentTotal": 550,
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
             "currency": "MXN"
           },
           "pricingRuleSnapshot": {
-            "appliedAt": "2026-11-13T16:20:12.380Z",
-            "basePrice": 6500,
-            "multiplier": 0.85,
-            "adjustments": {
-              "extraController": 550,
-              "originalBox": 300,
-              "missingPowerCable": -150,
-              "missingHdmi": -80,
-              "missingController": -600
+            "appliedAt": "2026-11-13T18:52:31.379Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
             }
           },
           "customerNotes": ""
         }
       ],
-      "totalEstimatedAmount": 6075,
+      "totalEstimatedAmount": 1550,
       "currency": "MXN",
       "status": "FINAL_ACCEPTED",
       "statusLabel": "Oferta Revisada Aceptada",
       "customerNotes": "",
       "photos": [],
       "termsAccepted": true,
-      "termsAcceptedAt": "2026-11-13T16:20:12.380Z",
+      "termsAcceptedAt": "2026-11-13T18:52:31.379Z",
       "termsVersion": "1.1-MEX-2026",
       "preliminaryOffer": {
-        "amount": 6075,
+        "amount": 1550,
         "preparedBy": null,
         "sentAt": null,
         "acceptedByCustomer": null,
@@ -869,18 +3256,18 @@
         "approved": true,
         "approvedBy": "Carlos Mendoza (Owner/Admin)",
         "approvedByRole": "admin",
-        "approvedAt": "2026-11-13T16:20:12.483Z",
+        "approvedAt": "2026-11-13T18:52:31.585Z",
         "carrier": "Estafeta México",
         "trackingNumber": "EST-TEST-12345678",
-        "labelReference": "LION-812483",
+        "labelReference": "LION-951585",
         "instructions": "Empacar con 3 capas de plástico burbuja",
         "isCRTVerified": false
       },
       "inspection": {
         "inspectedBy": "Carlos Mendoza (Owner/Admin)",
         "inspectedByRole": "admin",
-        "inspectedAt": "2026-11-13T16:20:12.507Z",
-        "serialVerified": "SN-PS5-TEST-999",
+        "inspectedAt": "2026-11-13T18:52:31.636Z",
+        "serialVerified": "SN-N64-TEST-999",
         "functionalityStatus": "fully_functional",
         "physicalCondition": "fair",
         "authenticityVerified": "authentic",
@@ -889,41 +3276,204 @@
         "inspectionEvidenceUrls": []
       },
       "revisedOffer": {
-        "originalAmount": 6075,
-        "revisedAmount": 5800,
-        "reason": "Ajuste de $575 MXN por desgaste cosmético visible en la cubierta blanca",
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
         "issuedBy": "Carlos Mendoza (Owner/Admin)",
-        "issuedAt": "2026-11-13T16:20:12.507Z",
+        "issuedAt": "2026-11-13T18:52:31.636Z",
         "customerDecision": "ACCEPTED",
-        "customerDecisionAt": "2026-11-13T16:20:12.529Z"
+        "customerDecisionAt": "2026-11-13T18:52:31.683Z"
       },
       "internalNotes": [],
-      "createdAt": "2026-11-13T16:20:12.380Z",
-      "updatedAt": "2026-11-13T16:20:12.529Z",
+      "createdAt": "2026-11-13T18:52:31.379Z",
+      "updatedAt": "2026-11-13T18:52:31.683Z",
       "statusHistory": [
         {
           "status": "SUBMITTED",
           "changedBy": "Cliente (Juan Pablo Montoya)",
-          "timestamp": "2026-11-13T16:20:12.380Z",
+          "timestamp": "2026-11-13T18:52:31.379Z",
           "notes": "Solicitud creada en línea con fotos y aceptación de términos."
         },
         {
           "status": "SHIPPING_APPROVED",
           "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
-          "timestamp": "2026-11-13T16:20:12.483Z",
+          "timestamp": "2026-11-13T18:52:31.585Z",
           "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
         },
         {
           "status": "REVISED_OFFER_SENT",
           "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
-          "timestamp": "2026-11-13T16:20:12.507Z",
-          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $5800 MXN. Motivo: Ajuste de $575 MXN por desgaste cosmético visible en la cubierta blanca"
+          "timestamp": "2026-11-13T18:52:31.636Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
         },
         {
           "status": "FINAL_ACCEPTED",
           "changedBy": "Cliente (Juan Pablo Montoya)",
-          "timestamp": "2026-11-13T16:20:12.529Z",
-          "notes": "Cliente aceptó explícitamente la oferta revisada de $5800 MXN."
+          "timestamp": "2026-11-13T18:52:31.683Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-7313",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794596252704-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
+          "calculationBreakdown": {
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-13T18:57:32.704Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1550,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-13T18:57:32.705Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1550,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-13T18:57:32.916Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-252916",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-13T18:57:32.974Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-13T18:57:32.974Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-13T18:57:33.026Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-13T18:57:32.705Z",
+      "updatedAt": "2026-11-13T18:57:33.026Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T18:57:32.705Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T18:57:32.916Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T18:57:32.974Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T18:57:33.026Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
         }
       ]
     }
@@ -934,59 +3484,110 @@
       "action": "SYSTEM_INIT",
       "performedBy": "System",
       "target": "Database",
-      "timestamp": "2026-11-13T16:09:54.840Z",
+      "timestamp": "2026-11-13T18:04:49.866Z",
       "details": "Base de datos inicializada con productos y usuarios de prueba"
     },
     {
-      "id": "audit-1794586812381",
+      "id": "audit-1794595951383",
       "action": "SELL_REQUEST_CREATED",
       "performedBy": "Juan Pablo Montoya",
-      "requestId": "REQ-2026-9048",
-      "timestamp": "2026-11-13T16:20:12.380Z",
-      "details": "Nueva solicitud creada con 1 artículos por $6075 MXN",
-      "createdAt": "2026-11-13T16:20:12.381Z",
-      "updatedAt": "2026-11-13T16:20:12.381Z"
+      "requestId": "REQ-2026-7025",
+      "timestamp": "2026-11-13T18:52:31.379Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-13T18:52:31.383Z",
+      "updatedAt": "2026-11-13T18:52:31.383Z"
     },
     {
-      "id": "audit-1794586812478",
+      "id": "audit-1794595951577",
       "action": "USER_LOGIN",
       "performedBy": "Carlos Mendoza (Owner/Admin)",
       "userId": "usr-admin-1",
       "role": "admin",
-      "timestamp": "2026-11-13T16:20:12.478Z",
+      "timestamp": "2026-11-13T18:52:31.577Z",
       "details": "Inicio de sesión exitoso como admin",
-      "createdAt": "2026-11-13T16:20:12.478Z",
-      "updatedAt": "2026-11-13T16:20:12.478Z"
+      "createdAt": "2026-11-13T18:52:31.577Z",
+      "updatedAt": "2026-11-13T18:52:31.577Z"
     },
     {
-      "id": "audit-1794586812503",
+      "id": "audit-1794595951617",
       "action": "SHIPPING_EXPLICITLY_APPROVED",
       "performedBy": "Carlos Mendoza (Owner/Admin)",
-      "requestId": "REQ-2026-9048",
-      "timestamp": "2026-11-13T16:20:12.483Z",
+      "requestId": "REQ-2026-7025",
+      "timestamp": "2026-11-13T18:52:31.585Z",
       "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
-      "createdAt": "2026-11-13T16:20:12.503Z",
-      "updatedAt": "2026-11-13T16:20:12.503Z"
+      "createdAt": "2026-11-13T18:52:31.617Z",
+      "updatedAt": "2026-11-13T18:52:31.617Z"
     },
     {
-      "id": "audit-1794586812516",
+      "id": "audit-1794595951662",
       "action": "INSPECTION_RECORDED",
       "performedBy": "Carlos Mendoza (Owner/Admin)",
-      "requestId": "REQ-2026-9048",
-      "timestamp": "2026-11-13T16:20:12.507Z",
+      "requestId": "REQ-2026-7025",
+      "timestamp": "2026-11-13T18:52:31.636Z",
       "details": "Inspección completada con dictamen: REVISED_OFFER",
-      "createdAt": "2026-11-13T16:20:12.516Z",
-      "updatedAt": "2026-11-13T16:20:12.516Z"
+      "createdAt": "2026-11-13T18:52:31.662Z",
+      "updatedAt": "2026-11-13T18:52:31.662Z"
     },
     {
-      "id": "audit-1794586812535",
+      "id": "audit-1794595951694",
       "action": "CUSTOMER_OFFER_ACCEPT",
       "performedBy": "Juan Pablo Montoya",
-      "requestId": "REQ-2026-9048",
-      "timestamp": "2026-11-13T16:20:12.529Z",
+      "requestId": "REQ-2026-7025",
+      "timestamp": "2026-11-13T18:52:31.683Z",
       "details": "Cliente decidió ACCEPT para la oferta (revised)",
-      "createdAt": "2026-11-13T16:20:12.535Z",
-      "updatedAt": "2026-11-13T16:20:12.535Z"
+      "createdAt": "2026-11-13T18:52:31.694Z",
+      "updatedAt": "2026-11-13T18:52:31.694Z"
+    },
+    {
+      "id": "audit-1794596252707",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-7313",
+      "timestamp": "2026-11-13T18:57:32.705Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-13T18:57:32.707Z",
+      "updatedAt": "2026-11-13T18:57:32.707Z"
+    },
+    {
+      "id": "audit-1794596252906",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-13T18:57:32.906Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-13T18:57:32.906Z",
+      "updatedAt": "2026-11-13T18:57:32.906Z"
+    },
+    {
+      "id": "audit-1794596252944",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-7313",
+      "timestamp": "2026-11-13T18:57:32.916Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-13T18:57:32.944Z",
+      "updatedAt": "2026-11-13T18:57:32.944Z"
+    },
+    {
+      "id": "audit-1794596253003",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-7313",
+      "timestamp": "2026-11-13T18:57:32.974Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-13T18:57:33.004Z",
+      "updatedAt": "2026-11-13T18:57:33.004Z"
+    },
+    {
+      "id": "audit-1794596253041",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-7313",
+      "timestamp": "2026-11-13T18:57:33.026Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-13T18:57:33.041Z",
+      "updatedAt": "2026-11-13T18:57:33.041Z"
     }
   ],
   "emailLogs": [
@@ -996,60 +3597,112 @@
       "subject": "Confirmación de solicitud de venta - REQ-2026-8801 | Lion Games & TVs",
       "type": "CUSTOMER_SUBMISSION_CONFIRMATION",
       "requestId": "REQ-2026-8801",
-      "sentAt": "2026-11-12T16:09:54.840Z",
+      "sentAt": "2026-11-12T18:04:49.866Z",
       "status": "SENT"
     },
     {
-      "id": "eml-1794586812402-592",
+      "id": "eml-1794595951438-434",
       "to": "adquisiciones@liongamestv.mx",
-      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-9048 - Juan Pablo Montoya ($6075 MXN)",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-7025 - Juan Pablo Montoya ($1550 MXN)",
       "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
-      "requestId": "REQ-2026-9048",
+      "requestId": "REQ-2026-7025",
       "customerName": "Juan Pablo Montoya",
-      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-9048</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>PlayStation 5 (Standard Disc Edition) - Buen Estado (Uso normal) (Est. $6,075.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $6,075.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
-      "sentAt": "2026-11-13T16:20:12.402Z",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-7025</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:52:31.438Z",
       "status": "SENT",
-      "createdAt": "2026-11-13T16:20:12.402Z",
-      "updatedAt": "2026-11-13T16:20:12.402Z"
+      "createdAt": "2026-11-13T18:52:31.438Z",
+      "updatedAt": "2026-11-13T18:52:31.438Z"
     },
     {
-      "id": "eml-1794586812404-948",
+      "id": "eml-1794595951440-471",
       "to": "juan.pablo@test.mx",
-      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-9048 | Lion Games & TVs",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-7025 | Lion Games & TVs",
       "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
-      "requestId": "REQ-2026-9048",
+      "requestId": "REQ-2026-7025",
       "customerName": "Juan Pablo Montoya",
-      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-9048</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$6,075.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">PlayStation 5 (Standard Disc Edition)</td>\n                <td style=\"padding: 8px;\">Buen Estado (Uso normal)</td>\n                <td style=\"padding: 8px; text-align: right;\">$6,075.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
-      "sentAt": "2026-11-13T16:20:12.404Z",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-7025</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:52:31.440Z",
       "status": "SENT",
-      "createdAt": "2026-11-13T16:20:12.404Z",
-      "updatedAt": "2026-11-13T16:20:12.404Z"
+      "createdAt": "2026-11-13T18:52:31.440Z",
+      "updatedAt": "2026-11-13T18:52:31.440Z"
     },
     {
-      "id": "eml-1794586812490-980",
+      "id": "eml-1794595951597-128",
       "to": "juan.pablo@test.mx",
-      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-9048 | Lion Games & TVs",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-7025 | Lion Games & TVs",
       "eventType": "SHIPPING_APPROVAL",
-      "requestId": "REQ-2026-9048",
+      "requestId": "REQ-2026-7025",
       "customerName": "Juan Pablo Montoya",
-      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-812483</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
-      "sentAt": "2026-11-13T16:20:12.490Z",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-951585</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:52:31.597Z",
       "status": "SENT",
-      "createdAt": "2026-11-13T16:20:12.490Z",
-      "updatedAt": "2026-11-13T16:20:12.490Z"
+      "createdAt": "2026-11-13T18:52:31.597Z",
+      "updatedAt": "2026-11-13T18:52:31.597Z"
     },
     {
-      "id": "eml-1794586812508-12",
+      "id": "eml-1794595951637-921",
       "to": "juan.pablo@test.mx",
-      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-9048 | Lion Games & TVs",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-7025 | Lion Games & TVs",
       "eventType": "REVISED_OFFER",
-      "requestId": "REQ-2026-9048",
+      "requestId": "REQ-2026-7025",
       "customerName": "Juan Pablo Montoya",
-      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-9048</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$6,075.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $5,800.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $575 MXN por desgaste cosmético visible en la cubierta blanca</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
-      "sentAt": "2026-11-13T16:20:12.508Z",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-7025</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:52:31.637Z",
       "status": "SENT",
-      "createdAt": "2026-11-13T16:20:12.508Z",
-      "updatedAt": "2026-11-13T16:20:12.508Z"
+      "createdAt": "2026-11-13T18:52:31.637Z",
+      "updatedAt": "2026-11-13T18:52:31.637Z"
+    },
+    {
+      "id": "eml-1794596252758-471",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-7313 - Juan Pablo Montoya ($1550 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-7313",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-7313</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:57:32.758Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:57:32.758Z",
+      "updatedAt": "2026-11-13T18:57:32.758Z"
+    },
+    {
+      "id": "eml-1794596252762-891",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-7313 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-7313",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-7313</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:57:32.762Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:57:32.762Z",
+      "updatedAt": "2026-11-13T18:57:32.762Z"
+    },
+    {
+      "id": "eml-1794596252927-147",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-7313 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-7313",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-252916</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:57:32.927Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:57:32.928Z",
+      "updatedAt": "2026-11-13T18:57:32.928Z"
+    },
+    {
+      "id": "eml-1794596252975-147",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-7313 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-7313",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-7313</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:57:32.975Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:57:32.975Z",
+      "updatedAt": "2026-11-13T18:57:32.975Z"
     }
   ]
 }

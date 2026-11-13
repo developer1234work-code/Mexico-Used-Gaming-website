@@ -525,7 +525,7 @@ export default function CataloguePage({ initialCategory = 'all', onOpenCustomQuo
                   </div>
                 </div>
                 <div className="text-right text-[11px] text-slate-400 max-w-[180px]">
-                  Validado por el servidor bajo reglas oficiales de Lion Games & TVs.
+                  Validado por el servidor bajo reglas oficiales de RetroCompra.
                 </div>
               </div>
 

@@ -52,7 +52,7 @@ export default function AdminLoginPage({ onLoginSuccess }) {
             <Lock className="w-7 h-7 text-slate-950" />
           </div>
           <h1 className="text-2xl font-black tracking-wider text-white">
-            LION GAMES & TVs
+            RETROCOMPRA
           </h1>
           <p className="text-xs text-amber-400 font-bold uppercase tracking-widest">
             PANEL DE ADMINISTRACIÓN Y OPERACIONES
@@ -81,7 +81,7 @@ export default function AdminLoginPage({ onLoginSuccess }) {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="usuario@liongamestv.mx"
+                placeholder="usuario@retrocompra.com"
                 className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-amber-400"
               />
             </div>
@@ -123,7 +123,7 @@ export default function AdminLoginPage({ onLoginSuccess }) {
           <div className="grid grid-cols-2 gap-2 text-xs">
             <button
               type="button"
-              onClick={() => handleQuickLogin('admin@liongamestv.mx', 'Admin123!')}
+              onClick={() => handleQuickLogin('admin@retrocompra.com', 'Admin123!')}
               className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-colors"
             >
               <div className="font-bold text-amber-400">Admin / Dueño</div>
@@ -132,7 +132,7 @@ export default function AdminLoginPage({ onLoginSuccess }) {
 
             <button
               type="button"
-              onClick={() => handleQuickLogin('purchasing@liongamestv.mx', 'Purchasing123!')}
+              onClick={() => handleQuickLogin('purchasing@retrocompra.com', 'Purchasing123!')}
               className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-colors"
             >
               <div className="font-bold text-blue-400">Compras</div>
@@ -141,7 +141,7 @@ export default function AdminLoginPage({ onLoginSuccess }) {
 
             <button
               type="button"
-              onClick={() => handleQuickLogin('inspection@liongamestv.mx', 'Inspection123!')}
+              onClick={() => handleQuickLogin('inspection@retrocompra.com', 'Inspection123!')}
               className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-colors"
             >
               <div className="font-bold text-emerald-400">Inspección</div>
@@ -150,7 +150,7 @@ export default function AdminLoginPage({ onLoginSuccess }) {
 
             <button
               type="button"
-              onClick={() => handleQuickLogin('support@liongamestv.mx', 'Support123!')}
+              onClick={() => handleQuickLogin('support@retrocompra.com', 'Support123!')}
               className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-left transition-colors"
             >
               <div className="font-bold text-purple-400">Soporte</div>

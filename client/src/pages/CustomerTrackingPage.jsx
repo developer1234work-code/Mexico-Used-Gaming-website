@@ -362,7 +362,7 @@ export default function CustomerTrackingPage({ initialRequestId = '', initialEma
                 </div>
 
                 <div className="p-3.5 bg-white rounded-xl border border-sky-100 text-xs text-slate-600 space-y-1">
-                  <strong className="text-slate-900">Dirección de Destino (Bodega Central Lion Games & TVs):</strong>
+                  <strong className="text-slate-900">Dirección de Destino (Bodega Central RetroCompra):</strong>
                   <p>Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.</p>
                 </div>
               </div>

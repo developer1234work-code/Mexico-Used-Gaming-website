@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 export default function WhatsAppFloat() {
   const whatsappNumber = '525587654321';
   const defaultText = encodeURIComponent(
-    'Hola equipo de Lion Games & TVs México, deseo vender mis videojuegos / consolas / CRT retro y tengo una pregunta.'
+    'Hola equipo de RetroCompra México, deseo vender mis videojuegos / consolas / CRT retro y tengo una pregunta.'
   );
 
   return (

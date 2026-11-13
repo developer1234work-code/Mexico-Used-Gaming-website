@@ -85,15 +85,23 @@ export default function AdminDashboardPage({ onLogout }) {
   const [newProductForm, setNewProductForm] = useState({
     name: '',
     category: 'consoles',
-    categoryName: 'Gaming Consoles',
-    brand: '',
+    categoryName: 'Consolas',
+    brand: 'Nintendo',
     model: '',
     platform: '',
     sku: '',
     baseBuyPrice: '',
     description: '',
+    imageUrl: '',
     isCRT: false,
-    weightKg: ''
+    weightKg: '',
+    accessoryPricing: {
+      extra_controller: 150,
+      original_box: 200,
+      original_manuals: 100,
+      expansion_pak: 300,
+      memory_card: 100
+    }
   });
 
   useEffect(() => {
@@ -278,7 +286,7 @@ export default function AdminDashboardPage({ onLogout }) {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="font-black text-base tracking-wider text-white">LION GAMES & TVs</h1>
+              <h1 className="font-black text-base tracking-wider text-white">RETROCOMPRA</h1>
               <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/40">
                 Staff Ops
               </span>
@@ -1231,21 +1239,24 @@ export default function AdminDashboardPage({ onLogout }) {
         </div>
       )}
 
-      {/* Modal: New Product */}
+      {/* Modal: New Product / Console */}
       {showNewProductModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-[#111827] rounded-3xl max-w-md w-full p-6 border border-slate-700 space-y-4 max-h-[85vh] overflow-y-auto">
-            <h3 className="font-bold text-base text-white">Nuevo Producto en Catálogo</h3>
+          <div className="bg-[#111827] rounded-3xl max-w-lg w-full p-6 sm:p-7 border border-slate-700 space-y-4 max-h-[88vh] overflow-y-auto shadow-2xl">
+            <h3 className="font-bold text-base text-white">Nuevo Producto o Consola en Catálogo</h3>
+            <p className="text-xs text-slate-400">
+              Registra una nueva consola o producto. Aparecerá inmediatamente en el catálogo y calculador en vivo.
+            </p>
             <form onSubmit={handleCreateProduct} className="space-y-3">
               <div>
-                <label className="text-xs text-slate-400 block mb-1">Nombre: *</label>
+                <label className="text-xs text-slate-400 block mb-1">Nombre del Sistema o Producto: *</label>
                 <input
                   type="text"
                   required
                   value={newProductForm.name}
                   onChange={(e) => setNewProductForm({ ...newProductForm, name: e.target.value })}
-                  placeholder="Ej. Nintendo Switch Lite"
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white"
+                  placeholder="Ej. Nintendo 64 / PlayStation 5 Pro"
+                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400"
                 />
               </div>
 
@@ -1255,7 +1266,7 @@ export default function AdminDashboardPage({ onLogout }) {
                   <select
                     value={newProductForm.category}
                     onChange={(e) => setNewProductForm({ ...newProductForm, category: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white"
+                    className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400"
                   >
                     <option value="consoles">Consolas</option>
                     <option value="video_games">Videojuegos</option>
@@ -1271,26 +1282,121 @@ export default function AdminDashboardPage({ onLogout }) {
                     required
                     value={newProductForm.baseBuyPrice}
                     onChange={(e) => setNewProductForm({ ...newProductForm, baseBuyPrice: e.target.value })}
-                    placeholder="Ej. 2500"
-                    className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white"
+                    placeholder="Ej. 900"
+                    className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <label className="text-xs text-slate-400 block mb-1">Marca:</label>
+                  <select
+                    value={newProductForm.brand}
+                    onChange={(e) => setNewProductForm({ ...newProductForm, brand: e.target.value })}
+                    className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400"
+                  >
+                    <option value="Nintendo">Nintendo</option>
+                    <option value="PlayStation">Sony PlayStation</option>
+                    <option value="Xbox">Microsoft Xbox</option>
+                    <option value="Sega">Sega</option>
+                    <option value="Atari">Atari</option>
+                    <option value="Vintage">Vintage / Retro</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="text-xs text-slate-400 block mb-1">Modelo / Versión:</label>
+                  <input
+                    type="text"
+                    value={newProductForm.model}
+                    onChange={(e) => setNewProductForm({ ...newProductForm, model: e.target.value })}
+                    placeholder="Ej. NUS-001 / Fat / Slim"
+                    className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="text-xs text-slate-400 block mb-1">Marca / Plataforma:</label>
+                <label className="text-xs text-slate-400 block mb-1">URL de la Imagen:</label>
                 <input
-                  type="text"
-                  value={newProductForm.brand}
-                  onChange={(e) => setNewProductForm({ ...newProductForm, brand: e.target.value })}
-                  placeholder="Ej. Nintendo / Switch"
-                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white"
+                  type="url"
+                  value={newProductForm.imageUrl}
+                  onChange={(e) => setNewProductForm({ ...newProductForm, imageUrl: e.target.value })}
+                  placeholder="https://images.unsplash.com/..."
+                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400"
                 />
               </div>
 
-              <div className="flex justify-end gap-2 pt-2">
-                <button type="button" onClick={() => setShowNewProductModal(false)} className="px-3 py-1.5 text-xs text-slate-400">Cancelar</button>
-                <button type="submit" className="px-4 py-1.5 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs">Guardar Producto</button>
+              <div>
+                <label className="text-xs text-slate-400 block mb-1">Descripción:</label>
+                <textarea
+                  rows="2"
+                  value={newProductForm.description}
+                  onChange={(e) => setNewProductForm({ ...newProductForm, description: e.target.value })}
+                  placeholder="Descripción de la consola o producto..."
+                  className="w-full px-3 py-2 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-amber-400"
+                />
+              </div>
+
+              {/* Controllable Accessories Pricing */}
+              <div className="pt-2 border-t border-slate-800 space-y-2">
+                <span className="text-xs font-bold text-amber-400 block">Precios de Recompra para Accesorios (MXN):</span>
+                <div className="grid grid-cols-2 gap-2 text-xs">
+                  <div>
+                    <label className="text-[10px] text-slate-400 block">Control adicional (+MXN):</label>
+                    <input
+                      type="number"
+                      value={newProductForm.accessoryPricing?.extra_controller || 150}
+                      onChange={(e) => setNewProductForm({
+                        ...newProductForm,
+                        accessoryPricing: { ...newProductForm.accessoryPricing, extra_controller: Number(e.target.value) }
+                      })}
+                      className="w-full px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-white"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[10px] text-slate-400 block">Caja original (+MXN):</label>
+                    <input
+                      type="number"
+                      value={newProductForm.accessoryPricing?.original_box || 200}
+                      onChange={(e) => setNewProductForm({
+                        ...newProductForm,
+                        accessoryPricing: { ...newProductForm.accessoryPricing, original_box: Number(e.target.value) }
+                      })}
+                      className="w-full px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-white"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[10px] text-slate-400 block">Manuales (+MXN):</label>
+                    <input
+                      type="number"
+                      value={newProductForm.accessoryPricing?.original_manuals || 100}
+                      onChange={(e) => setNewProductForm({
+                        ...newProductForm,
+                        accessoryPricing: { ...newProductForm.accessoryPricing, original_manuals: Number(e.target.value) }
+                      })}
+                      className="w-full px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-white"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[10px] text-slate-400 block">Expansion Pak/Memory (+MXN):</label>
+                    <input
+                      type="number"
+                      value={newProductForm.accessoryPricing?.expansion_pak || 300}
+                      onChange={(e) => setNewProductForm({
+                        ...newProductForm,
+                        accessoryPricing: { ...newProductForm.accessoryPricing, expansion_pak: Number(e.target.value) }
+                      })}
+                      className="w-full px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-white"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex justify-end gap-2 pt-3 border-t border-slate-800">
+                <button type="button" onClick={() => setShowNewProductModal(false)} className="px-4 py-2 text-xs text-slate-400 hover:text-white transition-colors">Cancelar</button>
+                <button type="submit" className="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-md transition-all">Guardar Consola / Producto</button>
               </div>
             </form>
           </div>

@@ -67,7 +67,7 @@ app.use((err, req, res, next) => {
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`=======================================================`);
-    console.log(`🦁 Lion Games & TVs Full-Stack Server Running on Port ${PORT}`);
+    console.log(`🎮 RetroCompra Full-Stack Server Running on Port ${PORT}`);
     console.log(`🇲🇽 Target Market: Mexico | Currency: MXN`);
     console.log(`💻 Web Application: http://localhost:${PORT}`);
     console.log(`⚡ API Endpoints: http://localhost:${PORT}/api`);

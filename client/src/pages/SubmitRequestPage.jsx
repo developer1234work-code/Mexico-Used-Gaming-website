@@ -405,7 +405,7 @@ export default function SubmitRequestPage({ onSubmissionSuccess, onBackToCart })
             <div className="p-4 rounded-2xl bg-amber-50 border border-amber-300/80 text-amber-950 text-xs leading-relaxed space-y-2">
               <div className="flex items-center gap-2 font-bold text-amber-800">
                 <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
-                <span>Lineamientos Críticos de Recompra Lion Games & TVs:</span>
+                <span>Lineamientos Críticos de Recompra RetroCompra:</span>
               </div>
               <ul className="list-disc list-inside space-y-1 text-slate-700 pl-1">
                 <li>Los precios mostrados son estimaciones preliminares sujetas a revisión técnica física.</li>
@@ -461,7 +461,7 @@ export default function SubmitRequestPage({ onSubmissionSuccess, onBackToCart })
               Términos y Condiciones de Servicio (Versión 1.1 México)
             </h3>
             <div className="text-xs text-slate-600 space-y-2 leading-relaxed">
-              <p><strong>1. Naturaleza del Servicio:</strong> Lion Games & TVs opera un modelo de compraventa inversa (Customer-to-Business) en México, adquiriendo videojuegos, consolas y equipo retro pre-poseído para su restauración y coleccionismo.</p>
+              <p><strong>1. Naturaleza del Servicio:</strong> RetroCompra opera un modelo de compraventa inversa (Customer-to-Business) en México, adquiriendo videojuegos, consolas y equipo retro pre-poseído para su restauración y coleccionismo.</p>
               <p><strong>2. Carácter No Vinculante del Estimado:</strong> El monto calculado en la plataforma web constituye únicamente una cotización preliminar informativa y no representa una oferta vinculante de compra.</p>
               <p><strong>3. Prohibición de Envío No Autorizado:</strong> Ningún usuario deberá enviar productos sin contar con la aprobación expresa y la guía de paquetería proporcionada por nuestro personal autorizado.</p>
               <p><strong>4. Inspección Física:</strong> A la recepción física de las mercancías, nuestro equipo técnico realiza pruebas de funcionalidad, autenticidad y número de serie.</p>

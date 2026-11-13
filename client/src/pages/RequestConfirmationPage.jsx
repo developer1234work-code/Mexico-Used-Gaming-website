@@ -24,7 +24,7 @@ export default function RequestConfirmationPage({ request, onTrackRequest, onGoH
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hola equipo de Lion Games & TVs México, acabo de enviar mi solicitud de venta con folio ${request.id} por un total estimado de ${formatMXN(request.totalEstimatedAmount)} MXN.`
+    `Hola equipo de RetroCompra México, acabo de enviar mi solicitud de venta con folio ${request.id} por un total estimado de ${formatMXN(request.totalEstimatedAmount)} MXN.`
   );
 
   return (
