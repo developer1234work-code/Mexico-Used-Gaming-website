@@ -379,8 +379,8 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
             <button
               onClick={() => { setView('home'); setCatDropdownOpen(false); }}
               className={`px-4 py-2 rounded-full font-bold text-xs sm:text-sm flex items-center gap-1.5 transition-all duration-200 ${isHomeActive
-                  ? 'border border-[#F5A623] bg-neutral-900/90 text-white shadow-[0_0_15px_rgba(245,166,35,0.3)] scale-[1.02]'
-                  : 'text-neutral-300 hover:text-white hover:bg-neutral-900/60'
+                ? 'border border-[#F5A623] bg-neutral-900/90 text-white shadow-[0_0_15px_rgba(245,166,35,0.3)] scale-[1.02]'
+                : 'text-neutral-300 hover:text-white hover:bg-neutral-900/60'
                 }`}
             >
               <Home className="w-4 h-4 text-[#F5A623]" />
@@ -391,8 +391,8 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
             <button
               onClick={() => setCatDropdownOpen(!catDropdownOpen)}
               className={`px-4 py-2 rounded-full font-extrabold text-xs sm:text-sm flex items-center gap-1.5 transition-all duration-200 ${catDropdownOpen
-                  ? 'border-2 border-[#F5A623] bg-neutral-900 text-[#F5A623] shadow-[0_0_22px_rgba(245,166,35,0.45)] scale-[1.02]'
-                  : 'border border-[#F5A623]/80 bg-neutral-900/80 text-neutral-200 hover:text-[#F5A623] hover:border-[#F5A623] shadow-[0_0_10px_rgba(245,166,35,0.2)]'
+                ? 'border-2 border-[#F5A623] bg-neutral-900 text-[#F5A623] shadow-[0_0_22px_rgba(245,166,35,0.45)] scale-[1.02]'
+                : 'border border-[#F5A623]/80 bg-neutral-900/80 text-neutral-200 hover:text-[#F5A623] hover:border-[#F5A623] shadow-[0_0_10px_rgba(245,166,35,0.2)]'
                 }`}
             >
               <span>Categorías</span>
