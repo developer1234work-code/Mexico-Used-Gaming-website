@@ -58,19 +58,18 @@ async function runTests() {
     const prods = await request('GET', '/api/products?category=consoles');
     console.log('2. Catalogue browse (Consoles):', prods.status === 200 && prods.data.products.length > 0 ? `PASS ✓ (${prods.data.products.length} found)` : 'FAIL ✗');
 
-    // 3. User's exact Nintendo 64 Pricing Formula Test
-    // N64 Base $900 + Extra original controller $150 + Expansion Pak $300 + Original box $200 = $1,550 MXN
+    // 3. User's exact Official Excel Nintendo 64 Pricing Formula Test
+    // N64 Base $500 + Extra original controller $150 + Expansion Pak $400 = $1,050 MXN
     const n64Estimate = await request('POST', '/api/calculator/estimate', {
       productId: 'n64-original',
-      condition: 'works_perfect',
+      condition: 'working_good',
       accessories: {
         extra_controller: true,
-        expansion_pak: true,
-        original_box: true
+        expansion_pak: true
       }
     });
     const n64Total = n64Estimate.data?.estimate?.calculatedEstimate;
-    console.log(`3. User's Exact N64 Formula Validation:`, n64Total === 1550 ? `PASS ✓ (Exact $1,550 MXN)` : `FAIL ✗ (Received $${n64Total})`);
+    console.log(`3. Official Excel N64 Formula Validation:`, n64Total === 1050 ? `PASS ✓ (Exact $1,050 MXN)` : `FAIL ✗ (Received $${n64Total})`);
 
     // 4. Create Sell Request (AC-05)
     const sellReq = await request('POST', '/api/requests', {
@@ -85,11 +84,10 @@ async function runTests() {
       items: [
         {
           productId: 'n64-original',
-          condition: 'works_perfect',
+          condition: 'working_good',
           accessories: {
             extra_controller: true,
-            expansion_pak: true,
-            original_box: true
+            expansion_pak: true
           }
         }
       ],

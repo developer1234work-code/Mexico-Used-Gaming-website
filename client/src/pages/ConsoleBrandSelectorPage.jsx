@@ -13,11 +13,11 @@ import { api } from '../services/api';
 import { formatMXN } from '../utils/formatters';
 
 const BRANDS = [
-  { id: 'all', name: 'Todas las Marcas Retro', count: 'Catálogo Retro' },
-  { id: 'Nintendo', name: 'Nintendo', count: '21 Sistemas', color: 'text-red-500' },
+  { id: 'all', name: 'Todas las Marcas Retro', count: 'Catálogo Oficial' },
+  { id: 'Nintendo', name: 'Nintendo', count: '31 Modelos', color: 'text-red-500' },
   { id: 'PlayStation', name: 'Sony PlayStation Retro', count: 'PS1 & PS2', color: 'text-blue-500' },
   { id: 'Xbox', name: 'Xbox Clásico (Original)', count: 'Xbox 2001', color: 'text-emerald-500' },
-  { id: 'Sega', name: 'Sega', count: '7 Sistemas', color: 'text-sky-500' }
+  { id: 'Sega', name: 'Sega Retro', count: '6 Modelos', color: 'text-sky-500' }
 ];
 
 export default function ConsoleBrandSelectorPage({ 

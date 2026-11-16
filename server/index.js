@@ -22,6 +22,9 @@ app.use(express.urlencoded({ extended: true, limit: '25mb' }));
 
 // Static uploads directory for item inspection and customer photos
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+// Static assets directory for consoles and CRT TV photos
+app.use('/assets', express.static(path.join(__dirname, '..', 'client', 'public', 'assets')));
+app.use('/assets', express.static(path.join(__dirname, '..', 'client', 'src', 'assets')));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

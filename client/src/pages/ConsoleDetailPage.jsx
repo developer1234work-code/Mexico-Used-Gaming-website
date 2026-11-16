@@ -25,20 +25,26 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
     consoleItem.editions && consoleItem.editions.length > 0 ? consoleItem.editions[0].id : 'standard'
   );
 
-  // 5 Explicit Condition Options requested by user
-  const [condition, setCondition] = useState('works_perfect');
+  // Dynamic conditions from product data (with fallback to standard 5)
+  const hasCustomConditions = Array.isArray(consoleItem.conditions) && consoleItem.conditions.length > 0;
+  const [condition, setCondition] = useState(
+    hasCustomConditions ? consoleItem.conditions[0].id : 'works_perfect'
+  );
 
-  // Track accessories toggled
-  const [accessories, setAccessories] = useState({
-    extra_controller: false,
-    expansion_pak: false,
-    original_box: false,
-    original_manuals: false,
-    memory_card: false,
-    hdmi_adapter: false,
-    original_power_supply: true,
-    av_cable: true,
-    original_controller: true
+  // Dynamic accessories from product data
+  const hasCustomAccessories = Array.isArray(consoleItem.accessoriesList) && consoleItem.accessoriesList.length > 0;
+  const [accessories, setAccessories] = useState(() => {
+    const initial = {};
+    if (hasCustomAccessories) {
+      consoleItem.accessoriesList.forEach(a => {
+        initial[a.key] = false;
+      });
+    } else {
+      initial.extra_controller = false;
+      initial.expansion_pak = false;
+      initial.original_box = false;
+    }
+    return initial;
   });
 
   const [customerNotes, setCustomerNotes] = useState('');
@@ -46,6 +52,22 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
   const [isCalculating, setIsCalculating] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
   const [addedSuccess, setAddedSuccess] = useState(false);
+
+  // When consoleItem changes, reset condition & accessories
+  useEffect(() => {
+    if (hasCustomConditions) {
+      setCondition(consoleItem.conditions[0].id);
+    } else {
+      setCondition('works_perfect');
+    }
+    if (hasCustomAccessories) {
+      const initial = {};
+      consoleItem.accessoriesList.forEach(a => {
+        initial[a.key] = false;
+      });
+      setAccessories(initial);
+    }
+  }, [consoleItem.id]);
 
   // Recalculate server-side estimate whenever condition, edition or accessories change
   useEffect(() => {
@@ -234,68 +256,106 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
               </div>
             )}
 
-            {/* Step 2: 5 Explicit Condition Options (100% Spanish) */}
+            {/* Step 2: Condition Options (Dynamic from official Excel or standard 5) */}
             <div className="bg-white rounded-3xl p-6 sm:p-7 border border-neutral-200/90 shadow-sm space-y-3">
               <label className="text-xs font-black uppercase tracking-wider text-neutral-900 block">
-                2. Selecciona la Condición de la Consola:
+                2. Selecciona la Condición de {consoleItem.isCRT ? 'la Televisión' : 'la Consola'}:
               </label>
 
               <div className="space-y-2">
-                {[
-                  {
-                    key: 'works_perfect',
-                    title: 'Funciona perfectamente',
-                    sub: '100% operativa, sin fallas de software, lector ni puertos.',
-                    rate: '100% del valor base'
-                  },
-                  {
-                    key: 'works_cosmetic_damage',
-                    title: 'Funciona pero tiene daño estético',
-                    sub: 'Rayones visibles, desgaste normal o ligeras manchas en la carcasa.',
-                    rate: '85% del valor base'
-                  },
-                  {
-                    key: 'has_functional_problems',
-                    title: 'Tiene problemas funcionales',
-                    sub: 'Lector láser con problemas, botones flojos o sobrecalentamiento.',
-                    rate: '60% del valor base'
-                  },
-                  {
-                    key: 'does_not_work',
-                    title: 'No funciona',
-                    sub: 'No enciende, luz azul/roja o requiere reparación profunda.',
-                    rate: '35% del valor base'
-                  },
-                  {
-                    key: 'for_parts_only',
-                    title: 'Para piezas únicamente',
-                    sub: 'Incompleta, rota o para reciclaje de componentes.',
-                    rate: '20% del valor base'
-                  }
-                ].map((cond) => {
-                  const isSelected = condition === cond.key;
-                  return (
-                    <div
-                      key={cond.key}
-                      onClick={() => setCondition(cond.key)}
-                      className={`p-3.5 rounded-2xl border cursor-pointer transition-all flex items-center justify-between ${
-                        isSelected
-                          ? 'border-[#F5A623] bg-amber-50/70 font-bold ring-2 ring-[#F5A623]/30'
-                          : 'border-neutral-200 hover:border-neutral-300 bg-white'
-                      }`}
-                    >
-                      <div className="space-y-0.5">
-                        <div className="text-xs font-bold text-neutral-900">{cond.title}</div>
-                        <div className="text-[11px] text-neutral-500">{cond.sub}</div>
+                {hasCustomConditions ? (
+                  consoleItem.conditions.map((cond) => {
+                    const isSelected = condition === cond.id;
+                    const isApproved = cond.status === 'Approved' && cond.buyPrice !== null;
+                    return (
+                      <div
+                        key={cond.id}
+                        onClick={() => setCondition(cond.id)}
+                        className={`p-3.5 rounded-2xl border cursor-pointer transition-all flex items-center justify-between ${
+                          isSelected
+                            ? 'border-[#F5A623] bg-amber-50/70 font-bold ring-2 ring-[#F5A623]/30'
+                            : 'border-neutral-200 hover:border-neutral-300 bg-white'
+                        }`}
+                      >
+                        <div className="space-y-0.5 max-w-[70%]">
+                          <div className="text-xs font-bold text-neutral-900">{cond.label || cond.name}</div>
+                          <div className="text-[11px] text-neutral-500 truncate">
+                            {cond.notes ? cond.notes : isApproved ? 'Inspección técnica estándar' : 'Evaluación especializada requerida'}
+                          </div>
+                        </div>
+                        <div>
+                          {isApproved ? (
+                            <span className={`text-[11px] font-bold px-2 py-0.5 rounded font-mono ${
+                              isSelected ? 'bg-[#F5A623] text-black' : 'bg-neutral-100 text-neutral-800'
+                            }`}>
+                              {formatMXN(cond.buyPrice)}
+                            </span>
+                          ) : (
+                            <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800 border border-amber-300">
+                              Revisión manual
+                            </span>
+                          )}
+                        </div>
                       </div>
-                      <span className={`text-[11px] font-bold px-2 py-0.5 rounded ${
-                        isSelected ? 'bg-[#F5A623] text-black' : 'bg-neutral-100 text-neutral-600'
-                      }`}>
-                        {cond.rate}
-                      </span>
-                    </div>
-                  );
-                })}
+                    );
+                  })
+                ) : (
+                  [
+                    {
+                      key: 'works_perfect',
+                      title: 'Funciona perfectamente',
+                      sub: '100% operativa, sin fallas de software, lector ni puertos.',
+                      rate: '100% del valor base'
+                    },
+                    {
+                      key: 'works_cosmetic_damage',
+                      title: 'Funciona pero tiene daño estético',
+                      sub: 'Rayones visibles, desgaste normal o ligeras manchas en la carcasa.',
+                      rate: '85% del valor base'
+                    },
+                    {
+                      key: 'has_functional_problems',
+                      title: 'Tiene problemas funcionales',
+                      sub: 'Lector láser con problemas, botones flojos o sobrecalentamiento.',
+                      rate: '60% del valor base'
+                    },
+                    {
+                      key: 'does_not_work',
+                      title: 'No funciona',
+                      sub: 'No enciende, luz azul/roja o requiere reparación profunda.',
+                      rate: '35% del valor base'
+                    },
+                    {
+                      key: 'for_parts_only',
+                      title: 'Para piezas únicamente',
+                      sub: 'Incompleta, rota o para reciclaje de componentes.',
+                      rate: '20% del valor base'
+                    }
+                  ].map((cond) => {
+                    const isSelected = condition === cond.key;
+                    return (
+                      <div
+                        key={cond.key}
+                        onClick={() => setCondition(cond.key)}
+                        className={`p-3.5 rounded-2xl border cursor-pointer transition-all flex items-center justify-between ${
+                          isSelected
+                            ? 'border-[#F5A623] bg-amber-50/70 font-bold ring-2 ring-[#F5A623]/30'
+                            : 'border-neutral-200 hover:border-neutral-300 bg-white'
+                        }`}
+                      >
+                        <div className="space-y-0.5">
+                          <div className="text-xs font-bold text-neutral-900">{cond.title}</div>
+                          <div className="text-[11px] text-neutral-500">{cond.sub}</div>
+                        </div>
+                        <span className={`text-[11px] font-bold px-2 py-0.5 rounded ${
+                          isSelected ? 'bg-[#F5A623] text-black' : 'bg-neutral-100 text-neutral-600'
+                        }`}>
+                          {cond.rate}
+                        </span>
+                      </div>
+                    );
+                  })
+                )}
               </div>
             </div>
 
@@ -303,7 +363,7 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
             <div className="bg-white rounded-3xl p-6 sm:p-7 border border-neutral-200/90 shadow-sm space-y-4">
               <div>
                 <label className="text-xs font-black uppercase tracking-wider text-neutral-900 block">
-                  3. Accesorios Adicionales y Componentes Incluidos:
+                  3. Accesorios Adicionales y Componentes Genuinos:
                 </label>
                 <p className="text-[11px] text-neutral-500 mt-0.5">
                   Marca los extras que tienes para sumarlos automáticamente a tu oferta garantizada.
@@ -311,73 +371,114 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
               </div>
 
               <div className="space-y-2">
-                {[
-                  {
-                    key: 'extra_controller',
-                    name: 'Control original adicional / extra',
-                    price: accessoryPrices.extra_controller || 150,
-                    note: 'Mando oficial funcionando'
-                  },
-                  {
-                    key: 'expansion_pak',
-                    name: 'Expansion Pak (Memoria de 4MB N64)',
-                    price: accessoryPrices.expansion_pak || 300,
-                    showOnly: consoleItem.id === 'n64-original',
-                    note: 'Tapa roja oficial de memoria'
-                  },
-                  {
-                    key: 'original_box',
-                    name: 'Caja original con protectores / inserts',
-                    price: accessoryPrices.original_box || 200,
-                    note: 'Embalaje original en buen estado'
-                  },
-                  {
-                    key: 'original_manuals',
-                    name: 'Manuales y folletos originales de fábrica',
-                    price: accessoryPrices.original_manuals || 100,
-                    note: 'Instructivos originales'
-                  },
-                  {
-                    key: 'memory_card',
-                    name: 'Memory Card / Tarjeta de memoria original',
-                    price: accessoryPrices.memory_card || 100,
-                    note: 'Tarjeta de memoria oficial'
-                  },
-                  {
-                    key: 'hdmi_adapter',
-                    name: 'Adaptador HDMI o cable de alta definición',
-                    price: accessoryPrices.hdmi_adapter || 150,
-                    note: 'Para televisores modernos'
-                  }
-                ].filter(item => item.showOnly === undefined || item.showOnly === true).map((acc) => {
-                  const isChecked = Boolean(accessories[acc.key]);
-                  return (
-                    <label
-                      key={acc.key}
-                      className={`flex items-center justify-between p-3 rounded-2xl border cursor-pointer transition-all ${
-                        isChecked 
-                          ? 'border-[#F5A623] bg-amber-50/50' 
-                          : 'border-neutral-200 hover:border-neutral-300 bg-neutral-50/40'
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <input
-                          type="checkbox"
-                          checked={isChecked}
-                          onChange={() => toggleAccessory(acc.key)}
-                          className="w-4 h-4 rounded text-[#F5A623] focus:ring-[#F5A623]"
-                        />
-                        <div>
-                          <div className="text-xs font-bold text-neutral-900">{acc.name}</div>
-                          <div className="text-[10px] text-neutral-500">{acc.note}</div>
+                {hasCustomAccessories ? (
+                  consoleItem.accessoriesList.map((acc) => {
+                    const isChecked = Boolean(accessories[acc.key]);
+                    const isApproved = acc.status === 'Approved' && acc.buyPrice !== null && acc.buyPrice > 0;
+                    return (
+                      <label
+                        key={acc.key}
+                        className={`flex items-center justify-between p-3 rounded-2xl border cursor-pointer transition-all ${
+                          isChecked 
+                            ? 'border-[#F5A623] bg-amber-50/50' 
+                            : 'border-neutral-200 hover:border-neutral-300 bg-neutral-50/40'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 max-w-[70%]">
+                          <input
+                            type="checkbox"
+                            checked={isChecked}
+                            onChange={() => toggleAccessory(acc.key)}
+                            className="w-4 h-4 rounded text-[#F5A623] focus:ring-[#F5A623]"
+                          />
+                          <div>
+                            <div className="text-xs font-bold text-neutral-900">{acc.label || acc.name}</div>
+                            <div className="text-[10px] text-neutral-500 truncate">{acc.notes || 'Valor adicional genuino'}</div>
+                          </div>
                         </div>
-                      </div>
-                      <span className="text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-xl border border-emerald-200">
-                        +{formatMXN(acc.price)}
-                      </span>
-                    </label>
-                  );
-                })}
+                        <div>
+                          {isApproved ? (
+                            <span className="text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-xl border border-emerald-200 font-mono">
+                              +{formatMXN(acc.buyPrice)}
+                            </span>
+                          ) : (
+                            <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200">
+                              Revisión manual
+                            </span>
+                          )}
+                        </div>
+                      </label>
+                    );
+                  })
+                ) : (
+                  [
+                    {
+                      key: 'extra_controller',
+                      name: 'Control original adicional / extra',
+                      price: accessoryPrices.extra_controller || 150,
+                      note: 'Mando oficial funcionando'
+                    },
+                    {
+                      key: 'expansion_pak',
+                      name: 'Expansion Pak (Memoria de 4MB N64)',
+                      price: accessoryPrices.expansion_pak || 300,
+                      showOnly: consoleItem.id === 'n64-original',
+                      note: 'Tapa roja oficial de memoria'
+                    },
+                    {
+                      key: 'original_box',
+                      name: 'Caja original con protectores / inserts',
+                      price: accessoryPrices.original_box || 200,
+                      note: 'Embalaje original en buen estado'
+                    },
+                    {
+                      key: 'original_manuals',
+                      name: 'Manuales y folletos originales de fábrica',
+                      price: accessoryPrices.original_manuals || 100,
+                      note: 'Instructivos originales'
+                    },
+                    {
+                      key: 'memory_card',
+                      name: 'Memory Card / Tarjeta de memoria original',
+                      price: accessoryPrices.memory_card || 100,
+                      note: 'Tarjeta de memoria oficial'
+                    },
+                    {
+                      key: 'hdmi_adapter',
+                      name: 'Adaptador HDMI o cable de alta definición',
+                      price: accessoryPrices.hdmi_adapter || 150,
+                      note: 'Para televisores modernos'
+                    }
+                  ].filter(item => item.showOnly === undefined || item.showOnly === true).map((acc) => {
+                    const isChecked = Boolean(accessories[acc.key]);
+                    return (
+                      <label
+                        key={acc.key}
+                        className={`flex items-center justify-between p-3 rounded-2xl border cursor-pointer transition-all ${
+                          isChecked 
+                            ? 'border-[#F5A623] bg-amber-50/50' 
+                            : 'border-neutral-200 hover:border-neutral-300 bg-neutral-50/40'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <input
+                            type="checkbox"
+                            checked={isChecked}
+                            onChange={() => toggleAccessory(acc.key)}
+                            className="w-4 h-4 rounded text-[#F5A623] focus:ring-[#F5A623]"
+                          />
+                          <div>
+                            <div className="text-xs font-bold text-neutral-900">{acc.name}</div>
+                            <div className="text-[10px] text-neutral-500">{acc.note}</div>
+                          </div>
+                        </div>
+                        <span className="text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-xl border border-emerald-200">
+                          +{formatMXN(acc.price)}
+                        </span>
+                      </label>
+                    );
+                  })
+                )}
               </div>
             </div>
 
@@ -391,29 +492,41 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
               </div>
 
               {/* Real-time Calculation Breakdown matching user's exact N64 example! */}
-              <div className="space-y-1.5 text-xs text-neutral-300">
-                <div className="flex justify-between">
-                  <span>{consoleItem.name} ({estimateData?.edition || 'Estándar'}):</span>
-                  <span className="font-bold text-white font-mono">
-                    {formatMXN(estimateData?.calculationBreakdown?.subtotalAfterCondition || consoleItem.baseBuyPrice)}
-                  </span>
-                </div>
-
-                {estimateData?.itemizedAccessories?.map((item, idx) => (
-                  <div key={idx} className="flex justify-between text-neutral-300 text-[11px]">
-                    <span>+ {item.name}:</span>
-                    <span className="font-bold text-emerald-400 font-mono">+{formatMXN(item.price)}</span>
+              {estimateData?.requiresManualReview ? (
+                <div className="bg-amber-950/40 border border-amber-500/40 rounded-2xl p-4 text-xs space-y-2">
+                  <div className="flex items-center gap-2 text-[#F5A623] font-bold">
+                    <AlertCircle className="w-4 h-4 text-[#F5A623]" />
+                    <span>Cotización Especializada Requerida</span>
                   </div>
-                ))}
-              </div>
+                  <p className="text-neutral-300 text-[11px] leading-relaxed">
+                    La condición seleccionada ({estimateData?.conditionLabel}) requiere evaluación individual por nuestro equipo de tasación técnica. Puedes agregarla a tu solicitud de venta y te contactaremos de inmediato.
+                  </p>
+                </div>
+              ) : (
+                <div className="space-y-1.5 text-xs text-neutral-300">
+                  <div className="flex justify-between">
+                    <span>{consoleItem.name} ({estimateData?.edition || 'Estándar'}):</span>
+                    <span className="font-bold text-white font-mono">
+                      {formatMXN(estimateData?.calculationBreakdown?.subtotalAfterCondition || consoleItem.baseBuyPrice)}
+                    </span>
+                  </div>
+
+                  {estimateData?.itemizedAccessories?.map((item, idx) => (
+                    <div key={idx} className="flex justify-between text-neutral-300 text-[11px]">
+                      <span>+ {item.name}:</span>
+                      <span className="font-bold text-emerald-400 font-mono">+{formatMXN(item.price)}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <div className="pt-3 border-t border-neutral-800 flex items-center justify-between">
                 <div>
                   <span className="text-[10px] text-neutral-400 uppercase font-bold tracking-wider block">
-                    TOTAL ESTIMADO A PAGAR:
+                    {estimateData?.requiresManualReview ? 'VALOR A COTIZAR:' : 'TOTAL ESTIMADO A PAGAR:'}
                   </span>
                   <div className="text-3xl font-black text-[#F5A623] font-mono">
-                    {formatMXN(currentEstimatedTotal)}
+                    {estimateData?.requiresManualReview ? 'Por Evaluar' : formatMXN(currentEstimatedTotal)}
                   </div>
                 </div>
 
@@ -424,7 +537,7 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
                   className="btn-shimmer px-6 py-3.5 rounded-2xl font-bold text-xs bg-[#F5A623] hover:bg-[#E59819] text-black shadow-lg shadow-[#F5A623]/25 hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
                 >
                   <ShoppingBag className="w-4 h-4 text-black" />
-                  <span>{isAdding ? 'Agregando...' : addedSuccess ? '¡Agregado al carrito!' : 'Agregar a Mi Venta'}</span>
+                  <span>{isAdding ? 'Agregando...' : addedSuccess ? '¡Agregado al carrito!' : estimateData?.requiresManualReview ? 'Agregar para Cotización' : 'Agregar a Mi Venta'}</span>
                 </button>
               </div>
 

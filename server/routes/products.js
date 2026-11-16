@@ -19,9 +19,19 @@ router.get('/', (req, res) => {
     products = products.filter(p => p.category === category);
   }
 
-  // Brand filter
+  // Brand filter (supports brand and platform aliases like PlayStation/Sony, Xbox/Microsoft, CRT TVs)
   if (brand && brand !== 'all') {
-    products = products.filter(p => p.brand.toLowerCase() === brand.toLowerCase());
+    const b = brand.toLowerCase();
+    products = products.filter(p => {
+      const pb = (p.brand || '').toLowerCase();
+      const pp = (p.platform || '').toLowerCase();
+      if (b === 'sony' || b === 'playstation') return pb.includes('sony') || pb.includes('playstation') || pp.includes('playstation');
+      if (b === 'microsoft' || b === 'xbox') return pb.includes('microsoft') || pb.includes('xbox') || pp.includes('xbox');
+      if (b === 'sega') return pb.includes('sega') || pp.includes('sega');
+      if (b === 'nintendo') return pb.includes('nintendo') || pp.includes('nintendo');
+      if (b.includes('crt') || b.includes('tv')) return p.isCRT || pb.includes('crt') || pb.includes('tv');
+      return pb === b || pp.includes(b);
+    });
   }
 
   // Platform filter

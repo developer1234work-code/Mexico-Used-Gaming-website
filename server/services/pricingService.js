@@ -57,7 +57,7 @@ function calculateItemEstimate(itemData) {
     }
   }
 
-  // Condition Multiplier
+  // Condition Multiplier and Exact Excel condition lookup
   const multipliers = product.conditionMultipliers || {
     works_perfect: 1.0,
     works_cosmetic_damage: 0.85,
@@ -67,23 +67,52 @@ function calculateItemEstimate(itemData) {
   };
 
   const conditionKey = mapConditionKey(condition);
-  const conditionMultiplier = multipliers[conditionKey] !== undefined ? multipliers[conditionKey] : 1.0;
+  let matchedCondition = null;
+  if (Array.isArray(product.conditions) && product.conditions.length > 0) {
+    matchedCondition = product.conditions.find(c => 
+      c.id === condition || 
+      c.id === conditionKey ||
+      c.standardCode === condition || 
+      c.standardCode === conditionKey ||
+      (c.name && c.name.toLowerCase() === String(condition).toLowerCase())
+    );
+  }
 
-  let subtotal = Math.round(basePrice * conditionMultiplier);
+  let subtotal = 0;
+  let conditionMultiplier = 1.0;
+  let conditionLabel = getConditionLabel(conditionKey);
+  let requiresManualReview = false;
+
+  if (matchedCondition) {
+    conditionLabel = matchedCondition.label || matchedCondition.name;
+    if (matchedCondition.status === 'Approved' && matchedCondition.buyPrice !== null) {
+      subtotal = Number(matchedCondition.buyPrice);
+      conditionMultiplier = product.baseBuyPrice > 0 ? Number((matchedCondition.buyPrice / product.baseBuyPrice).toFixed(3)) : 1.0;
+    } else {
+      requiresManualReview = true;
+      subtotal = 0;
+      conditionLabel += ' (Cotización manual requerida)';
+    }
+  } else {
+    conditionMultiplier = multipliers[conditionKey] !== undefined ? multipliers[conditionKey] : 1.0;
+    subtotal = Math.round(basePrice * conditionMultiplier);
+  }
+
   let accessoriesAdjustmentTotal = 0;
   const accessoryPrices = product.accessoryPricing || product.accessoryAdjustments || {};
+  const accessoryLabels = product.accessoryLabels || {};
 
   // Track itemized breakdown to avoid double-charging
   const itemizedAccessories = [];
 
   // Calculate accessory adjustments
   for (const [key, isSelected] of Object.entries(accessories)) {
-    if (isSelected === true && accessoryPrices[key]) {
+    if (isSelected === true && accessoryPrices[key] !== undefined) {
       const priceVal = Number(accessoryPrices[key]);
       accessoriesAdjustmentTotal += priceVal;
       itemizedAccessories.push({
         key,
-        name: formatAccessoryName(key),
+        name: accessoryLabels[key] || formatAccessoryName(key),
         price: priceVal,
         type: 'ADDITIONAL'
       });
@@ -93,14 +122,14 @@ function calculateItemEstimate(itemData) {
       accessoriesAdjustmentTotal += penaltyVal;
       itemizedAccessories.push({
         key,
-        name: formatAccessoryName(key),
+        name: accessoryLabels[key] || formatAccessoryName(key),
         price: penaltyVal,
         type: 'DEDUCTION'
       });
     }
   }
 
-  let finalEstimate = Math.max(100, Math.round(subtotal + accessoriesAdjustmentTotal));
+  let finalEstimate = requiresManualReview ? 0 : Math.max(100, Math.round(subtotal + accessoriesAdjustmentTotal));
 
   return {
     productId: product.id,
@@ -113,8 +142,9 @@ function calculateItemEstimate(itemData) {
     platform: product.platform || product.brand,
     brand: product.brand,
     imageUrl: product.imageUrl,
-    condition: conditionKey,
-    conditionLabel: getConditionLabel(conditionKey),
+    condition: matchedCondition ? matchedCondition.id : conditionKey,
+    conditionLabel,
+    requiresManualReview,
     accessories,
     itemizedAccessories,
     calculatedEstimate: finalEstimate,
@@ -125,6 +155,7 @@ function calculateItemEstimate(itemData) {
       conditionMultiplier,
       subtotalAfterCondition: subtotal,
       accessoriesAdjustmentTotal,
+      requiresManualReview,
       currency: 'MXN'
     },
     pricingRuleSnapshot: {

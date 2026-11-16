@@ -152,7 +152,7 @@ export default function CataloguePage({ initialCategory = 'all', onOpenCustomQuo
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Buscar por modelo, consola o título (ej. PS5, Zelda, Trinitron)..."
+                placeholder="Buscar por modelo, consola o título (ej. N64, Xbox Clásico, Cars CRT)..."
                 className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
               />
             </div>
