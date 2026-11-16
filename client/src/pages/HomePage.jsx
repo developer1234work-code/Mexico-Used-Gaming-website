@@ -120,7 +120,7 @@ function VideoGamesStackGraphic() {
   return (
     <svg viewBox="0 0 160 115" className="w-full h-full object-contain drop-shadow-md">
       <ellipse cx="80" cy="106" rx="60" ry="7" fill="rgba(0,0,0,0.12)" />
-      
+
       {/* Game Case 1 (Left - Blue Case) */}
       <g transform="translate(16, 12) skewY(-7) scale(0.85)">
         <rect x="0" y="0" width="46" height="86" rx="4" fill="#003791" stroke="#00225E" strokeWidth="1.5" />
@@ -318,18 +318,18 @@ export default function HomePage({ setView, onSelectCategory }) {
 
             {/* Title specifying analog TVs up to 21 inches */}
             <div className="space-y-3 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              <h1 className="text-3xl sm:text-4xl lg:text-[48px] font-black tracking-tight text-white leading-[1.12] font-display">
+              <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-black tracking-tight text-white leading-[1.28] sm:leading-[1.25] lg:leading-[1.22] font-display">
                 Vende tus consolas, videojuegos <br className="hidden sm:inline" />
                 y <span className="text-[#F5A623]">tvs analógicas de 13 hasta 21 pulgadas</span>
               </h1>
             </div>
 
-            {/* Subtitle with vertical gold bar matching image */}
+            {/* Subtitle with vertical gold bar */}
             <div
-              className="flex items-center gap-3 animate-fade-in-up"
+              className="flex items-center gap-3 animate-fade-in-up pt-1"
               style={{ animationDelay: '200ms' }}
             >
-              <div className="w-1.5 h-8 bg-[#F5A623] rounded-full shrink-0" />
+              <div className="w-1.5 h-7 bg-[#F5A623] rounded-full shrink-0" />
               <p className="text-base sm:text-lg text-neutral-200 font-semibold leading-relaxed">
                 Rápido, fácil y seguro.
               </p>
@@ -390,127 +390,165 @@ export default function HomePage({ setView, onSelectCategory }) {
         </div>
       </section>
 
-      {/* ======================================================== */}
-      {/* 2. ¿QUÉ QUIERES VENDER? (Matching reference image) */}
-      {/* ======================================================== */}
-      <section className="relative pt-20 pb-12 bg-[#0A0A0B] text-white overflow-hidden">
-        {/* Subtle ambient gold glows */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#E5A83B]/10 blur-[120px] pointer-events-none rounded-full" />
-        
-        {/* Top left corner gold ribbon flourish */}
-        <div className="absolute -top-16 -left-16 w-64 sm:w-80 h-64 sm:h-80 pointer-events-none opacity-85 z-0">
-          <svg viewBox="0 0 300 300" fill="none" className="w-full h-full">
-            <path d="M-40,160 C50,150 110,80 130,-40 L180,-40 C160,110 70,200 -40,220 Z" fill="url(#goldRibbonGrad1)" opacity="0.9" />
-            <path d="M-40,110 C20,105 80,50 100,-40 L130,-40 C110,70 40,140 -40,160 Z" fill="url(#goldRibbonGrad2)" />
-          </svg>
-        </div>
+      {/* ================================================================ */}
+      {/* 2. ¿QUÉ QUIERES VENDER? — Modern light-theme showcase cards     */}
+      {/* ================================================================ */}
+      <section className="py-24 bg-[#FAF9F6]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Top right corner gold ribbon flourish */}
-        <div className="absolute -top-16 -right-16 w-64 sm:w-80 h-64 sm:h-80 pointer-events-none opacity-85 z-0">
-          <svg viewBox="0 0 300 300" fill="none" className="w-full h-full">
-            <path d="M340,160 C250,150 190,80 170,-40 L120,-40 C140,110 230,200 340,220 Z" fill="url(#goldRibbonGrad1)" opacity="0.9" />
-            <path d="M340,110 C280,105 220,50 200,-40 L170,-40 C190,70 260,140 340,160 Z" fill="url(#goldRibbonGrad2)" />
-          </svg>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14 relative z-10">
-
-          {/* Section Header flanked by gold lines */}
-          <div className="text-center space-y-3">
-            <div className="flex items-center justify-center gap-3 sm:gap-5">
-              <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-r from-transparent to-[#E5A83B]" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight font-display">
-                — ¿Qué quieres <span className="text-[#E5A83B]">vender?</span> —
-              </h2>
-              <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#E5A83B]" />
+          {/* ── Section Header ── */}
+          <div className="text-center mb-14 animate-fade-in-up" style={{ animationDelay: '0s' }}>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F5A623]/10 border border-[#F5A623]/30 mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#F5A623] animate-pulse" />
+              <span className="text-[11px] font-black uppercase tracking-widest text-[#B87406]">Cotiza ahora</span>
             </div>
-            <p className="text-xs sm:text-sm md:text-base text-neutral-300 max-w-xl mx-auto font-normal">
-              Selecciona tu categoría para comenzar a vender tus artículos usados.
+            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-black text-neutral-900 tracking-tight font-display leading-[1.18] mb-3">
+              ¿Qué quieres <span className="text-[#F5A623]">vender?</span>
+            </h2>
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#F5A623]" />
+              <span className="w-2 h-2 rounded-full bg-[#F5A623]" />
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#F5A623]" />
+            </div>
+            <p className="text-sm sm:text-base text-neutral-500 max-w-lg mx-auto leading-relaxed font-normal">
+              Selecciona tu categoría para comenzar a vender con la mejor oferta garantizada.
             </p>
           </div>
 
-          {/* 3 Categories Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {/* ── 3 Showcase Cards ── */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
 
-            {/* 1. Consolas */}
+            {/* ─ 1. Consolas ─ */}
             <div
               onClick={() => setView('consoles')}
-              className="group cursor-pointer bg-white hover:bg-[#FFFDF9] rounded-[26px] border border-[#F0DEC2] hover:border-[#E5A83B] p-5 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_rgba(229,168,59,0.25)] transition-all duration-300 flex items-center justify-between gap-4"
+              className="sell-card relative cursor-pointer bg-white rounded-[28px] border border-neutral-200 overflow-hidden flex flex-col"
             >
-              <div className="flex items-center gap-4 min-w-0">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#FFF8EE] to-white border border-[#F0DEC2] flex items-center justify-center p-2 shrink-0 group-hover:scale-105 transition-transform overflow-hidden shadow-inner">
+              {/* Image Area */}
+              <div className="sell-card-img-wrap relative bg-gradient-to-br from-[#FFFBF2] via-[#FFF8EC] to-[#FFF3DD] p-8 pb-0 flex items-end justify-center overflow-hidden" style={{ minHeight: '210px' }}>
+                {/* Decorative circle glow */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-40 h-40 rounded-full bg-[#F5A623]/10 blur-2xl" />
+                </div>
+                {/* Category badge */}
+                <span className="sell-pill absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#F5A623] text-black shadow-sm">
+                  Retro &amp; Recientes
+                </span>
+                <div className="relative z-10 w-44 h-44 flex items-end justify-center drop-shadow-xl">
                   <NesConsoleGraphic />
                 </div>
-                <div className="min-w-0">
-                  <h3 className="text-lg sm:text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display tracking-tight">
-                    Consolas
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-500 mt-1 font-medium line-clamp-2">
-                    PS5, Xbox, Nintendo y más.
-                  </p>
-                </div>
               </div>
 
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#E5A83B] hover:bg-[#DDA83A] text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md shrink-0 ml-2">
-                <ArrowRight className="w-5 h-5 text-black stroke-[2.5]" />
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-black text-neutral-900 font-display mb-1.5">
+                  Consolas
+                </h3>
+                <p className="text-sm text-neutral-500 leading-relaxed mb-4 flex-1">
+                  Nintendo (NES, SNES, N64), PlayStation retro, Xbox Clásico y Sega. Cotiza según estado y accesorios.
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {['38+ sistemas', 'Con/sin caja', 'Pago inmediato'].map(t => (
+                    <span key={t} className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-neutral-100 text-neutral-600">{t}</span>
+                  ))}
+                </div>
+
+                {/* CTA row */}
+                <div className="flex items-center justify-between pt-4 border-t border-neutral-100">
+                  <span className="text-xs font-bold text-neutral-700">Explorar consolas</span>
+                  <div className="sell-arrow w-9 h-9 rounded-full bg-[#F5A623] flex items-center justify-center shadow-md">
+                    <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* 2. Videojuegos */}
+            {/* ─ 2. Videojuegos ─ */}
             <div
               onClick={() => { if (onSelectCategory) onSelectCategory('video_games'); setView('catalogue'); }}
-              className="group cursor-pointer bg-white hover:bg-[#FFFDF9] rounded-[26px] border border-[#F0DEC2] hover:border-[#E5A83B] p-5 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_rgba(229,168,59,0.25)] transition-all duration-300 flex items-center justify-between gap-4"
+              className="sell-card relative cursor-pointer bg-white rounded-[28px] border border-neutral-200 overflow-hidden flex flex-col"
             >
-              <div className="flex items-center gap-4 min-w-0">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#FFF8EE] to-white border border-[#F0DEC2] flex items-center justify-center p-2 shrink-0 group-hover:scale-105 transition-transform overflow-hidden shadow-inner">
-                  <VideoGamesStackGraphic />
+              {/* Image Area */}
+              <div className="sell-card-img-wrap relative bg-gradient-to-br from-[#FFFBF2] via-[#FFF8EC] to-[#FFF3DD] p-8 pb-0 flex items-end justify-center overflow-hidden" style={{ minHeight: '210px' }}>
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-40 h-40 rounded-full bg-[#F5A623]/10 blur-2xl" />
                 </div>
-                <div className="min-w-0">
-                  <h3 className="text-lg sm:text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display tracking-tight">
-                    Videojuegos
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-500 mt-1 font-medium line-clamp-2">
-                    Juegos originales en discos y cartuchos.
-                  </p>
+                <span className="sell-pill absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#F5A623] text-black shadow-sm">
+                  Discos &amp; Cartuchos
+                </span>
+                <div className="relative z-10 w-44 h-44 flex items-end justify-center drop-shadow-xl">
+                  <VideoGamesStackGraphic />
                 </div>
               </div>
 
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#E5A83B] hover:bg-[#DDA83A] text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md shrink-0 ml-2">
-                <ArrowRight className="w-5 h-5 text-black stroke-[2.5]" />
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-black text-neutral-900 font-display mb-1.5">
+                  Videojuegos
+                </h3>
+                <p className="text-sm text-neutral-500 leading-relaxed mb-4 flex-1">
+                  Juegos originales en cartuchos y discos para consolas retro y modernas. Con manual, caja o cartucho suelto.
+                </p>
+
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {['Originales', 'Ed. especiales', 'Lotes o sueltos'].map(t => (
+                    <span key={t} className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-neutral-100 text-neutral-600">{t}</span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between pt-4 border-t border-neutral-100">
+                  <span className="text-xs font-bold text-neutral-700">Explorar videojuegos</span>
+                  <div className="sell-arrow w-9 h-9 rounded-full bg-[#F5A623] flex items-center justify-center shadow-md">
+                    <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* 3. TVs analógicas CRT */}
+            {/* ─ 3. TVs analógicas CRT ─ */}
             <div
               onClick={() => { if (onSelectCategory) onSelectCategory('retro_tvs'); setView('catalogue'); }}
-              className="group cursor-pointer bg-white hover:bg-[#FFFDF9] rounded-[26px] border border-[#F0DEC2] hover:border-[#E5A83B] p-5 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_rgba(229,168,59,0.25)] transition-all duration-300 flex items-center justify-between gap-4"
+              className="sell-card relative cursor-pointer bg-white rounded-[28px] border border-neutral-200 overflow-hidden flex flex-col"
             >
-              <div className="flex items-center gap-4 min-w-0">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#FFF8EE] to-white border border-[#F0DEC2] flex items-center justify-center p-2 shrink-0 group-hover:scale-105 transition-transform overflow-hidden shadow-inner">
-                  <CarsCrtTvGraphic />
+              {/* Image Area */}
+              <div className="sell-card-img-wrap relative bg-gradient-to-br from-[#FFFBF2] via-[#FFF8EC] to-[#FFF3DD] p-8 pb-0 flex items-end justify-center overflow-hidden" style={{ minHeight: '210px' }}>
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="w-40 h-40 rounded-full bg-[#F5A623]/10 blur-2xl" />
                 </div>
-                <div className="min-w-0">
-                  <h3 className="text-lg sm:text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display tracking-tight">
-                    TVs analógicas CRT
-                  </h3>
-                  <p className="text-xs sm:text-sm text-neutral-500 mt-1 font-medium line-clamp-2">
-                    De 13 a 21 pulgadas, Sony, etc.
-                  </p>
+                <span className="sell-pill absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#F5A623] text-black shadow-sm">
+                  13&quot; – 21&quot; pulgadas
+                </span>
+                <div className="relative z-10 w-44 h-44 flex items-end justify-center drop-shadow-xl">
+                  <CarsCrtTvGraphic />
                 </div>
               </div>
 
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#E5A83B] hover:bg-[#DDA83A] text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md shrink-0 ml-2">
-                <ArrowRight className="w-5 h-5 text-black stroke-[2.5]" />
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-black text-neutral-900 font-display mb-1.5">
+                  TVs analógicas CRT
+                </h3>
+                <p className="text-sm text-neutral-500 leading-relaxed mb-4 flex-1">
+                  Televisores de tubo CRT de 13 a 21 pulgadas. Disney Cars, Shrek, Sony Trinitron y más. Mejor precio con control remoto.
+                </p>
+
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                  {['Combos VHS/DVD', 'Con control', 'Máx. valuación'].map(t => (
+                    <span key={t} className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-neutral-100 text-neutral-600">{t}</span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between pt-4 border-t border-neutral-100">
+                  <span className="text-xs font-bold text-neutral-700">Explorar TVs analógicas</span>
+                  <div className="sell-arrow w-9 h-9 rounded-full bg-[#F5A623] flex items-center justify-center shadow-md">
+                    <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
+                  </div>
+                </div>
               </div>
             </div>
 
           </div>
-
-        </div>
-
-        {/* Bottom wave ribbon transition to light section */}
-        <div className="mt-14">
-          <GoldRibbonDividerDarkToLight />
         </div>
       </section>
 
@@ -593,10 +631,7 @@ export default function HomePage({ setView, onSelectCategory }) {
 
         </div>
 
-        {/* Bottom wave ribbon transition to dark section */}
-        <div className="mt-14">
-          <GoldRibbonDividerLightToDark />
-        </div>
+
       </section>
 
       {/* ======================================================== */}

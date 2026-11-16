@@ -94,6 +94,78 @@
   box-shadow: 0 0 24px rgba(245, 166, 35, 0.22);
 }
 
+/* ============================================ */
+/* Sell Section Card Animations                 */
+/* ============================================ */
+
+/* Fade-in-up for section entry */
+@keyframes fadeInUp {
+  0%  { opacity: 0; transform: translateY(32px); }
+  100%{ opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Staggered card reveal */
+.sell-card { animation: fadeInUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.sell-card:nth-child(1) { animation-delay: 0.05s; }
+.sell-card:nth-child(2) { animation-delay: 0.18s; }
+.sell-card:nth-child(3) { animation-delay: 0.31s; }
+
+/* Gold shimmer sweep across card image area on hover */
+@keyframes cardShimmer {
+  0%   { left: -120%; }
+  100% { left: 120%; }
+}
+.sell-card-img-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -120%;
+  width: 55%; height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(245,166,35,0.18), transparent);
+  transform: skewX(-18deg);
+  pointer-events: none;
+}
+.sell-card:hover .sell-card-img-wrap::after {
+  animation: cardShimmer 0.7s ease-in-out;
+}
+
+/* Floating lift on card hover */
+.sell-card {
+  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.35s cubic-bezier(0.16,1,0.3,1),
+              border-color 0.25s ease;
+}
+.sell-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px -8px rgba(245,166,35,0.18), 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* Gold top-bar reveal */
+.sell-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #F5A623, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 28px 28px 0 0;
+}
+.sell-card:hover::before { opacity: 1; }
+
+/* Pill bounce */
+@keyframes pillBounce {
+  0%,100% { transform: scale(1); }
+  50%      { transform: scale(1.08); }
+}
+.sell-card:hover .sell-pill { animation: pillBounce 0.4s ease; }
+
+/* Arrow slide right on hover */
+.sell-arrow { transition: transform 0.25s cubic-bezier(0.16,1,0.3,1); }
+.sell-card:hover .sell-arrow { transform: translateX(4px); }
+
 /* Running Marquee Animation */
 @keyframes marqueeScroll {
   0% {
