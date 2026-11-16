@@ -21,9 +21,141 @@ import {
   Tv,
   Disc,
   Star,
-  Phone
+  Phone,
+  CreditCard,
+  Package,
+  HandCoins,
+  UserRound
 } from 'lucide-react';
 import heroBg from '../assets/hero-bg.png';
+
+// Metallic Gold Wave Ribbons
+function GoldRibbonDividerDarkToLight() {
+  return (
+    <div className="relative w-full overflow-hidden leading-none z-10 -mb-[1px]">
+      <svg
+        viewBox="0 0 1440 110"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-14 sm:h-20 md:h-24 object-fill block"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <linearGradient id="goldRibbonGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#4A3000" />
+            <stop offset="20%" stopColor="#C49028" />
+            <stop offset="45%" stopColor="#FBD778" />
+            <stop offset="65%" stopColor="#E2A737" />
+            <stop offset="85%" stopColor="#8C5C0C" />
+            <stop offset="100%" stopColor="#3B2500" />
+          </linearGradient>
+          <linearGradient id="goldRibbonGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#E2A737" stopOpacity="0.85" />
+            <stop offset="50%" stopColor="#FFF2BF" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="#96610E" stopOpacity="0.85" />
+          </linearGradient>
+        </defs>
+        {/* Fill underneath into light section */}
+        <path d="M0,110 L1440,110 L1440,65 C1120,95 820,25 460,70 C240,98 100,55 0,65 Z" fill="#FFFFFF" />
+        {/* Sweeping metallic gold ribbon */}
+        <path
+          d="M0,30 C280,-15 580,70 920,35 C1160,10 1320,60 1440,40 L1440,75 C1280,95 1040,40 800,75 C500,110 220,45 0,70 Z"
+          fill="url(#goldRibbonGrad1)"
+          opacity="0.95"
+        />
+        {/* Shimmer metallic wave highlight */}
+        <path
+          d="M0,40 C320,5 640,80 960,45 C1200,20 1360,65 1440,50 L1440,58 C1320,72 1140,30 880,62 C560,98 260,35 0,52 Z"
+          fill="url(#goldRibbonGrad2)"
+        />
+      </svg>
+    </div>
+  );
+}
+
+function GoldRibbonDividerLightToDark() {
+  return (
+    <div className="relative w-full overflow-hidden leading-none z-10 -mb-[1px]">
+      <svg
+        viewBox="0 0 1440 110"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-full h-14 sm:h-20 md:h-24 object-fill block"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <linearGradient id="goldRibbonGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#3B2500" />
+            <stop offset="25%" stopColor="#96610E" />
+            <stop offset="50%" stopColor="#FFF0B5" />
+            <stop offset="75%" stopColor="#D99B26" />
+            <stop offset="100%" stopColor="#5C3A00" />
+          </linearGradient>
+          <linearGradient id="goldRibbonGrad4" x1="100%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stopColor="#F5C04A" stopOpacity="0.9" />
+            <stop offset="50%" stopColor="#FFF7D6" stopOpacity="1" />
+            <stop offset="100%" stopColor="#A86C0A" stopOpacity="0.8" />
+          </linearGradient>
+        </defs>
+        {/* Fill underneath into dark section */}
+        <path d="M0,110 L1440,110 L1440,55 C1180,15 880,90 560,45 C260,10 100,50 0,55 Z" fill="#0A0A0B" />
+        {/* Sweeping metallic gold ribbon */}
+        <path
+          d="M0,40 C200,80 520,10 820,50 C1100,90 1320,25 1440,60 L1440,90 C1260,60 1020,110 740,70 C440,25 180,90 0,80 Z"
+          fill="url(#goldRibbonGrad3)"
+          opacity="0.95"
+        />
+        {/* Shimmer metallic wave highlight */}
+        <path
+          d="M0,52 C240,88 540,22 840,60 C1120,98 1340,35 1440,70 L1440,76 C1300,50 1060,102 780,64 C480,18 220,78 0,64 Z"
+          fill="url(#goldRibbonGrad4)"
+        />
+      </svg>
+    </div>
+  );
+}
+
+// 3D Video Games Stack Graphic (matching reference image games stack)
+function VideoGamesStackGraphic() {
+  return (
+    <svg viewBox="0 0 160 115" className="w-full h-full object-contain drop-shadow-md">
+      <ellipse cx="80" cy="106" rx="60" ry="7" fill="rgba(0,0,0,0.12)" />
+      
+      {/* Game Case 1 (Left - Blue Case) */}
+      <g transform="translate(16, 12) skewY(-7) scale(0.85)">
+        <rect x="0" y="0" width="46" height="86" rx="4" fill="#003791" stroke="#00225E" strokeWidth="1.5" />
+        <rect x="0" y="0" width="8" height="86" rx="2" fill="#00225E" />
+        <rect x="10" y="5" width="32" height="76" rx="2" fill="#1E3A8A" />
+        <rect x="10" y="5" width="32" height="14" fill="#000000" />
+        <text x="26" y="15" fill="#FFFFFF" fontSize="6" fontWeight="bold" textAnchor="middle">PS5</text>
+        <circle cx="26" cy="45" r="11" fill="#3B82F6" opacity="0.6" />
+      </g>
+
+      {/* Game Case 2 (Middle - Red Case) */}
+      <g transform="translate(46, 8) skewY(-3) scale(0.92)">
+        <rect x="0" y="0" width="50" height="90" rx="4" fill="#DC2626" stroke="#991B1B" strokeWidth="1.5" />
+        <rect x="0" y="0" width="8" height="90" rx="2" fill="#991B1B" />
+        <rect x="10" y="5" width="36" height="80" rx="2" fill="#B91C1C" />
+        <rect x="10" y="5" width="36" height="15" fill="#18181B" />
+        <text x="28" y="16" fill="#FFFFFF" fontSize="6.5" fontWeight="900" textAnchor="middle">SPIDER</text>
+        <path d="M 20 40 Q 28 30 36 40 Q 40 54 28 64 Q 16 54 20 40 Z" fill="#FBBF24" />
+        <text x="28" y="78" fill="#FFFFFF" fontSize="5" fontWeight="extrabold" textAnchor="middle">GAME</text>
+      </g>
+
+      {/* Game Case 3 (Front Right - Collector Box) */}
+      <g transform="translate(84, 15) scale(0.96)">
+        <rect x="0" y="0" width="54" height="88" rx="4" fill="#0F172A" stroke="#E5A83B" strokeWidth="1.5" />
+        <rect x="0" y="0" width="9" height="88" rx="2" fill="#020617" />
+        <rect x="11" y="5" width="39" height="78" rx="2" fill="#1E293B" />
+        <rect x="11" y="5" width="39" height="14" fill="#0F172A" />
+        <text x="30" y="15" fill="#E5A83B" fontSize="6" fontWeight="black" textAnchor="middle">RETRO</text>
+        <circle cx="30" cy="44" r="13" fill="#E5A83B" opacity="0.25" />
+        <polygon points="30,34 34,42 42,43 36,49 38,57 30,53 22,57 24,49 18,43 26,42" fill="#E5A83B" />
+        <text x="30" y="73" fill="#FFFFFF" fontSize="5" fontWeight="bold" textAnchor="middle">DISCS</text>
+      </g>
+    </svg>
+  );
+}
 
 // 1. Nintendo NES Console Graphic
 function NesConsoleGraphic() {
@@ -259,278 +391,317 @@ export default function HomePage({ setView, onSelectCategory }) {
       </section>
 
       {/* ======================================================== */}
-      {/* 2. ¿QUÉ QUIERES VENDER? (Matching the 3 cards in reference image) */}
+      {/* 2. ¿QUÉ QUIERES VENDER? (Matching reference image) */}
       {/* ======================================================== */}
-      <section className="py-20 bg-[#FAF9F6] border-b border-neutral-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="relative pt-20 pb-12 bg-[#0A0A0B] text-white overflow-hidden">
+        {/* Subtle ambient gold glows */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#E5A83B]/10 blur-[120px] pointer-events-none rounded-full" />
+        
+        {/* Top left corner gold ribbon flourish */}
+        <div className="absolute -top-16 -left-16 w-64 sm:w-80 h-64 sm:h-80 pointer-events-none opacity-85 z-0">
+          <svg viewBox="0 0 300 300" fill="none" className="w-full h-full">
+            <path d="M-40,160 C50,150 110,80 130,-40 L180,-40 C160,110 70,200 -40,220 Z" fill="url(#goldRibbonGrad1)" opacity="0.9" />
+            <path d="M-40,110 C20,105 80,50 100,-40 L130,-40 C110,70 40,140 -40,160 Z" fill="url(#goldRibbonGrad2)" />
+          </svg>
+        </div>
 
-          <div className="text-center space-y-2">
-            <div className="flex items-center justify-center gap-3">
-              <div className="w-12 h-0.5 bg-[#F5A623]" />
-              <h2 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight font-display">
-                ¿Qué quieres vender?
+        {/* Top right corner gold ribbon flourish */}
+        <div className="absolute -top-16 -right-16 w-64 sm:w-80 h-64 sm:h-80 pointer-events-none opacity-85 z-0">
+          <svg viewBox="0 0 300 300" fill="none" className="w-full h-full">
+            <path d="M340,160 C250,150 190,80 170,-40 L120,-40 C140,110 230,200 340,220 Z" fill="url(#goldRibbonGrad1)" opacity="0.9" />
+            <path d="M340,110 C280,105 220,50 200,-40 L170,-40 C190,70 260,140 340,160 Z" fill="url(#goldRibbonGrad2)" />
+          </svg>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14 relative z-10">
+
+          {/* Section Header flanked by gold lines */}
+          <div className="text-center space-y-3">
+            <div className="flex items-center justify-center gap-3 sm:gap-5">
+              <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-r from-transparent to-[#E5A83B]" />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight font-display">
+                — ¿Qué quieres <span className="text-[#E5A83B]">vender?</span> —
               </h2>
-              <div className="w-12 h-0.5 bg-[#F5A623]" />
+              <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#E5A83B]" />
             </div>
-            <p className="text-xs sm:text-sm text-neutral-500 max-w-md mx-auto">
-              Selecciona tu categoría para ver precios y cotizar de inmediato
+            <p className="text-xs sm:text-sm md:text-base text-neutral-300 max-w-xl mx-auto font-normal">
+              Selecciona tu categoría para comenzar a vender tus artículos usados.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* 3 Categories Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-            {/* 1. Consolas (NES Nintendo representation) */}
+            {/* 1. Consolas */}
             <div
               onClick={() => setView('consoles')}
-              className="group cursor-pointer bg-[#FFFDF8] hover:bg-white rounded-3xl border border-[#F0E6D2] hover:border-[#F5A623] p-6 shadow-sm hover:shadow-xl hover:shadow-[#F5A623]/10 transition-all duration-300 flex items-center justify-between"
+              className="group cursor-pointer bg-white hover:bg-[#FFFDF9] rounded-[26px] border border-[#F0DEC2] hover:border-[#E5A83B] p-5 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_rgba(229,168,59,0.25)] transition-all duration-300 flex items-center justify-between gap-4"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-24 h-24 rounded-2xl bg-white border border-neutral-100 flex items-center justify-center p-2 overflow-hidden group-hover:scale-105 transition-transform shadow-inner">
+              <div className="flex items-center gap-4 min-w-0">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#FFF8EE] to-white border border-[#F0DEC2] flex items-center justify-center p-2 shrink-0 group-hover:scale-105 transition-transform overflow-hidden shadow-inner">
                   <NesConsoleGraphic />
                 </div>
-                <div>
-                  <h3 className="text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display">
+                <div className="min-w-0">
+                  <h3 className="text-lg sm:text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display tracking-tight">
                     Consolas
                   </h3>
-                  <p className="text-xs text-neutral-500 mt-0.5 font-medium">
-                    Nintendo (NES, SNES, N64), PS retro, Xbox Clásico y Sega
+                  <p className="text-xs sm:text-sm text-neutral-500 mt-1 font-medium line-clamp-2">
+                    PS5, Xbox, Nintendo y más.
                   </p>
                 </div>
               </div>
 
-              <div className="w-10 h-10 rounded-full bg-[#F5A623] text-black flex items-center justify-center group-hover:scale-110 group-hover:bg-[#E59819] transition-all shadow-md shrink-0 ml-3">
-                <ChevronRight className="w-5 h-5 text-black" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#E5A83B] hover:bg-[#DDA83A] text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md shrink-0 ml-2">
+                <ArrowRight className="w-5 h-5 text-black stroke-[2.5]" />
               </div>
             </div>
 
             {/* 2. Videojuegos */}
             <div
               onClick={() => { if (onSelectCategory) onSelectCategory('video_games'); setView('catalogue'); }}
-              className="group cursor-pointer bg-[#FFFDF8] hover:bg-white rounded-3xl border border-[#F0E6D2] hover:border-[#F5A623] p-6 shadow-sm hover:shadow-xl hover:shadow-[#F5A623]/10 transition-all duration-300 flex items-center justify-between"
+              className="group cursor-pointer bg-white hover:bg-[#FFFDF9] rounded-[26px] border border-[#F0DEC2] hover:border-[#E5A83B] p-5 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_rgba(229,168,59,0.25)] transition-all duration-300 flex items-center justify-between gap-4"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-24 h-24 rounded-2xl bg-white border border-neutral-100 flex items-center justify-center p-2 overflow-hidden group-hover:scale-105 transition-transform">
-                  <img
-                    src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=300&q=80"
-                    alt="Videojuegos"
-                    className="w-full h-full object-contain"
-                  />
+              <div className="flex items-center gap-4 min-w-0">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#FFF8EE] to-white border border-[#F0DEC2] flex items-center justify-center p-2 shrink-0 group-hover:scale-105 transition-transform overflow-hidden shadow-inner">
+                  <VideoGamesStackGraphic />
                 </div>
-                <div>
-                  <h3 className="text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display">
+                <div className="min-w-0">
+                  <h3 className="text-lg sm:text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display tracking-tight">
                     Videojuegos
                   </h3>
-                  <p className="text-xs text-neutral-500 mt-0.5 font-medium">
-                    Cartuchos y discos originales
+                  <p className="text-xs sm:text-sm text-neutral-500 mt-1 font-medium line-clamp-2">
+                    Juegos originales en discos y cartuchos.
                   </p>
                 </div>
               </div>
 
-              <div className="w-10 h-10 rounded-full bg-[#F5A623] text-black flex items-center justify-center group-hover:scale-110 group-hover:bg-[#E59819] transition-all shadow-md shrink-0 ml-3">
-                <ChevronRight className="w-5 h-5 text-black" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#E5A83B] hover:bg-[#DDA83A] text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md shrink-0 ml-2">
+                <ArrowRight className="w-5 h-5 text-black stroke-[2.5]" />
               </div>
             </div>
 
-            {/* 3. TVs analógicas CRT (Disney's Cars CRT TV) */}
+            {/* 3. TVs analógicas CRT */}
             <div
               onClick={() => { if (onSelectCategory) onSelectCategory('retro_tvs'); setView('catalogue'); }}
-              className="group cursor-pointer bg-[#FFFDF8] hover:bg-white rounded-3xl border border-[#F0E6D2] hover:border-[#F5A623] p-6 shadow-sm hover:shadow-xl hover:shadow-[#F5A623]/10 transition-all duration-300 flex items-center justify-between"
+              className="group cursor-pointer bg-white hover:bg-[#FFFDF9] rounded-[26px] border border-[#F0DEC2] hover:border-[#E5A83B] p-5 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.22)] hover:shadow-[0_16px_40px_rgba(229,168,59,0.25)] transition-all duration-300 flex items-center justify-between gap-4"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-24 h-24 rounded-2xl bg-white border border-neutral-100 flex items-center justify-center p-2 overflow-hidden group-hover:scale-105 transition-transform shadow-inner">
+              <div className="flex items-center gap-4 min-w-0">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#FFF8EE] to-white border border-[#F0DEC2] flex items-center justify-center p-2 shrink-0 group-hover:scale-105 transition-transform overflow-hidden shadow-inner">
                   <CarsCrtTvGraphic />
                 </div>
-                <div>
-                  <h3 className="text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display">
+                <div className="min-w-0">
+                  <h3 className="text-lg sm:text-xl font-black text-neutral-900 group-hover:text-[#B87406] transition-colors font-display tracking-tight">
                     TVs analógicas CRT
                   </h3>
-                  <p className="text-xs text-neutral-500 mt-0.5 font-medium">
-                    13 a 21 pulgadas, temáticas Disney Cars y más
+                  <p className="text-xs sm:text-sm text-neutral-500 mt-1 font-medium line-clamp-2">
+                    De 13 a 21 pulgadas, Sony, etc.
                   </p>
                 </div>
               </div>
 
-              <div className="w-10 h-10 rounded-full bg-[#F5A623] text-black flex items-center justify-center group-hover:scale-110 group-hover:bg-[#E59819] transition-all shadow-md shrink-0 ml-3">
-                <ChevronRight className="w-5 h-5 text-black" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#E5A83B] hover:bg-[#DDA83A] text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md shrink-0 ml-2">
+                <ArrowRight className="w-5 h-5 text-black stroke-[2.5]" />
               </div>
             </div>
 
           </div>
 
         </div>
+
+        {/* Bottom wave ribbon transition to light section */}
+        <div className="mt-14">
+          <GoldRibbonDividerDarkToLight />
+        </div>
       </section>
 
       {/* ======================================================== */}
-      {/* 3. ¿POR QUÉ ELEGIRNOS? (4 Pillars matching reference image) */}
+      {/* 3. ¿POR QUÉ ELEGIRNOS? (Matching reference image) */}
       {/* ======================================================== */}
-      <section className="py-20 bg-white border-b border-neutral-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="relative py-14 sm:py-18 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-14 relative z-10">
 
-          <div className="text-center space-y-2">
-            <div className="flex items-center justify-center gap-3">
-              <div className="w-12 h-0.5 bg-[#F5A623]" />
-              <h2 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight font-display">
-                ¿Por qué elegirnos?
+          {/* Section Header flanked by gold lines */}
+          <div className="text-center space-y-3">
+            <div className="flex items-center justify-center gap-3 sm:gap-5">
+              <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-r from-transparent to-[#E5A83B]" />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 tracking-tight font-display">
+                — ¿Por qué <span className="text-[#E5A83B]">elegirnos?</span> —
               </h2>
-              <div className="w-12 h-0.5 bg-[#F5A623]" />
+              <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#E5A83B]" />
             </div>
-            <p className="text-xs sm:text-sm text-neutral-500 max-w-md mx-auto">
-              La plataforma de recompra gamer más segura, transparente y rápida de México
+            <p className="text-xs sm:text-sm md:text-base text-neutral-600 max-w-xl mx-auto font-medium">
+              Porque tus artículos merecen la mejor oferta y una experiencia sin complicaciones.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 4 Pillar Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
 
-            {/* 1. Cotización sin compromiso */}
-            <div className="p-6 rounded-3xl bg-[#FAF9F6] border border-neutral-200/90 text-center space-y-3 hover:border-[#F5A623] transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-black text-[#F5A623] flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
-                <Zap className="w-6 h-6 fill-[#F5A623]" />
+            {/* 1. Cotización Gratuita */}
+            <div className="bg-white rounded-[26px] border border-[#F0DEC2] p-7 text-center shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-[#E5A83B] transition-all duration-300 group flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-black border-2 border-[#E5A83B] text-[#E5A83B] flex items-center justify-center mx-auto shadow-md mb-5 group-hover:scale-105 transition-transform">
+                <Zap className="w-7 h-7 fill-[#E5A83B] text-[#E5A83B]" />
               </div>
-              <h4 className="font-extrabold text-base text-neutral-900 font-display">
-                Cotización sin compromiso
+              <h4 className="font-extrabold text-base sm:text-lg text-neutral-900 font-display mb-2">
+                Cotización Gratuita
               </h4>
-              <p className="text-xs text-neutral-500 leading-relaxed">
-                Recibe una cotización inmediata y transparente sin costo alguno ni obligación de venta.
+              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                Obtén una valuación justa e instantánea para tus artículos.
               </p>
             </div>
 
-            {/* 2. Compra segura */}
-            <div className="p-6 rounded-3xl bg-[#FAF9F6] border border-neutral-200/90 text-center space-y-3 hover:border-[#F5A623] transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-black text-[#F5A623] flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
-                <ShieldCheck className="w-6 h-6 text-[#F5A623]" />
+            {/* 2. Proceso Seguro */}
+            <div className="bg-white rounded-[26px] border border-[#F0DEC2] p-7 text-center shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-[#E5A83B] transition-all duration-300 group flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-black border-2 border-[#E5A83B] text-[#E5A83B] flex items-center justify-center mx-auto shadow-md mb-5 group-hover:scale-105 transition-transform">
+                <ShieldCheck className="w-7 h-7 text-[#E5A83B]" />
               </div>
-              <h4 className="font-extrabold text-base text-neutral-900 font-display">
-                Compra segura
+              <h4 className="font-extrabold text-base sm:text-lg text-neutral-900 font-display mb-2">
+                Proceso Seguro
               </h4>
-              <p className="text-xs text-neutral-500 leading-relaxed">
-                Tus datos y artículos están protegidos en todo momento mediante guías y contratos oficiales.
+              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                Tus datos y transacciones están siempre protegidos.
               </p>
             </div>
 
-            {/* 3. Pago rápido */}
-            <div className="p-6 rounded-3xl bg-[#FAF9F6] border border-neutral-200/90 text-center space-y-3 hover:border-[#F5A623] transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-black text-[#F5A623] flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
-                <Zap className="w-6 h-6 fill-[#F5A623]" />
+            {/* 3. Pago Rápido */}
+            <div className="bg-white rounded-[26px] border border-[#F0DEC2] p-7 text-center shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-[#E5A83B] transition-all duration-300 group flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-black border-2 border-[#E5A83B] text-[#E5A83B] flex items-center justify-center mx-auto shadow-md mb-5 group-hover:scale-105 transition-transform">
+                <CreditCard className="w-7 h-7 text-[#E5A83B]" />
               </div>
-              <h4 className="font-extrabold text-base text-neutral-900 font-display">
-                Pago rápido
+              <h4 className="font-extrabold text-base sm:text-lg text-neutral-900 font-display mb-2">
+                Pago Rápido
               </h4>
-              <p className="text-xs text-neutral-500 leading-relaxed">
-                Transferencia electrónica directa a tu cuenta bancaria el mismo día de la inspección técnica.
+              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                Recibe tu pago de manera rápida y segura.
               </p>
             </div>
 
-            {/* 4. Atención personalizada */}
-            <div className="p-6 rounded-3xl bg-[#FAF9F6] border border-neutral-200/90 text-center space-y-3 hover:border-[#F5A623] transition-all group">
-              <div className="w-12 h-12 rounded-2xl bg-black text-[#F5A623] flex items-center justify-center mx-auto shadow-md group-hover:scale-110 transition-transform">
-                <Headphones className="w-6 h-6 text-[#F5A623]" />
+            {/* 4. Atención Personalizada */}
+            <div className="bg-white rounded-[26px] border border-[#F0DEC2] p-7 text-center shadow-[0_4px_24px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-[#E5A83B] transition-all duration-300 group flex flex-col items-center">
+              <div className="w-16 h-16 rounded-full bg-black border-2 border-[#E5A83B] text-[#E5A83B] flex items-center justify-center mx-auto shadow-md mb-5 group-hover:scale-105 transition-transform">
+                <UserRound className="w-7 h-7 text-[#E5A83B]" />
               </div>
-              <h4 className="font-extrabold text-base text-neutral-900 font-display">
-                Atención personalizada
+              <h4 className="font-extrabold text-base sm:text-lg text-neutral-900 font-display mb-2">
+                Atención Personalizada
               </h4>
-              <p className="text-xs text-neutral-500 leading-relaxed">
-                Soporte y asesoría humana directa por WhatsApp y correo en todo momento.
+              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
+                Nuestro equipo está aquí para ayudarte en cada paso del proceso.
               </p>
             </div>
 
           </div>
 
         </div>
+
+        {/* Bottom wave ribbon transition to dark section */}
+        <div className="mt-14">
+          <GoldRibbonDividerLightToDark />
+        </div>
       </section>
 
       {/* ======================================================== */}
-      {/* 4. ¿CÓMO FUNCIONA? (4 Steps matching reference image) */}
+      {/* 4. ¿CÓMO FUNCIONA? (Matching reference image) */}
       {/* ======================================================== */}
-      <section className="py-20 bg-[#FAF9F6] border-b border-neutral-200/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+      <section className="relative py-16 sm:py-20 bg-[#0A0A0B] text-white overflow-hidden">
+        {/* Ambient background gold glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#E5A83B]/10 blur-[130px] pointer-events-none rounded-full" />
 
-          <div className="text-center space-y-2">
-            <div className="flex items-center justify-center gap-3">
-              <div className="w-12 h-0.5 bg-[#F5A623]" />
-              <h2 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight font-display">
-                ¿Cómo funciona?
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 relative z-10">
+
+          {/* Section Header flanked by gold lines */}
+          <div className="text-center space-y-3">
+            <div className="flex items-center justify-center gap-3 sm:gap-5">
+              <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-r from-transparent to-[#E5A83B]" />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight font-display">
+                — ¿Cómo <span className="text-[#E5A83B]">funciona?</span> —
               </h2>
-              <div className="w-12 h-0.5 bg-[#F5A623]" />
+              <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#E5A83B]" />
             </div>
-            <p className="text-xs sm:text-sm text-neutral-500 max-w-md mx-auto">
-              Vende tus artículos en 4 pasos sencillos sin complicaciones
+            <p className="text-xs sm:text-sm md:text-base text-neutral-300 max-w-xl mx-auto font-normal">
+              Vende tus artículos en 4 sencillos pasos.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          {/* 4 Connected Process Steps */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Horizontal gold connecting line behind circles on desktop */}
+            <div className="hidden lg:block absolute top-10 left-[12%] right-[12%] h-[2px] bg-gradient-to-r from-[#E5A83B]/20 via-[#E5A83B] to-[#E5A83B]/20 z-0" />
 
-            {/* Step 1 */}
-            <div className="flex flex-col items-center text-center space-y-3 group">
-              <div className="relative">
-                <div className="w-16 h-16 rounded-2xl bg-white border border-neutral-200 text-neutral-900 flex items-center justify-center shadow-sm group-hover:border-[#F5A623] group-hover:scale-110 transition-all">
-                  <Search className="w-7 h-7 text-neutral-800" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 relative z-10">
+
+              {/* Step 1 */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="relative">
+                  <div className="w-20 h-20 rounded-full bg-white border-2 border-[#E5A83B] text-black flex items-center justify-center shadow-[0_0_25px_rgba(229,168,59,0.35)] group-hover:scale-105 transition-transform">
+                    <Search className="w-8 h-8 text-black stroke-[2.2]" />
+                  </div>
+                  <span className="absolute -top-1 -left-1 w-7 h-7 rounded-full bg-[#E5A83B] text-black font-extrabold text-xs flex items-center justify-center shadow-md">
+                    1
+                  </span>
                 </div>
-                <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#F5A623] text-black font-black text-xs flex items-center justify-center shadow-md">
-                  1
-                </span>
+                <h3 className="text-white font-extrabold text-base sm:text-lg font-display mt-5 mb-1.5">
+                  Busca tu producto
+                </h3>
+                <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-[210px]">
+                  Busca y selecciona el artículo que deseas vender.
+                </p>
               </div>
-              <h3 className="text-base font-bold text-neutral-900 font-display">
-                Busca tu producto
-              </h3>
-              <p className="text-xs text-neutral-500 max-w-xs leading-relaxed">
-                Encuentra tu consola o juego en nuestro catálogo de más de 59 sistemas.
-              </p>
-            </div>
 
-            {/* Step 2 */}
-            <div className="flex flex-col items-center text-center space-y-3 group">
-              <div className="relative">
-                <div className="w-16 h-16 rounded-2xl bg-white border border-neutral-200 text-neutral-900 flex items-center justify-center shadow-sm group-hover:border-[#F5A623] group-hover:scale-110 transition-all">
-                  <ClipboardList className="w-7 h-7 text-neutral-800" />
+              {/* Step 2 */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="relative">
+                  <div className="w-20 h-20 rounded-full bg-white border-2 border-[#E5A83B] text-black flex items-center justify-center shadow-[0_0_25px_rgba(229,168,59,0.35)] group-hover:scale-105 transition-transform">
+                    <ClipboardList className="w-8 h-8 text-black stroke-[2.2]" />
+                  </div>
+                  <span className="absolute -top-1 -left-1 w-7 h-7 rounded-full bg-[#E5A83B] text-black font-extrabold text-xs flex items-center justify-center shadow-md">
+                    2
+                  </span>
                 </div>
-                <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#F5A623] text-black font-black text-xs flex items-center justify-center shadow-md">
-                  2
-                </span>
+                <h3 className="text-white font-extrabold text-base sm:text-lg font-display mt-5 mb-1.5">
+                  Completa el formulario
+                </h3>
+                <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-[210px]">
+                  Comparte los detalles sobre la condición de tu artículo.
+                </p>
               </div>
-              <h3 className="text-base font-bold text-neutral-900 font-display">
-                Completa el formulario
-              </h3>
-              <p className="text-xs text-neutral-500 max-w-xs leading-relaxed">
-                Selecciona la condición física y marca los accesorios extras incluidos.
-              </p>
-            </div>
 
-            {/* Step 3 */}
-            <div className="flex flex-col items-center text-center space-y-3 group">
-              <div className="relative">
-                <div className="w-16 h-16 rounded-2xl bg-white border border-neutral-200 text-neutral-900 flex items-center justify-center shadow-sm group-hover:border-[#F5A623] group-hover:scale-110 transition-all">
-                  <Truck className="w-7 h-7 text-neutral-800" />
+              {/* Step 3 */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="relative">
+                  <div className="w-20 h-20 rounded-full bg-white border-2 border-[#E5A83B] text-black flex items-center justify-center shadow-[0_0_25px_rgba(229,168,59,0.35)] group-hover:scale-105 transition-transform">
+                    <Package className="w-8 h-8 text-black stroke-[2.2]" />
+                  </div>
+                  <span className="absolute -top-1 -left-1 w-7 h-7 rounded-full bg-[#E5A83B] text-black font-extrabold text-xs flex items-center justify-center shadow-md">
+                    3
+                  </span>
                 </div>
-                <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#F5A623] text-black font-black text-xs flex items-center justify-center shadow-md">
-                  3
-                </span>
+                <h3 className="text-white font-extrabold text-base sm:text-lg font-display mt-5 mb-1.5">
+                  Envíanos tus artículos
+                </h3>
+                <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-[210px]">
+                  Envía o entrega tu artículo en nuestra ubicación.
+                </p>
               </div>
-              <h3 className="text-base font-bold text-neutral-900 font-display">
-                Envíanos tus artículos
-              </h3>
-              <p className="text-xs text-neutral-500 max-w-xs leading-relaxed">
-                Te enviamos la guía de paquetería prepagada y protegida por paquetería líder.
-              </p>
-            </div>
 
-            {/* Step 4 */}
-            <div className="flex flex-col items-center text-center space-y-3 group">
-              <div className="relative">
-                <div className="w-16 h-16 rounded-2xl bg-white border border-neutral-200 text-neutral-900 flex items-center justify-center shadow-sm group-hover:border-[#F5A623] group-hover:scale-110 transition-all">
-                  <Handshake className="w-7 h-7 text-neutral-800" />
+              {/* Step 4 */}
+              <div className="flex flex-col items-center text-center group">
+                <div className="relative">
+                  <div className="w-20 h-20 rounded-full bg-white border-2 border-[#E5A83B] text-black flex items-center justify-center shadow-[0_0_25px_rgba(229,168,59,0.35)] group-hover:scale-105 transition-transform">
+                    <HandCoins className="w-8 h-8 text-black stroke-[2.2]" />
+                  </div>
+                  <span className="absolute -top-1 -left-1 w-7 h-7 rounded-full bg-[#E5A83B] text-black font-extrabold text-xs flex items-center justify-center shadow-md">
+                    4
+                  </span>
                 </div>
-                <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#F5A623] text-black font-black text-xs flex items-center justify-center shadow-md">
-                  4
-                </span>
+                <h3 className="text-white font-extrabold text-base sm:text-lg font-display mt-5 mb-1.5">
+                  Recibe tu pago
+                </h3>
+                <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-[210px]">
+                  Recibe tu pago rápidamente una vez verificado tu artículo.
+                </p>
               </div>
-              <h3 className="text-base font-bold text-neutral-900 font-display">
-                Recibe tu oferta y pago
-              </h3>
-              <p className="text-xs text-neutral-500 max-w-xs leading-relaxed">
-                Al llegar a nuestra bodega, técnicos especializados verifican el funcionamiento y cosmética. Si todo coincide con lo especificado, ratificamos la oferta y transferimos a tu cuenta en 1-3 días hábiles.
-              </p>
-            </div>
 
+            </div>
           </div>
 
         </div>
