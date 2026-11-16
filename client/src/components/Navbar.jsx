@@ -45,51 +45,60 @@ function NesControllerSvg() {
   );
 }
 
-// 2. PlayStation (PS5 Tower + DualSense)
+// 2. PlayStation (PSone con Pantalla LCD Portátil)
 function PlaystationSvg() {
   return (
     <svg viewBox="0 0 140 85" className="w-24 h-13 sm:w-28 sm:h-15 object-contain drop-shadow-md">
-      {/* PS5 Console Tower */}
-      <path d="M 28 6 Q 34 38 31 78 L 47 78 Q 50 38 45 6 Z" fill="#F8FAFC" />
-      <path d="M 33 12 L 44 12 L 45 74 L 34 74 Z" fill="#090D16" />
-      {/* Blue LED Light Strip */}
-      <path d="M 33 12 L 34 72" stroke="#38BDF8" strokeWidth="1.2" opacity="0.95" />
-      {/* DualSense Controller */}
-      <path d="M 64 36 C 64 30, 118 30, 118 36 C 122 50, 124 70, 116 72 C 110 74, 104 60, 98 55 L 84 55 C 78 60, 72 74, 66 72 C 58 70, 60 50, 64 36 Z" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.2" />
-      {/* Center Black touchpad */}
-      <rect x="80" y="34" width="22" height="13" rx="3" fill="#090D16" />
-      <rect x="79.5" y="33.5" width="23" height="14" rx="3.5" fill="none" stroke="#38BDF8" strokeWidth="0.8" opacity="0.8" />
-      {/* Thumbsticks */}
-      <circle cx="82" cy="55" r="5" fill="#334155" stroke="#1E293B" strokeWidth="1" />
-      <circle cx="100" cy="55" r="5" fill="#334155" stroke="#1E293B" strokeWidth="1" />
-      {/* D-pad and Action buttons */}
-      <circle cx="73" cy="41" r="2.5" fill="#94A3B8" />
-      <circle cx="109" cy="41" r="2.5" fill="#94A3B8" />
+      {/* Attached Flip-Up LCD Screen */}
+      <rect x="36" y="6" width="68" height="42" rx="6" fill="#D8DCE0" stroke="#94A3B8" strokeWidth="1.5" />
+      {/* Screen Frame Bezel */}
+      <rect x="44" y="10" width="52" height="32" rx="3" fill="#1E293B" stroke="#0F172A" strokeWidth="1" />
+      {/* LCD Display Glowing with PlayStation Boot/Game Screen */}
+      <rect x="47" y="13" width="46" height="26" rx="2" fill="#0284C7" />
+      <text x="70" y="29" fill="#FFFFFF" fontSize="6" fontWeight="900" textAnchor="middle" letterSpacing="0.5">PS one</text>
+      {/* Left and Right Mini Speaker Grilles */}
+      <circle cx="39" cy="22" r="1.5" fill="#64748B" />
+      <circle cx="39" cy="28" r="1.5" fill="#64748B" />
+      <circle cx="101" cy="22" r="1.5" fill="#64748B" />
+      <circle cx="101" cy="28" r="1.5" fill="#64748B" />
+      {/* PSone Base Console Body */}
+      <rect x="26" y="44" width="88" height="34" rx="8" fill="#E2E8F0" stroke="#94A3B8" strokeWidth="1.5" />
+      {/* Circular Disc Cover */}
+      <circle cx="70" cy="61" r="13" fill="#CBD5E1" stroke="#94A3B8" strokeWidth="1" />
+      <circle cx="70" cy="61" r="5" fill="#E2E8F0" />
+      {/* Power and Open buttons */}
+      <ellipse cx="38" cy="61" rx="4" ry="4" fill="#94A3B8" />
+      <text x="38" y="62.5" fill="#475569" fontSize="2.5" fontWeight="bold" textAnchor="middle">PWR</text>
+      <ellipse cx="102" cy="61" rx="4" ry="4" fill="#94A3B8" />
+      <text x="102" y="62.5" fill="#475569" fontSize="2.5" fontWeight="bold" textAnchor="middle">OPEN</text>
+      {/* Front Controller & Memory Card Ports */}
+      <rect x="42" y="72" width="22" height="4" rx="1" fill="#475569" />
+      <rect x="76" y="72" width="22" height="4" rx="1" fill="#475569" />
     </svg>
   );
 }
 
-// 3. Xbox (Xbox Series X Tower + Wireless Controller)
+// 3. Xbox Original (Clásico)
 function XboxSvg() {
   return (
     <svg viewBox="0 0 140 85" className="w-24 h-13 sm:w-28 sm:h-15 object-contain drop-shadow-md">
-      {/* Series X Monolith Tower */}
-      <rect x="25" y="10" width="30" height="66" rx="3" fill="#18181B" stroke="#27272A" strokeWidth="1.5" />
-      {/* Top green concave ventilating exhaust */}
-      <ellipse cx="40" cy="10" rx="14" ry="3.5" fill="#10B981" opacity="0.9" />
-      {/* Glowing Xbox logo power button */}
-      <circle cx="33" cy="18" r="2.5" fill="#F4F4F5" />
-      <rect x="31" y="40" width="1.5" height="18" fill="#3F3F46" />
-      {/* Xbox Wireless Controller */}
-      <path d="M 70 34 C 70 28, 120 28, 120 34 C 124 48, 126 68, 118 70 C 112 72, 106 58, 100 55 L 86 55 C 80 58, 74 72, 68 70 C 60 68, 62 48, 70 34 Z" fill="#18181B" stroke="#3F3F46" strokeWidth="1.5" />
-      {/* Xbox jewel */}
-      <circle cx="95" cy="35" r="3.5" fill="#F4F4F5" />
-      {/* Left thumbstick */}
-      <circle cx="82" cy="42" r="5" fill="#27272A" stroke="#52525B" strokeWidth="0.8" />
-      {/* Right thumbstick */}
-      <circle cx="103" cy="52" r="5" fill="#27272A" stroke="#52525B" strokeWidth="0.8" />
-      {/* D-pad */}
-      <circle cx="88" cy="54" r="4" fill="#3F3F46" />
+      {/* Classic Xbox Bulky Chassis */}
+      <rect x="20" y="20" width="100" height="54" rx="6" fill="#18191B" stroke="#2D3035" strokeWidth="2" />
+      {/* Bold Top Embossed X Grooves */}
+      <line x1="28" y1="22" x2="112" y2="58" stroke="#101113" strokeWidth="6" strokeLinecap="round" />
+      <line x1="112" y1="22" x2="28" y2="58" stroke="#101113" strokeWidth="6" strokeLinecap="round" />
+      {/* Front Bevel and Disc Tray */}
+      <rect x="30" y="52" width="46" height="8" rx="1.5" fill="#25272B" stroke="#3D4046" strokeWidth="1" />
+      <circle cx="82" cy="56" r="2.5" fill="#10B981" />
+      {/* 4 Front Controller Ports */}
+      <rect x="90" y="53" width="6" height="6" rx="1.5" fill="#0C0D0E" />
+      <rect x="98" y="53" width="6" height="6" rx="1.5" fill="#0C0D0E" />
+      <rect x="106" y="53" width="6" height="6" rx="1.5" fill="#0C0D0E" />
+      <rect x="114" y="53" width="6" height="6" rx="1.5" fill="#0C0D0E" />
+      {/* Iconic Center Green Jewel */}
+      <ellipse cx="70" cy="38" rx="14" ry="11" fill="#10B981" stroke="#059669" strokeWidth="1.5" />
+      <ellipse cx="70" cy="38" rx="11" ry="8" fill="#34D399" />
+      <text x="70" y="40.5" fill="#064E3B" fontSize="4.5" fontWeight="900" textAnchor="middle" letterSpacing="0.8">XBOX</text>
     </svg>
   );
 }
@@ -100,25 +109,6 @@ function SegaSvg() {
     <div className="w-full h-full flex flex-col items-center justify-center">
       <span className="text-2xl sm:text-3xl font-black italic tracking-tighter text-[#0060A9] font-display select-none drop-shadow-[0_3px_12px_rgba(0,96,169,0.5)]">
         SEGA
-      </span>
-    </div>
-  );
-}
-
-// 5. Atari y Sistemas Clásicos (Iconic Red ATARI Fuji Logo)
-function AtariSvg() {
-  return (
-    <div className="w-full h-full flex flex-col items-center justify-center">
-      <svg viewBox="0 0 90 55" className="w-14 h-9 sm:w-16 sm:h-10 object-contain drop-shadow-[0_3px_12px_rgba(229,37,33,0.5)]">
-        {/* Central pillar */}
-        <rect x="41" y="2" width="8" height="38" fill="#E52521" rx="1.5" />
-        {/* Left wing */}
-        <path d="M 18 40 C 27 40, 32 22, 34 2 L 27 2 C 25 20, 20 33, 11 40 Z" fill="#E52521" />
-        {/* Right wing */}
-        <path d="M 72 40 C 63 40, 58 22, 56 2 L 63 2 C 65 20, 70 33, 79 40 Z" fill="#E52521" />
-      </svg>
-      <span className="text-xs sm:text-sm font-black tracking-[0.25em] text-[#E52521] mt-0.5 select-none font-display">
-        ATARI
       </span>
     </div>
   );
@@ -166,50 +156,53 @@ function AccessoriesSvg() {
   );
 }
 
-// 8. Televisiones CRT (Classic CRT Monitor with pixel game screen)
+// 7. Televisiones Analógicas CRT (Disney's Cars Lightning McQueen CRT TV)
 function CrtTvSvg() {
   return (
-    <svg viewBox="0 0 140 85" className="w-24 h-13 sm:w-28 sm:h-15 object-contain drop-shadow-md">
-      {/* Vintage Wood Bezel TV */}
-      <rect x="22" y="12" width="96" height="66" rx="8" fill="#78350F" stroke="#451A03" strokeWidth="2" />
-      {/* Inner Screen Bezel */}
-      <rect x="28" y="18" width="66" height="54" rx="6" fill="#1C1917" stroke="#292524" strokeWidth="1.5" />
-      {/* Glass Tube with 2D Mario Game */}
-      <rect x="31" y="21" width="60" height="48" rx="5" fill="#38BDF8" />
-      {/* Sky & Clouds */}
-      <ellipse cx="44" cy="28" rx="7" ry="3" fill="#FFFFFF" />
-      <ellipse cx="66" cy="30" rx="6" ry="2.5" fill="#FFFFFF" />
-      {/* Ground */}
-      <rect x="31" y="55" width="60" height="14" fill="#15803D" />
-      {/* Brick block & Question block */}
-      <rect x="52" y="44" width="8" height="8" fill="#D97706" stroke="#78350F" strokeWidth="0.8" />
-      <rect x="62" y="44" width="8" height="8" fill="#EAB308" stroke="#78350F" strokeWidth="0.8" />
-      <text x="66" y="50" fill="#78350F" fontSize="5" fontWeight="900" textAnchor="middle">?</text>
-      {/* Mario */}
-      <rect x="42" y="45" width="7" height="10" fill="#DC2626" />
-      <circle cx="45.5" cy="42" r="3" fill="#FDE047" />
-      {/* Knobs on the right bezel */}
-      <circle cx="104" cy="28" r="4.5" fill="#B45309" stroke="#451A03" strokeWidth="1" />
-      <circle cx="104" cy="44" r="4.5" fill="#B45309" stroke="#451A03" strokeWidth="1" />
-      <rect x="100" y="56" width="8" height="3" fill="#451A03" />
-      <rect x="100" y="62" width="8" height="3" fill="#451A03" />
-      {/* Rabbit-ear Antenna */}
-      <line x1="55" y1="12" x2="38" y2="2" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" />
-      <line x1="75" y1="12" x2="92" y2="2" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round" />
+    <svg viewBox="0 0 140 85" className="w-26 h-13 sm:w-30 sm:h-15 object-contain drop-shadow-md">
+      {/* Rabbit-ear Antennas */}
+      <line x1="58" y1="12" x2="42" y2="2" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" />
+      <line x1="82" y1="12" x2="98" y2="2" stroke="#94A3B8" strokeWidth="2" strokeLinecap="round" />
+      {/* Lightning McQueen Red Car Body Chassis */}
+      <path d="M 22 28 C 22 18, 40 12, 70 12 C 100 12, 118 18, 118 28 L 122 64 C 122 72, 110 74, 70 74 C 30 74, 18 72, 18 64 Z" fill="#DC2626" stroke="#991B1B" strokeWidth="2" />
+      {/* Roof spoiler */}
+      <rect x="38" y="10" width="64" height="4" rx="2" fill="#B91C1C" />
+      {/* CRT Screen Frame (Windshield) */}
+      <rect x="36" y="20" width="68" height="42" rx="8" fill="#18181B" stroke="#7F1D1D" strokeWidth="1.5" />
+      {/* Screen Tube (Cars Windshield with Eyes) */}
+      <rect x="40" y="24" width="60" height="34" rx="6" fill="#38BDF8" />
+      {/* Blue Eyes of Lightning McQueen */}
+      <ellipse cx="58" cy="41" rx="6" ry="7" fill="#FFFFFF" />
+      <circle cx="59" cy="41" r="3.5" fill="#1D4ED8" />
+      <circle cx="60" cy="40" r="1.5" fill="#FFFFFF" />
+      <ellipse cx="82" cy="41" rx="6" ry="7" fill="#FFFFFF" />
+      <circle cx="81" cy="41" r="3.5" fill="#1D4ED8" />
+      <circle cx="82" cy="40" r="1.5" fill="#FFFFFF" />
+      {/* Eyebrows */}
+      <path d="M 52 32 Q 58 30 64 33" stroke="#DC2626" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M 76 33 Q 82 30 88 32" stroke="#DC2626" strokeWidth="2" strokeLinecap="round" fill="none" />
+      {/* Yellow Headlights / Turning Signals on Bumper */}
+      <ellipse cx="28" cy="52" rx="4" ry="7" fill="#FBBF24" stroke="#D97706" strokeWidth="1" />
+      <ellipse cx="112" cy="52" rx="4" ry="7" fill="#FBBF24" stroke="#D97706" strokeWidth="1" />
+      {/* McQueen Smile Grille */}
+      <path d="M 54 68 Q 70 73 86 68" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      {/* Lightning 95 Badge */}
+      <rect x="23" y="32" width="10" height="6" rx="1" fill="#F59E0B" />
+      <text x="28" y="36.5" fill="#78350F" fontSize="3.5" fontWeight="900" textAnchor="middle">95</text>
     </svg>
   );
 }
 
-// Announcements list for the running marquee
+// Announcements list for the running marquee (leisurely smooth reading speed)
 const ANNOUNCEMENTS = [
-  "⚡ ¡Compramos tus consolas y videojuegos usados en todo México con cotización garantizada en MXN!",
-  "🎮 Nintendo, PlayStation, Xbox, Sega, Atari y sistemas retro al mejor valor del mercado",
-  "🚚 Envíos asegurados y guías de paquetería prepagada (Estafeta y DHL) con recolección directa",
-  "💰 Depósito y transferencia electrónica a tu cuenta bancaria el mismo día de la inspección",
-  "📺 Compramos televisores de tubo CRT para retrogaming (Sony Trinitron, PVM y monitores de tubo)",
-  "🛡️ Valuación técnica transparente, sin regateos ni comisiones ocultas",
-  "✨ ¿Tienes ediciones especiales o de colección? ¡Escríbenos y recibe ofertas preferentes!",
-  "📱 Atención personalizada y asesoría directa vía WhatsApp: 55 1234 5678"
+  "⚡ ¡Compramos tus consolas retro, videojuegos y tvs analógicas de 13 hasta 21 pulgadas en todo México!",
+  "🎮 Nintendo (NES, SNES, N64, GameCube), PlayStation (PS1 con pantalla portátil, PS2), Xbox Clásico Original y Sega",
+  "📺 Compramos tvs analógicas CRT temáticas (Disney Cars Rayo McQueen, personajes, combos DVD/VHS, 13\" a 21\")",
+  "🚚 Envíos asegurados y guías de paquetería prepagada con recolección directa en tu domicilio",
+  "💰 Transferencia a tu cuenta bancaria o método de preferencia de 1 a 3 días hábiles tras inspección",
+  "🛡️ Valuación técnica transparente, sin regateos ni comisiones ocultas • Lion Games & TVs",
+  "✨ ¿Tienes ediciones especiales o carcasas de colección? ¡Escríbenos y cotiza de inmediato!",
+  "📱 Atención personalizada y asesoría técnica directa vía WhatsApp: 55 1234 5678"
 ];
 
 // ========================================================
@@ -255,7 +248,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
 
   const isHomeActive = currentView === 'home';
 
-  // 8 Category definitions matching the user reference image structure
+  // 7 Category definitions (No Atari, PS1 pantalla portátil + PS2, Xbox Clásico Original, TVs analógicas CRT)
   const CATEGORIES = [
     {
       id: 'nintendo',
@@ -267,14 +260,14 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
     {
       id: 'playstation',
       name: 'PlayStation',
-      subtitle: 'PS1, PS2, PS3, PS4, PS5',
+      subtitle: 'PS1 con pantalla portátil y PS2',
       component: <PlaystationSvg />,
       action: () => handleBrandClick('PlayStation')
     },
     {
       id: 'xbox',
       name: 'Xbox',
-      subtitle: 'Xbox Clásico, 360, One y más',
+      subtitle: 'Xbox Clásico (Original)',
       component: <XboxSvg />,
       action: () => handleBrandClick('Xbox')
     },
@@ -284,13 +277,6 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
       subtitle: 'Genesis, Dreamcast y más',
       component: <SegaSvg />,
       action: () => handleBrandClick('Sega')
-    },
-    {
-      id: 'atari',
-      name: 'Atari y Sistemas Clásicos',
-      subtitle: '2600, 5200, 7800 y más',
-      component: <AtariSvg />,
-      action: () => handleBrandClick('Atari')
     },
     {
       id: 'video_games',
@@ -308,8 +294,8 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
     },
     {
       id: 'retro_tvs',
-      name: 'Televisiones CRT',
-      subtitle: 'Trinitron, WEGA y más',
+      name: 'Tvs analógicas CRT',
+      subtitle: '13" a 21" temáticas, Cars y más',
       component: <CrtTvSvg />,
       action: () => handleCategoryClick('retro_tvs')
     }
@@ -577,7 +563,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
               onClick={() => { setCatDropdownOpen(!catDropdownOpen); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-[#F5A623] font-bold hover:bg-neutral-900 cursor-pointer flex items-center justify-between"
             >
-              <span>Explorar Categorías (8 Secciones)</span>
+              <span>Explorar Categorías</span>
               <ChevronDown className="w-4 h-4 text-[#F5A623]" />
             </div>
 
@@ -585,7 +571,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
               onClick={() => { setView('consoles'); setMobileMenuOpen(false); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer"
             >
-              Vende tus Consolas (59+ Sistemas)
+              Vende tus Consolas Retro
             </div>
 
             <div
@@ -599,7 +585,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
               onClick={() => { handleCategoryClick('retro_tvs'); }}
               className="px-4 py-2.5 rounded-2xl text-neutral-200 hover:bg-neutral-900 cursor-pointer"
             >
-              Televisiones CRT
+              Tvs analógicas CRT (13" a 21")
             </div>
 
             <div

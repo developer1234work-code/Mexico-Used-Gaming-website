@@ -134,7 +134,7 @@ export default function CataloguePage({ initialCategory = 'all', onOpenCustomQuo
             — CATÁLOGO DE COMPRA MÉXICO —
           </span>
           <h1 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight font-display">
-            Valúa tus Consolas, Juegos y TVs CRT
+            Valúa tus Consolas, Juegos y TVs analógicas CRT
           </h1>
           <p className="text-xs sm:text-sm text-neutral-500">
             Busca tu modelo, ajusta su estado y obtén una cotización inmediata garantizada en MXN.
@@ -525,7 +525,7 @@ export default function CataloguePage({ initialCategory = 'all', onOpenCustomQuo
                   </div>
                 </div>
                 <div className="text-right text-[11px] text-slate-400 max-w-[180px]">
-                  Validado por el servidor bajo reglas oficiales de RetroCompra.
+                  Validado por el servidor bajo reglas oficiales de Lion Games & TVs.
                 </div>
               </div>
 

@@ -22,10 +22,10 @@ export function HowItWorksPage({ setView }) {
             — PROCESO TRANSPARENTE —
           </span>
           <h1 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight font-display">
-            ¿Cómo Funciona RetroCompra en México?
+            ¿Cómo funciona nuestro sistema de compras de tus artículos?
           </h1>
           <p className="text-sm text-neutral-600 max-w-lg mx-auto">
-            Convertimos tus consolas, videojuegos usados y televisores CRT en valor de manera sencilla, justa y transparente.
+            Convertimos tus consolas retro, videojuegos usados y tvs analógicas CRT en valor de manera sencilla, justa y transparente.
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export function HowItWorksPage({ setView }) {
             <div className="space-y-2">
               <h3 className="text-lg font-bold text-neutral-900 font-display">1. Selecciona y Cotiza en Línea</h3>
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                Navega en nuestro catálogo, elige tu modelo (Nintendo, PlayStation, Xbox, Sega, Vintage o CRT retro) y configura su estado y accesorios incluidos. Obtendrás un estimado instantáneo validado en Pesos Mexicanos (MXN).
+                Navega en nuestro catálogo, elige tu modelo (Nintendo, PlayStation retro, Xbox Clásico, Sega o TVs analógicas CRT) y configura su estado y accesorios incluidos. Obtendrás un estimado instantáneo validado en Pesos Mexicanos (MXN).
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ export function HowItWorksPage({ setView }) {
             <div className="space-y-2">
               <h3 className="text-lg font-bold text-neutral-900 font-display">3. Aprobación Formal de Envío (AC-09)</h3>
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                Nuestros valuadores analizan tus fotografías. Una vez aprobado, recibirás tu guía de paquetería prepagada (Estafeta, DHL o logística de tarima para CRTs pesados) con instrucciones de embalaje seguro.
+                Nuestros valuadores analizan tus fotografías. Una vez aprobado, recibirás tu guía de paquetería prepagada (Estafeta, DHL o fletera para paquetes) con instrucciones de embalaje seguro.
               </p>
             </div>
           </div>
@@ -70,11 +70,14 @@ export function HowItWorksPage({ setView }) {
             <div className="w-12 h-12 rounded-2xl bg-[#F5A623] text-black font-black flex items-center justify-center shrink-0 text-lg">
               4
             </div>
-            <div className="space-y-2">
-              <h3 className="text-lg font-bold text-neutral-900 font-display">4. Inspección Técnica y Depósito Inmediato</h3>
+            <div className="space-y-3">
+              <h3 className="text-lg font-bold text-neutral-900 font-display">4. Inspección Técnica y Transferencia</h3>
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
-                Al llegar a nuestra bodega central en CDMX, técnicos especializados verifican el funcionamiento y cosmética. Si todo coincide, ratificamos la oferta y transferimos de inmediato a tu cuenta bancaria. Si existe alguna discrepancia, emitimos una oferta revisada que puedes aceptar o rechazar libremente con devolución asegurada.
+                Al llegar a nuestra bodega, técnicos especializados verifican el funcionamiento y cosmética. Si todo coincide con lo especificado, ratificamos la oferta y transferimos a tu cuenta bancaria o a tu método de preferencia de 1-3 días hábiles. Si existe alguna discrepancia, emitimos una oferta revisada que puedes aceptar o rechazar libremente con devolución asegurada.
               </p>
+              <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-950 text-xs font-medium leading-relaxed">
+                <strong>Nota sobre gastos de envío y devoluciones:</strong> Una vez recibidos los artículos, en caso de arrepentimiento del vendedor (seller's remorse) o cancelación de la venta debido a que los artículos no correspondían con lo previamente descrito, los gastos de envío correrán por cuenta del cliente.
+              </div>
             </div>
           </div>
         </div>
@@ -102,19 +105,19 @@ export function AboutPage() {
             — NUESTRA HISTORIA —
           </span>
           <h1 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight font-display">
-            Acerca de RetroCompra México
+            Acerca de Lion Games & TVs
           </h1>
           <p className="text-sm text-neutral-600 max-w-lg mx-auto">
-            Impulsando la economía circular del videojuego y la preservación del retrogaming en México.
+            Impulsando la preservación del retrogaming y la compra profesional de videojuegos, consolas y televisores analógicos CRT.
           </p>
         </div>
 
         <div className="bg-white rounded-3xl p-8 border border-neutral-200/90 shadow-sm space-y-6 text-neutral-700 text-xs sm:text-sm leading-relaxed">
           <p>
-            <strong>RetroCompra</strong> nació en la Ciudad de México con una misión clara: ofrecer a los jugadores y coleccionistas una alternativa profesional, segura y transparente para vender sus consolas, videojuegos y televisores de tubo CRT coleccionables.
+            <strong>Lion Games & TVs</strong> nació con una misión clara: ofrecer a los jugadores y coleccionistas una alternativa profesional, segura y transparente para vender sus consolas retro, videojuegos y televisores de tubo CRT coleccionables.
           </p>
           <p>
-            A diferencia de los tianguis informales o plataformas de compraventa donde abundan fraudes y regateos sin garantía, nosotros operamos bajo un modelo institucional de <strong>comercio electrónico inverso (Customer-to-Business)</strong>. Cada artículo que compramos es revisado por técnicos certificados, restaurado con refacciones de calidad y reintegrado a la apasionada comunidad de videojugadores.
+            A diferencia de los tianguis informales o plataformas de compraventa donde abundan fraudes y regateos sin garantía, nosotros operamos bajo un modelo institucional de <strong>comercio electrónico inverso (Customer-to-Business)</strong>. Cada artículo que compramos es revisado por técnicos especializados para garantizar una valuación justa y un pago confiable.
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-neutral-100">
@@ -154,21 +157,21 @@ export function FAQPage() {
           <div className="space-y-1.5 pb-4 border-b border-neutral-100">
             <h3 className="font-bold text-neutral-900">¿Por qué no piden mis datos bancarios al llenar el formulario?</h3>
             <p className="text-neutral-600">
-              Conforme a la especificación de seguridad de RetroCompra, no recopilamos datos bancarios, CLABE ni SPEI en el formulario web para máxima protección de tu privacidad. El finiquito y transferencia se gestionan de común acuerdo una vez que los artículos han sido formalmente aprobados en la inspección física.
+              Conforme a la especificación de seguridad LionGamesAndTvs, no recopilamos datos bancarios, CLABE ni SPEI en el formulario web para máxima protección de tu privacidad. El finiquito y transferencia se gestionan de común acuerdo una vez que los artículos han sido formalmente aprobados en la inspección física.
             </p>
           </div>
 
           <div className="space-y-1.5 pb-4 border-b border-neutral-100">
-            <h3 className="font-bold text-neutral-900">¿Qué pasa si mi televisor CRT pesa más de 30 kilos?</h3>
+            <h3 className="font-bold text-neutral-900">¿Compran televisores CRT analógicos?</h3>
             <p className="text-neutral-600">
-              Contamos con convenios con fleteras de carga consolidada (Transportes Castores / Tres Guerras) para recolección en planta baja con empaque reforzado en tarima. Requerimos fotos del televisor encendido para autorizar el servicio.
+              Sí, compramos exclusivamente televisores analógicos de tubo CRT de 12 hasta 21 pulgadas, especialmente modelos temáticos de personajes (como Disney Cars Rayo McQueen, Shrek, Bob Esponja, Mickey Mouse o Batman). El precio de compra varía si incluyen su control remoto temático original correspondiente, combo con reproductor DVD o videocasetera VHS integrada.
             </p>
           </div>
 
           <div className="space-y-1.5 pb-4 border-b border-neutral-100">
             <h3 className="font-bold text-neutral-900">¿Qué sucede si no estoy de acuerdo con una oferta revisada?</h3>
             <p className="text-neutral-600">
-              Tienes el derecho total de rechazarla mediante el botón "Rechazar y Solicitar Devolución" en tu portal de seguimiento. Nuestro personal coordinará el retorno seguro de tus pertenencias.
+              Tienes el derecho de aceptar o rechazar libremente la oferta revisada. En caso de discrepancia o arrepentimiento del vendedor al no coincidir el estado físico con lo declarado, los gastos de envío de retorno correrán por cuenta del cliente.
             </p>
           </div>
         </div>
@@ -183,10 +186,10 @@ export function TermsPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
         <h1 className="text-3xl font-black text-neutral-900 font-display">Términos y Condiciones de Servicio (México)</h1>
         <div className="bg-white rounded-3xl p-8 border border-neutral-200/90 shadow-sm space-y-4 text-xs text-neutral-600 leading-relaxed">
-          <p><strong>Versión: 1.2-MEX-2026 • Última actualización: Noviembre 2026</strong></p>
-          <p>El presente documento regula el uso de la plataforma digital operada por RetroCompra en los Estados Unidos Mexicanos.</p>
-          <p>1. <strong>Valuaciones e Inspección:</strong> Toda cotización generada en el sitio es preliminar y de carácter ilustrativo. Ningún compromiso comercial se perfecciona hasta la recepción física y comprobación de autenticidad en el laboratorio técnico.</p>
-          <p>2. <strong>Reglas de Envío:</strong> Queda estrictamente prohibido al usuario remitir paquetes a las instalaciones de la empresa sin previa autorización escrita y emisión de guía oficial por el personal autorizado.</p>
+          <p><strong>Versión: 1.3-MEX-2026 • Última actualización: Noviembre 2026</strong></p>
+          <p>El presente documento regula el uso de la plataforma digital operada por Lion Games & TVs en los Estados Unidos Mexicanos.</p>
+          <p>1. <strong>Valuaciones e Inspección:</strong> Toda cotización generada en el sitio es preliminar y de carácter ilustrativo. Ningún compromiso comercial se perfecciona hasta la recepción física y comprobación de autenticidad y funcionamiento en nuestra bodega técnica.</p>
+          <p>2. <strong>Reglas de Envío y Devoluciones:</strong> Los envíos autorizados se gestionan con guías de paquetería prepagadas. En caso de desistimiento, arrepentimiento del vendedor o discrepancias por artículos no conformes con lo declarado, los gastos de paquetería correrán a cuenta del usuario.</p>
           <p>3. <strong>Retención y Propiedad:</strong> En ningún caso la empresa asumirá propiedad de los bienes por mero transcurso de tiempo sin la voluntad expresa del cliente.</p>
         </div>
       </div>

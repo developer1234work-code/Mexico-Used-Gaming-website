@@ -16,13 +16,13 @@ export default function Footer({ setView, onSelectCategory }) {
             >
               <img 
                 src={logoImg} 
-                alt="RetroCompra" 
+                alt="Lion Games & TVs" 
                 className="h-16 sm:h-20 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-200"
               />
             </div>
             
             <p className="text-xs sm:text-sm text-neutral-400 max-w-sm leading-relaxed">
-              Tu destino confiable para vender videojuegos, consolas de todas las generaciones y televisores retro CRT en México con cotización instantánea y pago seguro.
+              Tu destino confiable para vender videojuegos, consolas retro y televisores analógicos CRT en México con cotización instantánea y pago seguro.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -150,7 +150,7 @@ export default function Footer({ setView, onSelectCategory }) {
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#F5A623] shrink-0" />
                 <a 
-                  href="https://wa.me/525512345678?text=Hola%20RetroCompra,%20quiero%20vender%20mis%20art%C3%ADculos" 
+                  href="https://wa.me/525512345678?text=Hola%20LionGamesAndTvs,%20quiero%20vender%20mis%20art%C3%ADculos" 
                   target="_blank" 
                   rel="noreferrer" 
                   className="hover:text-white transition-colors font-mono"
@@ -160,18 +160,18 @@ export default function Footer({ setView, onSelectCategory }) {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#F5A623] shrink-0" />
-                <a href="mailto:hola@retrocompra.com" className="hover:text-white transition-colors">
-                  hola@retrocompra.com
+                <a href="mailto:contacto@liongamesandtvs.com" className="hover:text-white transition-colors">
+                  contacto@liongamesandtvs.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <MapPin className="w-4 h-4 text-[#F5A623] shrink-0" />
-                <span>Ciudad de México, México</span>
+                <span>México</span>
               </li>
             </ul>
 
             <div className="pt-2 text-[11px] text-neutral-500">
-              Atención a clientes: Lunes a Sábado de 10:00 a 19:00 hrs (CDMX)
+              Atención a clientes: Lunes a Sábado de 10:00 a 19:00 hrs
             </div>
           </div>
 
@@ -179,7 +179,7 @@ export default function Footer({ setView, onSelectCategory }) {
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-400 gap-4">
-          <p>© 2026 RetroCompra. Todos los derechos reservados.</p>
+          <p>© 2026 Lion Games & TVs. Todos los derechos reservados.</p>
           <div className="flex items-center gap-2 text-neutral-300">
             <Gamepad2 className="w-4 h-4 text-[#F5A623]" />
             <span className="font-semibold">¡Dale una segunda vida a tus videojuegos y consolas!</span>

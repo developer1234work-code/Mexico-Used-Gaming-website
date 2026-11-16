@@ -388,12 +388,12 @@ const seedProducts = [
   createConsole({
     id: 'ps1-slim',
     brand: 'PlayStation',
-    name: 'PlayStation 1 Slim',
-    model: 'PSone (SCPH-101)',
-    baseBuyPrice: 950,
+    name: 'PlayStation 1 con Pantalla LCD Portátil',
+    model: 'PSone Combo (SCPH-101 + Pantalla LCD Oficial SCPH-131)',
+    baseBuyPrice: 1650,
     imageUrl: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80',
-    description: 'Versión compacta y estilizada de PS1.',
-    accessories: { lcd_screen_attachment: 700, original_box: 300, extra_controller: 120 }
+    description: 'Consola compacta PSone con pantalla LCD portátil original plegable acoplada.',
+    accessories: { extra_controller: 120, memory_card: 80, original_car_adapter: 150, original_box: 350 }
   }),
   createConsole({
     id: 'ps2-original',
@@ -414,110 +414,6 @@ const seedProducts = [
     imageUrl: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80',
     description: 'Diseño ultradelgado de PS2 con puerto Ethernet integrado.',
     accessories: { extra_controller: 150, memory_card: 100, original_box: 300 }
-  }),
-  createConsole({
-    id: 'ps3-original',
-    brand: 'PlayStation',
-    name: 'PlayStation 3',
-    model: 'CECHA01 / CECHE01 (Fat Retrocompatible)',
-    baseBuyPrice: 1800,
-    imageUrl: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola PS3 con lector Blu-ray y retrocompatibilidad con PS2 (4 puertos USB).',
-    accessories: { extra_controller: 200, original_box: 350 },
-    editions: [
-      { id: 'retrocompatible_ps2', name: 'Fat con 4 USB (Retrocompatible PS2 Hardware)', priceDiff: 1000 },
-      { id: 'fat_standard', name: 'Fat Estándar 2 USB (40GB/80GB)', priceDiff: 0 }
-    ]
-  }),
-  createConsole({
-    id: 'ps3-slim',
-    brand: 'PlayStation',
-    name: 'PlayStation 3 Slim',
-    model: 'CECH-2000 / 2500 / 3000',
-    baseBuyPrice: 1400,
-    imageUrl: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80',
-    description: 'Modelo Slim de PS3 eficiente y silencioso.',
-    accessories: { extra_controller: 200, original_box: 250 }
-  }),
-  createConsole({
-    id: 'ps3-super-slim',
-    brand: 'PlayStation',
-    name: 'PlayStation 3 Super Slim',
-    model: 'CECH-4000 (Tapa Deslizable)',
-    baseBuyPrice: 1300,
-    imageUrl: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80',
-    description: 'Último rediseño de PS3 ultraligero con tapa superior deslizante.',
-    accessories: { extra_controller: 200, original_box: 250 }
-  }),
-  createConsole({
-    id: 'ps4-original',
-    brand: 'PlayStation',
-    name: 'PlayStation 4',
-    model: 'CUH-1000 / 1100 / 1200 (Fat)',
-    baseBuyPrice: 2200,
-    imageUrl: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola PS4 Fat de 500GB con arquitectura x86.',
-    accessories: { extra_controller: 350, original_box: 200 }
-  }),
-  createConsole({
-    id: 'ps4-slim',
-    brand: 'PlayStation',
-    name: 'PlayStation 4 Slim',
-    model: 'CUH-2000 / 2200 (500GB/1TB)',
-    baseBuyPrice: 2600,
-    imageUrl: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola PS4 delgada de menor consumo energético y HDR.',
-    accessories: { extra_controller: 350, original_box: 200 }
-  }),
-  createConsole({
-    id: 'ps4-pro',
-    brand: 'PlayStation',
-    name: 'PlayStation 4 Pro',
-    model: 'CUH-7000 / 7200 4K 1TB',
-    baseBuyPrice: 3300,
-    imageUrl: 'https://images.unsplash.com/photo-1486401899868-0e435ed85128?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola con doble potencia gráfica para juegos en resolución 4K y modo rendimiento.',
-    accessories: { extra_controller: 350, original_box: 250 }
-  }),
-  createConsole({
-    id: 'ps5-original',
-    brand: 'PlayStation',
-    name: 'PlayStation 5',
-    model: 'CFI-1000 / 1100 / 1200 (Standard Con Lector)',
-    baseBuyPrice: 6500,
-    imageUrl: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola PlayStation 5 con lector de discos Blu-ray Ultra HD y SSD ultrarrápido.',
-    accessories: { extra_controller: 600, original_box: 300, charging_station: 250 }
-  }),
-  createConsole({
-    id: 'ps5-digital',
-    brand: 'PlayStation',
-    name: 'PlayStation 5 Digital',
-    model: 'CFI-1000B / 1100B / 1200B Digital',
-    baseBuyPrice: 5600,
-    imageUrl: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola PS5 edición digital sin unidad de disco óptico.',
-    accessories: { extra_controller: 600, original_box: 300 }
-  }),
-  createConsole({
-    id: 'ps5-slim',
-    brand: 'PlayStation',
-    name: 'PlayStation 5 Slim',
-    model: 'CFI-2000 (Chasis Reducido 1TB)',
-    baseBuyPrice: 6800,
-    imageUrl: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80',
-    description: 'Nuevo modelo estilizado con 1TB de almacenamiento interno.',
-    accessories: { extra_controller: 600, original_box: 300 }
-  }),
-  createConsole({
-    id: 'ps5-pro',
-    brand: 'PlayStation',
-    name: 'PlayStation 5 Pro',
-    model: 'CFI-7000 2TB High-End',
-    baseBuyPrice: 11000,
-    imageUrl: 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=600&q=80',
-    description: 'La consola más potente de Sony con PSSR AI Upscaling y trazado de rayos avanzado.',
-    accessories: { extra_controller: 700, disc_drive_attachment: 900, original_box: 500 }
   }),
   createConsole({
     id: 'psp-original',
@@ -550,97 +446,17 @@ const seedProducts = [
   }),
 
   // ==========================================
-  // MICROSOFT XBOX CONSOLES (9 Systems)
+  // MICROSOFT XBOX CONSOLES (Xbox Clásico Original)
   // ==========================================
   createConsole({
     id: 'xbox-original',
     brand: 'Xbox',
-    name: 'Original Xbox',
-    model: 'Xbox Clásica (2001)',
+    name: 'Xbox Clásico (Original 2001)',
+    model: 'Xbox Clásica (2001 NTSC)',
     baseBuyPrice: 1100,
     imageUrl: 'https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80',
     description: 'La primera incursión de Microsoft con disco duro integrado y puerto Ethernet de serie.',
     accessories: { duke_controller: 200, controller_s: 150, original_box: 400 }
-  }),
-  createConsole({
-    id: 'xbox-360-original',
-    brand: 'Xbox',
-    name: 'Xbox 360',
-    model: 'Xbox 360 Fat (Pro / Elite / Arcade)',
-    baseBuyPrice: 950,
-    imageUrl: 'https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80',
-    description: 'Segunda generación de Xbox con resolución en alta definición y Xbox Live.',
-    accessories: { extra_controller: 150, hard_drive_hdd: 150, original_box: 250 }
-  }),
-  createConsole({
-    id: 'xbox-360-slim',
-    brand: 'Xbox',
-    name: 'Xbox 360 Slim',
-    model: 'Model 1439 (Sleek Black)',
-    baseBuyPrice: 1250,
-    imageUrl: 'https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80',
-    description: 'Diseño silencioso con Wi-Fi integrado y protección térmica avanzada.',
-    accessories: { extra_controller: 180, original_box: 250, kinect_sensor: 120 }
-  }),
-  createConsole({
-    id: 'xbox-360-e',
-    brand: 'Xbox',
-    name: 'Xbox 360 E',
-    model: 'Model 1538 (Estilo Xbox One)',
-    baseBuyPrice: 1350,
-    imageUrl: 'https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80',
-    description: 'El último rediseño de Xbox 360 ultra-compacto inspirado en Xbox One.',
-    accessories: { extra_controller: 180, original_box: 250 }
-  }),
-  createConsole({
-    id: 'xbox-one-original',
-    brand: 'Xbox',
-    name: 'Xbox One',
-    model: 'Model 1540 (Fat 500GB/1TB)',
-    baseBuyPrice: 1700,
-    imageUrl: 'https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola con lector Blu-ray y capacidades multimedia HDMI Pass-Through.',
-    accessories: { extra_controller: 300, original_box: 200 }
-  }),
-  createConsole({
-    id: 'xbox-one-s',
-    brand: 'Xbox',
-    name: 'Xbox One S',
-    model: 'Model 1681 (4K Ultra HD Blu-ray)',
-    baseBuyPrice: 2200,
-    imageUrl: 'https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola blanca compacta 40% más pequeña con fuente de alimentación interna y HDR.',
-    accessories: { extra_controller: 350, original_box: 200 }
-  }),
-  createConsole({
-    id: 'xbox-one-x',
-    brand: 'Xbox',
-    name: 'Xbox One X',
-    model: 'Model 1787 (4K Nativo 6 Teraflops)',
-    baseBuyPrice: 2900,
-    imageUrl: 'https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80',
-    description: 'La consola de generación anterior más potente, con juegos en 4K nativo.',
-    accessories: { extra_controller: 400, original_box: 250 }
-  }),
-  createConsole({
-    id: 'xbox-series-s',
-    brand: 'Xbox',
-    name: 'Xbox Series S',
-    model: 'Model 1883 512GB / 1TB',
-    baseBuyPrice: 3400,
-    imageUrl: 'https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=600&q=80',
-    description: 'Nueva generación en formato digital compacto hasta 120 FPS y arquitectura Xbox Velocity.',
-    accessories: { extra_controller: 500, original_box: 250 }
-  }),
-  createConsole({
-    id: 'xbox-series-x',
-    brand: 'Xbox',
-    name: 'Xbox Series X',
-    model: 'Model 1882 1TB 4K Gaming',
-    baseBuyPrice: 6200,
-    imageUrl: 'https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=600&q=80',
-    description: 'La cúspide de Microsoft con 12 Teraflops de potencia, lector de discos y 1TB SSD.',
-    accessories: { extra_controller: 550, original_box: 350 }
   }),
 
   // ==========================================
@@ -722,43 +538,8 @@ const seedProducts = [
   }),
 
   // ==========================================
-  // ATARI & VINTAGE RETRO SYSTEMS
+  // VINTAGE RETRO SYSTEMS (Coleccionismo)
   // ==========================================
-  createConsole({
-    id: 'atari-2600',
-    brand: 'Atari',
-    name: 'Atari 2600',
-    model: 'VCS (Woodgrain 4/6 Switches o Black Vader)',
-    baseBuyPrice: 1100,
-    imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80',
-    description: 'El clásico atemporal de 1977 con acabado frontal de madera o modelo Vader.',
-    accessories: { joystick_controller: 150, paddle_controllers: 200, original_box: 500 },
-    editions: [
-      { id: 'heavy_sixer', name: 'Heavy Sixer 1977 (Sunnyvale)', priceDiff: 900 },
-      { id: 'four_switch', name: '4-Switch Woodgrain', priceDiff: 0 },
-      { id: 'vader', name: 'All-Black Vader', priceDiff: 100 }
-    ]
-  }),
-  createConsole({
-    id: 'atari-7800',
-    brand: 'Atari',
-    name: 'Atari 7800 ProSystem',
-    model: 'Retrocompatible con Atari 2600',
-    baseBuyPrice: 1600,
-    imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80',
-    description: 'Consola avanzada retrocompatible de fábrica con toda la biblioteca de Atari 2600.',
-    accessories: { proline_controller: 200, original_box: 600 }
-  }),
-  createConsole({
-    id: 'atari-lynx',
-    brand: 'Atari',
-    name: 'Atari Lynx',
-    model: 'Lynx I / Lynx II',
-    baseBuyPrice: 1900,
-    imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80',
-    description: 'La primera consola portátil del mundo con pantalla LCD a color y aceleración 3D por hardware.',
-    accessories: { carrying_case: 200, original_box: 700 }
-  }),
   createConsole({
     id: 'neo-geo-aes',
     brand: 'Vintage',
@@ -861,24 +642,24 @@ const seedProducts = [
   },
 
   // ==========================================
-  // RETRO CRT TELEVISIONS
+  // RETRO CRT TELEVISIONS (13" a 21" Máximo)
   // ==========================================
   {
-    id: 'prod-tv-sony-trinitron-27',
-    sku: 'CRT-SONY-KV27FV310',
+    id: 'prod-tv-cars-13',
+    sku: 'CRT-CARS-13MCQUEEN',
     category: 'retro_tvs',
-    categoryName: 'TVs CRT',
-    brand: 'Sony Trinitron',
-    name: 'Sony Trinitron WEGA 27" Flat CRT (KV-27FV310)',
-    model: 'KV-27FV310 / NTSC Componentes',
+    categoryName: 'TVs analógicas CRT',
+    brand: 'Disney Pixar',
+    name: 'Televisor CRT Disney Cars Rayo McQueen 13" con Control',
+    model: 'Cars 13" NTSC Analog CRT / DVD Combo',
     platform: 'Retro Display',
-    baseBuyPrice: 3500,
-    description: 'El "Santo Grial" de los televisores CRT para retrogaming en México. Tubo plano FD Trinitron con subwoofer integrado.',
+    baseBuyPrice: 1800,
+    description: 'Televisor analógico temático de tubo CRT de 13 pulgadas con chasis Rayo McQueen. El precio varía si incluye control remoto original temático a juego y combo DVD/VHS.',
     imageUrl: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=600&q=80',
     active: true,
     isCRT: true,
-    dimensions: '76 x 58 x 52 cm',
-    weightKg: 46,
+    dimensions: '38 x 35 x 38 cm',
+    weightKg: 11,
     conditionMultipliers: {
       works_perfect: 1.0,
       works_cosmetic_damage: 0.85,
@@ -887,26 +668,27 @@ const seedProducts = [
       for_parts_only: 0.15
     },
     accessoryPricing: {
-      original_remote: 350,
-      stand_furniture: 500,
-      component_cable_test: 200
+      matching_remote: 350,
+      dvd_vhs_combo: 400,
+      rca_cables: 100
     }
   },
   {
-    id: 'prod-tv-sony-pvm-14',
-    sku: 'CRT-SONY-PVM14M4U',
+    id: 'prod-tv-personajes-14',
+    sku: 'CRT-THEMED-CHARACTERS',
     category: 'retro_tvs',
-    categoryName: 'TVs CRT',
-    brand: 'Sony PVM',
-    name: 'Sony PVM-14M4U 14" RGB Broadcast Monitor (800 TVL)',
-    model: 'PVM-14M4U High Resolution RGB',
-    platform: 'Broadcast Monitor',
-    baseBuyPrice: 7800,
+    categoryName: 'TVs analógicas CRT',
+    brand: 'Temático Colección',
+    name: 'Televisor CRT Analógico de Personajes 13"-14" (Shrek, Bob Esponja, Batman)',
+    model: 'CRT 13" a 14" con Control Temático',
+    platform: 'Retro Display',
+    baseBuyPrice: 1400,
+    description: 'Televisores analógicos retro de 13 a 14 pulgadas de personajes. Precio varía si incluye control remoto original a juego o combo DVD/VHS.',
     imageUrl: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=600&q=80',
     active: true,
     isCRT: true,
-    dimensions: '39 x 34 x 42 cm',
-    weightKg: 18,
+    dimensions: '40 x 36 x 38 cm',
+    weightKg: 12,
     conditionMultipliers: {
       works_perfect: 1.0,
       works_cosmetic_damage: 0.85,
@@ -915,25 +697,27 @@ const seedProducts = [
       for_parts_only: 0.20
     },
     accessoryPricing: {
-      bnc_terminators: 250,
-      rgb_scart_cable: 400
+      matching_remote: 300,
+      dvd_vhs_combo: 350,
+      rca_cables: 100
     }
   },
   {
-    id: 'prod-tv-jvc-dseries',
-    sku: 'CRT-JVC-AV27D302',
+    id: 'prod-tv-sony-trinitron-analogo',
+    sku: 'CRT-ANALOG-13TO21',
     category: 'retro_tvs',
-    categoryName: 'TVs CRT',
-    brand: 'JVC',
-    name: 'JVC D-Series 27" Curved CRT Television',
-    model: 'AV-27D302 Component Video',
+    categoryName: 'TVs analógicas CRT',
+    brand: 'Sony Trinitron',
+    name: 'Televisor Analógico CRT Retro 13" a 21" (Sony Trinitron / Panasonic)',
+    model: 'Tubo Analógico 13" a 21" Máximo',
     platform: 'Retro Display',
-    baseBuyPrice: 2400,
+    baseBuyPrice: 1300,
+    description: 'Televisores analógicos de tubo CRT de 13 hasta 21 pulgadas máximas. Entradas RCA frontales/traseras para retrogaming.',
     imageUrl: 'https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=600&q=80',
     active: true,
     isCRT: true,
-    dimensions: '72 x 56 x 49 cm',
-    weightKg: 38,
+    dimensions: '50 x 44 x 46 cm',
+    weightKg: 20,
     conditionMultipliers: {
       works_perfect: 1.0,
       works_cosmetic_damage: 0.85,
@@ -942,7 +726,8 @@ const seedProducts = [
       for_parts_only: 0.15
     },
     accessoryPricing: {
-      original_remote: 250
+      original_remote: 250,
+      rca_cables: 100
     }
   }
 ];

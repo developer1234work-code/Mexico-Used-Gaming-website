@@ -13,12 +13,11 @@ import { api } from '../services/api';
 import { formatMXN } from '../utils/formatters';
 
 const BRANDS = [
-  { id: 'all', name: 'Todas las Marcas', count: '59+' },
+  { id: 'all', name: 'Todas las Marcas Retro', count: 'Catálogo Retro' },
   { id: 'Nintendo', name: 'Nintendo', count: '21 Sistemas', color: 'text-red-500' },
-  { id: 'PlayStation', name: 'Sony PlayStation', count: '16 Sistemas', color: 'text-blue-500' },
-  { id: 'Xbox', name: 'Microsoft Xbox', count: '9 Sistemas', color: 'text-emerald-500' },
-  { id: 'Sega', name: 'Sega', count: '7 Sistemas', color: 'text-sky-500' },
-  { id: 'Atari', name: 'Atari & Vintage', count: '6 Sistemas', color: 'text-amber-500' }
+  { id: 'PlayStation', name: 'Sony PlayStation Retro', count: 'PS1 & PS2', color: 'text-blue-500' },
+  { id: 'Xbox', name: 'Xbox Clásico (Original)', count: 'Xbox 2001', color: 'text-emerald-500' },
+  { id: 'Sega', name: 'Sega', count: '7 Sistemas', color: 'text-sky-500' }
 ];
 
 export default function ConsoleBrandSelectorPage({ 
@@ -45,15 +44,11 @@ export default function ConsoleBrandSelectorPage({
     try {
       const res = await api.getProducts({
         category: 'consoles',
-        brand: selectedBrand === 'all' ? undefined : (selectedBrand === 'Atari' ? undefined : selectedBrand),
+        brand: selectedBrand === 'all' ? undefined : selectedBrand,
         search: searchQuery
       });
       if (res.products) {
-        let filtered = res.products;
-        if (selectedBrand === 'Atari') {
-          filtered = res.products.filter(p => p.brand === 'Atari' || p.brand === 'Vintage');
-        }
-        setConsoles(filtered);
+        setConsoles(res.products);
       }
     } catch (err) {
       console.error('Error fetching consoles:', err);

@@ -14,33 +14,33 @@ export default function SpecialEditionsPage({ onGoToConsoles, onOpenCustomQuote 
   const sampleEditions = [
     {
       name: "Nintendo 64 Pikachu Edition (Azul / Amarillo)",
-      baseVal: "$2,300 - $3,500 MXN",
+      baseVal: "$1,800 - $2,800 MXN",
       notes: "Carcasa exclusiva con mejillas iluminadas y figura en relieve de Pikachu."
     },
     {
-      name: "New Nintendo 3DS XL - The Legend of Zelda Majora's Mask Gold",
-      baseVal: "$3,600 - $5,000 MXN",
-      notes: "Edición limitada dorada de colección con máscara de Majora grabada."
+      name: "Nintendo 64 Funtastic Series (Translúcidas: Jungle, Smoke, Ice, Grape, Fire)",
+      baseVal: "$1,400 - $2,200 MXN",
+      notes: "Colores translúcidos de colección con control original a juego."
     },
     {
-      name: "PlayStation 4 Pro 500 Million Limited Edition (Azul Translúcido)",
-      baseVal: "$5,500 - $7,800 MXN",
-      notes: "Numerada individualmente con placa de cobre y disco de 2TB."
+      name: "Game Boy Color Pokémon Edition (Amarillo / Azul con Pikachu y Togepi)",
+      baseVal: "$1,100 - $1,650 MXN",
+      notes: "Serigrafía conmemorativa oficial de Pokémon con botón de encendido Pokébola."
     },
     {
-      name: "Nintendo GameCube Panasonic Q (DVD Híbrido Japón)",
-      baseVal: "$6,000 - $9,500 MXN",
-      notes: "Consola de acero inoxidable con bandeja DVD comercial y display digital."
+      name: "Game Boy Advance SP The Legend of Zelda Triforce (Dorado)",
+      baseVal: "$1,300 - $1,900 MXN",
+      notes: "Edición conmemorativa dorada con el blasón de la Trifuerza grabado."
     },
     {
-      name: "Xbox 360 Edición R2-D2 Star Wars con Sonidos Oficiales",
-      baseVal: "$2,400 - $3,800 MXN",
-      notes: "Acabado blanco y azul con control C-3PO dorado y sensor Kinect blanco."
+      name: "Xbox Clásico Original Edición Especial Halo Verde Translúcido / Cristal",
+      baseVal: "$1,400 - $2,100 MXN",
+      notes: "Consola Xbox clásica de 2001 en carcasa translúcida original de colección."
     },
     {
-      name: "Game Boy Advance SP AGS-101 Brighter Backlight (Cualquier Color)",
-      baseVal: "$2,200 - $3,200 MXN",
-      notes: "Pantalla retroiluminada de alta intensidad de fábrica muy cotizada."
+      name: "Sega Dreamcast Edición Especial Resident Evil Code: Veronica / Hello Kitty",
+      baseVal: "$1,800 - $2,700 MXN",
+      notes: "Chasis translúcido japonés o conmemorativo con VMU a juego."
     }
   ];
 
@@ -66,7 +66,7 @@ export default function SpecialEditionsPage({ onGoToConsoles, onOpenCustomQuote 
 
             <div className="pt-3 flex flex-wrap gap-3">
               <a
-                href="https://wa.me/525512345678?text=Hola%20RetroCompra,%20tengo%20una%20edici%C3%B3n%20especial%20para%20vender"
+                href="https://wa.me/525512345678?text=Hola%20LionGamesAndTvs,%20tengo%20una%20edici%C3%B3n%20especial%20para%20vender"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-shimmer px-6 py-3 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs flex items-center gap-2 shadow-lg"
