@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   ArrowRight,
   ShieldCheck,
@@ -28,6 +28,105 @@ import {
   UserRound
 } from 'lucide-react';
 import heroBg from '../assets/hero-bg.png';
+
+// Typewriter Heading Component matching user's exact design and typography
+const HERO_PHRASES = [
+  {
+    line1White: 'Consolas ',
+    line1Gold: 'Clásicas',
+    line2White: 'para Verdaderos ',
+    line2Gold: 'Fanáticos'
+  },
+  {
+    line1White: 'Videojuegos ',
+    line1Gold: 'Retro',
+    line2White: 'para Verdaderos ',
+    line2Gold: 'Fanáticos'
+  },
+  {
+    line1White: 'TVs Analógicas ',
+    line1Gold: 'CRT',
+    line2White: 'para Coleccionistas ',
+    line2Gold: 'Reales'
+  }
+];
+
+function HeroTypewriterHeading() {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [charCount, setCharCount] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const currentPhrase = HERO_PHRASES[phraseIndex];
+  const line1Full = currentPhrase.line1White + currentPhrase.line1Gold;
+  const line2Full = currentPhrase.line2White + currentPhrase.line2Gold;
+  const totalChars = line1Full.length + line2Full.length;
+
+  useEffect(() => {
+    let timeout;
+    if (!isDeleting && charCount < totalChars) {
+      // Typing forward
+      timeout = setTimeout(() => {
+        setCharCount(prev => prev + 1);
+      }, 55);
+    } else if (!isDeleting && charCount === totalChars) {
+      // Completed full heading: pause 5.5s so users read comfortably
+      timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 5500);
+    } else if (isDeleting && charCount > 0) {
+      // Deleting backward
+      timeout = setTimeout(() => {
+        setCharCount(prev => prev - 1);
+      }, 25);
+    } else if (isDeleting && charCount === 0) {
+      // Pause then switch to next phrase
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setPhraseIndex(prev => (prev + 1) % HERO_PHRASES.length);
+      }, 450);
+    }
+    return () => clearTimeout(timeout);
+  }, [charCount, isDeleting, totalChars]);
+
+  // Slices for Line 1
+  const line1TypedLen = Math.min(charCount, line1Full.length);
+  const line1Typed = line1Full.slice(0, line1TypedLen);
+  const line1White = line1Typed.slice(0, currentPhrase.line1White.length);
+  const line1Gold = line1Typed.length > currentPhrase.line1White.length
+    ? line1Typed.slice(currentPhrase.line1White.length)
+    : '';
+
+  // Slices for Line 2
+  const line2TypedLen = Math.max(0, charCount - line1Full.length);
+  const line2Typed = line2Full.slice(0, line2TypedLen);
+  const line2White = line2Typed.slice(0, currentPhrase.line2White.length);
+  const line2Gold = line2Typed.length > currentPhrase.line2White.length
+    ? line2Typed.slice(currentPhrase.line2White.length)
+    : '';
+
+  const isLine1Active = charCount <= line1Full.length;
+
+  return (
+    <h1 className="font-hero-gaming not-italic text-3xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight text-white leading-[1.12] sm:leading-[1.14] select-none min-h-[92px] sm:min-h-[132px]">
+      {/* Line 1 */}
+      <span className="block not-italic">
+        <span className="text-white not-italic">{line1White}</span>
+        <span className="text-[#F5A623] not-italic">{line1Gold}</span>
+        {isLine1Active && (
+          <span className="inline-block w-1 sm:w-1.5 h-[0.82em] ml-1 bg-[#F5A623] align-baseline animate-pulse shadow-[0_0_8px_#F5A623]" />
+        )}
+      </span>
+      {/* Line 2 */}
+      <span className="block mt-1 sm:mt-1.5 not-italic">
+        <span className="text-white not-italic">{line2White}</span>
+        <span className="text-[#F5A623] not-italic">{line2Gold}</span>
+        {!isLine1Active && (
+          <span className="inline-block w-1 sm:w-1.5 h-[0.82em] ml-1 bg-[#F5A623] align-baseline animate-pulse shadow-[0_0_8px_#F5A623]" />
+        )}
+      </span>
+    </h1>
+  );
+}
 
 // Metallic Gold Wave Ribbons
 function GoldRibbonDividerDarkToLight() {
@@ -296,94 +395,98 @@ export default function HomePage({ setView, onSelectCategory }) {
     <div className="min-h-screen bg-[#FAF9F6] text-neutral-900 selection:bg-[#F5A623] selection:text-black">
 
       {/* ======================================================== */}
-      {/* 1. HERO SECTION (100% Spanish, Pure Black, Hero Background) */}
+      {/* 1. HERO SECTION (Matching User Design, Exact Typography, Typewriter) */}
       {/* ======================================================== */}
-      <section className="relative overflow-hidden bg-black text-white min-h-[580px] lg:min-h-[615px] flex items-center">
+      <section className="relative overflow-hidden bg-black text-white min-h-[580px] lg:min-h-[640px] flex items-center">
 
-        {/* Background Image Layer from Asset */}
+        {/* Background Image Layer from Asset (NES, N64, Gold Glow & Reflections) */}
         <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 scale-100 hover:scale-[1.02]"
+          className="absolute inset-0 z-0 bg-cover bg-right lg:bg-center bg-no-repeat pointer-events-none"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
 
-        {/* Sophisticated Dual Gradient Overlay for legibility & contrast */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-black via-black/85 to-black/35 lg:via-black/75" />
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-transparent to-black/40" />
+        {/* Subtle gradient for mobile/tablet to ensure text contrast while keeping artwork vivid */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/90 via-black/55 to-transparent lg:from-black/40 lg:via-transparent lg:to-transparent pointer-events-none" />
 
-        {/* Subtle breathing ambient glow */}
-        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 w-[550px] h-[350px] bg-[#F5A623]/15 blur-[140px] rounded-full pointer-events-none animate-pulse-glow" />
+        {/* Subtle checkered flag motif at bottom-left */}
+        <div className="absolute bottom-0 left-0 w-48 sm:w-64 h-20 sm:h-24 pointer-events-none z-10 opacity-30 [mask-image:linear-gradient(to_top_right,black_15%,transparent_85%)]">
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage: `
+                linear-gradient(45deg, #444 25%, transparent 25%),
+                linear-gradient(-45deg, #444 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #444 75%),
+                linear-gradient(-45deg, transparent 75%, #444 75%)
+              `,
+              backgroundSize: '16px 16px',
+              backgroundPosition: '0 0, 0 8px, 8px -8px, -8px 0px'
+            }}
+          />
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24 relative z-10 w-full">
-          <div className="max-w-2xl space-y-7">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10 w-full">
+          <div className="max-w-xl lg:max-w-2xl space-y-6 sm:space-y-7">
 
-            {/* Title specifying analog TVs up to 21 inches */}
-            <div className="space-y-3 animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-black tracking-tight text-white leading-[1.28] sm:leading-[1.25] lg:leading-[1.22] font-display">
-                Vende tus consolas, videojuegos <br className="hidden sm:inline" />
-                y <span className="text-[#F5A623]">tvs analógicas de 13 hasta 21 pulgadas</span>
-              </h1>
+            {/* Kicker flanked by horizontal accent lines */}
+            <div className="flex items-center gap-3 animate-fade-in">
+              <div className="w-8 sm:w-14 h-[1px] bg-gradient-to-r from-transparent to-[#F5A623]" />
+              <span className="text-[10px] sm:text-xs font-bold tracking-[0.22em] uppercase text-neutral-300">
+                Revive la magia del juego
+              </span>
+              <div className="w-8 sm:w-14 h-[1px] bg-gradient-to-l from-transparent to-[#F5A623]" />
             </div>
 
-            {/* Subtitle with vertical gold bar */}
-            <div
-              className="flex items-center gap-3 animate-fade-in-up pt-1"
-              style={{ animationDelay: '200ms' }}
-            >
-              <div className="w-1.5 h-7 bg-[#F5A623] rounded-full shrink-0" />
-              <p className="text-base sm:text-lg text-neutral-200 font-semibold leading-relaxed">
-                Rápido, fácil y seguro.
-              </p>
+            {/* Heading with Typewriter effect & exact gaming font (not italic) */}
+            <HeroTypewriterHeading />
+
+            {/* Subtitle paragraph */}
+            <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal max-w-lg">
+              Revive los mejores momentos con consolas icónicas como Nintendo NES y Nintendo 64.
+            </p>
+
+            {/* Five diagonal gold hazard/speed slashes ///// */}
+            <div className="flex items-center gap-1.5 pt-0.5">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <span
+                  key={i}
+                  className="inline-block w-2.5 h-3.5 bg-[#F5A623] -skew-x-[24deg] rounded-[1px] shadow-sm shadow-[#F5A623]/30"
+                />
+              ))}
             </div>
 
-            {/* CTAs: WhatsApp button + Send message button */}
-            <div
-              className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 animate-fade-in-up"
-              style={{ animationDelay: '300ms' }}
-            >
-              {/* Button 1: Contáctanos por WhatsApp */}
-              <a
-                href="https://wa.me/525512345678?text=Hola%20LionGamesAndTvs,%20quiero%20vender%20mis%20consolas%20y%20videojuegos"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-shimmer px-7 py-3.5 rounded-full font-bold text-xs tracking-wide bg-[#F5A623] hover:bg-[#E59819] text-black shadow-xl shadow-[#F5A623]/25 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 group"
-              >
-                <MessageCircle className="w-4 h-4 fill-current text-black" />
-                <span>Contáctanos por WhatsApp</span>
-              </a>
-
-              {/* Button 2: Envíanos un mensaje */}
+            {/* CTAs: Explora Nuestra Colección + Conoce Más */}
+            <div className="pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4">
+              {/* Button 1: Solid gold pill button */}
               <button
-                onClick={() => setView('custom-quote')}
-                className="px-7 py-3.5 rounded-full font-bold text-xs tracking-wide bg-black/80 hover:bg-neutral-900 text-white border border-neutral-700 hover:border-[#F5A623] transition-all flex items-center justify-center gap-2.5 group"
+                type="button"
+                onClick={() => {
+                  if (onSelectCategory) onSelectCategory('all');
+                  setView('catalogue');
+                }}
+                className="btn-shimmer px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide bg-[#F5A623] hover:bg-[#E59819] text-black shadow-lg shadow-[#F5A623]/30 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center gap-2 group cursor-pointer"
               >
-                <Mail className="w-4 h-4 text-[#F5A623]" />
-                <span>Envíanos un mensaje</span>
+                <Gamepad2 className="w-4 h-4 text-black stroke-[2.2]" />
+                <span>Explora Nuestra Colección</span>
+                <ArrowRight className="w-4 h-4 text-black stroke-[2.5] group-hover:translate-x-1 transition-transform" />
               </button>
-            </div>
 
-            {/* Value Prop Micro Pills */}
-            <div
-              className="pt-4 flex flex-wrap items-center gap-6 text-xs text-neutral-300 font-medium animate-fade-in-up"
-              style={{ animationDelay: '400ms' }}
-            >
-              <div className="flex items-center gap-2 group cursor-default">
-                <div className="w-4 h-4 rounded-full bg-[#F5A623]/20 flex items-center justify-center">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#F5A623]" />
-                </div>
-                <span className="group-hover:text-white transition-colors">Cotización sin compromiso</span>
-              </div>
-              <div className="flex items-center gap-2 group cursor-default">
-                <div className="w-4 h-4 rounded-full bg-[#F5A623]/20 flex items-center justify-center">
-                  <Zap className="w-3.5 h-3.5 text-[#F5A623]" />
-                </div>
-                <span className="group-hover:text-white transition-colors">Pago rápido garantizado</span>
-              </div>
-              <div className="flex items-center gap-2 group cursor-default">
-                <div className="w-4 h-4 rounded-full bg-[#F5A623]/20 flex items-center justify-center">
-                  <HeartHandshake className="w-3.5 h-3.5 text-[#F5A623]" />
-                </div>
-                <span className="group-hover:text-white transition-colors">Envíos asegurados en todo México</span>
-              </div>
+              {/* Button 2: Dark outline pill button with gold border */}
+              <button
+                type="button"
+                onClick={() => {
+                  const target = document.getElementById('que-quieres-vender');
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    setView('como-funciona');
+                  }
+                }}
+                className="px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide bg-black/70 hover:bg-neutral-900 text-white border border-[#F5A623]/80 hover:border-[#F5A623] hover:text-[#F5A623] shadow-md transition-all flex items-center gap-2 group cursor-pointer"
+              >
+                <span className="text-[#F5A623] text-sm leading-none font-bold">▷</span>
+                <span>Conoce Más</span>
+              </button>
             </div>
 
           </div>
@@ -393,7 +496,7 @@ export default function HomePage({ setView, onSelectCategory }) {
       {/* ================================================================ */}
       {/* 2. ¿QUÉ QUIERES VENDER? — Modern light-theme showcase cards     */}
       {/* ================================================================ */}
-      <section className="py-24 bg-[#FAF9F6]">
+      <section id="que-quieres-vender" className="py-24 bg-[#FAF9F6]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ── Section Header ── */}

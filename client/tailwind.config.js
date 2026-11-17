@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Outfit', '"Plus Jakarta Sans"', 'sans-serif'],
+        gaming: ['"Chakra Petch"', '"Oxanium"', 'Outfit', 'sans-serif'],
       },
       colors: {
         lion: {

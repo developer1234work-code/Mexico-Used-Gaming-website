@@ -12,6 +12,13 @@
   }
 }
 
+/* Hero Gaming Font (strictly upright, not italic) */
+.font-hero-gaming {
+  font-family: 'Chakra Petch', 'Oxanium', 'Outfit', sans-serif;
+  font-style: normal !important;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
 /* Custom premium scrollbar */
 ::-webkit-scrollbar {
   width: 7px;
