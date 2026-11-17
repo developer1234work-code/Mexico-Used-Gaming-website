@@ -57,7 +57,7 @@ export default function CustomQuotePage({ onBackToCatalogue }) {
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
               — COTIZACIÓN PERSONALIZADA —
             </span>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h1 className="font-hero-gaming text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
               ¿Tienes un artículo no listado?
             </h1>
             <p className="text-xs sm:text-sm text-slate-500">

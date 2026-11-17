@@ -21,7 +21,7 @@ export function HowItWorksPage({ setView }) {
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E59819]">
             — PROCESO TRANSPARENTE —
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight font-display">
+          <h1 className="font-hero-gaming text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight font-display">
             ¿Cómo funciona nuestro sistema de compras de tus artículos?
           </h1>
           <p className="text-sm text-neutral-600 max-w-lg mx-auto">
@@ -104,7 +104,7 @@ export function AboutPage() {
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E59819]">
             — NUESTRA HISTORIA —
           </span>
-          <h1 className="text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight font-display">
+          <h1 className="font-hero-gaming text-3xl sm:text-4xl font-black text-neutral-900 tracking-tight font-display">
             Acerca de Lion Games & TVs
           </h1>
           <p className="text-sm text-neutral-600 max-w-lg mx-auto">
@@ -148,7 +148,7 @@ export function FAQPage() {
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E59819]">
             — CENTRO DE AYUDA —
           </span>
-          <h1 className="text-3xl font-black text-neutral-900 tracking-tight font-display">
+          <h1 className="font-hero-gaming text-3xl font-black text-neutral-900 tracking-tight font-display">
             Preguntas Frecuentes
           </h1>
         </div>
@@ -184,7 +184,7 @@ export function TermsPage() {
   return (
     <div className="min-h-screen bg-[#FAF9F6] py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-        <h1 className="text-3xl font-black text-neutral-900 font-display">Términos y Condiciones de Servicio (México)</h1>
+        <h1 className="font-hero-gaming text-3xl font-black text-neutral-900 font-display">Términos y Condiciones de Servicio (México)</h1>
         <div className="bg-white rounded-3xl p-8 border border-neutral-200/90 shadow-sm space-y-4 text-xs text-neutral-600 leading-relaxed">
           <p><strong>Versión: 1.3-MEX-2026 • Última actualización: Noviembre 2026</strong></p>
           <p>El presente documento regula el uso de la plataforma digital operada por Lion Games & TVs en los Estados Unidos Mexicanos.</p>
@@ -201,7 +201,7 @@ export function ShippingPolicyPage() {
   return (
     <div className="min-h-screen bg-[#FAF9F6] py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-        <h1 className="text-3xl font-black text-neutral-900 font-display">Política de Envío, Recepción e Inspección</h1>
+        <h1 className="font-hero-gaming text-3xl font-black text-neutral-900 font-display">Política de Envío, Recepción e Inspección</h1>
         <div className="bg-white rounded-3xl p-8 border border-neutral-200/90 shadow-sm space-y-4 text-xs text-neutral-600 leading-relaxed">
           <p>1. <strong>Aprobación Previa Obligatoria:</strong> Los envíos se gestionan únicamente tras la revisión fotográfica por el departamento de compras.</p>
           <p>2. <strong>Embalaje Recomendado:</strong> Consolas y mandos deben protegerse con al menos 3 capas de plástico de burbujas en caja de cartón doble corrugado sin holguras.</p>

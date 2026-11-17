@@ -133,7 +133,7 @@ export default function SubmitRequestPage({ onSubmissionSuccess, onBackToCart })
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500">
             — FINALIZAR SOLICITUD DE RECOMPRA —
           </span>
-          <h1 className="text-3xl font-black text-slate-900 tracking-tight">
+          <h1 className="font-hero-gaming text-3xl font-black text-slate-900 tracking-tight">
             Datos de Contacto y Envío en México
           </h1>
           <p className="text-sm text-slate-500 max-w-lg mx-auto">

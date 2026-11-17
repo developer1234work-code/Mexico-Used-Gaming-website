@@ -51,7 +51,7 @@ export default function AdminLoginPage({ onLoginSuccess }) {
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 flex items-center justify-center mx-auto shadow-xl shadow-amber-500/20">
             <Lock className="w-7 h-7 text-slate-950" />
           </div>
-          <h1 className="text-2xl font-black tracking-wider text-white">
+          <h1 className="font-hero-gaming text-2xl font-black tracking-wider text-white">
             RETROCOMPRA
           </h1>
           <p className="text-xs text-amber-400 font-bold uppercase tracking-widest">

@@ -66,7 +66,7 @@ export default function ConsoleBrandSelectorPage({
           <span className="text-[11px] font-extrabold uppercase tracking-[0.25em] text-[#E59819] block">
             — VENDE TUS CONSOLAS EN MÉXICO —
           </span>
-          <h1 className="text-3xl sm:text-5xl font-black text-neutral-900 tracking-tight font-display">
+          <h1 className="font-hero-gaming text-3xl sm:text-5xl font-black text-neutral-900 tracking-tight font-display">
             Selecciona tu Marca y Sistema
           </h1>
           <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">

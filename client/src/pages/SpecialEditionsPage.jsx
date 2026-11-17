@@ -56,7 +56,7 @@ export default function SpecialEditionsPage({ onGoToConsoles, onOpenCustomQuote 
               <span>Valuación de Coleccionismo y Ediciones Especiales</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-black tracking-tight font-display text-white">
+            <h1 className="font-hero-gaming text-3xl sm:text-4xl font-black tracking-tight font-display text-white">
               ¿Tienes una edición especial?
             </h1>
 

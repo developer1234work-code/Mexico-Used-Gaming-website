@@ -165,7 +165,7 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
                 <span className="text-[11px] font-black uppercase tracking-wider text-[#E59819] block">
                   {consoleItem.brand}
                 </span>
-                <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight font-display">
+                <h1 className="font-hero-gaming text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight font-display">
                   {consoleItem.name}
                 </h1>
                 <p className="text-xs text-neutral-500 font-medium">

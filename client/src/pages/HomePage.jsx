@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   ArrowRight,
   ShieldCheck,
@@ -28,105 +28,6 @@ import {
   UserRound
 } from 'lucide-react';
 import heroBg from '../assets/hero-bg.png';
-
-// Typewriter Heading Component matching user's exact design and typography
-const HERO_PHRASES = [
-  {
-    line1White: 'Consolas ',
-    line1Gold: 'Clásicas',
-    line2White: 'para Verdaderos ',
-    line2Gold: 'Fanáticos'
-  },
-  {
-    line1White: 'Videojuegos ',
-    line1Gold: 'Retro',
-    line2White: 'para Verdaderos ',
-    line2Gold: 'Fanáticos'
-  },
-  {
-    line1White: 'TVs Analógicas ',
-    line1Gold: 'CRT',
-    line2White: 'para Coleccionistas ',
-    line2Gold: 'Reales'
-  }
-];
-
-function HeroTypewriterHeading() {
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [charCount, setCharCount] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  const currentPhrase = HERO_PHRASES[phraseIndex];
-  const line1Full = currentPhrase.line1White + currentPhrase.line1Gold;
-  const line2Full = currentPhrase.line2White + currentPhrase.line2Gold;
-  const totalChars = line1Full.length + line2Full.length;
-
-  useEffect(() => {
-    let timeout;
-    if (!isDeleting && charCount < totalChars) {
-      // Typing forward
-      timeout = setTimeout(() => {
-        setCharCount(prev => prev + 1);
-      }, 55);
-    } else if (!isDeleting && charCount === totalChars) {
-      // Completed full heading: pause 5.5s so users read comfortably
-      timeout = setTimeout(() => {
-        setIsDeleting(true);
-      }, 5500);
-    } else if (isDeleting && charCount > 0) {
-      // Deleting backward
-      timeout = setTimeout(() => {
-        setCharCount(prev => prev - 1);
-      }, 25);
-    } else if (isDeleting && charCount === 0) {
-      // Pause then switch to next phrase
-      timeout = setTimeout(() => {
-        setIsDeleting(false);
-        setPhraseIndex(prev => (prev + 1) % HERO_PHRASES.length);
-      }, 450);
-    }
-    return () => clearTimeout(timeout);
-  }, [charCount, isDeleting, totalChars]);
-
-  // Slices for Line 1
-  const line1TypedLen = Math.min(charCount, line1Full.length);
-  const line1Typed = line1Full.slice(0, line1TypedLen);
-  const line1White = line1Typed.slice(0, currentPhrase.line1White.length);
-  const line1Gold = line1Typed.length > currentPhrase.line1White.length
-    ? line1Typed.slice(currentPhrase.line1White.length)
-    : '';
-
-  // Slices for Line 2
-  const line2TypedLen = Math.max(0, charCount - line1Full.length);
-  const line2Typed = line2Full.slice(0, line2TypedLen);
-  const line2White = line2Typed.slice(0, currentPhrase.line2White.length);
-  const line2Gold = line2Typed.length > currentPhrase.line2White.length
-    ? line2Typed.slice(currentPhrase.line2White.length)
-    : '';
-
-  const isLine1Active = charCount <= line1Full.length;
-
-  return (
-    <h1 className="font-hero-gaming not-italic text-3xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight text-white leading-[1.12] sm:leading-[1.14] select-none min-h-[92px] sm:min-h-[132px]">
-      {/* Line 1 */}
-      <span className="block not-italic">
-        <span className="text-white not-italic">{line1White}</span>
-        <span className="text-[#F5A623] not-italic">{line1Gold}</span>
-        {isLine1Active && (
-          <span className="inline-block w-1 sm:w-1.5 h-[0.82em] ml-1 bg-[#F5A623] align-baseline animate-pulse shadow-[0_0_8px_#F5A623]" />
-        )}
-      </span>
-      {/* Line 2 */}
-      <span className="block mt-1 sm:mt-1.5 not-italic">
-        <span className="text-white not-italic">{line2White}</span>
-        <span className="text-[#F5A623] not-italic">{line2Gold}</span>
-        {!isLine1Active && (
-          <span className="inline-block w-1 sm:w-1.5 h-[0.82em] ml-1 bg-[#F5A623] align-baseline animate-pulse shadow-[0_0_8px_#F5A623]" />
-        )}
-      </span>
-    </h1>
-  );
-}
 
 // Metallic Gold Wave Ribbons
 function GoldRibbonDividerDarkToLight() {
@@ -437,8 +338,15 @@ export default function HomePage({ setView, onSelectCategory }) {
               <div className="w-8 sm:w-14 h-[1px] bg-gradient-to-l from-transparent to-[#F5A623]" />
             </div>
 
-            {/* Heading with Typewriter effect & exact gaming font (not italic) */}
-            <HeroTypewriterHeading />
+            {/* Static Heading — Chakra Petch gaming font, upright, single phrase */}
+            <h1 className="font-hero-gaming not-italic text-3xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight text-white leading-[1.12] sm:leading-[1.14]">
+              <span className="block">
+                Consolas <span className="text-[#F5A623]">Clásicas</span>
+              </span>
+              <span className="block mt-1 sm:mt-1.5">
+                para Verdaderos <span className="text-[#F5A623]">Fanáticos</span>
+              </span>
+            </h1>
 
             {/* Subtitle paragraph */}
             <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal max-w-lg">
@@ -505,7 +413,7 @@ export default function HomePage({ setView, onSelectCategory }) {
               <span className="w-2 h-2 rounded-full bg-[#F5A623] animate-pulse" />
               <span className="text-[11px] font-black uppercase tracking-widest text-[#B87406]">Cotiza ahora</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-[42px] font-black text-neutral-900 tracking-tight font-display leading-[1.18] mb-3">
+            <h2 className="font-hero-gaming text-3xl sm:text-4xl md:text-[42px] font-black text-neutral-900 tracking-tight leading-[1.18] mb-3">
               ¿Qué quieres <span className="text-[#F5A623]">vender?</span>
             </h2>
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -543,7 +451,7 @@ export default function HomePage({ setView, onSelectCategory }) {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-black text-neutral-900 font-display mb-1.5">
+                <h3 className="font-hero-gaming text-xl font-black text-neutral-900 mb-1.5">
                   Consolas
                 </h3>
                 <p className="text-sm text-neutral-500 leading-relaxed mb-4 flex-1">
@@ -587,7 +495,7 @@ export default function HomePage({ setView, onSelectCategory }) {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-black text-neutral-900 font-display mb-1.5">
+                <h3 className="font-hero-gaming text-xl font-black text-neutral-900 mb-1.5">
                   Videojuegos
                 </h3>
                 <p className="text-sm text-neutral-500 leading-relaxed mb-4 flex-1">
@@ -629,7 +537,7 @@ export default function HomePage({ setView, onSelectCategory }) {
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-black text-neutral-900 font-display mb-1.5">
+                <h3 className="font-hero-gaming text-xl font-black text-neutral-900 mb-1.5">
                   TVs analógicas CRT
                 </h3>
                 <p className="text-sm text-neutral-500 leading-relaxed mb-4 flex-1">
@@ -665,7 +573,7 @@ export default function HomePage({ setView, onSelectCategory }) {
           <div className="text-center space-y-3">
             <div className="flex items-center justify-center gap-3 sm:gap-5">
               <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-r from-transparent to-[#E5A83B]" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 tracking-tight font-display">
+              <h2 className="font-hero-gaming text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 tracking-tight">
                 — ¿Por qué <span className="text-[#E5A83B]">elegirnos?</span> —
               </h2>
               <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#E5A83B]" />
@@ -750,7 +658,7 @@ export default function HomePage({ setView, onSelectCategory }) {
           <div className="text-center space-y-3">
             <div className="flex items-center justify-center gap-3 sm:gap-5">
               <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-r from-transparent to-[#E5A83B]" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight font-display">
+              <h2 className="font-hero-gaming text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
                 — ¿Cómo <span className="text-[#E5A83B]">funciona?</span> —
               </h2>
               <div className="w-12 sm:w-20 h-[2px] bg-gradient-to-l from-transparent to-[#E5A83B]" />
@@ -777,7 +685,7 @@ export default function HomePage({ setView, onSelectCategory }) {
                     1
                   </span>
                 </div>
-                <h3 className="text-white font-extrabold text-base sm:text-lg font-display mt-5 mb-1.5">
+                <h3 className="font-hero-gaming text-white font-extrabold text-base sm:text-lg mt-5 mb-1.5">
                   Busca tu producto
                 </h3>
                 <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-[210px]">
@@ -795,7 +703,7 @@ export default function HomePage({ setView, onSelectCategory }) {
                     2
                   </span>
                 </div>
-                <h3 className="text-white font-extrabold text-base sm:text-lg font-display mt-5 mb-1.5">
+                <h3 className="font-hero-gaming text-white font-extrabold text-base sm:text-lg mt-5 mb-1.5">
                   Completa el formulario
                 </h3>
                 <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-[210px]">
@@ -813,7 +721,7 @@ export default function HomePage({ setView, onSelectCategory }) {
                     3
                   </span>
                 </div>
-                <h3 className="text-white font-extrabold text-base sm:text-lg font-display mt-5 mb-1.5">
+                <h3 className="font-hero-gaming text-white font-extrabold text-base sm:text-lg mt-5 mb-1.5">
                   Envíanos tus artículos
                 </h3>
                 <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-[210px]">
@@ -831,7 +739,7 @@ export default function HomePage({ setView, onSelectCategory }) {
                     4
                   </span>
                 </div>
-                <h3 className="text-white font-extrabold text-base sm:text-lg font-display mt-5 mb-1.5">
+                <h3 className="font-hero-gaming text-white font-extrabold text-base sm:text-lg mt-5 mb-1.5">
                   Recibe tu pago
                 </h3>
                 <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-[210px]">
@@ -869,7 +777,7 @@ export default function HomePage({ setView, onSelectCategory }) {
 
               {/* Center Column: Text */}
               <div className="lg:col-span-5 space-y-3">
-                <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-[#F5A623] font-display">
+                <h3 className="font-hero-gaming text-2xl sm:text-3xl font-black tracking-tight text-[#F5A623]">
                   ¿Tienes una edición especial?
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed font-normal">
@@ -921,7 +829,7 @@ export default function HomePage({ setView, onSelectCategory }) {
           <div className="text-center space-y-2">
             <div className="flex items-center justify-center gap-3">
               <div className="w-12 h-0.5 bg-[#F5A623]" />
-              <h2 className="text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight font-display">
+              <h2 className="font-hero-gaming text-2xl sm:text-3xl font-black text-neutral-900 tracking-tight">
                 ¿Preguntas frecuentes? Tenemos respuestas
               </h2>
               <div className="w-12 h-0.5 bg-[#F5A623]" />
@@ -1011,7 +919,7 @@ export default function HomePage({ setView, onSelectCategory }) {
                   <Mail className="w-4 h-4" />
                   <span>Boletín Lion Games & TVs</span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white font-display">
+                <h3 className="font-hero-gaming text-2xl sm:text-3xl font-black tracking-tight text-white">
                   Mantente en el Juego
                 </h3>
                 <p className="text-xs text-neutral-400">

@@ -41,7 +41,7 @@ export default function RequestConfirmationPage({ request, onTrackRequest, onGoH
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-600">
               ¡SOLICITUD REGISTRADA EXITOSAMENTE!
             </span>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+            <h1 className="font-hero-gaming text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
               Hemos recibido tus artículos para valuación
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto">
