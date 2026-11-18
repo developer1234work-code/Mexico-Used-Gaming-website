@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Reverse E-Commerce Buyback Platform for Video Games, Consoles and Retro CRT TVs in Mexico (MERN Stack)",
   "scripts": {
+    "start": "node server/index.js",
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
     "server": "cd server && node index.js",
     "client": "cd client && npm run dev",
-    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['run', 'server'], { stdio: 'inherit', shell: true }); spawn('npm', ['run', 'client'], { stdio: 'inherit', shell: true });\"",
-    "build": "cd client && npm run build"
+    "dev": "node -e \"const { spawn } = require('child_process'); spawn('npm', ['run', 'server'], { stdio: 'inherit', shell: true }); spawn('npm', ['run', 'client'], { stdio: 'inherit', shell: true });\""
   },
   "keywords": [
     "mern",
@@ -18,5 +19,8 @@
     "consoles"
   ],
   "author": "Lion Games & TVs Development Team",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

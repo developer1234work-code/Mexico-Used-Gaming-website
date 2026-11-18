@@ -1,7 +1,8 @@
 node_modules/
 .tools/
-dist/
-build/
 uploads/
 .env
 *.log
+
+# Keep client/dist out of git - Railway will build it
+client/dist/

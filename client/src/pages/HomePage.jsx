@@ -380,7 +380,7 @@ export default function HomePage({ setView, onSelectCategory }) {
               </button>
 
               {/* Button 2: Dark outline pill button with gold border */}
-              <button
+              {/* <button
                 type="button"
                 onClick={() => {
                   const target = document.getElementById('que-quieres-vender');
@@ -390,11 +390,11 @@ export default function HomePage({ setView, onSelectCategory }) {
                     setView('como-funciona');
                   }
                 }}
-                className="px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide bg-black/70 hover:bg-neutral-900 text-white border border-[#F5A623]/80 hover:border-[#F5A623] hover:text-[#F5A623] shadow-md transition-all flex items-center gap-2 group cursor-pointer"
+                className="px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide bg-black/100 hover:bg-neutral-900 text-white border border-[#F5A623]/80 hover:border-[#F5A623] hover:text-[#F5A623] shadow-md transition-all flex items-center gap-2 group cursor-pointer"
               >
                 <span className="text-[#F5A623] text-sm leading-none font-bold">▷</span>
                 <span>Conoce Más</span>
-              </button>
+              </button> */}
             </div>
 
           </div>
