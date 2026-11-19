@@ -339,12 +339,12 @@ export default function HomePage({ setView, onSelectCategory }) {
             </div>
 
             {/* Static Heading — Chakra Petch gaming font, upright */}
-            <h1 className="font-hero-gaming not-italic text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.18]">
+            <h1 className="font-hero-gaming not-italic text-3xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight text-white leading-[1.12] sm:leading-[1.14]">
               <span className="block">
-                Vende consolas, <span className="text-[#F5A623]">videojuegos</span>
+                ¡Dale valor a tus <span className="text-[#F5A623]">consolas</span>
               </span>
               <span className="block mt-1 sm:mt-1.5">
-                y TVs analógicas <span className="text-[#F5A623]">(13–21 pulgadas)</span>
+                y <span className="text-[#F5A623]">videojuegos!</span>
               </span>
             </h1>
 
