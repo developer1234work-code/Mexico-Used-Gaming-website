@@ -338,13 +338,13 @@ export default function HomePage({ setView, onSelectCategory }) {
               <div className="w-8 sm:w-14 h-[1px] bg-gradient-to-l from-transparent to-[#F5A623]" />
             </div>
 
-            {/* Static Heading — Chakra Petch gaming font, upright, single phrase */}
-            <h1 className="font-hero-gaming not-italic text-3xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight text-white leading-[1.12] sm:leading-[1.14]">
+            {/* Static Heading — Chakra Petch gaming font, upright */}
+            <h1 className="font-hero-gaming not-italic text-3xl sm:text-4xl lg:text-[48px] xl:text-[52px] font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.18]">
               <span className="block">
-                Consolas <span className="text-[#F5A623]">Clásicas</span>
+                Vende consolas, <span className="text-[#F5A623]">videojuegos</span>
               </span>
               <span className="block mt-1 sm:mt-1.5">
-                para Verdaderos <span className="text-[#F5A623]">Fanáticos</span>
+                y TVs analógicas <span className="text-[#F5A623]">(13–21 pulgadas)</span>
               </span>
             </h1>
 
