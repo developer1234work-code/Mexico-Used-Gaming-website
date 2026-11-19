@@ -354,7 +354,7 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
             <img
               src={logoImg}
               alt="RetroCompra"
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_2px_12px_rgba(245,166,35,0.2)]"
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_2px_12px_rgba(245,166,35,0.2)]"
             />
           </div>
 
@@ -424,16 +424,16 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
           </nav>
 
           {/* Right Icons & Admin Button (Matching Screenshot Layout) */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
 
             {/* 1. Shopping Cart Icon with Red Counter Badge */}
             <button
               onClick={openCart}
-              className="relative w-10 h-10 rounded-full border border-[#F5A623]/80 bg-neutral-900/90 hover:bg-neutral-800 hover:border-[#F5A623] transition-all flex items-center justify-center text-[#F5A623] shadow-[0_0_12px_rgba(245,166,35,0.25)] hover:scale-110 active:scale-95 group"
+              className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-[#F5A623]/80 bg-neutral-900/90 hover:bg-neutral-800 hover:border-[#F5A623] transition-all flex items-center justify-center text-[#F5A623] shadow-[0_0_12px_rgba(245,166,35,0.25)] hover:scale-110 active:scale-95 group"
               title="Carrito de Venta"
               aria-label="Carrito de Venta"
             >
-              <ShoppingBag className="w-4 h-4 text-[#F5A623]" />
+              <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F5A623]" />
               <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-600 text-white font-black text-[10px] flex items-center justify-center shadow-md">
                 {itemCount}
               </span>
@@ -442,29 +442,29 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
             {/* 2. Gift / Package Icon (Tracking de Folio) */}
             <button
               onClick={() => { setView('track'); setCatDropdownOpen(false); }}
-              className="w-10 h-10 rounded-full border border-[#F5A623]/80 bg-neutral-900/90 hover:bg-neutral-800 hover:border-[#F5A623] transition-all flex items-center justify-center text-[#F5A623] shadow-[0_0_12px_rgba(245,166,35,0.25)] hover:scale-110 active:scale-95 group"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-[#F5A623]/80 bg-neutral-900/90 hover:bg-neutral-800 hover:border-[#F5A623] transition-all flex items-center justify-center text-[#F5A623] shadow-[0_0_12px_rgba(245,166,35,0.25)] hover:scale-110 active:scale-95 group"
               title="Rastrear Solicitud / Folio"
               aria-label="Rastrear Solicitud"
             >
-              <Gift className="w-4 h-4 text-[#F5A623]" />
+              <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F5A623]" />
             </button>
 
             {/* 3. Admin Button (Filled Golden Capsule) */}
             <button
               onClick={() => { setView('admin'); setCatDropdownOpen(false); }}
-              className="btn-shimmer px-4 py-2 rounded-full bg-gradient-to-r from-[#F5A623] via-[#E59819] to-[#D48806] text-black font-extrabold text-xs sm:text-sm flex items-center gap-1.5 shadow-[0_0_20px_rgba(245,166,35,0.4)] hover:brightness-110 hover:scale-105 active:scale-95 transition-all"
+              className="btn-shimmer px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-[#F5A623] via-[#E59819] to-[#D48806] text-black font-extrabold text-[11px] sm:text-xs md:text-sm flex items-center gap-1 sm:gap-1.5 shadow-[0_0_20px_rgba(245,166,35,0.4)] hover:brightness-110 hover:scale-105 active:scale-95 transition-all"
               title="Panel de Administración"
             >
-              <Shield className="w-4 h-4 fill-black text-black" />
+              <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-black text-black" />
               <span>Admin</span>
             </button>
 
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors ml-1"
+              className="lg:hidden p-1.5 sm:p-2 rounded-xl text-neutral-400 hover:text-white hover:bg-neutral-900 transition-colors"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
 
@@ -474,12 +474,12 @@ export default function Navbar({ currentView, setView, onSelectBrand, onSelectCa
         {/* 3. COMPACT CATEGORY SUB-MENU (REDUCED SLEEK HEIGHT)      */}
         {/* ======================================================== */}
         {catDropdownOpen && (
-          <div className="fixed left-1/2 -translate-x-1/2 top-28 w-[95vw] max-w-6xl z-50 animate-mega-menu pt-1">
+          <div className="fixed left-1/2 -translate-x-1/2 top-24 sm:top-28 w-[95vw] max-w-6xl z-50 animate-mega-menu pt-1">
             <div
               style={{
                 background: 'radial-gradient(ellipse at 25% 10%, rgba(245, 166, 35, 0.12) 0%, transparent 50%), #0C0D10'
               }}
-              className="backdrop-blur-2xl rounded-3xl sm:rounded-[2rem] border border-[#F5A623]/70 p-4 sm:p-5 shadow-[0_0_50px_rgba(245,166,35,0.28),0_25px_60px_rgba(0,0,0,0.95)] space-y-3"
+              className="backdrop-blur-2xl rounded-2xl sm:rounded-3xl border border-[#F5A623]/70 p-3.5 sm:p-5 shadow-[0_0_50px_rgba(245,166,35,0.28),0_25px_60px_rgba(0,0,0,0.95)] space-y-3 max-h-[82vh] overflow-y-auto"
             >
 
               {/* Header inside Sub-Menu (Compact) */}

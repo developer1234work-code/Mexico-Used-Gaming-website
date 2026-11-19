@@ -3,6 +3,7 @@ node_modules/
 uploads/
 .env
 *.log
+*.pdf
 
 # Keep client/dist out of git - Railway will build it
 client/dist/

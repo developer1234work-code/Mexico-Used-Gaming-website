@@ -520,12 +520,12 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
                 </div>
               )}
 
-              <div className="pt-3 border-t border-neutral-800 flex items-center justify-between">
+              <div className="pt-3 border-t border-neutral-800 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
                 <div>
                   <span className="text-[10px] text-neutral-400 uppercase font-bold tracking-wider block">
                     {estimateData?.requiresManualReview ? 'VALOR A COTIZAR:' : 'TOTAL ESTIMADO A PAGAR:'}
                   </span>
-                  <div className="text-3xl font-black text-[#F5A623] font-mono">
+                  <div className="text-2xl sm:text-3xl font-black text-[#F5A623] font-mono">
                     {estimateData?.requiresManualReview ? 'Por Evaluar' : formatMXN(currentEstimatedTotal)}
                   </div>
                 </div>
@@ -534,9 +534,9 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
                   type="button"
                   onClick={handleAddToCart}
                   disabled={isAdding}
-                  className="btn-shimmer px-6 py-3.5 rounded-2xl font-bold text-xs bg-[#F5A623] hover:bg-[#E59819] text-black shadow-lg shadow-[#F5A623]/25 hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
+                  className="btn-shimmer w-full sm:w-auto justify-center px-6 py-3.5 rounded-2xl font-bold text-xs bg-[#F5A623] hover:bg-[#E59819] text-black shadow-lg shadow-[#F5A623]/25 hover:scale-105 active:scale-95 transition-all flex items-center gap-2"
                 >
-                  <ShoppingBag className="w-4 h-4 text-black" />
+                  <ShoppingBag className="w-4 h-4 text-black shrink-0" />
                   <span>{isAdding ? 'Agregando...' : addedSuccess ? '¡Agregado al carrito!' : estimateData?.requiresManualReview ? 'Agregar para Cotización' : 'Agregar a Mi Venta'}</span>
                 </button>
               </div>

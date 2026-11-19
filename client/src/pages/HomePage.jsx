@@ -339,7 +339,7 @@ export default function HomePage({ setView, onSelectCategory }) {
             </div>
 
             {/* Static Heading — Chakra Petch gaming font, upright */}
-            <h1 className="font-hero-gaming not-italic text-3xl sm:text-5xl lg:text-[56px] font-extrabold tracking-tight text-white leading-[1.12] sm:leading-[1.14]">
+            <h1 className="font-hero-gaming not-italic text-2xl sm:text-4xl lg:text-5xl xl:text-[56px] font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.14] break-words">
               <span className="block">
                 ¡Dale valor a tus <span className="text-[#F5A623]">consolas</span>
               </span>
@@ -349,8 +349,8 @@ export default function HomePage({ setView, onSelectCategory }) {
             </h1>
 
             {/* Subtitle paragraph */}
-            <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal max-w-lg">
-              Revive los mejores momentos con consolas icónicas como Nintendo NES y Nintendo 64.
+            <p className="text-xs sm:text-sm md:text-base text-neutral-300 leading-relaxed font-normal max-w-lg">
+              ¡Esos Tesoros Retro Merecen una Recompensa!
             </p>
 
             {/* Five diagonal gold hazard/speed slashes ///// */}
@@ -372,29 +372,12 @@ export default function HomePage({ setView, onSelectCategory }) {
                   if (onSelectCategory) onSelectCategory('all');
                   setView('catalogue');
                 }}
-                className="btn-shimmer px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide bg-[#F5A623] hover:bg-[#E59819] text-black shadow-lg shadow-[#F5A623]/30 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center gap-2 group cursor-pointer"
+                className="btn-shimmer w-full sm:w-auto justify-center px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide bg-[#F5A623] hover:bg-[#E59819] text-black shadow-lg shadow-[#F5A623]/30 hover:scale-[1.03] active:scale-[0.98] transition-all flex items-center gap-2 group cursor-pointer"
               >
                 <Gamepad2 className="w-4 h-4 text-black stroke-[2.2]" />
                 <span>Explora Nuestra Colección</span>
                 <ArrowRight className="w-4 h-4 text-black stroke-[2.5] group-hover:translate-x-1 transition-transform" />
               </button>
-
-              {/* Button 2: Dark outline pill button with gold border */}
-              {/* <button
-                type="button"
-                onClick={() => {
-                  const target = document.getElementById('que-quieres-vender');
-                  if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    setView('como-funciona');
-                  }
-                }}
-                className="px-6 sm:px-7 py-3 sm:py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide bg-black/100 hover:bg-neutral-900 text-white border border-[#F5A623]/80 hover:border-[#F5A623] hover:text-[#F5A623] shadow-md transition-all flex items-center gap-2 group cursor-pointer"
-              >
-                <span className="text-[#F5A623] text-sm leading-none font-bold">▷</span>
-                <span>Conoce Más</span>
-              </button> */}
             </div>
 
           </div>
@@ -481,15 +464,26 @@ export default function HomePage({ setView, onSelectCategory }) {
               className="sell-card relative cursor-pointer bg-white rounded-[28px] border border-neutral-200 overflow-hidden flex flex-col"
             >
               {/* Image Area */}
-              <div className="sell-card-img-wrap relative bg-gradient-to-br from-[#FFFBF2] via-[#FFF8EC] to-[#FFF3DD] p-8 pb-0 flex items-end justify-center overflow-hidden" style={{ minHeight: '210px' }}>
+              <div className="sell-card-img-wrap relative bg-gradient-to-br from-[#FFFBF2] via-[#FFF8EC] to-[#FFF3DD] p-6 pb-2 flex items-end justify-center overflow-hidden" style={{ minHeight: '210px' }}>
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="w-40 h-40 rounded-full bg-[#F5A623]/10 blur-2xl" />
                 </div>
                 <span className="sell-pill absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#F5A623] text-black shadow-sm">
                   Discos &amp; Cartuchos
                 </span>
-                <div className="relative z-10 w-44 h-44 flex items-end justify-center drop-shadow-xl">
-                  <VideoGamesStackGraphic />
+                <div className="relative z-10 w-full h-44 flex items-center justify-center drop-shadow-xl gap-1">
+                  <img
+                    src="/assets/video games/super-mario-64.avif"
+                    alt="Super Mario 64 Cartucho N64"
+                    className="w-24 h-28 object-contain -rotate-6 transform hover:rotate-0 hover:scale-110 transition-all duration-300 drop-shadow-lg z-10"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                  <img
+                    src="/assets/video games/super-smash-bros-melee.png"
+                    alt="Super Smash Bros Melee GameCube"
+                    className="w-22 h-28 object-contain rotate-12 -ml-5 transform hover:rotate-0 hover:scale-110 transition-all duration-300 drop-shadow-lg"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
                 </div>
               </div>
 

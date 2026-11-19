@@ -94,9 +94,9 @@ export default function ConsoleBrandSelectorPage({
             {/* Special Edition Prompt */}
             <button
               onClick={onOpenSpecialEditions}
-              className="text-xs font-bold text-[#B87406] bg-amber-50 hover:bg-amber-100 border border-[#F0C068] px-4 py-3 rounded-2xl flex items-center gap-2 transition-all shrink-0"
+              className="text-xs font-bold text-[#B87406] bg-amber-50 hover:bg-amber-100 border border-[#F0C068] px-4 py-3 rounded-2xl flex items-center justify-center gap-2 transition-all shrink-0 w-full md:w-auto text-center"
             >
-              <Flame className="w-4 h-4 fill-current text-[#F5A623]" />
+              <Flame className="w-4 h-4 fill-current text-[#F5A623] shrink-0" />
               <span>¿Tienes una edición especial? Consulta precios aquí</span>
             </button>
           </div>

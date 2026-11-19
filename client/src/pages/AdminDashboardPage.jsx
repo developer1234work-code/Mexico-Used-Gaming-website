@@ -610,38 +610,40 @@ export default function AdminDashboardPage({ onLogout }) {
             </div>
 
             <div className="bg-[#111827] rounded-2xl border border-slate-800 overflow-hidden shadow-xl">
-              <table className="w-full text-left text-xs">
-                <thead className="bg-slate-900 text-slate-400 uppercase font-semibold border-b border-slate-800">
-                  <tr>
-                    <th className="py-3 px-4">Destinatario</th>
-                    <th className="py-3 px-4">Asunto / Evento</th>
-                    <th className="py-3 px-4">Folio Asociado</th>
-                    <th className="py-3 px-4">Fecha y Hora</th>
-                    <th className="py-3 px-4 text-right">Vista Previa</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800/60">
-                  {emailLogs.map((eml) => (
-                    <tr key={eml.id} className="hover:bg-slate-800/40">
-                      <td className="py-3 px-4 font-medium text-white">{eml.to}</td>
-                      <td className="py-3 px-4 font-semibold text-slate-200">
-                        <div>{eml.subject}</div>
-                        <div className="text-[10px] text-amber-400 uppercase font-mono">{eml.eventType}</div>
-                      </td>
-                      <td className="py-3 px-4 font-mono text-amber-400">{eml.requestId}</td>
-                      <td className="py-3 px-4 text-slate-400">{formatDate(eml.sentAt)}</td>
-                      <td className="py-3 px-4 text-right">
-                        <button
-                          onClick={() => setShowEmailPreviewModal(eml)}
-                          className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold"
-                        >
-                          Ver Correo
-                        </button>
-                      </td>
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs min-w-[600px]">
+                  <thead className="bg-slate-900 text-slate-400 uppercase font-semibold border-b border-slate-800">
+                    <tr>
+                      <th className="py-3 px-4">Destinatario</th>
+                      <th className="py-3 px-4">Asunto / Evento</th>
+                      <th className="py-3 px-4">Folio Asociado</th>
+                      <th className="py-3 px-4">Fecha y Hora</th>
+                      <th className="py-3 px-4 text-right">Vista Previa</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-slate-800/60">
+                    {emailLogs.map((eml) => (
+                      <tr key={eml.id} className="hover:bg-slate-800/40">
+                        <td className="py-3 px-4 font-medium text-white">{eml.to}</td>
+                        <td className="py-3 px-4 font-semibold text-slate-200">
+                          <div>{eml.subject}</div>
+                          <div className="text-[10px] text-amber-400 uppercase font-mono">{eml.eventType}</div>
+                        </td>
+                        <td className="py-3 px-4 font-mono text-amber-400">{eml.requestId}</td>
+                        <td className="py-3 px-4 text-slate-400">{formatDate(eml.sentAt)}</td>
+                        <td className="py-3 px-4 text-right">
+                          <button
+                            onClick={() => setShowEmailPreviewModal(eml)}
+                            className="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold"
+                          >
+                            Ver Correo
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         )}

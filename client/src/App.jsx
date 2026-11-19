@@ -77,7 +77,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FAF9F6] text-neutral-900">
+    <div className="flex flex-col min-h-screen bg-[#FAF9F6] text-neutral-900 overflow-x-hidden min-w-0 w-full relative">
       {/* Top Header Navigation (Pure black, clean and modern) */}
       <Navbar 
         currentView={currentView} 

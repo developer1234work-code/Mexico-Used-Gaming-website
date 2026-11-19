@@ -1,4 +1,3 @@
-// Auto-generated official catalog seed data
 module.exports = {
   "users": [
     {
@@ -9232,7 +9231,7 @@ module.exports = {
       "platform": "Nintendo 64",
       "baseBuyPrice": 450,
       "description": "Cartucho original de Super Mario 64 para Nintendo 64. Evaluamos estado de la etiqueta, pines y funcionamiento.",
-      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
+      "imageUrl": "/assets/video games/super-mario-64.avif",
       "active": true,
       "isCRT": false,
       "weightKg": 0.15,
@@ -9314,7 +9313,7 @@ module.exports = {
       "platform": "Nintendo 64",
       "baseBuyPrice": 550,
       "description": "Cartucho original de The Legend of Zelda: Ocarina of Time para Nintendo 64.",
-      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
+      "imageUrl": "/assets/video games/zelda-ocarina-of-time.avif",
       "active": true,
       "isCRT": false,
       "weightKg": 0.15,
@@ -9378,7 +9377,7 @@ module.exports = {
       "platform": "Nintendo GameCube",
       "baseBuyPrice": 700,
       "description": "Disco original de Super Smash Bros. Melee para Nintendo GameCube. Inspección de superficie sin rayones profundos.",
-      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
+      "imageUrl": "/assets/video games/super-smash-bros-melee.png",
       "active": true,
       "isCRT": false,
       "weightKg": 0.2,
@@ -10714,6 +10713,286 @@ module.exports = {
           "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
         }
       ]
+    },
+    {
+      "id": "REQ-2026-2633",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794827945489-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64 Standard",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 console.jpg",
+          "condition": "working_good",
+          "conditionLabel": "Funciona bien / Buen estado estético",
+          "requiresManualReview": false,
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control original N64 adicional",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak original (Memoria 4MB N64)",
+              "price": 400,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1050,
+          "calculationBreakdown": {
+            "basePrice": 500,
+            "originalBasePrice": 500,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 500,
+            "accessoriesAdjustmentTotal": 550,
+            "requiresManualReview": false,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-16T11:19:05.489Z",
+            "basePrice": 500,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "power_adapter": 75,
+              "av_cable": 75,
+              "expansion_pak": 400,
+              "jumper_pak": 80
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1050,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-16T11:19:05.489Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1050,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-16T11:19:05.791Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-945791",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-16T11:19:05.852Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1050,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-16T11:19:05.852Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-16T11:19:05.913Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-16T11:19:05.489Z",
+      "updatedAt": "2026-11-16T11:19:05.913Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T11:19:05.489Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T11:19:05.791Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T11:19:05.852Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T11:19:05.913Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-4550",
+      "customer": {
+        "fullName": "rg",
+        "email": "psgeeta16@gmail.com",
+        "phone": "7666",
+        "whatsapp": "7666",
+        "city": "fqrfqfr",
+        "state": "Ciudad de México (CDMX)",
+        "postalCode": "rqerr",
+        "shippingOrigin": "fqrfqfr, Ciudad de México (CDMX) C.P. rqerr",
+        "streetAddress": "req"
+      },
+      "items": [
+        {
+          "itemId": "item-1795087349032-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64 Standard",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 console.jpg",
+          "condition": "working_good",
+          "conditionLabel": "Funciona bien / Buen estado estético",
+          "requiresManualReview": false,
+          "accessories": {
+            "extra_controller": false,
+            "power_adapter": false,
+            "av_cable": false,
+            "expansion_pak": false,
+            "jumper_pak": false
+          },
+          "itemizedAccessories": [],
+          "calculatedEstimate": 500,
+          "calculationBreakdown": {
+            "basePrice": 500,
+            "originalBasePrice": 500,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 500,
+            "accessoriesAdjustmentTotal": 0,
+            "requiresManualReview": false,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-19T11:22:29.032Z",
+            "basePrice": 500,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "power_adapter": 75,
+              "av_cable": 75,
+              "expansion_pak": 400,
+              "jumper_pak": 80
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 500,
+      "currency": "MXN",
+      "status": "OFFER_CONFIRMED",
+      "statusLabel": "Inspección Aprobada - Oferta Confirmada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-19T11:22:29.032Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 500,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-19T11:23:35.348Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "dth",
+        "labelReference": "LION-415348",
+        "instructions": "Empacar con al menos 3 capas de plástico de burbujas en caja de cartón corrugado rígida.",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-19T11:31:52.475Z",
+        "serialVerified": "REQ-2026-4550",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "good",
+        "authenticityVerified": "authentic",
+        "discrepancies": "",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": [
+          "https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=600&q=80"
+        ]
+      },
+      "revisedOffer": null,
+      "internalNotes": [],
+      "createdAt": "2026-11-19T11:22:29.032Z",
+      "updatedAt": "2026-11-19T11:31:52.476Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (rg)",
+          "timestamp": "2026-11-19T11:22:29.032Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-19T11:23:35.348Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: dth."
+        },
+        {
+          "status": "OFFER_CONFIRMED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-19T11:31:52.475Z",
+          "notes": "Inspección física superada con éxito. Oferta confirmada por $500 MXN."
+        }
+      ]
     }
   ],
   "auditLogs": [
@@ -11092,6 +11371,98 @@ module.exports = {
       "details": "Cliente decidió ACCEPT para la oferta (revised)",
       "createdAt": "2026-11-16T06:09:11.112Z",
       "updatedAt": "2026-11-16T06:09:11.112Z"
+    },
+    {
+      "id": "audit-1794827945496",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-2633",
+      "timestamp": "2026-11-16T11:19:05.489Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1050 MXN",
+      "createdAt": "2026-11-16T11:19:05.496Z",
+      "updatedAt": "2026-11-16T11:19:05.496Z"
+    },
+    {
+      "id": "audit-1794827945778",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-16T11:19:05.778Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-16T11:19:05.778Z",
+      "updatedAt": "2026-11-16T11:19:05.778Z"
+    },
+    {
+      "id": "audit-1794827945826",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-2633",
+      "timestamp": "2026-11-16T11:19:05.791Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-16T11:19:05.826Z",
+      "updatedAt": "2026-11-16T11:19:05.826Z"
+    },
+    {
+      "id": "audit-1794827945891",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-2633",
+      "timestamp": "2026-11-16T11:19:05.852Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-16T11:19:05.891Z",
+      "updatedAt": "2026-11-16T11:19:05.891Z"
+    },
+    {
+      "id": "audit-1794827945930",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-2633",
+      "timestamp": "2026-11-16T11:19:05.913Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-16T11:19:05.930Z",
+      "updatedAt": "2026-11-16T11:19:05.930Z"
+    },
+    {
+      "id": "audit-1795087291701",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-19T11:21:31.701Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-19T11:21:31.701Z",
+      "updatedAt": "2026-11-19T11:21:31.701Z"
+    },
+    {
+      "id": "audit-1795087349040",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "rg",
+      "requestId": "REQ-2026-4550",
+      "timestamp": "2026-11-19T11:22:29.032Z",
+      "details": "Nueva solicitud creada con 1 artículos por $500 MXN",
+      "createdAt": "2026-11-19T11:22:29.041Z",
+      "updatedAt": "2026-11-19T11:22:29.041Z"
+    },
+    {
+      "id": "audit-1795087415391",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-4550",
+      "timestamp": "2026-11-19T11:23:35.348Z",
+      "details": "Envío autorizado con guía dth (Estafeta México)",
+      "createdAt": "2026-11-19T11:23:35.391Z",
+      "updatedAt": "2026-11-19T11:23:35.391Z"
+    },
+    {
+      "id": "audit-1795087912484",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-4550",
+      "timestamp": "2026-11-19T11:31:52.475Z",
+      "details": "Inspección completada con dictamen: CONFIRM_PRELIMINARY",
+      "createdAt": "2026-11-19T11:31:52.484Z",
+      "updatedAt": "2026-11-19T11:31:52.484Z"
     }
   ],
   "emailLogs": [
@@ -11467,6 +11838,97 @@ module.exports = {
       "status": "SENT",
       "createdAt": "2026-11-16T06:09:11.027Z",
       "updatedAt": "2026-11-16T06:09:11.027Z"
+    },
+    {
+      "id": "eml-1794827945609-894",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-2633 - Juan Pablo Montoya ($1050 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-2633",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-2633</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 Standard - Funciona bien / Buen estado estético (Est. $1,050.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,050.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T11:19:05.609Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T11:19:05.609Z",
+      "updatedAt": "2026-11-16T11:19:05.609Z"
+    },
+    {
+      "id": "eml-1794827945617-855",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-2633 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-2633",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-2633</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,050.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64 Standard</td>\n                <td style=\"padding: 8px;\">Funciona bien / Buen estado estético</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,050.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T11:19:05.617Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T11:19:05.617Z",
+      "updatedAt": "2026-11-16T11:19:05.617Z"
+    },
+    {
+      "id": "eml-1794827945806-285",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-2633 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-2633",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-945791</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T11:19:05.806Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T11:19:05.806Z",
+      "updatedAt": "2026-11-16T11:19:05.806Z"
+    },
+    {
+      "id": "eml-1794827945852-825",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-2633 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-2633",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-2633</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,050.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T11:19:05.852Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T11:19:05.852Z",
+      "updatedAt": "2026-11-16T11:19:05.852Z"
+    },
+    {
+      "id": "eml-1795087349114-224",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-4550 - rg ($500 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-4550",
+      "customerName": "rg",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>fqrfqfr, Ciudad de México (CDMX)</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-4550</p>\n          <p><strong>Cliente:</strong> rg (7666)</p>\n          <p><strong>Email:</strong> psgeeta16@gmail.com</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 Standard - Funciona bien / Buen estado estético (Est. $500.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $500.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-19T11:22:29.114Z",
+      "status": "SENT",
+      "createdAt": "2026-11-19T11:22:29.114Z",
+      "updatedAt": "2026-11-19T11:22:29.114Z"
+    },
+    {
+      "id": "eml-1795087349124-759",
+      "to": "psgeeta16@gmail.com",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-4550 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-4550",
+      "customerName": "rg",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola rg!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-4550</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$500.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64 Standard</td>\n                <td style=\"padding: 8px;\">Funciona bien / Buen estado estético</td>\n                <td style=\"padding: 8px; text-align: right;\">$500.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-19T11:22:29.124Z",
+      "status": "SENT",
+      "createdAt": "2026-11-19T11:22:29.124Z",
+      "updatedAt": "2026-11-19T11:22:29.124Z"
+    },
+    {
+      "id": "eml-1795087415358-789",
+      "to": "psgeeta16@gmail.com",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-4550 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-4550",
+      "customerName": "rg",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a rg:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> dth</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-415348</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con al menos 3 capas de plástico de burbujas en caja de cartón corrugado rígida.</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-19T11:23:35.358Z",
+      "status": "SENT",
+      "createdAt": "2026-11-19T11:23:35.358Z",
+      "updatedAt": "2026-11-19T11:23:35.358Z"
     }
   ]
 };

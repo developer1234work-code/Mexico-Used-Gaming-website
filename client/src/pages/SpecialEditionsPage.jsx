@@ -64,12 +64,12 @@ export default function SpecialEditionsPage({ onGoToConsoles, onOpenCustomQuote 
               Si tu consola tiene colores exclusivos (Funtastic, Pokémon, Zelda, Halo), carcasas translúcidas o es una edición conmemorativa limitada, <strong>pagamos primas de valor superiores al modelo estándar</strong>.
             </p>
 
-            <div className="pt-3 flex flex-wrap gap-3">
+            <div className="pt-3 flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="https://wa.me/525512345678?text=Hola%20LionGamesAndTvs,%20tengo%20una%20edici%C3%B3n%20especial%20para%20vender"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-shimmer px-6 py-3 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs flex items-center gap-2 shadow-lg"
+                className="btn-shimmer px-6 py-3 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg w-full sm:w-auto"
               >
                 <MessageCircle className="w-4 h-4 fill-current" />
                 <span>Escríbenos por WhatsApp</span>
@@ -77,13 +77,13 @@ export default function SpecialEditionsPage({ onGoToConsoles, onOpenCustomQuote 
 
               <button
                 onClick={onOpenCustomQuote}
-                className="px-6 py-3 rounded-2xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs border border-neutral-700 flex items-center gap-2"
+                className="px-6 py-3 rounded-2xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs border border-neutral-700 flex items-center justify-center gap-2 w-full sm:w-auto"
               >
                 <Mail className="w-4 h-4 text-[#F5A623]" />
                 <span>Envíanos un mensaje</span>
               </button>
 
-              <div className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-neutral-900/80 text-xs text-neutral-300 font-mono">
+              <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-neutral-900/80 text-xs text-neutral-300 font-mono w-full sm:w-auto">
                 <Phone className="w-3.5 h-3.5 text-[#F5A623]" />
                 <span>55 1234 5678</span>
               </div>

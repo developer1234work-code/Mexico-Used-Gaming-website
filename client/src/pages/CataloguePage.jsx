@@ -160,10 +160,10 @@ export default function CataloguePage({ initialCategory = 'all', onOpenCustomQuo
             {/* Non-catalogue Custom Link */}
             <button
               onClick={onOpenCustomQuote}
-              className="text-xs font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 border border-amber-300 px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-colors whitespace-nowrap"
+              className="text-xs font-bold text-amber-700 bg-amber-50 hover:bg-amber-100 border border-amber-300 px-4 py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition-colors whitespace-nowrap w-full md:w-auto"
             >
               <Plus className="w-4 h-4" />
-              ¿No encuentras tu artículo? Cotizar manualmente
+              <span>¿No encuentras tu artículo? Cotizar manualmente</span>
             </button>
           </div>
 
@@ -309,8 +309,8 @@ export default function CataloguePage({ initialCategory = 'all', onOpenCustomQuo
       {/* ESTIMATE MODAL / CALCULATOR CONFIGURATOR (AC-03) */}
       {/* ======================================================== */}
       {activeProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm overflow-y-auto">
-          <div className="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative my-8">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-sm overflow-y-auto">
+          <div className="bg-white rounded-3xl max-w-xl w-full p-5 sm:p-8 shadow-2xl border border-slate-200 relative my-auto max-h-[92vh] overflow-y-auto">
             
             {/* Modal Header */}
             <div className="flex items-start justify-between pb-4 border-b border-slate-200">
