@@ -339,6 +339,16 @@ export default function CataloguePage({ initialCategory = 'all', onOpenCustomQuo
             {/* Body */}
             <div className="py-5 space-y-6">
               
+              {/* Consoles Base Price Note */}
+              {activeProduct.category === 'consoles' && (
+                <div className="bg-amber-50 rounded-xl p-3 border border-amber-200/80 text-xs text-amber-900 flex items-start gap-2">
+                  <Info className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                  <div>
+                    <strong>Precio base por solo la consola:</strong> Corresponde a la consola sin cables ni controles. Si incluyes cable AV, fuente de poder o controles originales, selecciónalos abajo para sumar más valor a tu pago.
+                  </div>
+                </div>
+              )}
+
               {/* 1. Condition Selector */}
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-800 uppercase tracking-wide flex items-center justify-between">

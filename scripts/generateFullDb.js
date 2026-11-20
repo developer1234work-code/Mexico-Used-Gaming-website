@@ -55,6 +55,11 @@ console.log(`Parsed ${rows.length} rows from official_pricing.csv`);
 // Group by Category and Model
 const productsMap = {};
 for (const row of rows) {
+  // RULE 3: REMOVE PlayStation PS1 Original (Fat) - we don't buy it!
+  if (row.model === 'PlayStation PS1 Original') {
+    continue;
+  }
+
   const key = `${row.category}|||${row.model}`;
   if (!productsMap[key]) {
     productsMap[key] = {
@@ -79,7 +84,7 @@ const fullProducts = [];
 for (const key of productKeys) {
   const entry = productsMap[key];
   const cat = entry.category;
-  const model = entry.model;
+  let model = entry.model;
 
   // Determine system category and brand
   let category = 'consoles';
@@ -129,9 +134,13 @@ for (const key of productKeys) {
     }
   }
   if (baseBuyPrice === 0) {
-    // If no approved condition price yet, use the first numeric buyPrice or 500
     const firstNum = entry.conditions.find(c => c.buyPrice > 0);
     baseBuyPrice = firstNum ? firstNum.buyPrice : 500;
+  }
+
+  // RULE 3: For PSone Slim, we buy the one including the screen attached ($200 console + $800 screen = $1,000 MXN)
+  if (model === 'PSone Slim') {
+    baseBuyPrice = 1000;
   }
 
   // Condition multipliers and condition list
@@ -144,32 +153,50 @@ for (const key of productKeys) {
   };
 
   const conditionsList = [];
+  const isGbaSp = model === 'GBA SP AGS-001' || model === 'GBA SP AGS-101';
+
   for (const c of entry.conditions) {
-    const tr = conditionTranslations[c.item] || { label: c.item, code: 'works_cosmetic_damage' };
-    const condPrice = c.buyPrice || 0;
-    const condMultiplier = baseBuyPrice > 0 && condPrice > 0 ? Number((condPrice / baseBuyPrice).toFixed(3)) : 0;
-    
-    // Update multiplier for standard key if appropriate
-    if (tr.code === 'works_perfect' && condMultiplier > 0) {
-      conditionMultipliers.works_perfect = 1.0;
-    } else if (tr.code === 'works_cosmetic_damage' && condMultiplier > 0) {
-      conditionMultipliers.works_cosmetic_damage = Math.min(0.9, condMultiplier);
-    } else if (tr.code === 'has_functional_problems' && condMultiplier > 0) {
-      conditionMultipliers.has_functional_problems = Math.min(0.7, condMultiplier);
-    } else if (tr.code === 'does_not_work' && condMultiplier > 0) {
-      conditionMultipliers.does_not_work = Math.min(0.4, condMultiplier);
+    let tr = conditionTranslations[c.item] || { label: c.item, code: 'works_cosmetic_damage' };
+    let condPrice = c.buyPrice || 0;
+    let status = c.status;
+    let notes = c.notes || '';
+
+    // RULE 2 NOTE: We won't be buying consoles that have cracks and yellowish together (except GBA SP 001 and 101)
+    const isYellowAndCracked = (c.item.toLowerCase().includes('yellow') && c.item.toLowerCase().includes('crack'));
+    if (!isGbaSp && isYellowAndCracked) {
+      status = 'No automatic offer';
+      condPrice = null;
+      notes = 'No compramos consolas con grietas y amarilleo simultáneo (no aptas para reventa)';
     }
+
+    // RULE 3: For PSone Slim, only buy with screen in good condition and console reading discs!
+    if (model === 'PSone Slim') {
+      if (c.item === 'Working good') {
+        tr = {
+          label: 'Consola y pantalla LCD portátil original funcionando al 100% (leyendo discos)',
+          code: 'works_perfect'
+        };
+        condPrice = 1000;
+        status = 'Approved';
+      } else {
+        status = 'No automatic offer';
+        condPrice = null;
+        notes = 'Solo compramos PSone Slim con pantalla LCD portátil original en buen estado y leyendo discos';
+      }
+    }
+
+    const condMultiplier = (baseBuyPrice > 0 && condPrice > 0) ? Number((condPrice / baseBuyPrice).toFixed(3)) : 0;
 
     conditionsList.push({
       id: c.item.toLowerCase().replace(/[^a-z0-9]+/g, '_'),
       name: c.item,
       label: tr.label,
       standardCode: tr.code,
-      buyPrice: c.buyPrice,
-      status: c.status,
+      buyPrice: condPrice,
+      status: status,
       multiplier: condMultiplier,
-      isAutomaticOffer: c.status === 'Approved' && c.buyPrice !== null,
-      notes: c.notes || ''
+      isAutomaticOffer: status === 'Approved' && condPrice !== null && condPrice > 0,
+      notes: notes
     });
   }
 
@@ -179,6 +206,11 @@ for (const key of productKeys) {
   const accessoryLabels = {};
 
   for (const a of entry.accessories) {
+    // If PSone Slim, don't duplicate screen as accessory since it's already built into the base bundle
+    if (model === 'PSone Slim' && a.item.includes('LCD screen')) {
+      continue;
+    }
+
     const map = accessoryKeyMap[a.item] || {
       key: a.item.toLowerCase().replace(/[^a-z0-9]+/g, '_'),
       label: a.item
@@ -199,10 +231,34 @@ for (const key of productKeys) {
     });
   }
 
-  // Base includes
+  // RULE 4: For GameCube, add WaveBird controller ($650 MXN) as an option when configuring details to sell, plus OEM controller and cables!
+  if (model === 'GameCube') {
+    const gcAccessories = [
+      { key: 'extra_controller', name: 'OEM GameCube controller', label: 'Control original GameCube alámbrico', buyPrice: 150, status: 'Approved', isAutomaticOffer: true },
+      { key: 'wavebird_controller', name: 'OEM WaveBird wireless controller with receiver', label: 'Control inalámbrico WaveBird con receptor original', buyPrice: 650, status: 'Approved', isAutomaticOffer: true },
+      { key: 'power_adapter', name: 'OEM GameCube power adapter', label: 'Adaptador de corriente / Eliminador original GameCube', buyPrice: 100, status: 'Approved', isAutomaticOffer: true },
+      { key: 'av_cable', name: 'OEM GameCube AV cable', label: 'Cable de Audio/Video AV original GameCube', buyPrice: 100, status: 'Approved', isAutomaticOffer: true },
+      { key: 'memory_card', name: 'OEM GameCube memory card', label: 'Tarjeta de memoria Memory Card original GameCube', buyPrice: 100, status: 'Approved', isAutomaticOffer: true }
+    ];
+    for (const ga of gcAccessories) {
+      accessoryPricing[ga.key] = ga.buyPrice;
+      accessoryLabels[ga.key] = ga.label;
+      accessoriesList.push({
+        key: ga.key,
+        name: ga.name,
+        label: ga.label,
+        buyPrice: ga.buyPrice,
+        status: ga.status,
+        isAutomaticOffer: true,
+        notes: 'Valor adicional genuino si está incluido'
+      });
+    }
+  }
+
+  // RULE 2: Base includes is ONLY the console itself (sin cables ni controles)!
   const baseIncludes = isCRT 
     ? ['tubo_catodico_funcionando', 'altavoces_integrados']
-    : ['original_controller', 'power_supply', 'av_cable'];
+    : ['solo_consola'];
 
   // Image filename
   const imgFile = imageMapping[model] || 'Nintendo 64 console.jpg';
@@ -212,12 +268,16 @@ for (const key of productKeys) {
   let displayName = model;
   if (isCRT) {
     displayName = `Televisor CRT ${model} 13"-21"`;
+  } else if (model === 'PSone Slim') {
+    displayName = 'PSone Slim con Pantalla LCD Portátil';
   }
 
-  // Description
+  // Description - clearly states BASE PRICE IS CONSOLE ONLY
   let description = isCRT
     ? `Televisor analógico CRT de tubo coleccionable temático de ${model} (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.`
-    : `Consola original ${model} de ${brand}. Inspección técnica garantizada con pago por transferencia directa en México.`;
+    : model === 'PSone Slim'
+    ? `Consola original Sony PSone Slim con pantalla LCD portátil original a juego. Solo compramos este modelo con pantalla en buen estado y consola leyendo discos.`
+    : `Consola original ${model} de ${brand}. Precio base por solo la consola (sin cables ni controles). Agrega tus controles y cables originales en las opciones para sumar más dinero a tu oferta final.`;
 
   const prodId = makeId(cat, model);
   const sku = `${category.slice(0, 3).toUpperCase()}-${brand.slice(0, 4).toUpperCase()}-${prodId.slice(0, 10).toUpperCase()}`;
@@ -252,7 +312,7 @@ for (const key of productKeys) {
 
 console.log(`Generated ${fullProducts.length} official products from Excel data.`);
 
-// Standard Video Games & Accessories to complete the catalog
+// Standard Video Games to complete the catalog
 const standardVideoGames = [
   {
     id: 'game-super-mario-64',
@@ -338,7 +398,13 @@ const standardVideoGames = [
     isCRT: false,
     weightKg: 0.2,
     dimensions: '19 x 13.5 x 1.5 cm',
-    conditionMultipliers: { works_perfect: 1.0, works_cosmetic_damage: 0.75, has_functional_problems: 0.40, does_not_work: 0.15, for_parts_only: 0.05 },
+    conditionMultipliers: {
+      works_perfect: 1.0,
+      works_cosmetic_damage: 0.75,
+      has_functional_problems: 0.40,
+      does_not_work: 0.15,
+      for_parts_only: 0.05
+    },
     conditions: [
       { id: 'cib', name: 'CIB', label: 'Completo con estuche y manual', standardCode: 'works_perfect', buyPrice: 950, status: 'Approved', multiplier: 1.35, isAutomaticOffer: true },
       { id: 'disc_good', name: 'Disco con estuche', label: 'Disco en buen estado con estuche original', standardCode: 'works_perfect', buyPrice: 700, status: 'Approved', multiplier: 1.0, isAutomaticOffer: true }
@@ -351,6 +417,7 @@ const standardVideoGames = [
   }
 ];
 
+// Accessories (WaveBird removed from here, now directly an accessory of GameCube)
 const standardAccessories = [
   {
     id: 'acc-n64-expansion-pak',
@@ -371,30 +438,6 @@ const standardAccessories = [
     conditionMultipliers: { works_perfect: 1.0, works_cosmetic_damage: 0.85, has_functional_problems: 0.5, does_not_work: 0.2, for_parts_only: 0.1 },
     conditions: [
       { id: 'works_perfect', name: 'Working good', label: 'Funciona perfectamente', standardCode: 'works_perfect', buyPrice: 400, status: 'Approved', multiplier: 1.0, isAutomaticOffer: true }
-    ],
-    accessoryPricing: {},
-    accessoryLabels: {},
-    accessoriesList: []
-  },
-  {
-    id: 'acc-gamecube-wavebird',
-    sku: 'ACC-NINT-WAVEBIRD',
-    category: 'accessories',
-    categoryName: 'Accesorios',
-    brand: 'Nintendo',
-    name: 'Control Inalámbrico WaveBird GameCube con Receptor',
-    model: 'WaveBird Controller',
-    platform: 'Nintendo GameCube',
-    baseBuyPrice: 650,
-    description: 'Control oficial inalámbrico WaveBird para Nintendo GameCube incluyendo receptor de radiofrecuencia original.',
-    imageUrl: '/assets/Consoles and tv pictures/Nintendo gamecube consoles.png',
-    active: true,
-    isCRT: false,
-    weightKg: 0.35,
-    dimensions: '14 x 13 x 6 cm',
-    conditionMultipliers: { works_perfect: 1.0, works_cosmetic_damage: 0.85, has_functional_problems: 0.5, does_not_work: 0.2, for_parts_only: 0.1 },
-    conditions: [
-      { id: 'works_perfect', name: 'Working good with receiver', label: 'Funciona al 100% con receptor incluido', standardCode: 'works_perfect', buyPrice: 650, status: 'Approved', multiplier: 1.0, isAutomaticOffer: true }
     ],
     accessoryPricing: {},
     accessoryLabels: {},

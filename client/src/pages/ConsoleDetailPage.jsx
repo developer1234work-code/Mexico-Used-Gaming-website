@@ -180,27 +180,27 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
               <div className="pt-4 border-t border-neutral-100 flex items-center justify-between text-left">
                 <div>
                   <span className="text-[10px] text-neutral-400 font-bold uppercase tracking-wider block">
-                    Precio Base de Recompra:
+                    Precio Base ({consoleItem.isCRT ? 'Solo Televisor' : 'Solo Consola'}):
                   </span>
                   <span className="text-2xl font-black text-neutral-900">
                     {formatMXN(consoleItem.baseBuyPrice)}
                   </span>
                 </div>
                 <span className="text-[10px] font-bold bg-amber-50 text-[#B87406] px-2.5 py-1 rounded-full border border-[#F0C068]/50">
-                  En buen estado
+                  {consoleItem.isCRT ? 'Tubo funcionando' : 'Solo consola funcionando'}
                 </span>
               </div>
             </div>
 
-            {/* Clear Base Price Inclusions (Prevents double payment!) */}
+            {/* Clear Base Price Inclusions (Solo Consola - Cables y Controles suman valor) */}
             <div className="bg-[#FAF4E6] rounded-2xl p-5 border border-[#F0C068]/70 text-xs space-y-2">
               <div className="flex items-center gap-2 font-black text-neutral-900">
                 <CheckCircle2 className="w-4 h-4 text-[#F5A623]" />
-                <span>¿Qué incluye el precio base? (Sin doble cobro)</span>
+                <span>Precio base: Solo la consola (Sin cables ni controles)</span>
               </div>
               <p className="text-neutral-700 leading-relaxed text-[11px]">
-                El precio base incluye la consola con 1 control original y sus cables básicos de conexión (fuente de poder y cable de video). 
-                Los accesorios extras que marques a la derecha se <strong>suman íntegramente como valor adicional a tu oferta</strong>.
+                El precio base corresponde únicamente al dispositivo en buen estado funcional. 
+                Si cuentas con cables originales (AV, fuente de poder / eliminador) o controles, selecciónalos en la lista de accesorios a la derecha para <strong>sumar más dinero directamente a tu oferta de pago</strong>.
               </p>
             </div>
 
@@ -414,14 +414,26 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
                   [
                     {
                       key: 'extra_controller',
-                      name: 'Control original adicional / extra',
+                      name: 'Control original (Mando oficial)',
                       price: accessoryPrices.extra_controller || 150,
-                      note: 'Mando oficial funcionando'
+                      note: 'Mando original funcionando'
+                    },
+                    {
+                      key: 'power_adapter',
+                      name: 'Adaptador de corriente / Eliminador original',
+                      price: accessoryPrices.power_adapter || 100,
+                      note: 'Fuente de poder oficial'
+                    },
+                    {
+                      key: 'av_cable',
+                      name: 'Cable de Audio/Video (AV o HDMI original)',
+                      price: accessoryPrices.av_cable || 75,
+                      note: 'Cable oficial de conexión de video'
                     },
                     {
                       key: 'expansion_pak',
                       name: 'Expansion Pak (Memoria de 4MB N64)',
-                      price: accessoryPrices.expansion_pak || 300,
+                      price: accessoryPrices.expansion_pak || 400,
                       showOnly: consoleItem.id === 'n64-original',
                       note: 'Tapa roja oficial de memoria'
                     },
@@ -442,12 +454,6 @@ export default function ConsoleDetailPage({ consoleItem, onBack, onOpenCustomQuo
                       name: 'Memory Card / Tarjeta de memoria original',
                       price: accessoryPrices.memory_card || 100,
                       note: 'Tarjeta de memoria oficial'
-                    },
-                    {
-                      key: 'hdmi_adapter',
-                      name: 'Adaptador HDMI o cable de alta definición',
-                      price: accessoryPrices.hdmi_adapter || 150,
-                      note: 'Para televisores modernos'
                     }
                   ].filter(item => item.showOnly === undefined || item.showOnly === true).map((acc) => {
                     const isChecked = Boolean(accessories[acc.key]);

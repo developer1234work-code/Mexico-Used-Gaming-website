@@ -339,18 +339,18 @@ export default function HomePage({ setView, onSelectCategory }) {
             </div>
 
             {/* Static Heading — Chakra Petch gaming font, upright */}
-            <h1 className="font-hero-gaming not-italic text-2xl sm:text-4xl lg:text-5xl xl:text-[56px] font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.14] break-words">
+            <h1 className="font-hero-gaming not-italic text-2xl sm:text-4xl lg:text-5xl xl:text-[54px] font-extrabold tracking-tight text-white leading-[1.18] sm:leading-[1.15] break-words">
               <span className="block">
-                ¡Dale valor a tus <span className="text-[#F5A623]">consolas</span>
+                Vende tus <span className="text-[#F5A623]">consolas</span>
               </span>
               <span className="block mt-1 sm:mt-1.5">
-                y <span className="text-[#F5A623]">videojuegos!</span>
+                y TVs analógicas <span className="text-[#F5A623]">de 13 hasta 21 pulgadas</span>
               </span>
             </h1>
 
             {/* Subtitle paragraph */}
             <p className="text-xs sm:text-sm md:text-base text-neutral-300 leading-relaxed font-normal max-w-lg">
-              ¡Esos Tesoros Retro Merecen una Recompensa!
+              Cotización transparente y pago seguro por transferencia en México.
             </p>
 
             {/* Five diagonal gold hazard/speed slashes ///// */}
