@@ -1,0 +1,11795 @@
+// Auto-generated official catalog seed data
+module.exports = {
+  "users": [
+    {
+      "id": "usr-admin-1",
+      "name": "Carlos Mendoza (Owner/Admin)",
+      "email": "admin@retrocompra.com",
+      "passwordHash": "$2a$10$R1PtMGd.iyvytOmIAcaT/udJ8qfBAjmgD2gnHdU3AEaO5mtDrNlee",
+      "role": "admin",
+      "department": "Management",
+      "createdAt": "2026-11-13T18:04:49.492Z"
+    },
+    {
+      "id": "usr-purchasing-1",
+      "name": "Sofia Reyes (Purchasing Lead)",
+      "email": "purchasing@retrocompra.com",
+      "passwordHash": "$2a$10$uPwzVL1t8VQXJiKebacm7uAyN2um/DiE.Ghgtqaawp7CbcHXnzeYK",
+      "role": "purchasing",
+      "department": "Purchasing & Valuations",
+      "createdAt": "2026-11-13T18:04:49.640Z"
+    },
+    {
+      "id": "usr-inspection-1",
+      "name": "Mateo Hernandez (Hardware QA & Receiving)",
+      "email": "inspection@retrocompra.com",
+      "passwordHash": "$2a$10$AwPIe.WJ.FD3LOMii8tetePGKwvM.NxuojidSbgSVL3Ku89vd9.N6",
+      "role": "inspection",
+      "department": "Receiving & Inspection",
+      "createdAt": "2026-11-13T18:04:49.758Z"
+    },
+    {
+      "id": "usr-support-1",
+      "name": "Valeria Cruz (Customer Service)",
+      "email": "support@retrocompra.com",
+      "passwordHash": "$2a$10$7DfXAKxaH67R0d4.1qMBEO6z1MqiJQR5pBJZ77Cz4MO.3VyzidjK6",
+      "role": "customer_service",
+      "department": "Customer Support",
+      "createdAt": "2026-11-13T18:04:49.864Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "n64-original",
+      "sku": "CON-NINT-N64-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64 Standard",
+      "model": "Nintendo 64 Standard",
+      "platform": "Nintendo",
+      "baseBuyPrice": 500,
+      "description": "Consola original Nintendo 64 Standard de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 console.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.6,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_corners",
+          "name": "Working cracked corners",
+          "label": "Funciona bien pero con esquinas cuarteadas/rotas",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "power_adapter": 75,
+        "av_cable": 75,
+        "expansion_pak": 400,
+        "jumper_pak": 80
+      },
+      "accessoryLabels": {
+        "extra_controller": "Control original N64 adicional",
+        "power_adapter": "Adaptador de corriente / Eliminador original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "expansion_pak": "Expansion Pak original (Memoria 4MB N64)",
+        "jumper_pak": "Jumper Pak original N64"
+      },
+      "accessoriesList": [
+        {
+          "key": "extra_controller",
+          "name": "OEM N64 controller",
+          "label": "Control original N64 adicional",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter",
+          "name": "OEM power adapter",
+          "label": "Adaptador de corriente / Eliminador original",
+          "buyPrice": 75,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 75,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "expansion_pak",
+          "name": "Expansion Pak",
+          "label": "Expansion Pak original (Memoria 4MB N64)",
+          "buyPrice": 400,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "jumper_pak",
+          "name": "Jumper Pak",
+          "label": "Jumper Pak original N64",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nintendo-gamecube",
+      "sku": "CON-NINT-NINTENDO-G",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "GameCube",
+      "model": "GameCube",
+      "platform": "Nintendo",
+      "baseBuyPrice": 500,
+      "description": "Consola original GameCube de Nintendo. Precio base por la consola sola (sin cables ni controles). Agrega en la configuración tus cables y controles (incluyendo WaveBird) para recibir una mayor cotización.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo gamecube consoles.png",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.7,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.3,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 350,
+          "status": "Approved",
+          "multiplier": 0.7,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_read_discs",
+          "name": "Powers on but does not read discs",
+          "label": "Enciende pero no lee discos (láser agotado)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 250,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 150,
+          "status": "Approved",
+          "multiplier": 0.3,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "wavebird_controller": 650,
+        "extra_controller": 200,
+        "power_adapter": 120,
+        "av_cable": 80,
+        "memory_card": 100
+      },
+      "accessoryLabels": {
+        "wavebird_controller": "Control inalámbrico WaveBird original con receptor",
+        "extra_controller": "Control original GameCube (alámbrico)",
+        "power_adapter": "Eliminador / adaptador de corriente original GameCube",
+        "av_cable": "Cable de Audio/Video AV original GameCube",
+        "memory_card": "Tarjeta de memoria Memory Card original GameCube"
+      },
+      "accessoriesList": [
+        {
+          "key": "wavebird_controller",
+          "name": "Control inalámbrico WaveBird con receptor",
+          "label": "Control inalámbrico WaveBird original con receptor RF",
+          "buyPrice": 650,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Control WaveBird oficial con receptor de radiofrecuencia"
+        },
+        {
+          "key": "extra_controller",
+          "name": "Control original GameCube (alámbrico)",
+          "label": "Control original GameCube oficial",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Mando oficial funcionando"
+        },
+        {
+          "key": "power_adapter",
+          "name": "Adaptador de corriente original",
+          "label": "Eliminador de corriente original GameCube",
+          "buyPrice": 120,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Fuente de poder original Nintendo"
+        },
+        {
+          "key": "av_cable",
+          "name": "Cable AV original",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Cable de video oficial Nintendo"
+        },
+        {
+          "key": "memory_card",
+          "name": "Memory Card original",
+          "label": "Tarjeta de memoria Memory Card oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Tarjeta de memoria oficial"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nintendo-wii",
+      "sku": "CON-NINT-NINTENDO-W",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Wii Original",
+      "model": "Wii Original",
+      "platform": "Nintendo",
+      "baseBuyPrice": 300,
+      "description": "Consola original Wii Original de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo wii console_.webp",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.667,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_read_discs",
+          "name": "Does not read discs",
+          "label": "No lee discos ópticos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "wii_remote": 200,
+        "nunchuk": 100,
+        "power_adapter": 100,
+        "av_cable": 100,
+        "sensor_bar": 80
+      },
+      "accessoryLabels": {
+        "wii_remote": "Control Wii Remote oficial",
+        "nunchuk": "Nunchuk oficial",
+        "power_adapter": "Adaptador de corriente / Eliminador original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "sensor_bar": "Barra sensora original Wii"
+      },
+      "accessoriesList": [
+        {
+          "key": "wii_remote",
+          "name": "Wii Remote",
+          "label": "Control Wii Remote oficial",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "nunchuk",
+          "name": "Nunchuk",
+          "label": "Nunchuk oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter",
+          "name": "Power adapter",
+          "label": "Adaptador de corriente / Eliminador original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "sensor_bar",
+          "name": "Sensor bar",
+          "label": "Barra sensora original Wii",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nes-original",
+      "sku": "CON-NINT-NES-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "NES Front Loader",
+      "model": "NES Front Loader",
+      "platform": "Nintendo",
+      "baseBuyPrice": 550,
+      "description": "Consola original NES Front Loader de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/nes console.webp",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.273,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_no_yellowing_cracks",
+          "name": "Working no yellowing/cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_perfect",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_cracks_no_yellowing",
+          "name": "Working cracks no yellowing",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowing_no_cracks",
+          "name": "Working yellowing no cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowing_and_cracks",
+          "name": "Working yellowing and cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "does_not_work",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "powers_on_but_does_not_load_games",
+          "name": "Powers on but does not load games",
+          "label": "Enciende pero no lee/carga cartuchos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.364,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 150,
+          "status": "Approved",
+          "multiplier": 0.273,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "extra_controller": 80,
+        "power_adapter": 80,
+        "av_cable": 80,
+        "rf_switch": 50
+      },
+      "accessoryLabels": {
+        "extra_controller": "Control original adicional oficial",
+        "power_adapter": "Adaptador de corriente / Eliminador original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "rf_switch": "Cable / Conmutador RF original"
+      },
+      "accessoriesList": [
+        {
+          "key": "extra_controller",
+          "name": "OEM controller",
+          "label": "Control original adicional oficial",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter",
+          "name": "Power adapter",
+          "label": "Adaptador de corriente / Eliminador original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "rf_switch",
+          "name": "RF switch/cable",
+          "label": "Cable / Conmutador RF original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "snes-original",
+      "sku": "CON-NINT-SNES-ORIGI",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "SNES Original",
+      "model": "SNES Original",
+      "platform": "Nintendo",
+      "baseBuyPrice": 600,
+      "description": "Consola original SNES Original de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/super nintendo snes console.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.333,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_no_yellowing_cracks",
+          "name": "Working no yellowing/cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_perfect",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_cracks_no_yellowing",
+          "name": "Working cracks no yellowing",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowing_no_cracks",
+          "name": "Working yellowing no cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowing_and_cracks",
+          "name": "Working yellowing and cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "does_not_work",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "powers_on_but_does_not_load_games",
+          "name": "Powers on but does not load games",
+          "label": "Enciende pero no lee/carga cartuchos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 250,
+          "status": "Approved",
+          "multiplier": 0.417,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "extra_controller": 120,
+        "power_adapter": 100,
+        "av_cable": 100,
+        "rf_switch": 80
+      },
+      "accessoryLabels": {
+        "extra_controller": "Control original adicional oficial",
+        "power_adapter": "Adaptador de corriente / Eliminador original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "rf_switch": "Cable / Conmutador RF original"
+      },
+      "accessoriesList": [
+        {
+          "key": "extra_controller",
+          "name": "OEM controller",
+          "label": "Control original adicional oficial",
+          "buyPrice": 120,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter",
+          "name": "Power adapter",
+          "label": "Adaptador de corriente / Eliminador original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "rf_switch",
+          "name": "RF switch/cable",
+          "label": "Cable / Conmutador RF original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-snes-jr-snes-101",
+      "sku": "CON-NINT-NIN-SNES-J",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "SNES Jr SNES-101",
+      "model": "SNES Jr SNES-101",
+      "platform": "Nintendo",
+      "baseBuyPrice": 500,
+      "description": "Consola original SNES Jr SNES-101 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/super nintendo snes console.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_no_yellowing_cracks",
+          "name": "Working no yellowing/cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_perfect",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_cracks_no_yellowing",
+          "name": "Working cracks no yellowing",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowing_no_cracks",
+          "name": "Working yellowing no cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowing_and_cracks",
+          "name": "Working yellowing and cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "does_not_work",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "powers_on_but_does_not_load_games",
+          "name": "Powers on but does not load games",
+          "label": "Enciende pero no lee/carga cartuchos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "extra_controller": 120,
+        "power_adapter": 100,
+        "av_cable": 100,
+        "rf_cable": 80
+      },
+      "accessoryLabels": {
+        "extra_controller": "Control original adicional oficial",
+        "power_adapter": "Adaptador de corriente / Eliminador original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "rf_cable": "Cable RF / Adaptador si aplica"
+      },
+      "accessoriesList": [
+        {
+          "key": "extra_controller",
+          "name": "OEM controller",
+          "label": "Control original adicional oficial",
+          "buyPrice": 120,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter",
+          "name": "Power adapter",
+          "label": "Adaptador de corriente / Eliminador original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "rf_cable",
+          "name": "RF cable if applicable (no native RF output)",
+          "label": "Cable RF / Adaptador si aplica",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nes-top-loader-nes-101",
+      "sku": "CON-NINT-NIN-NES-TO",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "NES Top Loader NES-101",
+      "model": "NES Top Loader NES-101",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1100,
+      "description": "Consola original NES Top Loader NES-101 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo nes top loader.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.455,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_no_yellowing_cracks",
+          "name": "Working no yellowing/cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_perfect",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_cracks_no_yellowing",
+          "name": "Working cracks no yellowing",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowing_no_cracks",
+          "name": "Working yellowing no cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowing_and_cracks",
+          "name": "Working yellowing and cracks",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "does_not_work",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "powers_on_but_does_not_load_games",
+          "name": "Powers on but does not load games",
+          "label": "Enciende pero no lee/carga cartuchos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.455,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.455,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dogbone_controller": 300,
+        "power_adapter": 100,
+        "rf_switch": 100
+      },
+      "accessoryLabels": {
+        "dogbone_controller": "Control original tipo Hueso de Perro (Dogbone)",
+        "power_adapter": "Adaptador de corriente / Eliminador original",
+        "rf_switch": "Cable / Conmutador RF original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dogbone_controller",
+          "name": "OEM dogbone controller",
+          "label": "Control original tipo Hueso de Perro (Dogbone)",
+          "buyPrice": 300,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter",
+          "name": "Power adapter",
+          "label": "Adaptador de corriente / Eliminador original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "rf_switch",
+          "name": "RF switch/cable",
+          "label": "Cable / Conmutador RF original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "gameboy-original",
+      "sku": "CON-NINT-GAMEBOY-OR",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy DMG-01",
+      "model": "Game Boy DMG-01",
+      "platform": "Nintendo",
+      "baseBuyPrice": 600,
+      "description": "Consola original Game Boy DMG-01 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo gameboy.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.667,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_no_yellowing",
+          "name": "Working no yellowing",
+          "label": "Funciona bien sin amarilleo",
+          "standardCode": "works_perfect",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_yellowed",
+          "name": "Working yellowed",
+          "label": "Funciona bien pero con carcasa amarilleada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracks_no_yellowing",
+          "name": "Working cracks no yellowing",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "working_yellowed_and_cracked",
+          "name": "Working yellowed and cracked",
+          "label": "Carcasa cuarteada y con amarilleo (No se compra)",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "No compramos consolas con grietas y amarilleo juntos (excepto Game Boy Advance SP 001 y 101)."
+        },
+        {
+          "id": "missing_vertical_screen_lines",
+          "name": "Missing vertical screen lines",
+          "label": "Líneas verticales faltantes en pantalla LCD",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_screen",
+          "name": "Damaged screen",
+          "label": "Pantalla LCD dañada / rota o con manchas",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "battery_compartment_corrosion",
+          "name": "Battery compartment corrosion",
+          "label": "Corrosión/sulfato en compartimiento de pilas",
+          "standardCode": "for_parts_only",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "battery_cover": 40,
+        "link_cable": 50
+      },
+      "accessoryLabels": {
+        "battery_cover": "Tapa de pilas original oficial",
+        "link_cable": "Cable Game Link original"
+      },
+      "accessoriesList": [
+        {
+          "key": "battery_cover",
+          "name": "OEM battery cover",
+          "label": "Tapa de pilas original oficial",
+          "buyPrice": 40,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "link_cable",
+          "name": "OEM link cable",
+          "label": "Cable Game Link original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-game-boy-pocket-mgb-001",
+      "sku": "CON-NINT-NIN-GAME-B",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy Pocket MGB-001",
+      "model": "Game Boy Pocket MGB-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 500,
+      "description": "Consola original Game Boy Pocket MGB-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo gameboy pocket_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_screen",
+          "name": "Damaged screen",
+          "label": "Pantalla LCD dañada / rota o con manchas",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "battery_cover": 0,
+        "link_cable": 0
+      },
+      "accessoryLabels": {
+        "battery_cover": "Tapa de pilas original oficial",
+        "link_cable": "Cable Game Link original"
+      },
+      "accessoriesList": [
+        {
+          "key": "battery_cover",
+          "name": "OEM battery cover",
+          "label": "Tapa de pilas original oficial",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "isAutomaticOffer": false,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "link_cable",
+          "name": "OEM link cable",
+          "label": "Cable Game Link original",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "isAutomaticOffer": false,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-game-boy-color-cgb-001",
+      "sku": "CON-NINT-NIN-GAME-B",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy Color CGB-001",
+      "model": "Game Boy Color CGB-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 700,
+      "description": "Consola original Game Boy Color CGB-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo Gameboy color.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_screen",
+          "name": "Damaged screen",
+          "label": "Pantalla LCD dañada / rota o con manchas",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "battery_cover": 50,
+        "link_cable": 0
+      },
+      "accessoryLabels": {
+        "battery_cover": "Tapa de pilas original oficial",
+        "link_cable": "Cable Game Link original"
+      },
+      "accessoriesList": [
+        {
+          "key": "battery_cover",
+          "name": "OEM battery cover",
+          "label": "Tapa de pilas original oficial",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "link_cable",
+          "name": "OEM link cable",
+          "label": "Cable Game Link original",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "isAutomaticOffer": false,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-game-boy-advance-agb-001",
+      "sku": "CON-NINT-NIN-GAME-B",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy Advance AGB-001",
+      "model": "Game Boy Advance AGB-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 650,
+      "description": "Consola original Game Boy Advance AGB-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/gameboy advance_.png",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 650,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_screen",
+          "name": "Damaged screen",
+          "label": "Pantalla LCD dañada / rota o con manchas",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "battery_cover": 0,
+        "link_cable": 0
+      },
+      "accessoryLabels": {
+        "battery_cover": "Tapa de pilas original oficial",
+        "link_cable": "Cable Game Link original"
+      },
+      "accessoriesList": [
+        {
+          "key": "battery_cover",
+          "name": "OEM battery cover",
+          "label": "Tapa de pilas original oficial",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "isAutomaticOffer": false,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "link_cable",
+          "name": "OEM link cable",
+          "label": "Cable Game Link original",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "isAutomaticOffer": false,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-gba-sp-ags-001",
+      "sku": "CON-NINT-NIN-GBA-SP",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "GBA SP AGS-001",
+      "model": "GBA SP AGS-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 800,
+      "description": "Consola original GBA SP AGS-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo gameboy advance sp model 001.png",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.875,
+        "has_functional_problems": 0.375,
+        "does_not_work": 0.25,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.875,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.875,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "damaged_screen",
+          "name": "Damaged screen",
+          "label": "Pantalla LCD dañada / rota o con manchas",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.625,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.25,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.375,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.375,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 100
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-gba-sp-ags-101",
+      "sku": "CON-NINT-NIN-GBA-SP",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "GBA SP AGS-101",
+      "model": "GBA SP AGS-101",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1200,
+      "description": "Consola original GBA SP AGS-101 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo gameboy advance sp model 101.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.75,
+        "has_functional_problems": 0.333,
+        "does_not_work": 0.167,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.833,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 900,
+          "status": "Approved",
+          "multiplier": 0.75,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "damaged_screen",
+          "name": "Damaged screen",
+          "label": "Pantalla LCD dañada / rota o con manchas",
+          "standardCode": "does_not_work",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 900,
+          "status": "Approved",
+          "multiplier": 0.75,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.167,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 100
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-game-boy-micro-oxy-001",
+      "sku": "CON-NINT-NIN-GAME-B",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Game Boy Micro OXY-001",
+      "model": "Game Boy Micro OXY-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1300,
+      "description": "Consola original Game Boy Micro OXY-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo gameboy micro_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.615,
+        "has_functional_problems": 0.308,
+        "does_not_work": 0.154,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1300,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1100,
+          "status": "Approved",
+          "multiplier": 0.846,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_faceplate",
+          "name": "Missing/damaged faceplate",
+          "label": "Carátula frontal faltante o dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.769,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.615,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "damaged_screen",
+          "name": "Damaged screen",
+          "label": "Pantalla LCD dañada / rota o con manchas",
+          "standardCode": "does_not_work",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.231,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.154,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.308,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.308,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 100,
+        "faceplate": 100
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "faceplate": "Carátula frontal intercambiable original Micro"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "faceplate",
+          "name": "OEM interchangeable faceplate",
+          "label": "Carátula frontal intercambiable original Micro",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-ds-ntr-001",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo DS NTR-001",
+      "model": "Nintendo DS NTR-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 400,
+      "description": "Consola original Nintendo DS NTR-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo ds fat.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 80,
+        "stylus": 60
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 60,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-ds-lite-usg-001",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo DS Lite USG-001",
+      "model": "Nintendo DS Lite USG-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 500,
+      "description": "Consola original Nintendo DS Lite USG-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo ds lite.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 100,
+        "stylus": 80
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-dsi-twl-001",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo DSi TWL-001",
+      "model": "Nintendo DSi TWL-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 500,
+      "description": "Consola original Nintendo DSi TWL-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo dsi.png",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 100,
+        "stylus": 80
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-dsi-xl-utl-001",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo DSi XL UTL-001",
+      "model": "Nintendo DSi XL UTL-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 900,
+      "description": "Consola original Nintendo DSi XL UTL-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo dsi xl.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.778,
+        "has_functional_problems": 0.444,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 900,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.778,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.778,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.444,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 80,
+        "stylus": 60
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 60,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-3ds-ctr-001",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 3DS CTR-001",
+      "model": "Nintendo 3DS CTR-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1100,
+      "description": "Consola original Nintendo 3DS CTR-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 3ds original_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.545,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1100,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.636,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.545,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 80,
+        "stylus": 50
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-3ds-xl-spr-001",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 3DS XL SPR-001",
+      "model": "Nintendo 3DS XL SPR-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1800,
+      "description": "Consola original Nintendo 3DS XL SPR-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 3ds xl original 2012.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.722,
+        "has_functional_problems": 0.389,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1800,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1300,
+          "status": "Approved",
+          "multiplier": 0.722,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1300,
+          "status": "Approved",
+          "multiplier": 0.722,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1300,
+          "status": "Approved",
+          "multiplier": 0.722,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.389,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 70,
+        "stylus": 50
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 70,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-2ds-ftr-001",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 2DS FTR-001",
+      "model": "Nintendo 2DS FTR-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1200,
+      "description": "Consola original Nintendo 2DS FTR-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 2ds xl.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.667,
+        "has_functional_problems": 0.333,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.417,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 80,
+        "stylus": 50
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-new-nintendo-3ds-ktr-001",
+      "sku": "CON-NINT-NIN-NEW-NI",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "New Nintendo 3DS KTR-001",
+      "model": "New Nintendo 3DS KTR-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 2500,
+      "description": "Consola original New Nintendo 3DS KTR-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 3ds original_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.8,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1400,
+          "status": "Approved",
+          "multiplier": 0.56,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 100,
+        "stylus": 50,
+        "cover_plates": 200
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original",
+        "cover_plates": "Juego de carátulas Cover Plates intercambiables originales"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "cover_plates",
+          "name": "OEM interchangeable cover plates, complete pair",
+          "label": "Juego de carátulas Cover Plates intercambiables originales",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-new-nintendo-3ds-xl-red-001",
+      "sku": "CON-NINT-NIN-NEW-NI",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "New Nintendo 3DS XL RED-001",
+      "model": "New Nintendo 3DS XL RED-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 3000,
+      "description": "Consola original New Nintendo 3DS XL RED-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 3ds xl original 2012.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.667,
+        "has_functional_problems": 0.333,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 3000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 0.833,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.233,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 80,
+        "stylus": 50
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-new-nintendo-2ds-xl-jan-001",
+      "sku": "CON-NINT-NIN-NEW-NI",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "New Nintendo 2DS XL JAN-001",
+      "model": "New Nintendo 2DS XL JAN-001",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1500,
+      "description": "Consola original New Nintendo 2DS XL JAN-001 de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 2ds xl.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.4,
+      "dimensions": "Portátil",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.8,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "broken_hinge",
+          "name": "Broken hinge",
+          "label": "Bisagra rota o floja (pantalla suelta)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1100,
+          "status": "Approved",
+          "multiplier": 0.733,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "damaged_top_screen",
+          "name": "Damaged top screen",
+          "label": "Pantalla superior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "damaged_bottom_screen",
+          "name": "Damaged bottom screen",
+          "label": "Pantalla inferior dañada / rota",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "unresponsive_touchscreen",
+          "name": "Unresponsive touchscreen",
+          "label": "Digitalizador / pantalla táctil no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "no_sound",
+          "name": "No sound",
+          "label": "Sin sonido / bocina integrada dañada",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.467,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "battery_does_not_hold_charge",
+          "name": "Battery does not hold charge",
+          "label": "Batería agotada / no retiene carga",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "camera_not_functioning",
+          "name": "Camera not functioning",
+          "label": "Cámara integrada no funciona",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.333,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "circle_pad_3d_slider_or_c_stick_not_working",
+          "name": "Circle Pad/3D slider or C-Stick not working",
+          "label": "Circle Pad, slider 3D o C-Stick no responde",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "buttons_shoulder_triggers_not_working",
+          "name": "Buttons/shoulder triggers not working",
+          "label": "Botones o gatillos laterales (L/R) no responden",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "charger": 80,
+        "stylus": 50
+      },
+      "accessoryLabels": {
+        "charger": "Cargador original oficial",
+        "stylus": "Lápiz táctil Stylus original"
+      },
+      "accessoriesList": [
+        {
+          "key": "charger",
+          "name": "OEM charger",
+          "label": "Cargador original oficial",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "stylus",
+          "name": "OEM stylus",
+          "label": "Lápiz táctil Stylus original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-64-funtastic-jungle-green",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64 Funtastic Jungle Green",
+      "model": "Nintendo 64 Funtastic Jungle Green",
+      "platform": "Nintendo",
+      "baseBuyPrice": 700,
+      "description": "Consola original Nintendo 64 Funtastic Jungle Green de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 jungle green.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.429,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.429,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.429,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 500
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-64-funtastic-ice-blue",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64 Funtastic Ice Blue",
+      "model": "Nintendo 64 Funtastic Ice Blue",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1300,
+      "description": "Consola original Nintendo 64 Funtastic Ice Blue de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 Ice blue.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.615,
+        "does_not_work": 0.385,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1300,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.385,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.615,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 500
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-64-funtastic-grape-purple",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64 Funtastic Grape Purple",
+      "model": "Nintendo 64 Funtastic Grape Purple",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1300,
+      "description": "Consola original Nintendo 64 Funtastic Grape Purple de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 grape purple.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.385,
+        "has_functional_problems": 0.538,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1300,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.385,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.538,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.538,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 500
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-64-funtastic-fire-orange",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64 Funtastic Fire Orange",
+      "model": "Nintendo 64 Funtastic Fire Orange",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1500,
+      "description": "Consola original Nintendo 64 Funtastic Fire Orange de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 fire orange.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.4,
+        "has_functional_problems": 0.467,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.467,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 650
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 650,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-64-funtastic-watermelon-red",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64 Funtastic Watermelon Red",
+      "model": "Nintendo 64 Funtastic Watermelon Red",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1500,
+      "description": "Consola original Nintendo 64 Funtastic Watermelon Red de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 watermelon red.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.2,
+        "has_functional_problems": 0.467,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.467,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 600
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 600,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-64-funtastic-smoke-black",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64 Funtastic Smoke Black",
+      "model": "Nintendo 64 Funtastic Smoke Black",
+      "platform": "Nintendo",
+      "baseBuyPrice": 1500,
+      "description": "Consola original Nintendo 64 Funtastic Smoke Black de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 smoke_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.2,
+        "has_functional_problems": 0.533,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 700
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 700,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "nin-nintendo-64-pikachu-blue-yellow",
+      "sku": "CON-NINT-NIN-NINTEN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Nintendo",
+      "name": "Nintendo 64 Pikachu Blue/Yellow",
+      "model": "Nintendo 64 Pikachu Blue/Yellow",
+      "platform": "Nintendo",
+      "baseBuyPrice": 2500,
+      "description": "Consola original Nintendo 64 Pikachu Blue/Yellow de Nintendo. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 pikachu console_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.6,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.72,
+        "has_functional_problems": 0.7,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1800,
+          "status": "Approved",
+          "multiplier": 0.72,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "pikachu_nose_power_button_missing_damaged",
+          "name": "Pikachu nose/power button missing/damaged",
+          "label": "Nariz de Pikachu / botón de encendido roto o faltante",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_pikachu_controller": 1000
+      },
+      "accessoryLabels": {
+        "matching_pikachu_controller": "Control original Pikachu edición especial a juego"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_pikachu_controller",
+          "name": "Matching OEM Pikachu controller",
+          "label": "Control original Pikachu edición especial a juego",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps1-slim",
+      "sku": "CON-PLAY-PS1-SLIM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PlayStation PsOne Slim (Con Pantalla LCD Portátil)",
+      "model": "PSone Slim",
+      "platform": "PlayStation",
+      "baseBuyPrice": 1000,
+      "description": "Consola PlayStation PsOne Slim incluyendo la pantalla LCD portátil adjunta oficial. Compramos exclusivamente el combo con pantalla en buen estado y consola leyendo discos. Puedes agregar controles y cables originales en la configuración.",
+      "imageUrl": "/assets/Consoles and tv pictures/Playstation 1 slim.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 2.1,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_psone",
+        "pantalla_lcd_adjunta"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_with_screen",
+          "name": "Pantalla en buen estado y consola leyendo discos",
+          "label": "Pantalla LCD en buen estado y consola leyendo discos",
+          "standardCode": "works_perfect",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": "Consola PsOne Slim con pantalla portátil oficial Sony adjunta funcionando al 100%"
+        },
+        {
+          "id": "screen_damaged_or_not_reading",
+          "name": "Sin pantalla o no lee discos",
+          "label": "Sin pantalla portátil, pantalla dañada o no lee discos (No se compra)",
+          "standardCode": "does_not_work",
+          "buyPrice": null,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": "Solo compramos PsOne Slim con pantalla oficial adjunta en buen estado y leyendo discos."
+        }
+      ],
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "power_adapter": 75,
+        "av_cable": 75,
+        "memory_card": 25
+      },
+      "accessoryLabels": {
+        "extra_controller": "Control original PSone oficial",
+        "power_adapter": "Eliminador / adaptador de corriente original PSone",
+        "av_cable": "Cable AV original Sony",
+        "memory_card": "Memory Card original oficial"
+      },
+      "accessoriesList": [
+        {
+          "key": "extra_controller",
+          "name": "OEM controller",
+          "label": "Control original PSone oficial",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Control oficial gris claro funcionando"
+        },
+        {
+          "key": "power_adapter",
+          "name": "OEM power adapter",
+          "label": "Eliminador / adaptador de corriente original",
+          "buyPrice": 75,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Adaptador de corriente oficial Sony"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable AV original Sony",
+          "buyPrice": 75,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Cable de video oficial"
+        },
+        {
+          "key": "memory_card",
+          "name": "OEM memory card",
+          "label": "Memory Card original oficial",
+          "buyPrice": 25,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Tarjeta de memoria oficial"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps2-original",
+      "sku": "CON-PLAY-PS2-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PS2 Fat",
+      "model": "PS2 Fat",
+      "platform": "PlayStation",
+      "baseBuyPrice": 500,
+      "description": "Consola original PS2 Fat de PlayStation. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Playstation 2 fat.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 2.1,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.6,
+        "has_functional_problems": 0.2,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_read_discs",
+          "name": "Powers on but does not read discs",
+          "label": "Enciende pero no lee discos (láser agotado)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 100,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "disc_tray_lid_does_not_operate_properly",
+          "name": "Disc tray/lid does not operate properly",
+          "label": "Bandeja o tapa de discos no opera correctamente",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 100,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dualshock2_controller": 150,
+        "power_cable": 50,
+        "av_cable": 50,
+        "memory_card_8mb": 25,
+        "network_adapter": 200
+      },
+      "accessoryLabels": {
+        "dualshock2_controller": "Control DualShock 2 original oficial",
+        "power_cable": "Cable de corriente original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "memory_card_8mb": "Tarjeta de memoria oficial 8MB",
+        "network_adapter": "Adaptador de red Ethernet/HDD oficial PS2"
+      },
+      "accessoriesList": [
+        {
+          "key": "dualshock2_controller",
+          "name": "OEM DualShock 2 controller",
+          "label": "Control DualShock 2 original oficial",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable",
+          "name": "OEM power cable",
+          "label": "Cable de corriente original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "memory_card_8mb",
+          "name": "OEM 8MB memory card",
+          "label": "Tarjeta de memoria oficial 8MB",
+          "buyPrice": 25,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "network_adapter",
+          "name": "OEM network adapter",
+          "label": "Adaptador de red Ethernet/HDD oficial PS2",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "ps2-slim",
+      "sku": "CON-PLAY-PS2-SLIM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "PlayStation",
+      "name": "PS2 Slim",
+      "model": "PS2 Slim",
+      "platform": "PlayStation",
+      "baseBuyPrice": 500,
+      "description": "Consola original PS2 Slim de PlayStation. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Playstation 2 slim.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 2.1,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.5,
+        "has_functional_problems": 0.2,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 250,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_read_discs",
+          "name": "Powers on but does not read discs",
+          "label": "Enciende pero no lee discos (láser agotado)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 100,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "disc_tray_lid_does_not_operate_properly",
+          "name": "Disc tray/lid does not operate properly",
+          "label": "Bandeja o tapa de discos no opera correctamente",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 100,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 100,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dualshock2_controller": 150,
+        "power_adapter_7000x": 200,
+        "power_cable_9000x": 200,
+        "av_cable": 50,
+        "memory_card_8mb": 30
+      },
+      "accessoryLabels": {
+        "dualshock2_controller": "Control DualShock 2 original oficial",
+        "power_adapter_7000x": "Eliminador de corriente externo oficial SCPH-7000x",
+        "power_cable_9000x": "Cable de corriente directo oficial SCPH-9000x",
+        "av_cable": "Cable de Audio/Video AV original",
+        "memory_card_8mb": "Tarjeta de memoria oficial 8MB"
+      },
+      "accessoriesList": [
+        {
+          "key": "dualshock2_controller",
+          "name": "OEM DualShock 2 controller",
+          "label": "Control DualShock 2 original oficial",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter_7000x",
+          "name": "OEM external power adapter SCPH-7000x",
+          "label": "Eliminador de corriente externo oficial SCPH-7000x",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable_9000x",
+          "name": "OEM power cable SCPH-9000x",
+          "label": "Cable de corriente directo oficial SCPH-9000x",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "memory_card_8mb",
+          "name": "OEM 8MB memory card",
+          "label": "Tarjeta de memoria oficial 8MB",
+          "buyPrice": 30,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "seg-master-system-model-1",
+      "sku": "CON-SEGA-SEG-MASTER",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Master System Model 1",
+      "model": "Master System Model 1",
+      "platform": "Sega Retro",
+      "baseBuyPrice": 750,
+      "description": "Consola original Master System Model 1 de Sega. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/sega master system 1.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.533,
+        "has_functional_problems": 0.267,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 750,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 550,
+          "status": "Approved",
+          "multiplier": 0.733,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_load_games",
+          "name": "Powers on but does not load games",
+          "label": "Enciende pero no lee/carga cartuchos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.267,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.267,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "power_adapter": 100,
+        "av_cable": 100,
+        "rf_cable": 100,
+        "light_phaser": 100
+      },
+      "accessoryLabels": {
+        "extra_controller": "Control original adicional oficial",
+        "power_adapter": "Adaptador de corriente / Eliminador original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "rf_cable": "Cable RF original oficial",
+        "light_phaser": "Pistola de luz Light Phaser original funcionando"
+      },
+      "accessoriesList": [
+        {
+          "key": "extra_controller",
+          "name": "OEM controller",
+          "label": "Control original adicional oficial",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter",
+          "name": "OEM power adapter",
+          "label": "Adaptador de corriente / Eliminador original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "rf_cable",
+          "name": "OEM RF cable",
+          "label": "Cable RF original oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "light_phaser",
+          "name": "OEM Light Phaser working",
+          "label": "Pistola de luz Light Phaser original funcionando",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "seg-master-system-ii",
+      "sku": "CON-SEGA-SEG-MASTER",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Master System II",
+      "model": "Master System II",
+      "platform": "Sega Retro",
+      "baseBuyPrice": 750,
+      "description": "Consola original Master System II de Sega. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/sega master system 2.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.533,
+        "has_functional_problems": 0.533,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 750,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_load_games",
+          "name": "Powers on but does not load games",
+          "label": "Enciende pero no lee/carga cartuchos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "extra_controller": 150,
+        "power_adapter": 100,
+        "rf_cable": 100
+      },
+      "accessoryLabels": {
+        "extra_controller": "Control original adicional oficial",
+        "power_adapter": "Adaptador de corriente / Eliminador original",
+        "rf_cable": "Cable RF original oficial"
+      },
+      "accessoriesList": [
+        {
+          "key": "extra_controller",
+          "name": "OEM controller",
+          "label": "Control original adicional oficial",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_adapter",
+          "name": "OEM power adapter",
+          "label": "Adaptador de corriente / Eliminador original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "rf_cable",
+          "name": "OEM RF cable",
+          "label": "Cable RF original oficial",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-genesis",
+      "sku": "CON-SEGA-SEGA-GENES",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Genesis Model 1",
+      "model": "Genesis Model 1",
+      "platform": "Sega Retro",
+      "baseBuyPrice": 400,
+      "description": "Consola original Genesis Model 1 de Sega. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/sega genesis model 1.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.25,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 100,
+          "status": "Approved",
+          "multiplier": 0.25,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_load_games",
+          "name": "Powers on but does not load games",
+          "label": "Enciende pero no lee/carga cartuchos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "controller_3button": 75,
+        "controller_6button": 150,
+        "model1_power_adapter": 80,
+        "model1_av_cable": 80,
+        "rf_cable": 80
+      },
+      "accessoryLabels": {
+        "controller_3button": "Control de 3 botones original oficial Sega",
+        "controller_6button": "Control de 6 botones original oficial Sega",
+        "model1_power_adapter": "Eliminador oficial Sega Model 1",
+        "model1_av_cable": "Cable AV oficial Sega Model 1",
+        "rf_cable": "Cable RF original oficial"
+      },
+      "accessoriesList": [
+        {
+          "key": "controller_3button",
+          "name": "OEM 3-button controller",
+          "label": "Control de 3 botones original oficial Sega",
+          "buyPrice": 75,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "controller_6button",
+          "name": "OEM 6-button controller",
+          "label": "Control de 6 botones original oficial Sega",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "model1_power_adapter",
+          "name": "OEM Model 1 power adapter",
+          "label": "Eliminador oficial Sega Model 1",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "model1_av_cable",
+          "name": "OEM Model 1 AV cable",
+          "label": "Cable AV oficial Sega Model 1",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "rf_cable",
+          "name": "OEM RF cable",
+          "label": "Cable RF original oficial",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "seg-genesis-model-2",
+      "sku": "CON-SEGA-SEG-GENESI",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Genesis Model 2",
+      "model": "Genesis Model 2",
+      "platform": "Sega Retro",
+      "baseBuyPrice": 250,
+      "description": "Consola original Genesis Model 2 de Sega. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/sega genesis model 1.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 250,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_load_games",
+          "name": "Powers on but does not load games",
+          "label": "Enciende pero no lee/carga cartuchos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "controller_3button": 100,
+        "controller_6button": 150,
+        "model2_power_adapter": 75,
+        "model2_av_cable": 75,
+        "rf_cable": 50
+      },
+      "accessoryLabels": {
+        "controller_3button": "Control de 3 botones original oficial Sega",
+        "controller_6button": "Control de 6 botones original oficial Sega",
+        "model2_power_adapter": "Eliminador oficial Sega Model 2",
+        "model2_av_cable": "Cable AV oficial Sega Model 2",
+        "rf_cable": "Cable RF original oficial"
+      },
+      "accessoriesList": [
+        {
+          "key": "controller_3button",
+          "name": "OEM 3-button controller",
+          "label": "Control de 3 botones original oficial Sega",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "controller_6button",
+          "name": "OEM 6-button controller",
+          "label": "Control de 6 botones original oficial Sega",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "model2_power_adapter",
+          "name": "OEM Model 2 power adapter",
+          "label": "Eliminador oficial Sega Model 2",
+          "buyPrice": 75,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "model2_av_cable",
+          "name": "OEM Model 2 AV cable",
+          "label": "Cable AV oficial Sega Model 2",
+          "buyPrice": 75,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "rf_cable",
+          "name": "OEM RF cable",
+          "label": "Cable RF original oficial",
+          "buyPrice": 50,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-saturn",
+      "sku": "CON-SEGA-SEGA-SATUR",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Saturn",
+      "model": "Saturn",
+      "platform": "Sega Retro",
+      "baseBuyPrice": 1000,
+      "description": "Consola original Saturn de Sega. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/sega Saturn.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_read_discs",
+          "name": "Does not read discs",
+          "label": "No lee discos ópticos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "disc_lid_malfunction",
+          "name": "Disc lid malfunction",
+          "label": "Tapa superior de discos rota o no traba",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "saturn_controller": 100,
+        "saturn_3d_pad": 150,
+        "power_cable": 100,
+        "av_cable": 100,
+        "saturn_backup_cart": 80
+      },
+      "accessoryLabels": {
+        "saturn_controller": "Control estándar oficial Sega Saturn",
+        "saturn_3d_pad": "Control 3D Control Pad analógico oficial (Saturn)",
+        "power_cable": "Cable de corriente original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "saturn_backup_cart": "Cartucho de memoria de respaldo oficial Saturn"
+      },
+      "accessoriesList": [
+        {
+          "key": "saturn_controller",
+          "name": "OEM standard controller",
+          "label": "Control estándar oficial Sega Saturn",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "saturn_3d_pad",
+          "name": "OEM 3D Control Pad",
+          "label": "Control 3D Control Pad analógico oficial (Saturn)",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable",
+          "name": "OEM power cable",
+          "label": "Cable de corriente original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "saturn_backup_cart",
+          "name": "OEM backup memory cartridge",
+          "label": "Cartucho de memoria de respaldo oficial Saturn",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "sega-dreamcast",
+      "sku": "CON-SEGA-SEGA-DREAM",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Sega",
+      "name": "Dreamcast",
+      "model": "Dreamcast",
+      "platform": "Sega Retro",
+      "baseBuyPrice": 650,
+      "description": "Consola original Dreamcast de Sega. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/sega dreamcast.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 1.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.538,
+        "has_functional_problems": 0.231,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_no_yellowing",
+          "name": "Working good no yellowing",
+          "label": "Working good no yellowing",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 650,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_yellowed_discolored",
+          "name": "Working yellowed/discolored",
+          "label": "Funciona bien pero con decoloración o amarilleo",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.615,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.615,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_shell",
+          "name": "Working cracked shell",
+          "label": "Funciona bien pero con carcasa cuarteada/rota",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 350,
+          "status": "Approved",
+          "multiplier": 0.538,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_read_discs",
+          "name": "Does not read discs",
+          "label": "No lee discos ópticos",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "disc_lid_malfunction",
+          "name": "Disc lid malfunction",
+          "label": "Tapa superior de discos rota o no traba",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.308,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 150,
+          "status": "Approved",
+          "multiplier": 0.231,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "extra_controller": 200,
+        "dreamcast_vmu": 150,
+        "dreamcast_jump_pack": 100,
+        "power_cable": 100,
+        "av_cable": 100
+      },
+      "accessoryLabels": {
+        "extra_controller": "Control original adicional oficial",
+        "dreamcast_vmu": "Tarjeta de memoria VMU con pantalla LCD original",
+        "dreamcast_jump_pack": "Jump Pack / Paquete de vibración original",
+        "power_cable": "Cable de corriente original",
+        "av_cable": "Cable de Audio/Video AV original"
+      },
+      "accessoriesList": [
+        {
+          "key": "extra_controller",
+          "name": "OEM controller",
+          "label": "Control original adicional oficial",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dreamcast_vmu",
+          "name": "VMU",
+          "label": "Tarjeta de memoria VMU con pantalla LCD original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dreamcast_jump_pack",
+          "name": "Vibration pack",
+          "label": "Jump Pack / Paquete de vibración original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable",
+          "name": "Power cable",
+          "label": "Cable de corriente original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "xbox-original",
+      "sku": "CON-XBOX-XBOX-ORIGI",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Original Xbox Standard Black",
+      "model": "Original Xbox Standard Black",
+      "platform": "Xbox Clásico",
+      "baseBuyPrice": 500,
+      "description": "Consola original Original Xbox Standard Black de Xbox. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Microsoft original xbox_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 3.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.7,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.35,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.8,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 350,
+          "status": "Approved",
+          "multiplier": 0.7,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_read_discs",
+          "name": "Powers on but does not read discs",
+          "label": "Enciende pero no lee discos (láser agotado)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "disc_tray_malfunction",
+          "name": "Disc tray malfunction",
+          "label": "Bandeja de discos trabada o no abre/cierra",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "controller_s": 200,
+        "controller_duke": 300,
+        "power_cable": 80,
+        "av_cable": 80,
+        "dvd_kit": 125
+      },
+      "accessoryLabels": {
+        "controller_s": "Control Controller S original oficial (Xbox)",
+        "controller_duke": "Control Duke clásico grande original oficial (Xbox)",
+        "power_cable": "Cable de corriente original",
+        "av_cable": "Cable de Audio/Video AV original",
+        "dvd_kit": "Kit de reproducción de DVD con receptor y control original"
+      },
+      "accessoriesList": [
+        {
+          "key": "controller_s",
+          "name": "OEM Controller S",
+          "label": "Control Controller S original oficial (Xbox)",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "controller_duke",
+          "name": "OEM Duke controller",
+          "label": "Control Duke clásico grande original oficial (Xbox)",
+          "buyPrice": 300,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable",
+          "name": "OEM power cable",
+          "label": "Cable de corriente original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_kit",
+          "name": "OEM DVD playback kit",
+          "label": "Kit de reproducción de DVD con receptor y control original",
+          "buyPrice": 125,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "mic-original-xbox-crystal",
+      "sku": "CON-XBOX-MIC-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Original Xbox Crystal",
+      "model": "Original Xbox Crystal",
+      "platform": "Xbox Clásico",
+      "baseBuyPrice": 1500,
+      "description": "Consola original Original Xbox Crystal de Xbox. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Microsoft Xbox crystal version_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 3.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.533,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_read_discs",
+          "name": "Powers on but does not read discs",
+          "label": "Enciende pero no lee discos (láser agotado)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "disc_tray_malfunction",
+          "name": "Disc tray malfunction",
+          "label": "Bandeja de discos trabada o no abre/cierra",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 500,
+        "power_cable": 80,
+        "av_cable": 80
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego",
+        "power_cable": "Cable de corriente original",
+        "av_cable": "Cable de Audio/Video AV original"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable",
+          "name": "OEM power cable",
+          "label": "Cable de corriente original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "mic-original-xbox-halo-green",
+      "sku": "CON-XBOX-MIC-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Original Xbox Halo Green",
+      "model": "Original Xbox Halo Green",
+      "platform": "Xbox Clásico",
+      "baseBuyPrice": 1300,
+      "description": "Consola original Original Xbox Halo Green de Xbox. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Microsoft Xbox halo green.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 3.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.462,
+        "has_functional_problems": 0.577,
+        "does_not_work": 0.385,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 1300,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 900,
+          "status": "Approved",
+          "multiplier": 0.692,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.462,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_read_discs",
+          "name": "Powers on but does not read discs",
+          "label": "Enciende pero no lee discos (láser agotado)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 750,
+          "status": "Approved",
+          "multiplier": 0.577,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "disc_tray_malfunction",
+          "name": "Disc tray malfunction",
+          "label": "Bandeja de discos trabada o no abre/cierra",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.615,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.385,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 750,
+          "status": "Approved",
+          "multiplier": 0.577,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 500,
+        "power_cable": 80,
+        "av_cable": 80
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego",
+        "power_cable": "Cable de corriente original",
+        "av_cable": "Cable de Audio/Video AV original"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable",
+          "name": "OEM power cable",
+          "label": "Cable de corriente original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "mic-original-xbox-blue-translucent",
+      "sku": "CON-XBOX-MIC-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Original Xbox Blue Translucent",
+      "model": "Original Xbox Blue Translucent",
+      "platform": "Xbox Clásico",
+      "baseBuyPrice": 3000,
+      "description": "Consola original Original Xbox Blue Translucent de Xbox. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Microsoft Xbox blue edition_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 3.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.667,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 3000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 2300,
+          "status": "Approved",
+          "multiplier": 0.767,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_read_discs",
+          "name": "Powers on but does not read discs",
+          "label": "Enciende pero no lee discos (láser agotado)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "disc_tray_malfunction",
+          "name": "Disc tray malfunction",
+          "label": "Bandeja de discos trabada o no abre/cierra",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 0.833,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1800,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 600,
+        "power_cable": 80,
+        "av_cable": 80
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego",
+        "power_cable": "Cable de corriente original",
+        "av_cable": "Cable de Audio/Video AV original"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 600,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable",
+          "name": "OEM power cable",
+          "label": "Cable de corriente original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "mic-original-xbox-mountain-dew-green",
+      "sku": "CON-XBOX-MIC-ORIGIN",
+      "category": "consoles",
+      "categoryName": "Consolas",
+      "brand": "Xbox",
+      "name": "Original Xbox Mountain Dew Green",
+      "model": "Original Xbox Mountain Dew Green",
+      "platform": "Xbox Clásico",
+      "baseBuyPrice": 7000,
+      "description": "Consola original Original Xbox Mountain Dew Green de Xbox. Precio base por la consola sola (sin cables ni controles). Al configurarla puedes agregar tus cables y controles originales para recibir un mayor importe.",
+      "imageUrl": "/assets/Consoles and tv pictures/Microsoft Xbox mountain dew edition_.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 3.8,
+      "dimensions": "30 x 20 x 8 cm",
+      "baseIncludes": [
+        "consola_sola"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.786,
+        "has_functional_problems": 0.5,
+        "does_not_work": 0.357,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good",
+          "name": "Working good",
+          "label": "Funciona bien / Buen estado estético",
+          "standardCode": "works_perfect",
+          "buyPrice": 7000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "heavy_scratches",
+          "name": "Heavy scratches",
+          "label": "Funciona pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 5750,
+          "status": "Approved",
+          "multiplier": 0.821,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "cracked_shell",
+          "name": "Cracked shell",
+          "label": "Funciona pero con carcasa rota o cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 5500,
+          "status": "Approved",
+          "multiplier": 0.786,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_but_does_not_read_discs",
+          "name": "Powers on but does not read discs",
+          "label": "Enciende pero no lee discos (láser agotado)",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 5000,
+          "status": "Approved",
+          "multiplier": 0.714,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "disc_tray_malfunction",
+          "name": "Disc tray malfunction",
+          "label": "Bandeja de discos trabada o no abre/cierra",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 6500,
+          "status": "Approved",
+          "multiplier": 0.929,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 0.357,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_video",
+          "name": "Powers on no video",
+          "label": "Enciende pero sin señal de video ni imagen",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 3500,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "matching_controller": 1000,
+        "power_cable": 80,
+        "av_cable": 80
+      },
+      "accessoryLabels": {
+        "matching_controller": "Control original del color/edición a juego",
+        "power_cable": "Cable de corriente original",
+        "av_cable": "Cable de Audio/Video AV original"
+      },
+      "accessoriesList": [
+        {
+          "key": "matching_controller",
+          "name": "Matching OEM controller",
+          "label": "Control original del color/edición a juego",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "power_cable",
+          "name": "OEM power cable",
+          "label": "Cable de corriente original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "av_cable",
+          "name": "OEM AV cable",
+          "label": "Cable de Audio/Video AV original",
+          "buyPrice": 80,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-winnie-the-pooh",
+      "sku": "RET-TVS -COL-WINNIE",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Winnie the Pooh 13\"-21\"",
+      "model": "Winnie the Pooh",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 2500,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Winnie the Pooh (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/winnie the pooh crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.32,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.12,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.32,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 750,
+          "status": "Approved",
+          "multiplier": 0.3,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 750,
+          "status": "Approved",
+          "multiplier": 0.3,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.12,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 1000,
+        "dvd_broken": 200,
+        "matching_remote": 300,
+        "detachable_power_cord": 100
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 300,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-batman",
+      "sku": "RET-TVS -COL-BATMAN",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Batman 13\"-21\"",
+      "model": "Batman",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 2000,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Batman (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/batman crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.375,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.15,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 750,
+          "status": "Approved",
+          "multiplier": 0.375,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.25,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.25,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.15,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 1200,
+        "dvd_broken": 200,
+        "matching_remote": 700,
+        "detachable_power_cord": 150
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 700,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-disney-pixar-cars",
+      "sku": "RET-TVS -COL-DISNEY",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Disney Pixar Cars 13\"-21\"",
+      "model": "Disney Pixar Cars",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 1000,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Disney Pixar Cars (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/Disney_s cars crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.4,
+        "has_functional_problems": 0.5,
+        "does_not_work": 0.3,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.7,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.3,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.3,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 1000,
+        "dvd_broken": 200,
+        "matching_remote": 200,
+        "detachable_power_cord": 100
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 100,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-spongebob-squarepants",
+      "sku": "RET-TVS -COL-SPONGE",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT SpongeBob SquarePants 13\"-21\"",
+      "model": "SpongeBob SquarePants",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 2000,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de SpongeBob SquarePants (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/SpongeBob squarepants crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.5,
+        "has_functional_problems": 0.7,
+        "does_not_work": 0.2,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.35,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 0.35,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 0.75,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 1500,
+        "dvd_broken": 500,
+        "matching_remote": 800,
+        "detachable_power_cord": 150
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 800,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-mickey-mouse",
+      "sku": "RET-TVS -COL-MICKEY",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Mickey Mouse 13\"-21\"",
+      "model": "Mickey Mouse",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 2500,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Mickey Mouse (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/mickey mouse crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.6,
+        "has_functional_problems": 0.7,
+        "does_not_work": 0.2,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1800,
+          "status": "Approved",
+          "multiplier": 0.72,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.48,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.48,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1800,
+          "status": "Approved",
+          "multiplier": 0.72,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 1500,
+        "dvd_broken": 400,
+        "matching_remote": 500,
+        "detachable_power_cord": 200
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 400,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-disney-princess",
+      "sku": "RET-TVS -COL-DISNEY",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Disney Princess 13\"-21\"",
+      "model": "Disney Princess",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 2500,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Disney Princess (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/disney princess crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.6,
+        "has_functional_problems": 0.7,
+        "does_not_work": 0.2,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1800,
+          "status": "Approved",
+          "multiplier": 0.72,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1800,
+          "status": "Approved",
+          "multiplier": 0.72,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 1500,
+        "dvd_broken": 400,
+        "matching_remote": 500,
+        "detachable_power_cord": 150
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 400,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-hello-kitty",
+      "sku": "RET-TVS -COL-HELLO-",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Hello Kitty 13\"-21\"",
+      "model": "Hello Kitty",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 1500,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Hello Kitty (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/hello kitty crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.533,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.267,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 0.667,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 800,
+          "status": "Approved",
+          "multiplier": 0.533,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 0.267,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "multiplier": 0,
+          "isAutomaticOffer": false,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 1200,
+        "dvd_broken": 400,
+        "matching_remote": 400,
+        "detachable_power_cord": 150
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 400,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 400,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-teenage-mutant-ninja-turtles",
+      "sku": "RET-TVS -COL-TEENAG",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Teenage Mutant Ninja Turtles 13\"-21\"",
+      "model": "Teenage Mutant Ninja Turtles",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 3000,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Teenage Mutant Ninja Turtles (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/teenage mutant ninja turtles crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.5,
+        "has_functional_problems": 0.7,
+        "does_not_work": 0.2,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 3000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 2200,
+          "status": "Approved",
+          "multiplier": 0.733,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.4,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 2200,
+          "status": "Approved",
+          "multiplier": 0.733,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 2000,
+        "dvd_broken": 500,
+        "matching_remote": 1000,
+        "detachable_power_cord": 150
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 500,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-spider-man",
+      "sku": "RET-TVS -COL-SPIDER",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Spider-Man 13\"-21\"",
+      "model": "Spider-Man",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 5000,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Spider-Man (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/spiderman crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.75,
+        "has_functional_problems": 0.6,
+        "does_not_work": 0.4,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 5000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 4200,
+          "status": "Approved",
+          "multiplier": 0.84,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 3750,
+          "status": "Approved",
+          "multiplier": 0.75,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 3000,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 3000,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 2500,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 3000,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 0,
+        "dvd_broken": 0,
+        "matching_remote": 1000,
+        "detachable_power_cord": 150
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "isAutomaticOffer": false,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 0,
+          "status": "Undecided",
+          "isAutomaticOffer": false,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-dora-the-explorer",
+      "sku": "RET-TVS -COL-DORA-T",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Dora the Explorer 13\"-21\"",
+      "model": "Dora the Explorer",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 1000,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Dora the Explorer (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/dora the explorer crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.5,
+        "has_functional_problems": 0.5,
+        "does_not_work": 0.2,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 1000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 600,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.3,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.3,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 200,
+          "status": "Approved",
+          "multiplier": 0.2,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 500,
+          "status": "Approved",
+          "multiplier": 0.5,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 750,
+        "dvd_broken": 200,
+        "matching_remote": 400,
+        "detachable_power_cord": 150
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 750,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 200,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 400,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "col-shrek",
+      "sku": "RET-TVS -COL-SHREK",
+      "category": "retro_tvs",
+      "categoryName": "TVs analógicas CRT",
+      "brand": "TVs analógicas CRT",
+      "name": "Televisor CRT Shrek 13\"-21\"",
+      "model": "Shrek",
+      "platform": "CRT Retro",
+      "baseBuyPrice": 2000,
+      "description": "Televisor analógico CRT de tubo coleccionable temático de Shrek (13 a 21 pulgadas). Aceptamos modelos estándar y combos con DVD/VHS integrado.",
+      "imageUrl": "/assets/Consoles and tv pictures/shrek crt tv.jpg",
+      "active": true,
+      "isCRT": true,
+      "weightKg": 14,
+      "dimensions": "13\" a 21\" pulgadas",
+      "baseIncludes": [
+        "tubo_catodico_funcionando",
+        "altavoces_integrados"
+      ],
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.6,
+        "has_functional_problems": 0.7,
+        "does_not_work": 0.15,
+        "for_parts_only": 0.2
+      },
+      "conditions": [
+        {
+          "id": "working_good_cosmetic",
+          "name": "Working good cosmetic",
+          "label": "Funciona bien con cosmética cuidada",
+          "standardCode": "works_perfect",
+          "buyPrice": 2000,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_heavy_scratches",
+          "name": "Working heavy scratches",
+          "label": "Funciona bien pero con rayones profundos/visibles",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1500,
+          "status": "Approved",
+          "multiplier": 0.75,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "working_cracked_housing",
+          "name": "Working cracked housing",
+          "label": "Funciona bien pero con carcasa cuarteada",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 1200,
+          "status": "Approved",
+          "multiplier": 0.6,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "powers_on_no_picture_video",
+          "name": "Powers on no picture/video",
+          "label": "Enciende pero sin imagen ni video",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 650,
+          "status": "Approved",
+          "multiplier": 0.325,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "picture_works_no_sound",
+          "name": "Picture works no sound",
+          "label": "Da imagen en pantalla pero sin sonido/audio",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 650,
+          "status": "Approved",
+          "multiplier": 0.325,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "does_not_turn_on",
+          "name": "Does not turn on",
+          "label": "No enciende en absoluto",
+          "standardCode": "does_not_work",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.15,
+          "isAutomaticOffer": true,
+          "notes": ""
+        },
+        {
+          "id": "missing_damaged_character_decorations",
+          "name": "Missing/damaged character decorations",
+          "label": "Decoraciones/figuras del personaje faltantes o rotas",
+          "standardCode": "has_functional_problems",
+          "buyPrice": 1400,
+          "status": "Approved",
+          "multiplier": 0.7,
+          "isAutomaticOffer": true,
+          "notes": ""
+        }
+      ],
+      "accessoryPricing": {
+        "dvd_working": 1250,
+        "dvd_broken": 300,
+        "matching_remote": 750,
+        "detachable_power_cord": 0
+      },
+      "accessoryLabels": {
+        "dvd_working": "Reproductor DVD integrado original funcionando",
+        "dvd_broken": "Reproductor DVD integrado con falla",
+        "matching_remote": "Control remoto temático original correspondiente",
+        "detachable_power_cord": "Cable de corriente desmontable original"
+      },
+      "accessoriesList": [
+        {
+          "key": "dvd_working",
+          "name": "Working original built-in DVD player (only DVD-equipped models)",
+          "label": "Reproductor DVD integrado original funcionando",
+          "buyPrice": 1250,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "dvd_broken",
+          "name": "Broken original built-in DVD player (if applicable)",
+          "label": "Reproductor DVD integrado con falla",
+          "buyPrice": 300,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "matching_remote",
+          "name": "Matching OEM remote",
+          "label": "Control remoto temático original correspondiente",
+          "buyPrice": 750,
+          "status": "Approved",
+          "isAutomaticOffer": true,
+          "notes": "Additional value only when genuine, present and not already counted"
+        },
+        {
+          "key": "detachable_power_cord",
+          "name": "Original detachable power cord (if applicable)",
+          "label": "Cable de corriente desmontable original",
+          "buyPrice": 0,
+          "status": "No automatic offer",
+          "isAutomaticOffer": false,
+          "notes": "Additional value only when genuine, present and not already counted"
+        }
+      ],
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Versión / Color Original",
+          "priceDiff": 0
+        }
+      ]
+    },
+    {
+      "id": "game-super-mario-64",
+      "sku": "GAM-NINT-SM64",
+      "category": "video_games",
+      "categoryName": "Videojuegos",
+      "brand": "Nintendo",
+      "name": "Super Mario 64 (N64 Original)",
+      "model": "Super Mario 64",
+      "platform": "Nintendo 64",
+      "baseBuyPrice": 450,
+      "description": "Cartucho original de Super Mario 64 para Nintendo 64. Evaluamos estado de la etiqueta, pines y funcionamiento.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.15,
+      "dimensions": "11 x 7 x 2 cm",
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.75,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.15,
+        "for_parts_only": 0.05
+      },
+      "conditions": [
+        {
+          "id": "cib",
+          "name": "CIB (Completo con caja y manual)",
+          "label": "Completo en caja con manuales",
+          "standardCode": "works_perfect",
+          "buyPrice": 900,
+          "status": "Approved",
+          "multiplier": 2,
+          "isAutomaticOffer": true
+        },
+        {
+          "id": "cart_only_good",
+          "name": "Cartucho solo / Excelente",
+          "label": "Cartucho solo con etiqueta original intacta",
+          "standardCode": "works_perfect",
+          "buyPrice": 450,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true
+        },
+        {
+          "id": "cart_worn",
+          "name": "Cartucho con etiqueta desgastada",
+          "label": "Cartucho funcionando con desgaste en carátula",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 300,
+          "status": "Approved",
+          "multiplier": 0.67,
+          "isAutomaticOffer": true
+        }
+      ],
+      "accessoryPricing": {
+        "original_box": 350,
+        "original_manuals": 150
+      },
+      "accessoryLabels": {
+        "original_box": "Caja original de cartón",
+        "original_manuals": "Folleto/Manual original"
+      },
+      "accessoriesList": [
+        {
+          "key": "original_box",
+          "name": "Caja original",
+          "label": "Caja original de cartón",
+          "buyPrice": 350,
+          "status": "Approved",
+          "isAutomaticOffer": true
+        },
+        {
+          "key": "original_manuals",
+          "name": "Manual original",
+          "label": "Folleto/Manual original",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true
+        }
+      ]
+    },
+    {
+      "id": "game-zelda-ocarina",
+      "sku": "GAM-NINT-ZELDA-OOT",
+      "category": "video_games",
+      "categoryName": "Videojuegos",
+      "brand": "Nintendo",
+      "name": "The Legend of Zelda: Ocarina of Time (N64)",
+      "model": "Zelda Ocarina of Time",
+      "platform": "Nintendo 64",
+      "baseBuyPrice": 550,
+      "description": "Cartucho original de The Legend of Zelda: Ocarina of Time para Nintendo 64.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.15,
+      "dimensions": "11 x 7 x 2 cm",
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.75,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.15,
+        "for_parts_only": 0.05
+      },
+      "conditions": [
+        {
+          "id": "cart_only_good",
+          "name": "Cartucho solo / Excelente",
+          "label": "Cartucho solo con etiqueta original intacta",
+          "standardCode": "works_perfect",
+          "buyPrice": 550,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true
+        },
+        {
+          "id": "cart_worn",
+          "name": "Cartucho con etiqueta desgastada",
+          "label": "Cartucho funcionando con desgaste en carátula",
+          "standardCode": "works_cosmetic_damage",
+          "buyPrice": 380,
+          "status": "Approved",
+          "multiplier": 0.69,
+          "isAutomaticOffer": true
+        }
+      ],
+      "accessoryPricing": {
+        "original_box": 400,
+        "original_manuals": 180
+      },
+      "accessoryLabels": {
+        "original_box": "Caja original de cartón",
+        "original_manuals": "Manual original"
+      },
+      "accessoriesList": [
+        {
+          "key": "original_box",
+          "name": "Caja original",
+          "label": "Caja original de cartón",
+          "buyPrice": 400,
+          "status": "Approved",
+          "isAutomaticOffer": true
+        }
+      ]
+    },
+    {
+      "id": "game-smash-melee",
+      "sku": "GAM-NINT-MELEE",
+      "category": "video_games",
+      "categoryName": "Videojuegos",
+      "brand": "Nintendo",
+      "name": "Super Smash Bros. Melee (GameCube)",
+      "model": "Super Smash Bros. Melee",
+      "platform": "Nintendo GameCube",
+      "baseBuyPrice": 700,
+      "description": "Disco original de Super Smash Bros. Melee para Nintendo GameCube. Inspección de superficie sin rayones profundos.",
+      "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.2,
+      "dimensions": "19 x 13.5 x 1.5 cm",
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.75,
+        "has_functional_problems": 0.4,
+        "does_not_work": 0.15,
+        "for_parts_only": 0.05
+      },
+      "conditions": [
+        {
+          "id": "cib",
+          "name": "CIB",
+          "label": "Completo con estuche y manual",
+          "standardCode": "works_perfect",
+          "buyPrice": 950,
+          "status": "Approved",
+          "multiplier": 1.35,
+          "isAutomaticOffer": true
+        },
+        {
+          "id": "disc_good",
+          "name": "Disco con estuche",
+          "label": "Disco en buen estado con estuche original",
+          "standardCode": "works_perfect",
+          "buyPrice": 700,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true
+        }
+      ],
+      "accessoryPricing": {
+        "original_manuals": 150
+      },
+      "accessoryLabels": {
+        "original_manuals": "Manual original"
+      },
+      "accessoriesList": [
+        {
+          "key": "original_manuals",
+          "name": "Manual original",
+          "label": "Manual original GameCube",
+          "buyPrice": 150,
+          "status": "Approved",
+          "isAutomaticOffer": true
+        }
+      ]
+    },
+    {
+      "id": "acc-n64-expansion-pak",
+      "sku": "ACC-NINT-EXP-PAK",
+      "category": "accessories",
+      "categoryName": "Accesorios",
+      "brand": "Nintendo",
+      "name": "Expansion Pak Original N64 (4MB)",
+      "model": "Expansion Pak",
+      "platform": "Nintendo 64",
+      "baseBuyPrice": 400,
+      "description": "Módulo de expansión de memoria original de 4MB para Nintendo 64 con tapa superior roja.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 console.jpg",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.1,
+      "dimensions": "5 x 4 x 2 cm",
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.5,
+        "does_not_work": 0.2,
+        "for_parts_only": 0.1
+      },
+      "conditions": [
+        {
+          "id": "works_perfect",
+          "name": "Working good",
+          "label": "Funciona perfectamente",
+          "standardCode": "works_perfect",
+          "buyPrice": 400,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true
+        }
+      ],
+      "accessoryPricing": {},
+      "accessoryLabels": {},
+      "accessoriesList": []
+    },
+    {
+      "id": "acc-gamecube-wavebird",
+      "sku": "ACC-NINT-WAVEBIRD",
+      "category": "accessories",
+      "categoryName": "Accesorios",
+      "brand": "Nintendo",
+      "name": "Control Inalámbrico WaveBird GameCube con Receptor",
+      "model": "WaveBird Controller",
+      "platform": "Nintendo GameCube",
+      "baseBuyPrice": 650,
+      "description": "Control oficial inalámbrico WaveBird para Nintendo GameCube incluyendo receptor de radiofrecuencia original.",
+      "imageUrl": "/assets/Consoles and tv pictures/Nintendo gamecube consoles.png",
+      "active": true,
+      "isCRT": false,
+      "weightKg": 0.35,
+      "dimensions": "14 x 13 x 6 cm",
+      "conditionMultipliers": {
+        "works_perfect": 1,
+        "works_cosmetic_damage": 0.85,
+        "has_functional_problems": 0.5,
+        "does_not_work": 0.2,
+        "for_parts_only": 0.1
+      },
+      "conditions": [
+        {
+          "id": "works_perfect",
+          "name": "Working good with receiver",
+          "label": "Funciona al 100% con receptor incluido",
+          "standardCode": "works_perfect",
+          "buyPrice": 650,
+          "status": "Approved",
+          "multiplier": 1,
+          "isAutomaticOffer": true
+        }
+      ],
+      "accessoryPricing": {},
+      "accessoryLabels": {},
+      "accessoriesList": []
+    }
+  ],
+  "sellRequests": [
+    {
+      "id": "REQ-2026-8801",
+      "customer": {
+        "fullName": "Roberto Garcia Perez",
+        "email": "roberto.garcia@example.com",
+        "phone": "+52 55 1234 5678",
+        "whatsapp": "+52 55 1234 5678",
+        "city": "Ciudad de México",
+        "state": "Ciudad de México (CDMX)",
+        "postalCode": "03100",
+        "shippingOrigin": "Benito Juárez, CDMX"
+      },
+      "items": [
+        {
+          "itemId": "item-1",
+          "productId": "n64-original",
+          "productName": "Nintendo 64",
+          "edition": "Funtastic Jungle Green",
+          "category": "consoles",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "calculatedEstimate": 1950,
+          "customerNotes": "N64 Jungle Green con expansion pak instalado y control extra."
+        }
+      ],
+      "totalEstimatedAmount": 1950,
+      "currency": "MXN",
+      "status": "SUBMITTED",
+      "statusLabel": "En Revisión Preliminar",
+      "customerNotes": "Disponible para entrega o recolección.",
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "label": "Consola y accesorios"
+        }
+      ],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-12T18:04:49.865Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1950,
+        "preparedBy": "Sofia Reyes",
+        "sentAt": null
+      },
+      "shippingApproval": {
+        "approved": false
+      },
+      "inspection": null,
+      "revisedOffer": null,
+      "createdAt": "2026-11-12T18:04:49.866Z",
+      "updatedAt": "2026-11-12T18:04:49.866Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Roberto Garcia)",
+          "timestamp": "2026-11-12T18:04:49.866Z",
+          "notes": "Solicitud creada con cotización de Nintendo 64 Jungle Green."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-7025",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794595951379-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
+          "calculationBreakdown": {
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-13T18:52:31.379Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1550,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-13T18:52:31.379Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1550,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-13T18:52:31.585Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-951585",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-13T18:52:31.636Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-13T18:52:31.636Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-13T18:52:31.683Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-13T18:52:31.379Z",
+      "updatedAt": "2026-11-13T18:52:31.683Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T18:52:31.379Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T18:52:31.585Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T18:52:31.636Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T18:52:31.683Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-7313",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794596252704-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
+          "calculationBreakdown": {
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-13T18:57:32.704Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1550,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-13T18:57:32.705Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1550,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-13T18:57:32.916Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-252916",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-13T18:57:32.974Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-13T18:57:32.974Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-13T18:57:33.026Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-13T18:57:32.705Z",
+      "updatedAt": "2026-11-13T18:57:33.026Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T18:57:32.705Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T18:57:32.916Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T18:57:32.974Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T18:57:33.026Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-1436",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794597100529-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
+          "calculationBreakdown": {
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-13T19:11:40.529Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1550,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-13T19:11:40.529Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1550,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-13T19:11:40.755Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-100755",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-13T19:11:40.803Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-13T19:11:40.803Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-13T19:11:40.862Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-13T19:11:40.529Z",
+      "updatedAt": "2026-11-13T19:11:40.862Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T19:11:40.529Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T19:11:40.755Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T19:11:40.803Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T19:11:40.862Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-2221",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794598027029-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
+          "calculationBreakdown": {
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-13T19:27:07.029Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1550,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-13T19:27:07.029Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1550,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-13T19:27:07.339Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-027339",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-13T19:27:07.405Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-13T19:27:07.405Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-13T19:27:07.478Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-13T19:27:07.029Z",
+      "updatedAt": "2026-11-13T19:27:07.478Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T19:27:07.029Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T19:27:07.339Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-13T19:27:07.405Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-13T19:27:07.478Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-9180",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794805762562-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
+          "calculationBreakdown": {
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-16T05:09:22.562Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1550,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-16T05:09:22.562Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1550,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-16T05:09:22.837Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-762837",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-16T05:09:22.884Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-16T05:09:22.884Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-16T05:09:22.937Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-16T05:09:22.562Z",
+      "updatedAt": "2026-11-16T05:09:22.937Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T05:09:22.562Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T05:09:22.837Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T05:09:22.884Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T05:09:22.937Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-3628",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794805845558-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
+          "calculationBreakdown": {
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-16T05:10:45.558Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1550,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-16T05:10:45.558Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1550,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-16T05:10:45.762Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-845762",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-16T05:10:45.822Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-16T05:10:45.822Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-16T05:10:45.877Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-16T05:10:45.558Z",
+      "updatedAt": "2026-11-16T05:10:45.877Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T05:10:45.558Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T05:10:45.762Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T05:10:45.822Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T05:10:45.877Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-9545",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794809350639-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+          "condition": "works_perfect",
+          "conditionLabel": "Funciona perfectamente (100%)",
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true,
+            "original_box": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control adicional / Extra original",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak (Memoria N64)",
+              "price": 300,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "original_box",
+              "name": "Caja original con inserts",
+              "price": 200,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1550,
+          "calculationBreakdown": {
+            "basePrice": 900,
+            "originalBasePrice": 900,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 900,
+            "accessoriesAdjustmentTotal": 650,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-16T06:09:10.638Z",
+            "basePrice": 900,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "original_power_supply": 120,
+              "av_cable": 80,
+              "hdmi_adapter": 150,
+              "memory_card": 100,
+              "original_box": 200,
+              "original_manuals": 100,
+              "missing_controller": -150,
+              "missing_power_supply": -120,
+              "missing_av_cable": -60,
+              "expansion_pak": 300,
+              "rumble_pak": 120
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1550,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-16T06:09:10.639Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1550,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-16T06:09:10.972Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-350972",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-16T06:09:11.026Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1550,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-16T06:09:11.026Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-16T06:09:11.092Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-16T06:09:10.639Z",
+      "updatedAt": "2026-11-16T06:09:11.092Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T06:09:10.639Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T06:09:10.972Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T06:09:11.026Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T06:09:11.092Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-2633",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1794827945489-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64 Standard",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 console.jpg",
+          "condition": "working_good",
+          "conditionLabel": "Funciona bien / Buen estado estético",
+          "requiresManualReview": false,
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control original N64 adicional",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak original (Memoria 4MB N64)",
+              "price": 400,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1050,
+          "calculationBreakdown": {
+            "basePrice": 500,
+            "originalBasePrice": 500,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 500,
+            "accessoriesAdjustmentTotal": 550,
+            "requiresManualReview": false,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-16T11:19:05.489Z",
+            "basePrice": 500,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "power_adapter": 75,
+              "av_cable": 75,
+              "expansion_pak": 400,
+              "jumper_pak": 80
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1050,
+      "currency": "MXN",
+      "status": "FINAL_ACCEPTED",
+      "statusLabel": "Oferta Revisada Aceptada",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-16T11:19:05.489Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1050,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": true,
+        "approvedBy": "Carlos Mendoza (Owner/Admin)",
+        "approvedByRole": "admin",
+        "approvedAt": "2026-11-16T11:19:05.791Z",
+        "carrier": "Estafeta México",
+        "trackingNumber": "EST-TEST-12345678",
+        "labelReference": "LION-945791",
+        "instructions": "Empacar con 3 capas de plástico burbuja",
+        "isCRTVerified": false
+      },
+      "inspection": {
+        "inspectedBy": "Carlos Mendoza (Owner/Admin)",
+        "inspectedByRole": "admin",
+        "inspectedAt": "2026-11-16T11:19:05.852Z",
+        "serialVerified": "SN-N64-TEST-999",
+        "functionalityStatus": "fully_functional",
+        "physicalCondition": "fair",
+        "authenticityVerified": "authentic",
+        "discrepancies": "Rasguño cosmético en carcasa lateral",
+        "missingAccessories": [],
+        "inspectionEvidenceUrls": []
+      },
+      "revisedOffer": {
+        "originalAmount": 1050,
+        "revisedAmount": 1400,
+        "reason": "Ajuste de $150 MXN por detalle estético en la cubierta",
+        "issuedBy": "Carlos Mendoza (Owner/Admin)",
+        "issuedAt": "2026-11-16T11:19:05.852Z",
+        "customerDecision": "ACCEPTED",
+        "customerDecisionAt": "2026-11-16T11:19:05.913Z"
+      },
+      "internalNotes": [],
+      "createdAt": "2026-11-16T11:19:05.489Z",
+      "updatedAt": "2026-11-16T11:19:05.913Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T11:19:05.489Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        },
+        {
+          "status": "SHIPPING_APPROVED",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T11:19:05.791Z",
+          "notes": "Envío explícitamente aprobado por Carlos Mendoza (Owner/Admin). Paquetería: Estafeta México, Guía: EST-TEST-12345678."
+        },
+        {
+          "status": "REVISED_OFFER_SENT",
+          "changedBy": "Carlos Mendoza (Owner/Admin) (admin)",
+          "timestamp": "2026-11-16T11:19:05.852Z",
+          "notes": "Inspección detectó discrepancias. Se emitió oferta revisada de $1400 MXN. Motivo: Ajuste de $150 MXN por detalle estético en la cubierta"
+        },
+        {
+          "status": "FINAL_ACCEPTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-16T11:19:05.913Z",
+          "notes": "Cliente aceptó explícitamente la oferta revisada de $1400 MXN."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-2995",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1795624101568-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64 Standard",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 console.jpg",
+          "condition": "working_good",
+          "conditionLabel": "Funciona bien / Buen estado estético",
+          "requiresManualReview": false,
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control original N64 adicional",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak original (Memoria 4MB N64)",
+              "price": 400,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1050,
+          "calculationBreakdown": {
+            "basePrice": 500,
+            "originalBasePrice": 500,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 500,
+            "accessoriesAdjustmentTotal": 550,
+            "requiresManualReview": false,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-25T16:28:21.568Z",
+            "basePrice": 500,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "power_adapter": 75,
+              "av_cable": 75,
+              "expansion_pak": 400,
+              "jumper_pak": 80
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1050,
+      "currency": "MXN",
+      "status": "SUBMITTED",
+      "statusLabel": "En Revisión Preliminar",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-25T16:28:21.568Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1050,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": false,
+        "approvedBy": null,
+        "approvedAt": null,
+        "carrier": null,
+        "trackingNumber": null,
+        "labelReference": null,
+        "instructions": null,
+        "isCRTVerified": false
+      },
+      "inspection": null,
+      "revisedOffer": null,
+      "internalNotes": [],
+      "createdAt": "2026-11-25T16:28:21.568Z",
+      "updatedAt": "2026-11-25T16:28:21.568Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-25T16:28:21.568Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2026-1846",
+      "customer": {
+        "fullName": "Juan Pablo Montoya",
+        "email": "juan.pablo@test.mx",
+        "phone": "+52 55 9988 7766",
+        "whatsapp": "+52 55 9988 7766",
+        "city": "Puebla",
+        "state": "Puebla",
+        "postalCode": "72000",
+        "shippingOrigin": "Puebla, Puebla C.P. 72000",
+        "streetAddress": ""
+      },
+      "items": [
+        {
+          "itemId": "item-1795624387696-1",
+          "productId": "n64-original",
+          "sku": "CON-NINT-N64-ORIGIN",
+          "productName": "Nintendo 64 Standard",
+          "edition": "Estándar",
+          "editionPriceDiff": 0,
+          "category": "consoles",
+          "categoryName": "Consolas",
+          "platform": "Nintendo",
+          "brand": "Nintendo",
+          "imageUrl": "/assets/Consoles and tv pictures/Nintendo 64 console.jpg",
+          "condition": "working_good",
+          "conditionLabel": "Funciona bien / Buen estado estético",
+          "requiresManualReview": false,
+          "accessories": {
+            "extra_controller": true,
+            "expansion_pak": true
+          },
+          "itemizedAccessories": [
+            {
+              "key": "extra_controller",
+              "name": "Control original N64 adicional",
+              "price": 150,
+              "type": "ADDITIONAL"
+            },
+            {
+              "key": "expansion_pak",
+              "name": "Expansion Pak original (Memoria 4MB N64)",
+              "price": 400,
+              "type": "ADDITIONAL"
+            }
+          ],
+          "calculatedEstimate": 1050,
+          "calculationBreakdown": {
+            "basePrice": 500,
+            "originalBasePrice": 500,
+            "editionPriceDiff": 0,
+            "conditionMultiplier": 1,
+            "subtotalAfterCondition": 500,
+            "accessoriesAdjustmentTotal": 550,
+            "requiresManualReview": false,
+            "currency": "MXN"
+          },
+          "pricingRuleSnapshot": {
+            "appliedAt": "2026-11-25T16:33:07.696Z",
+            "basePrice": 500,
+            "multiplier": 1,
+            "accessoryPrices": {
+              "extra_controller": 150,
+              "power_adapter": 75,
+              "av_cable": 75,
+              "expansion_pak": 400,
+              "jumper_pak": 80
+            }
+          },
+          "customerNotes": ""
+        }
+      ],
+      "totalEstimatedAmount": 1050,
+      "currency": "MXN",
+      "status": "SUBMITTED",
+      "statusLabel": "En Revisión Preliminar",
+      "customerNotes": "",
+      "photos": [],
+      "termsAccepted": true,
+      "termsAcceptedAt": "2026-11-25T16:33:07.696Z",
+      "termsVersion": "1.1-MEX-2026",
+      "preliminaryOffer": {
+        "amount": 1050,
+        "preparedBy": null,
+        "sentAt": null,
+        "acceptedByCustomer": null,
+        "acceptedAt": null
+      },
+      "shippingApproval": {
+        "approved": false,
+        "approvedBy": null,
+        "approvedAt": null,
+        "carrier": null,
+        "trackingNumber": null,
+        "labelReference": null,
+        "instructions": null,
+        "isCRTVerified": false
+      },
+      "inspection": null,
+      "revisedOffer": null,
+      "internalNotes": [],
+      "createdAt": "2026-11-25T16:33:07.696Z",
+      "updatedAt": "2026-11-25T16:33:07.696Z",
+      "statusHistory": [
+        {
+          "status": "SUBMITTED",
+          "changedBy": "Cliente (Juan Pablo Montoya)",
+          "timestamp": "2026-11-25T16:33:07.696Z",
+          "notes": "Solicitud creada en línea con fotos y aceptación de términos."
+        }
+      ]
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit-001",
+      "action": "SYSTEM_INIT",
+      "performedBy": "System",
+      "target": "Database",
+      "timestamp": "2026-11-13T18:04:49.866Z",
+      "details": "Base de datos inicializada con productos y usuarios de prueba"
+    },
+    {
+      "id": "audit-1794595951383",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-7025",
+      "timestamp": "2026-11-13T18:52:31.379Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-13T18:52:31.383Z",
+      "updatedAt": "2026-11-13T18:52:31.383Z"
+    },
+    {
+      "id": "audit-1794595951577",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-13T18:52:31.577Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-13T18:52:31.577Z",
+      "updatedAt": "2026-11-13T18:52:31.577Z"
+    },
+    {
+      "id": "audit-1794595951617",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-7025",
+      "timestamp": "2026-11-13T18:52:31.585Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-13T18:52:31.617Z",
+      "updatedAt": "2026-11-13T18:52:31.617Z"
+    },
+    {
+      "id": "audit-1794595951662",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-7025",
+      "timestamp": "2026-11-13T18:52:31.636Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-13T18:52:31.662Z",
+      "updatedAt": "2026-11-13T18:52:31.662Z"
+    },
+    {
+      "id": "audit-1794595951694",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-7025",
+      "timestamp": "2026-11-13T18:52:31.683Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-13T18:52:31.694Z",
+      "updatedAt": "2026-11-13T18:52:31.694Z"
+    },
+    {
+      "id": "audit-1794596252707",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-7313",
+      "timestamp": "2026-11-13T18:57:32.705Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-13T18:57:32.707Z",
+      "updatedAt": "2026-11-13T18:57:32.707Z"
+    },
+    {
+      "id": "audit-1794596252906",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-13T18:57:32.906Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-13T18:57:32.906Z",
+      "updatedAt": "2026-11-13T18:57:32.906Z"
+    },
+    {
+      "id": "audit-1794596252944",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-7313",
+      "timestamp": "2026-11-13T18:57:32.916Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-13T18:57:32.944Z",
+      "updatedAt": "2026-11-13T18:57:32.944Z"
+    },
+    {
+      "id": "audit-1794596253003",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-7313",
+      "timestamp": "2026-11-13T18:57:32.974Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-13T18:57:33.004Z",
+      "updatedAt": "2026-11-13T18:57:33.004Z"
+    },
+    {
+      "id": "audit-1794596253041",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-7313",
+      "timestamp": "2026-11-13T18:57:33.026Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-13T18:57:33.041Z",
+      "updatedAt": "2026-11-13T18:57:33.041Z"
+    },
+    {
+      "id": "audit-1794597100533",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-1436",
+      "timestamp": "2026-11-13T19:11:40.529Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-13T19:11:40.533Z",
+      "updatedAt": "2026-11-13T19:11:40.533Z"
+    },
+    {
+      "id": "audit-1794597100744",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-13T19:11:40.744Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-13T19:11:40.744Z",
+      "updatedAt": "2026-11-13T19:11:40.744Z"
+    },
+    {
+      "id": "audit-1794597100781",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-1436",
+      "timestamp": "2026-11-13T19:11:40.755Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-13T19:11:40.781Z",
+      "updatedAt": "2026-11-13T19:11:40.781Z"
+    },
+    {
+      "id": "audit-1794597100838",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-1436",
+      "timestamp": "2026-11-13T19:11:40.803Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-13T19:11:40.838Z",
+      "updatedAt": "2026-11-13T19:11:40.839Z"
+    },
+    {
+      "id": "audit-1794597100876",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-1436",
+      "timestamp": "2026-11-13T19:11:40.862Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-13T19:11:40.876Z",
+      "updatedAt": "2026-11-13T19:11:40.877Z"
+    },
+    {
+      "id": "audit-1794598027033",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-2221",
+      "timestamp": "2026-11-13T19:27:07.029Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-13T19:27:07.033Z",
+      "updatedAt": "2026-11-13T19:27:07.033Z"
+    },
+    {
+      "id": "audit-1794598027326",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-13T19:27:07.326Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-13T19:27:07.326Z",
+      "updatedAt": "2026-11-13T19:27:07.326Z"
+    },
+    {
+      "id": "audit-1794598027374",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-2221",
+      "timestamp": "2026-11-13T19:27:07.339Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-13T19:27:07.375Z",
+      "updatedAt": "2026-11-13T19:27:07.375Z"
+    },
+    {
+      "id": "audit-1794598027448",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-2221",
+      "timestamp": "2026-11-13T19:27:07.405Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-13T19:27:07.448Z",
+      "updatedAt": "2026-11-13T19:27:07.448Z"
+    },
+    {
+      "id": "audit-1794598027492",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-2221",
+      "timestamp": "2026-11-13T19:27:07.478Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-13T19:27:07.492Z",
+      "updatedAt": "2026-11-13T19:27:07.492Z"
+    },
+    {
+      "id": "audit-1794759203384",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-15T16:13:23.384Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-15T16:13:23.384Z",
+      "updatedAt": "2026-11-15T16:13:23.384Z"
+    },
+    {
+      "id": "audit-1794805762566",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-9180",
+      "timestamp": "2026-11-16T05:09:22.562Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-16T05:09:22.566Z",
+      "updatedAt": "2026-11-16T05:09:22.566Z"
+    },
+    {
+      "id": "audit-1794805762826",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-16T05:09:22.826Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-16T05:09:22.826Z",
+      "updatedAt": "2026-11-16T05:09:22.826Z"
+    },
+    {
+      "id": "audit-1794805762863",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-9180",
+      "timestamp": "2026-11-16T05:09:22.837Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-16T05:09:22.863Z",
+      "updatedAt": "2026-11-16T05:09:22.863Z"
+    },
+    {
+      "id": "audit-1794805762915",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-9180",
+      "timestamp": "2026-11-16T05:09:22.884Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-16T05:09:22.915Z",
+      "updatedAt": "2026-11-16T05:09:22.915Z"
+    },
+    {
+      "id": "audit-1794805762949",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-9180",
+      "timestamp": "2026-11-16T05:09:22.937Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-16T05:09:22.949Z",
+      "updatedAt": "2026-11-16T05:09:22.949Z"
+    },
+    {
+      "id": "audit-1794805845562",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-3628",
+      "timestamp": "2026-11-16T05:10:45.558Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-16T05:10:45.562Z",
+      "updatedAt": "2026-11-16T05:10:45.562Z"
+    },
+    {
+      "id": "audit-1794805845751",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-16T05:10:45.751Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-16T05:10:45.751Z",
+      "updatedAt": "2026-11-16T05:10:45.751Z"
+    },
+    {
+      "id": "audit-1794805845796",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-3628",
+      "timestamp": "2026-11-16T05:10:45.762Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-16T05:10:45.796Z",
+      "updatedAt": "2026-11-16T05:10:45.796Z"
+    },
+    {
+      "id": "audit-1794805845854",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-3628",
+      "timestamp": "2026-11-16T05:10:45.822Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-16T05:10:45.854Z",
+      "updatedAt": "2026-11-16T05:10:45.854Z"
+    },
+    {
+      "id": "audit-1794805845894",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-3628",
+      "timestamp": "2026-11-16T05:10:45.877Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-16T05:10:45.894Z",
+      "updatedAt": "2026-11-16T05:10:45.894Z"
+    },
+    {
+      "id": "audit-1794809350646",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-9545",
+      "timestamp": "2026-11-16T06:09:10.639Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1550 MXN",
+      "createdAt": "2026-11-16T06:09:10.646Z",
+      "updatedAt": "2026-11-16T06:09:10.646Z"
+    },
+    {
+      "id": "audit-1794809350959",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-16T06:09:10.959Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-16T06:09:10.959Z",
+      "updatedAt": "2026-11-16T06:09:10.959Z"
+    },
+    {
+      "id": "audit-1794809350996",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-9545",
+      "timestamp": "2026-11-16T06:09:10.972Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-16T06:09:10.996Z",
+      "updatedAt": "2026-11-16T06:09:10.996Z"
+    },
+    {
+      "id": "audit-1794809351063",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-9545",
+      "timestamp": "2026-11-16T06:09:11.026Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-16T06:09:11.063Z",
+      "updatedAt": "2026-11-16T06:09:11.063Z"
+    },
+    {
+      "id": "audit-1794809351112",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-9545",
+      "timestamp": "2026-11-16T06:09:11.092Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-16T06:09:11.112Z",
+      "updatedAt": "2026-11-16T06:09:11.112Z"
+    },
+    {
+      "id": "audit-1794827945496",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-2633",
+      "timestamp": "2026-11-16T11:19:05.489Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1050 MXN",
+      "createdAt": "2026-11-16T11:19:05.496Z",
+      "updatedAt": "2026-11-16T11:19:05.496Z"
+    },
+    {
+      "id": "audit-1794827945778",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-16T11:19:05.778Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-16T11:19:05.778Z",
+      "updatedAt": "2026-11-16T11:19:05.778Z"
+    },
+    {
+      "id": "audit-1794827945826",
+      "action": "SHIPPING_EXPLICITLY_APPROVED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-2633",
+      "timestamp": "2026-11-16T11:19:05.791Z",
+      "details": "Envío autorizado con guía EST-TEST-12345678 (Estafeta México)",
+      "createdAt": "2026-11-16T11:19:05.826Z",
+      "updatedAt": "2026-11-16T11:19:05.826Z"
+    },
+    {
+      "id": "audit-1794827945891",
+      "action": "INSPECTION_RECORDED",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "requestId": "REQ-2026-2633",
+      "timestamp": "2026-11-16T11:19:05.852Z",
+      "details": "Inspección completada con dictamen: REVISED_OFFER",
+      "createdAt": "2026-11-16T11:19:05.891Z",
+      "updatedAt": "2026-11-16T11:19:05.891Z"
+    },
+    {
+      "id": "audit-1794827945930",
+      "action": "CUSTOMER_OFFER_ACCEPT",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-2633",
+      "timestamp": "2026-11-16T11:19:05.913Z",
+      "details": "Cliente decidió ACCEPT para la oferta (revised)",
+      "createdAt": "2026-11-16T11:19:05.930Z",
+      "updatedAt": "2026-11-16T11:19:05.930Z"
+    },
+    {
+      "id": "audit-1795622348206",
+      "action": "USER_LOGIN",
+      "performedBy": "Carlos Mendoza (Owner/Admin)",
+      "userId": "usr-admin-1",
+      "role": "admin",
+      "timestamp": "2026-11-25T15:59:08.206Z",
+      "details": "Inicio de sesión exitoso como admin",
+      "createdAt": "2026-11-25T15:59:08.206Z",
+      "updatedAt": "2026-11-25T15:59:08.206Z"
+    },
+    {
+      "id": "audit-1795624101572",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-2995",
+      "timestamp": "2026-11-25T16:28:21.568Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1050 MXN",
+      "createdAt": "2026-11-25T16:28:21.572Z",
+      "updatedAt": "2026-11-25T16:28:21.572Z"
+    },
+    {
+      "id": "audit-1795624387700",
+      "action": "SELL_REQUEST_CREATED",
+      "performedBy": "Juan Pablo Montoya",
+      "requestId": "REQ-2026-1846",
+      "timestamp": "2026-11-25T16:33:07.696Z",
+      "details": "Nueva solicitud creada con 1 artículos por $1050 MXN",
+      "createdAt": "2026-11-25T16:33:07.700Z",
+      "updatedAt": "2026-11-25T16:33:07.700Z"
+    }
+  ],
+  "emailLogs": [
+    {
+      "id": "eml-001",
+      "to": "roberto.garcia@example.com",
+      "subject": "Confirmación de solicitud de venta - REQ-2026-8801 | Lion Games & TVs",
+      "type": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-8801",
+      "sentAt": "2026-11-12T18:04:49.866Z",
+      "status": "SENT"
+    },
+    {
+      "id": "eml-1794595951438-434",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-7025 - Juan Pablo Montoya ($1550 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-7025",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-7025</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:52:31.438Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:52:31.438Z",
+      "updatedAt": "2026-11-13T18:52:31.438Z"
+    },
+    {
+      "id": "eml-1794595951440-471",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-7025 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-7025",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-7025</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:52:31.440Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:52:31.440Z",
+      "updatedAt": "2026-11-13T18:52:31.440Z"
+    },
+    {
+      "id": "eml-1794595951597-128",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-7025 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-7025",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-951585</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:52:31.597Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:52:31.597Z",
+      "updatedAt": "2026-11-13T18:52:31.597Z"
+    },
+    {
+      "id": "eml-1794595951637-921",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-7025 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-7025",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-7025</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:52:31.637Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:52:31.637Z",
+      "updatedAt": "2026-11-13T18:52:31.637Z"
+    },
+    {
+      "id": "eml-1794596252758-471",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-7313 - Juan Pablo Montoya ($1550 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-7313",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-7313</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:57:32.758Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:57:32.758Z",
+      "updatedAt": "2026-11-13T18:57:32.758Z"
+    },
+    {
+      "id": "eml-1794596252762-891",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-7313 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-7313",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-7313</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:57:32.762Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:57:32.762Z",
+      "updatedAt": "2026-11-13T18:57:32.762Z"
+    },
+    {
+      "id": "eml-1794596252927-147",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-7313 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-7313",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-252916</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:57:32.927Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:57:32.928Z",
+      "updatedAt": "2026-11-13T18:57:32.928Z"
+    },
+    {
+      "id": "eml-1794596252975-147",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-7313 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-7313",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-7313</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T18:57:32.975Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T18:57:32.975Z",
+      "updatedAt": "2026-11-13T18:57:32.975Z"
+    },
+    {
+      "id": "eml-1794597100595-693",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-1436 - Juan Pablo Montoya ($1550 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-1436",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-1436</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T19:11:40.595Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T19:11:40.595Z",
+      "updatedAt": "2026-11-13T19:11:40.595Z"
+    },
+    {
+      "id": "eml-1794597100599-681",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-1436 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-1436",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-1436</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T19:11:40.599Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T19:11:40.599Z",
+      "updatedAt": "2026-11-13T19:11:40.599Z"
+    },
+    {
+      "id": "eml-1794597100764-656",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-1436 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-1436",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-100755</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T19:11:40.764Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T19:11:40.764Z",
+      "updatedAt": "2026-11-13T19:11:40.764Z"
+    },
+    {
+      "id": "eml-1794597100803-437",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-1436 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-1436",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-1436</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T19:11:40.803Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T19:11:40.803Z",
+      "updatedAt": "2026-11-13T19:11:40.803Z"
+    },
+    {
+      "id": "eml-1794598027116-367",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-2221 - Juan Pablo Montoya ($1550 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-2221",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-2221</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T19:27:07.116Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T19:27:07.116Z",
+      "updatedAt": "2026-11-13T19:27:07.116Z"
+    },
+    {
+      "id": "eml-1794598027120-49",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-2221 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-2221",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-2221</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T19:27:07.120Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T19:27:07.120Z",
+      "updatedAt": "2026-11-13T19:27:07.120Z"
+    },
+    {
+      "id": "eml-1794598027354-94",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-2221 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-2221",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-027339</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T19:27:07.354Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T19:27:07.354Z",
+      "updatedAt": "2026-11-13T19:27:07.354Z"
+    },
+    {
+      "id": "eml-1794598027406-612",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-2221 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-2221",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-2221</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-13T19:27:07.406Z",
+      "status": "SENT",
+      "createdAt": "2026-11-13T19:27:07.406Z",
+      "updatedAt": "2026-11-13T19:27:07.406Z"
+    },
+    {
+      "id": "eml-1794805762671-277",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-9180 - Juan Pablo Montoya ($1550 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-9180",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-9180</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T05:09:22.671Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T05:09:22.672Z",
+      "updatedAt": "2026-11-16T05:09:22.672Z"
+    },
+    {
+      "id": "eml-1794805762675-62",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-9180 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-9180",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-9180</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T05:09:22.675Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T05:09:22.675Z",
+      "updatedAt": "2026-11-16T05:09:22.675Z"
+    },
+    {
+      "id": "eml-1794805762847-41",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-9180 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-9180",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-762837</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T05:09:22.847Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T05:09:22.847Z",
+      "updatedAt": "2026-11-16T05:09:22.847Z"
+    },
+    {
+      "id": "eml-1794805762885-191",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-9180 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-9180",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-9180</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T05:09:22.885Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T05:09:22.885Z",
+      "updatedAt": "2026-11-16T05:09:22.885Z"
+    },
+    {
+      "id": "eml-1794805845600-456",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-3628 - Juan Pablo Montoya ($1550 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-3628",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-3628</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T05:10:45.600Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T05:10:45.600Z",
+      "updatedAt": "2026-11-16T05:10:45.600Z"
+    },
+    {
+      "id": "eml-1794805845604-985",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-3628 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-3628",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-3628</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T05:10:45.604Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T05:10:45.604Z",
+      "updatedAt": "2026-11-16T05:10:45.604Z"
+    },
+    {
+      "id": "eml-1794805845776-604",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-3628 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-3628",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-845762</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T05:10:45.776Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T05:10:45.776Z",
+      "updatedAt": "2026-11-16T05:10:45.776Z"
+    },
+    {
+      "id": "eml-1794805845823-218",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-3628 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-3628",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-3628</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T05:10:45.823Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T05:10:45.823Z",
+      "updatedAt": "2026-11-16T05:10:45.823Z"
+    },
+    {
+      "id": "eml-1794809350741-527",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-9545 - Juan Pablo Montoya ($1550 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-9545",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-9545</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 - Funciona perfectamente (100%) (Est. $1,550.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,550.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T06:09:10.741Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T06:09:10.741Z",
+      "updatedAt": "2026-11-16T06:09:10.741Z"
+    },
+    {
+      "id": "eml-1794809350750-85",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-9545 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-9545",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-9545</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,550.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64</td>\n                <td style=\"padding: 8px;\">Funciona perfectamente (100%)</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,550.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T06:09:10.750Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T06:09:10.750Z",
+      "updatedAt": "2026-11-16T06:09:10.750Z"
+    },
+    {
+      "id": "eml-1794809350989-53",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-9545 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-9545",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-350972</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T06:09:10.989Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T06:09:10.989Z",
+      "updatedAt": "2026-11-16T06:09:10.989Z"
+    },
+    {
+      "id": "eml-1794809351027-679",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-9545 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-9545",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-9545</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,550.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T06:09:11.027Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T06:09:11.027Z",
+      "updatedAt": "2026-11-16T06:09:11.027Z"
+    },
+    {
+      "id": "eml-1794827945609-894",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-2633 - Juan Pablo Montoya ($1050 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-2633",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-2633</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 Standard - Funciona bien / Buen estado estético (Est. $1,050.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,050.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T11:19:05.609Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T11:19:05.609Z",
+      "updatedAt": "2026-11-16T11:19:05.609Z"
+    },
+    {
+      "id": "eml-1794827945617-855",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-2633 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-2633",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-2633</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,050.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64 Standard</td>\n                <td style=\"padding: 8px;\">Funciona bien / Buen estado estético</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,050.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T11:19:05.617Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T11:19:05.617Z",
+      "updatedAt": "2026-11-16T11:19:05.617Z"
+    },
+    {
+      "id": "eml-1794827945806-285",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Envío Aprobado! Instrucciones y Guía para REQ-2026-2633 | Lion Games & TVs",
+      "eventType": "SHIPPING_APPROVAL",
+      "requestId": "REQ-2026-2633",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <h2 style=\"color: #0284c7; margin-top: 0;\">📦 Envío Autorizado por Lion Games & TVs</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Un miembro autorizado de nuestro equipo ha validado tu solicitud y ha aprobado formalmente el envío de tus artículos.</p>\n        \n        <div style=\"background: #e0f2fe; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>Paquetería asignada:</strong> Estafeta México</p>\n          <p><strong>Número de Guía / Rastreo:</strong> EST-TEST-12345678</p>\n          <p><strong>Referencia de Etiqueta:</strong> LION-945791</p>\n          <p><strong>Instrucciones especiales de empaque:</strong></p>\n          <p style=\"margin: 0; color: #0369a1;\">Empacar con 3 capas de plástico burbuja</p>\n        </div>\n\n        <p><strong>Dirección de entrega de la bodega central:</strong><br>\n        Lion Games & TVs - Centro de Recepción e Inspección<br>\n        Av. Cuitláhuac 240, Nave 4, Col. San Salvador Xochimanca, Azcapotzalco, CDMX, C.P. 02870, México.<br>\n        Tel: +52 55 8765 4321\n        </p>\n\n        <p>Una vez entregado el paquete a la paquetería, te notificaremos en cuanto arribe a nuestras instalaciones para dar inicio a la inspección física.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T11:19:05.806Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T11:19:05.806Z",
+      "updatedAt": "2026-11-16T11:19:05.806Z"
+    },
+    {
+      "id": "eml-1794827945852-825",
+      "to": "juan.pablo@test.mx",
+      "subject": "[ACCIÓN REQUERIDA] Oferta Revisada tras inspección para REQ-2026-2633 | Lion Games & TVs",
+      "eventType": "REVISED_OFFER",
+      "requestId": "REQ-2026-2633",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; padding: 24px; border: 2px solid #f59e0b; border-radius: 8px;\">\n        <h2 style=\"color: #d97706; margin-top: 0;\">⚠️ Oferta Revisada tras Inspección Física</h2>\n        <p>Estimado/a Juan Pablo Montoya:</p>\n        <p>Nuestros técnicos concluyeron la inspección de tu solicitud <strong>REQ-2026-2633</strong>. Durante las pruebas encontramos algunas discrepancias con la declaración inicial:</p>\n        \n        <div style=\"background: #fffbeb; padding: 16px; border-radius: 6px; margin: 16px 0; border: 1px solid #fcd34d;\">\n          <p><strong>Estimado inicial:</strong> <strike>$1,050.00 MXN</strike></p>\n          <p style=\"font-size: 20px; color: #b45309;\"><strong>Nueva Oferta Revisada: $1,400.00 MXN</strong></p>\n          <p><strong>Motivo del ajuste:</strong> Ajuste de $150 MXN por detalle estético en la cubierta</p>\n        </div>\n\n        <p><strong>REQUERIMOS TU DECISIÓN:</strong></p>\n        <p>De acuerdo con nuestras políticas, ninguna oferta revisada se aplica sin tu consentimiento explícito. Por favor ingresa a tu portal de seguimiento para <strong>Aceptar</strong> la nueva oferta o <strong>Rechazar</strong> y solicitar la devolución de tus artículos.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-16T11:19:05.852Z",
+      "status": "SENT",
+      "createdAt": "2026-11-16T11:19:05.852Z",
+      "updatedAt": "2026-11-16T11:19:05.852Z"
+    },
+    {
+      "id": "eml-1795624101608-335",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-2995 - Juan Pablo Montoya ($1050 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-2995",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-2995</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 Standard - Funciona bien / Buen estado estético (Est. $1,050.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,050.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-25T16:28:21.608Z",
+      "status": "SENT",
+      "createdAt": "2026-11-25T16:28:21.608Z",
+      "updatedAt": "2026-11-25T16:28:21.608Z"
+    },
+    {
+      "id": "eml-1795624101612-51",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-2995 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-2995",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-2995</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,050.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64 Standard</td>\n                <td style=\"padding: 8px;\">Funciona bien / Buen estado estético</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,050.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-25T16:28:21.612Z",
+      "status": "SENT",
+      "createdAt": "2026-11-25T16:28:21.612Z",
+      "updatedAt": "2026-11-25T16:28:21.612Z"
+    },
+    {
+      "id": "eml-1795624387736-339",
+      "to": "adquisiciones@liongamestv.mx",
+      "subject": "[NUEVA SOLICITUD DE VENTA] REQ-2026-1846 - Juan Pablo Montoya ($1050 MXN)",
+      "eventType": "NEW_REQUEST_ALERT_TO_BUSINESS",
+      "requestId": "REQ-2026-1846",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #0b0f19; color: #f8fafc; padding: 24px; border-radius: 8px;\">\n        <h2 style=\"color: #f59e0b; margin-top: 0;\">🦁 Lion Games & TVs - Sistema Interno de Compras</h2>\n        <p>Se ha recibido una nueva solicitud de venta desde <strong>Puebla, Puebla</strong>.</p>\n        <div style=\"background-color: #1e293b; padding: 16px; border-radius: 6px; margin: 16px 0;\">\n          <p><strong>ID de Solicitud:</strong> REQ-2026-1846</p>\n          <p><strong>Cliente:</strong> Juan Pablo Montoya (+52 55 9988 7766)</p>\n          <p><strong>Email:</strong> juan.pablo@test.mx</p>\n          <p><strong>Artículos (1):</strong></p>\n          <ul>\n            <li>Nintendo 64 Standard - Funciona bien / Buen estado estético (Est. $1,050.00)</li>\n          </ul>\n          <p style=\"font-size: 18px; color: #f59e0b;\"><strong>Total Estimado: $1,050.00 MXN</strong></p>\n        </div>\n        <p>Por favor ingrese al panel de administración para revisar fotos, notas y autorizar la oferta preliminar.</p>\n      </div>\n    ",
+      "sentAt": "2026-11-25T16:33:07.736Z",
+      "status": "SENT",
+      "createdAt": "2026-11-25T16:33:07.736Z",
+      "updatedAt": "2026-11-25T16:33:07.736Z"
+    },
+    {
+      "id": "eml-1795624387740-359",
+      "to": "juan.pablo@test.mx",
+      "subject": "¡Hemos recibido tu solicitud de venta! - Folio: REQ-2026-1846 | Lion Games & TVs",
+      "eventType": "CUSTOMER_SUBMISSION_CONFIRMATION",
+      "requestId": "REQ-2026-1846",
+      "customerName": "Juan Pablo Montoya",
+      "bodyHtml": "\n      <div style=\"font-family: Arial, sans-serif; background-color: #f8fafc; color: #1e293b; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px;\">\n        <div style=\"text-align: center; margin-bottom: 20px;\">\n          <h1 style=\"color: #b45309; margin: 0;\">🦁 LION GAMES & TVs</h1>\n          <p style=\"color: #64748b; font-size: 14px;\">Especialistas en videojuegos, consolas y CRT retro en México</p>\n        </div>\n        <h3>¡Hola Juan Pablo Montoya!</h3>\n        <p>Gracias por iniciar tu proceso de venta con Lion Games & TVs. Hemos registrado tu solicitud exitosamente.</p>\n        \n        <div style=\"background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px; margin: 20px 0;\">\n          <p style=\"margin: 0; font-weight: bold; color: #92400e;\">FOLIO DE SEGUIMIENTO: REQ-2026-1846</p>\n          <p style=\"margin: 4px 0 0 0; font-size: 13px; color: #78350f;\">Monto estimado preliminar: <strong>$1,050.00 MXN</strong></p>\n        </div>\n\n        <h4>Resumen de tus artículos:</h4>\n        <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 16px;\">\n          <thead>\n            <tr style=\"background-color: #e2e8f0; text-align: left;\">\n              <th style=\"padding: 8px;\">Artículo</th>\n              <th style=\"padding: 8px;\">Estado</th>\n              <th style=\"padding: 8px; text-align: right;\">Estimado</th>\n            </tr>\n          </thead>\n          <tbody>\n            \n              <tr style=\"border-bottom: 1px solid #e2e8f0;\">\n                <td style=\"padding: 8px;\">Nintendo 64 Standard</td>\n                <td style=\"padding: 8px;\">Funciona bien / Buen estado estético</td>\n                <td style=\"padding: 8px; text-align: right;\">$1,050.00 MXN</td>\n              </tr>\n            \n          </tbody>\n        </table>\n\n        <div style=\"background-color: #fee2e2; border-left: 4px solid #ef4444; padding: 12px; margin: 20px 0; color: #991b1b; font-size: 13px;\">\n          <strong>AVISO IMPORTANTE:</strong> Los precios mostrados son estimaciones no vinculantes. \n          <strong>NO ENVÍES TUS ARTÍCULOS</strong> hasta que nuestro equipo revise tus fotos y emita una aprobación formal de envío con su correspondiente guía de transporte.\n        </div>\n\n        <p>Puedes consultar el estado de tu trámite en cualquier momento en nuestro portal con tu folio y correo electrónico.</p>\n        <p>Atentamente,<br><strong>Equipo de Valuaciones de Lion Games & TVs México</strong></p>\n      </div>\n    ",
+      "sentAt": "2026-11-25T16:33:07.740Z",
+      "status": "SENT",
+      "createdAt": "2026-11-25T16:33:07.740Z",
+      "updatedAt": "2026-11-25T16:33:07.740Z"
+    }
+  ]
+};
